@@ -50,7 +50,7 @@
     ],
     "behavior": [
       {
-        "id": 1001,
+        "id": 0,
         "part": "tail",
         "target": "close",
         "actions": [
@@ -70,7 +70,7 @@
         ]
       },
       {
-        "id": 1002,
+        "id": 1,
         "part": "head",
         "target": "close",
         "actions": [
@@ -91,7 +91,7 @@
         ]
       },
       {
-        "id": 1003,
+        "id": 2,
         "part": "tail",
         "target": "close",
         "actions": [
@@ -111,7 +111,7 @@
         ]
       },
       {
-        "id": 1004,
+        "id": 3,
         "part": "head",
         "target": "far",
         "actions": [
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": 1005,
+        "id": 4,
         "part": "tail",
         "target": "far",
         "actions": [
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "id": 1006,
+        "id": 5,
         "part": "tail",
         "target": "far",
         "actions": [
@@ -174,7 +174,7 @@
         ]
       },
       {
-        "id": 1007,
+        "id": 6,
         "part": "head",
         "target": "close",
         "extra": "sharpen",
@@ -187,7 +187,7 @@
         ]
       },
       {
-        "id": 1008,
+        "id": 7,
         "part": "head",
         "target": "close",
         "extra": "sharpen",
@@ -200,7 +200,7 @@
         ]
       },
       {
-        "id": 1009,
+        "id": 8,
         "part": "head",
         "target": "far",
         "extra": "sharpen",
@@ -213,7 +213,7 @@
         ]
       },
       {
-        "id": 1010,
+        "id": 9,
         "part": "tail",
         "target": "far",
         "actions": [
@@ -234,7 +234,7 @@
         ]
       },
       {
-        "id": 1011,
+        "id": 10,
         "part": "tail",
         "target": "close",
         "type": "track",
@@ -253,7 +253,7 @@
         ]
       },
       {
-        "id": 1012,
+        "id": 11,
         "part": "tail",
         "target": "far",
         "type": "track",
@@ -274,7 +274,7 @@
         ]
       },
       {
-        "id": 1013,
+        "id": 12,
         "part": "tail",
         "target": "far",
         "type": "track",
@@ -346,7 +346,7 @@
     ],
     "behavior": [
       {
-        "id": 1014, 
+        "id": 13, 
         "part": "head",
         "target": "close",
         "actions": [
@@ -366,7 +366,7 @@
         ]
       },
       {
-        "id": 1015,
+        "id": 14,
         "part": "leg",
         "target": "close",
         "actions": [
@@ -387,7 +387,7 @@
         ]
       },
       {
-        "id": 1016,
+        "id": 15,
         "part": "head",
         "target": "far",
         "actions": [
@@ -409,7 +409,7 @@
         ]
       },
       {
-        "id": 1017,
+        "id": 16,
         "part": "leg",
         "target": "far",
         "actions": [ 
@@ -430,7 +430,7 @@
         ]
       },
       {
-        "id": 1018,
+        "id": 17,
         "part": "head",
         "target": "far",
         "actions": [
@@ -453,7 +453,7 @@
         ]
       },
       {
-        "id": 1019,
+        "id": 18,
         "part": "leg",
         "target": "close",
         "actions": [
@@ -475,7 +475,7 @@
         ]
       },
       {
-      "id": 1020,
+      "id": 19,
         "part": "head",
         "target": "close",
         "extra": "freeze",
@@ -489,7 +489,7 @@
         ]
       },
       {
-        "id": 1021,
+        "id": 20,
           "part": "head",
           "target": "close",
           "extra": "freeze",
@@ -503,7 +503,7 @@
           ]
       },
       {
-        "id": 1022,
+        "id": 21,
           "part": "head",
           "target": "far",
           "extra": "freeze",
@@ -517,7 +517,7 @@
           ]
       },
       {
-        "id": 1023,
+        "id": 22,
         "part": "leg",
         "target": "close",
         "actions": [
@@ -539,7 +539,7 @@
         ]
       },
       {
-        "id": 1024,
+        "id": 23,
         "part": "leg",
         "target": "close",
         "type": "track",
@@ -558,7 +558,7 @@
         ]
       },
       {
-        "id": 1025,
+        "id": 24,
         "part": "head",
         "target": "far",
         "type": "track",
@@ -577,7 +577,7 @@
         ]
       },
       {
-        "id": 1026,
+        "id": 25,
         "part": "leg",
         "target": "close",
         "type": "track",
