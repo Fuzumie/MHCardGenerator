@@ -1,0 +1,358 @@
+{
+  "paol": {
+    "species": "Flying Wyvern",
+    "name": "Paolumu",
+    "resistance": {
+      "fire": 1,
+      "ice": 0,
+      "water": 0,
+      "thunder": 2,
+      "dragon": 0,
+      "paralysis": 2,
+      "blast": 1,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "difficulty": [1, 2, 3],
+    "arrange": ["head", "wing", "torso", "tail"],
+    "levels": [
+      {
+        "hp": 65,
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 4,
+          "broken": "Behaviours with [enraged] have -2 [movement]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 1,
+          "break": 4,
+          "broken": "Remove two air tokens from the Monster's physiology card."
+        },
+        "torso": { "arc": "46", "armor": 2, "break": 5, "broken": "" },
+        "tail": { "arc": "2", "armor": 2, "break": 4, "broken": "" }
+      },
+
+      {
+        "hp": 70,
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 5,
+          "broken": "Behaviours with [enraged] have -2 [movement]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 2,
+          "break": 4,
+          "broken": "Remove two air tokens from the Monster's physiology card."
+        },
+        "torso": { "arc": "46", "armor": 3, "break": 5, "broken": "" },
+        "tail": {
+          "arc": "2",
+          "armor": 2,
+          "break": 5,
+          "broken": "Replace [enraged] behavior cards with [normal] behaviors. If already using [normal] behaviors, reshuffle the behavior cards" }
+      },
+
+      {
+        "hp": 75,
+        "head": {
+          "arc": "8",
+          "armor": 3,
+          "break": 6,
+          "broken": "Behaviours with [enraged] have -2 [movement]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 3,
+          "break": 5,
+          "broken": "Remove two air tokens from the Monster's physiology card."
+        },
+        "torso": {
+          "arc": "46",
+          "armor": 3,
+          "break": 5,
+          "broken": "Behaviors with [torso] have -1 [attack]."
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 2,
+          "break": 6,
+          "broken": " Replace [enraged] behavior cards with [normal] behaviors. If already using [normal] behaviors, reshuffle the behavior cards" }
+      }
+    ],
+    "skills": [
+      {
+        "skill-name": "Floating Wyvern",
+        "skill": "Separate behavior cards into [enraged] and [normal]. Begin with [normal]. Each time an Inhale attack is drawn, place an Air Token on the physiology card, and reshuffle the behavior cards. Once there are three air tokens on the card, replace [normal] cards with [enraged] cards. When a Gust attack card is drawn, place an Air Token on the targeted node or closest node within the range of the intended target. Reshuffle the behavior cards. Hunters entering a node with an Air Token suffer [stun] and remove the token. When there are no Air Tokens on the monster's physiology card, replace the [enraged] cards with the [normal] cards."
+      },
+      {
+        "skill-name": "enraged Wyvern",
+        "skill": "Separate behavior cards into [enraged] and [normal]. Begin with [normal]. Place one Air Token on the physiology card. Each time an Inhale attack is drawn, place an Air Token on the physiology card, and reshuffle the behavior cards. Once there are three air tokens on the card, replace [normal] cards with [enraged] cards. When a Gust attack card is drawn, place an Air Token on the targeted node or closest node within the range of the intended target. Reshuffle the behavior cards. Hunters entering a node with an Air Token suffer [stun] and remove the token. When there are no Air Tokens on the monster's physiology card, replace the [enraged] cards with the [normal] cards."
+      },
+      {
+        "skill-name": "Vortex Wyvern",
+        "skill": "Separate behavior cards into [enraged] and [normal]. Begin with [normal]. Place two Air Tokens on the physiology card. Behaviors with [enraged] have +1 [attack] and +1 [dodge]. Each time an Inhale attack is drawn, place an Air Token on the physiology card, and reshuffle the behavior cards. Once there are three air tokens on the card, replace [normal] cards with [enraged] cards. When a Gust attack card is drawn, place an Air Token on the targeted node or closest node within the range of the intended target. Reshuffle the behavior cards. Hunters entering a node with an Air Token suffer [stun] and remove the token. When there are no Air Tokens on the monster's physiology card, replace the [enraged] cards with the [normal] cards."
+      }
+    ],
+    "rewards": {
+      "1": "Coral Crystal",
+      "2": "Tzitzi-ya-ku Scale",
+      "3": "Tzitzi-ya-ku Photophore",
+      "4": "Tzitzi-ya-ku Hide",
+      "5": "Tzitzi-ya-ku Claw",
+      "6": "Tzitzi-ya-ku Scale",
+      "7": "Tzitzi-ya-ku Scale",
+      "8": "Bird Wyvern Gem",
+      "9": "Tzitzi-ya-ku Claw",
+      "10": "Tzitzi-ya-ku Hide",
+      "11": "Coral Crystal",
+      "12": "Tzitzi-ya-ku Photophore"
+    },
+    "part-rewards": {
+      "head": "Tzitzi-ya-ku Photophore",
+      "claws": "Tzitzi-ya-ku Claw",
+      "tail": "Tzitzi-ya-ku Scale"
+    },
+    "behavior-names": [
+      "Bite Forward",
+      "Charge",
+      "Tail Sweep Left",
+      "Tail Sweep Right",
+      "Kick Feet",
+      "Inhale",
+      "Flying Charge",
+      "Flying Tail Sweep",
+      "Flying Tail Swat",
+      "Flying Slam",
+      "Flying Heavy Slam",
+      "Gust",
+      "Lob Gust"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "part": "head",
+        "target": "close",
+        "extra":"normal",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "id": 1002,
+        "part": "head",
+        "target": "far",
+        "extra":"normal",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 4, "card": 2 }
+        ]
+      },
+      {
+        "id": 1003,
+        "part": "tail",
+        "target": "close",
+        "extra":"normal",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "84"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1004,
+        "part": "tail",
+        "target": "close",
+        "extra":"normal",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "86"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1005,
+        "part": "tail",
+        "target": "close",
+        "extra":"normal",
+        "type":"track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "8462"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1006,
+        "part": "torso",
+        "target": "far",
+        "extra":"normal",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 1 }
+        ]
+      },
+      {
+        "id": 1007,
+        "part": "head",
+        "target": "far",
+        "extra":"enraged", 
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1008,
+        "part": "tail",
+        "target": "close",
+        "extra":"enraged", 
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 4,
+            "dir": "846"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1009,
+        "part": "tail",
+        "target": "close",
+        "extra":"enraged", 
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1010,
+        "part": "torso",
+        "target": "close",
+        "extra":"enraged", 
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8462",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1011,
+        "part": "torso",
+        "target": "far",
+        "extra":"enraged",
+        "type":"track",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8462",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 4, "card": 2 }
+        ]
+      },
+      {
+        "id": 1012,
+        "part": "torso",
+        "target": "close",
+        "extra":"enraged", 
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1013,
+        "part": "torso",
+        "target": "far",
+        "extra":"enraged",
+        "type":"track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      }
+    ]
+  }
+}

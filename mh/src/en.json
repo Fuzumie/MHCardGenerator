@@ -1,0 +1,2880 @@
+{
+  "menu": {
+    "appName": "MHW:BG Helper",
+    "langName": "English",
+    "target": "Target",
+    "quest": "Quest",
+    "run": "Attempt",
+    "quest-type": ["Assigned", "Investigation", "Tempered Investigation"],
+    "gather": "Gathering Phase",
+    "arena": "Arena Quest",
+    "hunting": "Hunting Phase",
+    "common": "Common",
+    "other": "Other",
+    "terrain": "Terrain",
+    "monster-status": "Monster Status",
+    "hunter-status": "Hunter Status",
+    "skills": "Skills",
+    "downtime": "Downtime Activities",
+    "armor": "Armor",
+    "weapon": "Weapon",
+    "alloy": "Alloy",
+    "bone": "Bone",
+    "chainmail": "Chainmail",
+    "leather": "Leather",
+    "set-bonus": "Set Bonus",
+    "back": "Back",
+    "starting-weapon": "Starting Weapon",
+    "starting-deck": "Use all attack cards with the hexagon weapon icon to create your hunter attack deck.",
+    "starting-gear": "Starting Armour",
+    "avg-dmg": "Average Damage",
+    "cards": "Cards",
+    "remove": "Remove",
+    "add": "Replace",
+    "forge": "Forge",
+    "time-limit": "Time Limit",
+    "export": "Export Save",
+    "import": "Import Save",
+    "track-gain": ["Gain 1 track token.", "Gain {0} track tokens."],
+    "track-discard": ["Discard 1 track token.", "Discard {0} track tokens."],
+    "each-gain": "Each hunter gains {0}.",
+    "and": " and ",
+    "or": " or ",
+    "time-discard": ["Discard 1 time card.", "Discard {0} time cards."],
+    "time-add": "Shuffle the {0} card into time deck.",
+    "reveal-hunt": "Reveal your track tokens, check the Scoutfly level, and begin the hunting phase.",
+    "each-hp": [
+      "Each hunter suffers {0} damage.",
+      "Each hunter recovers {0} health."
+    ],
+    "potion": "Potion",
+    "stat": "Statistics",
+    "average": "Average",
+    "atk-type": "Attack Type",
+    "resistances": "Resistances",
+    "hide-outcomes": "Hide option outcomes",
+    "campaign-timer": "Campaign Timer",
+    "reward-table": "Reward Table",
+    "finish-hunt": "Finish Hunting",
+    "special-rules": "Special Rules",
+    "level": "Level",
+    "behavior-add": "Behavior Card to Add",
+    "map": "Map"
+  },
+  "weapons": {
+    "g-sword": "Great Sword",
+    "l-sword": "Long Sword",
+    "blades": "Dual Blades",
+    "shield": "Sword & Shield",
+    "axe": "Switch Axe",
+    "blade": "Charge Blade",
+    "glaive": "Insect Glaive",
+    "lance": "Lance",
+    "gunlance": "Gunlance",
+    "hammer": "Hammer",
+    "horn": "Hunting Horn",
+    "bow": "Bow",
+    "l-bowgun": "Light Bowgun",
+    "h-bowgun": "Heavy Bowgun"
+  },
+  "monsters": {
+    "g-jagr": "Great Jagras",
+    "barr": "Barroth",
+    "kulu": "Kulu-Ya-Ku",
+    "puke": "Pukei-Pukei",
+    "tobi": "Tobi-Kadachi",
+    "anja": "Anjanath",
+    "jyur": "Jyuratodus",
+    "rath": "Rathalos",
+    "a-rath": "Azure Rathalos",
+    "diab": "Diablos",
+    "b-diab": "Black Diablos",
+    "kush": "Kushala Daora",
+    "nerg": "Nergigante",
+    "teos": "Teostra",
+    "gamm": "Gammoth"
+  },
+  "monster-stat": {
+    "g-jagr": {
+      "species": "Fanged Wyvern",
+      "behavior": [
+        "Heavy Bite",
+        "Head Slam",
+        "Headbutt",
+        "Spit Up",
+        "Belly Roll Left",
+        "Belly Charge",
+        "Belly Slam",
+        "Belly Roll Right",
+        "Front Claw Smash",
+        "Forward Swing",
+        "Retreat Swing",
+        "Forward Roll",
+        "Jagras Spit"
+      ],
+      "levels": [
+        {
+          "skill-name": "Gluttonous",
+          "skill": "Each time this monster deals 1 or more damage to a hunter it regains 1 lost health.",
+          "head": "Behaviours with [water] inflict physical damage instead of elemental damage.",
+          "torso": "The monster suffers 5 damage.",
+          "claws": ""
+        },
+        {
+          "skill-name": "Irritable",
+          "skill": "Each time this monster deals 1 or more damage to a hunter it regains 1 lost health. While this monster has at least 1 broken body part, behaviours this monster performs gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [water] inflict physical damage instead of elemental damage.",
+          "torso": "The monster suffers 5 damage.",
+          "claws": "Behaviours with [claws] have -1 [movement]."
+        },
+        {
+          "skill-name": "Jagras Alpha",
+          "skill": "Each time this monster deals 1 or more damage to a hunter it regains 1 lost health. Behaviours gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [water] inflict physical damage instead of elemental damage.",
+          "torso": "The monster doesn't regain lost health when it damages hunters.",
+          "claws": "Behaviours with [claws] have -1 [movement]."
+        }
+      ]
+    },
+    "barr": {
+      "species": "Brute Wyvern",
+      "behavior": [
+        "Thrash Left",
+        "Thrash Right",
+        "Nose Dive",
+        "Skull Slam",
+        "Mud Shake",
+        "Shoulder Barge",
+        "Steamroller",
+        "Rear Slam",
+        "Wide Sweep",
+        "Tail Thrash",
+        "Skull Crush",
+        "Furious Trample",
+        "Tail Smash"
+      ],
+      "levels": [
+        {
+          "skill-name": "Mud Coating",
+          "skill": "The first time Barroth moves onto a pond node, remove 1 [break] from each body part that isn't broken.",
+          "head": "Behaviours with [head] have -1 [movement].",
+          "torso": "Behaviours with [water] -1 [dodge].",
+          "claws": "",
+          "tail": ""
+        },
+        {
+          "skill-name": "Mud Cladding",
+          "skill": "Each time Barroth moves onto a pond node, remove 1 [break] from each body part that isn't broken.",
+          "head": "Behaviours with [head] have -1 [movement].",
+          "torso": "Behaviours with [water] -1 [dodge].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "tail": ""
+        },
+        {
+          "skill-name": "Mud Armour",
+          "skill": "Each time Barroth moves onto a pond node, remove 1 [break] from each body part that isn't broken. Behaviour gain +1 [attack].",
+          "head": "Behaviours with [head] have -1 [movement].",
+          "torso": "Behaviours with [water] -1 [dodge].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "tail": "The monster no longer removes break tokens when it moves onto a pond node."
+        }
+      ]
+    },
+    "kulu": {
+      "species": "Bird Wyvern",
+      "behavior": [
+        "Peck",
+        "Jump Slam",
+        "Triple Peck",
+        "Backleg Kick",
+        "Leaping Crush",
+        "Rock Slam",
+        "Claw Slash Left",
+        "Claw Slash Right",
+        "Rock Throw",
+        "Double Slash",
+        "Double Peck",
+        "Solid Rock Throw",
+        "Aggressive Rock Slam"
+      ],
+      "levels": [
+        {
+          "skill-name": "Crude Tools",
+          "skill": "After resolving a [claws] behaviour card, Kulu-Ya-Ku gains +2 [armor] on its [head] and [claws] body parts until its next turn.",
+          "head": "",
+          "claws": "Behaviours with [claws] have -1 [attack].",
+          "leg": ""
+        },
+        {
+          "skill-name": "Dangerous Tools",
+          "skill": "Behaviours with [claws] gain +1 [attack]. After resolving a [claws] behaviour card, Kulu-Ya-Ku gains +2 [armor] on its [head] and [claws] body parts until its next turn.",
+          "head": "Behaviours have -1 [dodge].",
+          "claws": "Behaviours with [claws] have -1 [attack].",
+          "leg": ""
+        },
+        {
+          "skill-name": "Deadly Tools",
+          "skill": "Behaviours with [claws] gain +1 [attack] and +1 [dodge]. After resolving a [claws] behaviour card, Kulu-Ya-Ku gains +2 [armor] on its [head] and [claws] body parts until its next turn.",
+          "head": "Behaviours have -1 [dodge].",
+          "claws": "Behaviours with [claws] have -1 [attack].",
+          "leg": "Remove the top card from the behaviour deck. Shuffle discarded behaviour cards into the deck."
+        }
+      ]
+    },
+    "puke": {
+      "species": "Bird Wyvern",
+      "behavior": [
+        "Poison Spit",
+        "Poison Glob",
+        "Tongue Lash",
+        "Flying Spit",
+        "Tongue Whip Left",
+        "Tongue Whip Right",
+        "Poison Spew",
+        "Tail Whip",
+        "Left Wing Swipe",
+        "Right Wing Swipe",
+        "Flying Bite",
+        "Rear Spray",
+        "Chicken Scratch"
+      ],
+      "levels": [
+        {
+          "skill-name": "Toxic Presence",
+          "skill": "When hunters suffer [poison] from Pukei-Pukei they lose 3 health at the end of their turn instead of 2.",
+          "head": "",
+          "claws": "Behaviours with [claws] gain +1 [hunter-turn].",
+          "tail": ""
+        },
+        {
+          "skill-name": "Toxic Presence",
+          "skill": "When hunters suffer [poison] from Pukei-Pukei they lose 3 health at the end of their turn instead of 2. Behaviours with [poison] gain +1 [dodge].",
+          "head": "",
+          "claws": "Behaviours with [claws] gain +1 [hunter-turn].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Toxic Predator",
+          "skill": "When hunters suffer [poison] from Pukei-Pukei they lose 3 health at the end of their turn instead of 2. Behaviours gain +1 [dodge].",
+          "head": "[poison] causes hunters to lose 2 health instead of 3.",
+          "claws": "Behaviours with [claws] gain +1 [hunter-turn].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    },
+    "tobi": {
+      "species": "Fanged Wyvern",
+      "behavior": [
+        "Leaping Bite",
+        "Rapid Bite",
+        "Backflip Slam",
+        "Backslash Swoop",
+        "Tail Swing",
+        "Gliding Tail Slam",
+        "Tail Spin",
+        "Tail Shock Pulse",
+        "Tail Slash",
+        "Tail Spark",
+        "Front Flip Slam",
+        "Leap Quick Bite",
+        "Gliding Tail Cleave"
+      ],
+      "levels": [
+        {
+          "skill-name": "Shocking",
+          "skill": "When you determine Tobi-Kadachi's target for a [thunder] behaviour remove Tobi-Kadachi from the board. Place Tobi-Kadachi on the farthest rock node from its current node without changing its facing. If there are multiple farthest rock nodes, the players choose. Move any hunters on that node as if Tobi-Kadachi had moved onto the node. Then resolve the behaviour as normal.",
+          "head": "",
+          "torso": "Behaviours with [paralysis] inflict -1 [attack].",
+          "tail": ""
+        },
+        {
+          "skill-name": "Electrifying",
+          "skill": "When you determine Tobi-Kadachi's target for a [thunder] behaviour remove Tobi-Kadachi from the board. Place Tobi-Kadachi on the farthest rock node from its current node without changing its facing. If there are multiple farthest rock nodes, the players choose. Move any hunters on that node as if Tobi-Kadachi had moved onto the node. Then resolve the behaviour as normal. Behaviours with [thunder] gain +1 [attack].",
+          "head": "Remove Leaping Bite from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "torso": "Behaviours with [paralysis] inflict -1 [attack].",
+          "tail": ""
+        },
+        {
+          "skill-name": "Static Charge",
+          "skill": "When you determine Tobi-Kadachi's target for a [thunder] behaviour remove Tobi-Kadachi from the board. Place Tobi-Kadachi on the farthest rock node from its current node without changing its facing. If there are multiple farthest rock nodes, the players choose. Move any hunters on that node as if Tobi-Kadachi had moved onto the node. Then resolve the behaviour as normal. Behaviours with [thunder] gain +2 [attack].",
+          "head": "Remove Leaping Bite from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "torso": "Behaviours with [paralysis] inflict -1 [attack].",
+          "tail": "Behaviours with [thunder] inflict -1 [attack]."
+        }
+      ]
+    },
+    "anja": {
+      "species": "Brute Wyvern",
+      "behavior": [
+        "Tail Swing",
+        "Bludgeon",
+        "Slam",
+        "Charge",
+        "Crush",
+        "Head Plunge",
+        "Fire Snort",
+        "Bite",
+        "Flame Spray",
+        "Flame Jet",
+        "Crushing Charge",
+        "Deadly Bludgeon",
+        "Right Flame Spray"
+      ],
+      "levels": [
+        {
+          "skill-name": "Reckless Aggression",
+          "skill": "Each time this monster suffers 4 or more damage from an attack card, after the attack is resolved the monster moves 2 nodes toward [farthest].",
+          "head": "Behaviours with [fire] inflict -1 [attack].",
+          "torso": "",
+          "leg": "Remove Crush from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "tail": ""
+        },
+        {
+          "skill-name": "Flaming Anger",
+          "skill": "Each time this monster suffers 4 or more damage from an attack card, after the attack is resolved the monster moves 2 nodes toward [farthest]. Behaviours with [fire] gain +1 [attack].",
+          "head": "Behaviours with [fire] inflict -1 [attack].",
+          "torso": "Discard the top card of the monster's behaviour deck.",
+          "leg": "Remove Crush from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "tail": ""
+        },
+        {
+          "skill-name": "Burning Wrath",
+          "skill": "Each time this monster suffers 4 or more damage from an attack card, after the attack is resolved the monster moves 2 nodes toward [farthest]. Behaviours with [fire] gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [fire] inflict -1 [attack].",
+          "torso": "Discard the top card of the monster's behaviour deck.",
+          "leg": "Remove Crush from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    },
+    "jyur": {
+      "species": "Piscine Wyvern",
+      "behavior": [
+        "Mud Bomb",
+        "Double Spit",
+        "Mud Spit",
+        "Rapid Headbutt",
+        "Dive Smash",
+        "Mud Splash",
+        "Back Flip",
+        "Direct Rush",
+        "Tidal Waves",
+        "Shark Bite",
+        "Forward Bite",
+        "Submerge Attack",
+        "Water Wrap"
+      ],
+      "levels": [
+        {
+          "skill-name": "Mire Dweller",
+          "skill": "While Jyuratodus is on a pond node, behaviours gain +1 [dodge].",
+          "head": "Behaviours with [head] have -1 [dodge].",
+          "leg-l": "",
+          "leg-r": "",
+          "tail": "Behaviours with [tail] have -1 [attack]."
+        },
+        {
+          "skill-name": "Mire Stalker",
+          "skill": "While Jyuratodus is on a pond node, behaviours gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [head] have -1 [dodge].",
+          "leg-l": "",
+          "leg-r": "This body part has -1 [armor].",
+          "tail": "Behaviours with [tail] have -1 [attack]."
+        },
+        {
+          "skill-name": "Mire Beast",
+          "skill": "While Jyuratodus is on a pond node, each body part gains +1 [armor] and behaviours gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [head] have -1 [dodge].",
+          "leg-l": "This body part has -1 [armor].",
+          "leg-r": "This body part has -1 [armor].",
+          "tail": ""
+        }
+      ]
+    },
+    "rath": {
+      "species": "Flying Wyvern",
+      "behavior": [
+        "Tail Swing",
+        "Tackle",
+        "Raging Charge",
+        "Flying Fire Ball",
+        "Take Off Blast",
+        "Swooping Evade",
+        "Claw Drop",
+        "Fire Spin",
+        "Flamethrower",
+        "Flame Burst",
+        "Stunning Spin",
+        "Molten Bite",
+        "Charging Swoop"
+      ],
+      "levels": [
+        {
+          "skill-name": "Chaotic Rage",
+          "skill": "When this monster has 35 health or less, remove the card with [track] from the behaviour deck. Then randomly add 1 of the 3 Rathalos behaviour cards with [track] into this monster's behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Remove Take Off Blast from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "torso": "Behaviours with [torso] gain +1 [hunter-attack] and +1 [hunter-turn].",
+          "tail": "Discard the top card of the monster's behaviour deck."
+        },
+        {
+          "skill-name": "Burning Rage",
+          "skill": "When this monster has 50 health or less, randomly add 1 additional Rathalos behaviour card with [track] into this monster's behaviour deck. Shuffle discarded behaviour cards into the deck. Behaviours with [fire] gain +1 [attack].",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Remove Take Off Blast from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "torso": "Behaviours with [torso] gain +1 [hunter-attack] and +1 [hunter-turn].",
+          "tail": "Discard the top card of the monster's behaviour deck."
+        },
+        {
+          "skill-name": "King of the Skies",
+          "skill": "When this monster has 55 health or less, add the 2 remaining Rathalos behaviour card with [track] into this monster's behaviour deck. Shuffle discarded behaviour cards into the deck. Behaviours gain +1 [attack] and +1 [dodge].",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Remove Take Off Blast from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "torso": "Behaviours with [torso] gain +1 [hunter-attack] and +1 [hunter-turn].",
+          "tail": "Discard the top card of the monster's behaviour deck."
+        }
+      ]
+    },
+    "a-rath": {
+      "species": "Flying Wyvern",
+      "behavior": [
+        "Tail Swing",
+        "Tackle",
+        "Talon Charge",
+        "Retreating Sweep",
+        "Take Off Blast",
+        "Swooping Evade",
+        "Claw Drop",
+        "Left Flame Burst",
+        "Fire Spray",
+        "Right Flame Burst",
+        "Fire Spin",
+        "Fireball",
+        "Talon Dive"
+      ],
+      "levels": [
+        {
+          "skill-name": "Fleeing Instinct",
+          "skill": "Each time this monster suffers damage from an attack card, after the attack is resolved the monster moves 1 node away from [closest].",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Behaviours with [wing] gain +1 [hunter-turn].",
+          "torso": "Fleeting Instinct moves the monster 2 nodes rather than 1.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Strafing Instinct",
+          "skill": "Each time this monster suffers damage from an attack card, after the attack is resolved the monster moves 1 node away from [closest]. Behaviours with [fire] gain +1 [attack].",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Behaviours with [wing] gain +1 [hunter-turn].",
+          "torso": "Fleeting Instinct moves the monster 2 nodes rather than 1.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Skyfire Instinct",
+          "skill": "Each time this monster suffers damage from an attack card, after the attack is resolved the monster moves 1 node away from [closest]. Behaviours gain +1 [attack].",
+          "head": "Behaviours with [fire] have -1 [range].",
+          "wing": "Behaviours with [wing] gain +1 [hunter-turn].",
+          "torso": "Fleeting Instinct moves the monster 2 nodes rather than 1.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    },
+    "diab": {
+      "species": "Flying Wyvern",
+      "behavior": [
+        "Short Charge",
+        "Long Charge",
+        "Horn Swing Left",
+        "Horn Swing Right",
+        "Left Surface Smash",
+        "Right Surface Smash",
+        "Right Side Bash",
+        "Left Side Bash",
+        "Tail Sweep Left",
+        "Tail Sweep Right",
+        "Forward Rush",
+        "Horn Thrust",
+        "Surface Bite"
+      ],
+      "levels": [
+        {
+          "skill-name": "Boundless Charge",
+          "skill": "While performing [head] behaviours, when Diablos moves onto the same node as the hunters those hunters may only move to the node in the centre of Diablos' front arc unless that node isn't available.",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "leg": "Behaviours with [head] have -1 [dodge].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Devastating Charge",
+          "skill": "While performing [head] behaviours, when Diablos moves onto the same node as the hunters those hunters may only move to the node in the centre of Diablos' front arc unless that node isn't available. Behaviours with [head] gain +1 [attack].",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "leg": "Behaviours with [head] have -1 [movement].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Primal Charge",
+          "skill": "While performing [head] behaviours, when Diablos moves onto the same node as the hunters those hunters may only move to the node in the centre of Diablos' front arc unless that node isn't available. Behaviours with [head] gain +2 [attack].",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "leg": "Behaviours with [head] have -1 [movement].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    },
+    "b-diab": {
+      "species": "Flying Wyvern",
+      "behavior": [
+        "Short Charge",
+        "Long Charge",
+        "Horn Swing Left",
+        "Horn Swing Right",
+        "Surface Bite",
+        "Surface Dive",
+        "Surface Charge",
+        "Surface Retreat",
+        "Tail Bash",
+        "Tail Sweep",
+        "Side Horn Thrust",
+        "Burrowing Retreat",
+        "Surface Impale"
+      ],
+      "levels": [
+        {
+          "skill-name": "Delving Wyvern",
+          "skill": "When you determine Black Diablos' target for a [claws] behaviour remove Black Diablos from the board. Place Black Diablos on the same node as its target without changing its facing. Move any hunters on that node as if Black Diablos had moved onto that node. Then resolve the behaviour as normal.",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Remove 1 [claws] card of your choice from the behaviour deck then shuffle the deck.",
+          "leg": "This body part has -1 [armor].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Tunnelling Wyvern",
+          "skill": "When you determine Black Diablos' target for a [claws] behaviour remove Black Diablos from the board. Place Black Diablos on the same node as its target without changing its facing. Move any hunters on that node as if Black Diablos had moved onto that node. Then resolve the behaviour as normal. Behaviours with [claws] gain +1 [attack].",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Remove 1 [claws] card of your choice from the behaviour deck then shuffle the deck.",
+          "leg": "This body part has -1 [armor].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Burrowing Wyvern",
+          "skill": "When you determine Black Diablos' target for a [claws] behaviour remove Black Diablos from the board. Place Black Diablos on the same node as its target without changing its facing. Move any hunters on that node as if Black Diablos had moved onto that node. Then resolve the behaviour as normal. Behaviours with [claws] gain +2 [attack].",
+          "head": "Behaviours have -1 [attack].",
+          "claws": "Remove 1 [claws] card of your choice from the behaviour deck then shuffle the deck.",
+          "leg": "This body part has -1 [armor].",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    },
+    "kush": {
+      "species": "Elder Dragon",
+      "behavior": [
+        "Double Bite",
+        "Wind Blast",
+        "Air Cannon",
+        "Air Blast",
+        "Flying Press",
+        "Swooping Dive",
+        "Wind Pressure",
+        "Unearth",
+        "Wind Aura",
+        "Wind Wave",
+        "Wind Bite",
+        "Wind Buffet",
+        "Engulfing Aura"
+      ],
+      "levels": [
+        {
+          "skill-name": "Fierce Winds",
+          "skill": "At the start of Kushala Daora's turn, place 1 wind token on its physiology card. If 2 wind tokens are on its physiology card, remove both tokens instead of placing 1. During your turn, when your hunter moves onto a node adjacent to Kushala Daora you must discard attack cards from your hand with a total agility value that equals or exceeds the number of wind tokens currently on its physiology card.",
+          "head": "Remove Double Bite from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "wing": "Remove up to 5 tornado tokens from the game board.",
+          "leg": "Behaviours with [head] have -1 [movement].",
+          "tail": "Remove up to 2 wind tokens from this monster's physiology card."
+        },
+        {
+          "skill-name": "Fierce Winds",
+          "skill": "At the start of Kushala Daora's turn, place 1 wind token on its physiology card. If 2 wind tokens are on its physiology card, remove both tokens instead of placing 1. During your turn, when your hunter moves onto a node adjacent to Kushala Daora you must discard attack cards from your hand with a total agility value that equals or exceeds the number of wind tokens currently on its physiology card.",
+          "head": "Behaviours with [head] have +1 [hunter-turn].",
+          "wing": "Remove up to 4 tornado tokens from the game board.",
+          "leg": "Behaviours with [head] have -1 [movement].",
+          "tail": "Remove up to 2 wind tokens from this monster's physiology card."
+        },
+        {
+          "skill-name": "Devastating Winds",
+          "skill": "Behaviours gain +1 [attack]. At the start of Kushala Daora's turn, place 1 wind token on its physiology card. If 2 wind tokens are on its physiology card, remove both tokens instead of placing 1. During your turn, when your hunter moves onto a node adjacent to Kushala Daora you must discard attack cards from your hand with a total agility value that equals or exceeds the number of wind tokens currently on its physiology card.",
+          "head": "Behaviours with [head] have +1 [hunter-turn].",
+          "wing": "Remove up to 3 tornado tokens from the game board.",
+          "leg": "Behaviours with [head] have -1 [movement].",
+          "tail": "Remove up to 1 wind tokens from this monster's physiology card."
+        }
+      ]
+    },
+    "nerg": {
+      "species": "Elder Dragon",
+      "behavior": [
+        "Charging Bludgeon",
+        "Horn Gouge",
+        "Ground Plunge",
+        "Swipe Right",
+        "Swipe Left",
+        "Tail Smash",
+        "Tail Mace",
+        "Rolling Smash Left",
+        "Rolling Smash Right",
+        "Wing Sweep",
+        "Spike Shot",
+        "Head Thrust",
+        "Spinning Bash",
+        "Nergigante Dive"
+      ],
+      "levels": [
+        {
+          "skill-name": "Growing Armour",
+          "skill": "When you attack a body part of Nergigante without spike tokens, place 1 black spike token on that part. After resolving a behaviour card with the [spike] place 1 spike token on each body part. If Nergigante begins its turn with 6 or more spike tokens on its physiology card, resolve the Nergigante Dive [nerg-dive] behaviour card instead of drawing a behaviour card.",
+          "head": "Remove Horn Gouge from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "wing": "Behaviours with [wing] have -1 [dodge].",
+          "claws": "Discard the top card of the monster's behaviour deck.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        },
+        {
+          "skill-name": "Growing Armour",
+          "skill": "When you attack a body part of Nergigante without spike tokens, place 1 black spike token on that part. After resolving a behaviour card with the [spike] place 1 spike token on each body part. If Nergigante begins its turn with 6 or more spike tokens on its physiology card, resolve the Nergigante Dive [nerg-dive] behaviour card instead of drawing a behaviour card.",
+          "head": "Behaviours with [head] have -1 [attack].",
+          "wing": "Behaviours with [wing] have -1 [dodge].",
+          "claws": "Remove 1 white spike token from each body part.",
+          "tail": "Behaviours with [tail] have -1 [attack]."
+        },
+        {
+          "skill-name": "Armoured Nightmare",
+          "skill": "Behaviours gain +1 [attack]. When you attack a body part of Nergigante without spike tokens, place 1 black spike token on that part. After resolving a behaviour card with the [spike] place 1 spike token on each body part. If Nergigante begins its turn with 6 or more spike tokens on its physiology card, resolve the Nergigante Dive [nerg-dive] behaviour card instead of drawing a behaviour card.",
+          "head": "Behaviours with [head] have -1 [attack].",
+          "wing": "Behaviours with [wing] have -1 [dodge].",
+          "claws": "Remove 1 white spike token from each body part.",
+          "tail": "Behaviours with [tail] have -1 [attack]."
+        }
+      ]
+    },
+    "teos": {
+      "species": "Elder Dragon",
+      "behavior": [
+        "Flamingthrower",
+        "Blast Bomb",
+        "Flame Trail",
+        "Flame Spray",
+        "Pounce",
+        "Claw Swipe",
+        "Wing Blast Scatter",
+        "Flying Fire",
+        "Blast Sweep",
+        "Tail Sweep",
+        "Blast Swing",
+        "Flying Dive Bomb",
+        "Flame Bite",
+        "Supernova"
+      ],
+      "levels": [
+        {
+          "skill-name": "Fiery Presence",
+          "skill": "When a hunter ends their turn in a node adjacent to Teostra, the hunter suffers [blast]. If all 12 blackscale dust tokens are on the game board when Teostra begins its turn, resolve the Supernova [supernova] behaviour card instead of drawing a behaviour card. After resolving this behaviour card remove all of the blackscale dust tokens from the board.",
+          "head": "Remove up to 6 blackscale dust tokens from the game board.",
+          "wing": "Behaviours with [wing] have -1 [attack].",
+          "tail": "This body part has -1 [armor]."
+        },
+        {
+          "skill-name": "Fiery Presence",
+          "skill": "When a hunter ends their turn in a node adjacent to Teostra, the hunter suffers [blast]. If all 12 blackscale dust tokens are on the game board when Teostra begins its turn, resolve the Supernova [supernova] behaviour card instead of drawing a behaviour card. After resolving this behaviour card remove all of the blackscale dust tokens from the board.",
+          "head": "Remove up to 5 blackscale dust tokens from the game board.",
+          "wing": "Remove Claw Swipe from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "tail": "This body part has -1 [armor]."
+        },
+        {
+          "skill-name": "Volcanic Presence",
+          "skill": "Behaviours gain +1 [attack]. When a hunter ends their turn in a node adjacent to Teostra, the hunter suffers [blast]. If all 12 blackscale dust tokens are on the game board when Teostra begins its turn, resolve the Supernova [supernova] behaviour card instead of drawing a behaviour card. After resolving this behaviour card remove all of the blackscale dust tokens from the board.",
+          "head": "Remove up to 4 blackscale dust tokens from the game board.",
+          "wing": "Remove Claw Swipe from the behaviour deck. Shuffle discarded behaviour cards into the deck.",
+          "tail": "Behaviours with [tail] have -1 [range]."
+        }
+      ]
+    }
+  },
+  "quests": {
+    "barr": [1, 2, 3],
+    "g-jagr": [1, 2, 3],
+    "kulu": [1, 2, 3],
+    "puke": [1, 2, 3],
+    "tobi": [1, 2, 3],
+    "anja": [1, 2, 3],
+    "jyur": [1, 2, 3],
+    "a-rath": [1, 2, 4],
+    "b-diab": [1, 2, 4],
+    "diab": [1, 2, 4],
+    "rath": [1, 2, 4],
+    "kush": [1, 2, 5],
+    "nerg": [1, 2, 5],
+    "teos": [1, 2, 5]
+  },
+  "time": {
+    "barr": [35, 30, 30],
+    "g-jagr": [35, 30, 30],
+    "kulu": [35, 35, 35],
+    "puke": [35, 35, 35],
+    "tobi": [35, 35, 35],
+    "anja": [35, 35, 35],
+    "jyur": [35, 35, 35],
+    "a-rath": [40, 40, 45],
+    "b-diab": [40, 40, 45],
+    "diab": [40, 40, 45],
+    "rath": [40, 40, 45],
+    "kush": [40, 40, 45],
+    "nerg": [40, 40, 45],
+    "teos": [40, 40, 45]
+  },
+  "time-card": {
+    "common": [
+      "Flip your hunter token face down.",
+      "Discard 1 attack card from the| rightmost slot of your stamina board.",
+      "Discard any number of| attack cards from your hand.",
+      "Draw attack cards until there| are 5 cards in your hand."
+    ],
+    "cards": {
+      "0": {
+        "title": "Tactical Shift",
+        "num": 5,
+        "color": "blue",
+        "text": ["Up to 2 hunters may move up to 1 node each."]
+      },
+      "1": {
+        "title": "Threat Shift",
+        "num": 8,
+        "color": "blue",
+        "text": [
+          "All players pass their hunter token to the player to their left.",
+          "The facing of the hunter token each player now has should match the facing of their previous token."
+        ]
+      },
+      "2": {
+        "title": "Monster Retreats",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Discard 4 time cards.",
+          "Each hunter may sharpen their weapon and use a potion from the communal pool."
+        ]
+      },
+      "3": {
+        "title": "Brief Respite",
+        "num": 4,
+        "color": "blue",
+        "text": [
+          "You may discard 1 attack card from any slot of your stamina board."
+        ]
+      },
+      "4": {
+        "title": "Keep Hunting",
+        "num": 5,
+        "color": "blue",
+        "text": []
+      },
+      "5": {
+        "title": "Wiggly Litchi",
+        "num": 1,
+        "color": "blue",
+        "text": ["You may discard all attack cards from your stamina board."]
+      },
+      "6": {
+        "title": "Paratoad",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die:",
+          "On a 1-3 place 1 [paralysis] token on the monster's physiology card.",
+          "On a 4-6 your hunter suffers [paralysis]."
+        ]
+      },
+      "7": {
+        "title": "Sleeptoad",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die:",
+          "On a 1-3 place 1 [sleep] token on the monster's physiology card.",
+          "On a 4-6 your hunter suffers [sleep]."
+        ]
+      },
+      "8": {
+        "title": "Poisoncup",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die:",
+          "On a 1-3 place 1 [poison] token on the monster's physiology card.",
+          "On a 4-6 your hunter suffers [poison]."
+        ]
+      },
+      "9": {
+        "title": "Nitrotoad",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die:",
+          "On a 1-3 place 1 [break] token on the monster's body part of your choice.",
+          "On a 4-6 your hunter suffers [blast]."
+        ]
+      },
+      "10": {
+        "title": "Monster Sleeps",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Remove 1 [break] from each monster body part that isn't broken.",
+          "The monster recovers 5 health."
+        ]
+      },
+      "11": {
+        "title": "Roar",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die.",
+          "Discard cards from the time deck equal to the amount rolled."
+        ]
+      },
+      "12": {
+        "title": "Suspended Boulder",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "Roll a die:",
+          "On a 1-3 the monster suffers 5 damage.",
+          "On a 4-6 your hunter suffers 2 damage."
+        ]
+      },
+      "13": {
+        "title": "Rampage",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "During the monster's next turn its behaviour card has 0 [hunter-turn]."
+        ]
+      },
+      "14": {
+        "title": "Vespoid Attack",
+        "num": 2,
+        "color": "blue",
+        "text": ["Your hunter suffers [paralysis]."]
+      },
+      "15": {
+        "title": "Misread",
+        "num": 2,
+        "color": "blue",
+        "text": [
+          "At the start of the monster's next turn, before drawing a behaviour card, discard the top card from the monster's behaviour deck."
+        ]
+      },
+      "16": {
+        "title": "Aimless Wandering",
+        "num": 1,
+        "color": "red",
+        "text": ["If able, each hunter must move 1 node away from the monster."]
+      },
+      "17": {
+        "title": "Exhaustion",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Each hunter flips the leftmost face up attack card on their stamina board face down."
+        ]
+      },
+      "18": {
+        "title": "Wake Up!",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Double the value of any damage cards drawn during the next hunter attack which inflicts damage."
+        ]
+      },
+      "19": {
+        "title": "Rushed Advance",
+        "num": 1,
+        "color": "red",
+        "text": ["Each hunter may move up to 2 nodes."]
+      },
+      "20": {
+        "title": "Researcher’s Favour",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "During the next player's turn, attack cards which inflict damage gain +1 [break]."
+        ]
+      },
+      "21": {
+        "title": "Ancient Guardian",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If the monster resolves a movement symbol during its next behaviour, reduce the symbol's value by 2 to a minimum of 0."
+        ]
+      },
+      "22": {
+        "title": "Jagras Slayer",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, each player may roll 1 die on the Great Jagras’ reward table. Place this card to the side of game baord as a reminder."
+        ]
+      },
+      "23": {
+        "title": "Unavenged",
+        "num": 1,
+        "color": "red",
+        "text": ["All hunters suffer 2 damage."]
+      },
+      "24": {
+        "title": "Time Waster",
+        "num": 1,
+        "color": "red",
+        "text": ["Discard 4 time cards."]
+      },
+      "25": {
+        "title": "Palico Assistant",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Draw a random Palico card and give it to a hunter that does not have a Palico. Discard the Palico card at the end of the quest."
+        ]
+      },
+      "26": {
+        "title": "Betrayal",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, each player rolls 1 fewer die on the monster's reward table. Place this card to the side of game board as a reminder."
+        ]
+      },
+      "27": {
+        "title": "Turf War",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Each hunter suffers 2 damage and the monster suffers 5 damage."
+        ]
+      },
+      "28": {
+        "title": "Fumbled Carving",
+        "num": 1,
+        "color": "red",
+        "text": ["Each hunter suffers [poison]."]
+      },
+      "29": {
+        "title": "Rathalos Slayer",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, each player may roll 1 die on the Rathalos’ reward table. Place this card to the side of game board as a reminder."
+        ]
+      },
+      "30": {
+        "title": "Recovery",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "The monster regains 5 lost health. If no damage is inflicted during the next hunter's turn, at the end of their turn, the monster regains another 5 lost health."
+        ]
+      },
+      "31": {
+        "title": "Wind Storm",
+        "num": 1,
+        "color": "red",
+        "text": ["Each hunter must move 2 nodes away from the monster."]
+      },
+      "32": {
+        "title": "Rocksteady Mantle",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "During the next hunter's turn, Kushala Daora counts as having 0 wind tokens on its physiology card."
+        ]
+      },
+      "33": {
+        "title": "Eye of the Storm",
+        "num": 1,
+        "color": "red",
+        "text": ["Remove up to 1 tornado token from the game board."]
+      },
+      "34": {
+        "title": "Ice Storm",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Each hunter that doesn't have [r-ice] resistance suffers 3 damage."
+        ]
+      },
+      "35": {
+        "title": "Determined",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Choose up to 2 discarded time cards and shuffle them back into the time deck."
+        ]
+      },
+      "36": {
+        "title": "Studied Quarry",
+        "num": 1,
+        "color": "red",
+        "text": ["Flip the top card of the monster's behaviour deck face up."]
+      },
+      "37": {
+        "title": "Surprise Attack",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "Reduce the [hunter-turn] of the next monster behaviour card by 1."
+        ]
+      },
+      "38": {
+        "title": "Spine Breaker",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "During the next player's turn, attack cards which inflict damage but don't have [break] remove 1 spike token from the selected body part as if they had 1 [break]."
+        ]
+      },
+      "39": {
+        "title": "Spine Crumble",
+        "num": 1,
+        "color": "red",
+        "text": ["Remove up to 2 white spike tokens from the monster."]
+      },
+      "40": {
+        "title": "Quenched Blades",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "During the next player's turn, attack cards which inflict damage gain +1 [water]."
+        ]
+      },
+      "41": {
+        "title": "Fortuitous Wind",
+        "num": 1,
+        "color": "red",
+        "text": ["Remove up to 4 Blackscale Dust tokens from the game board."]
+      },
+      "42": {
+        "title": "Barroth Slayer",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, each player may choose 1 resource from the Barroth’s reward table. Place this card to the side of the game board as a reminder."
+        ]
+      },
+      "43": {
+        "title": "Time Management",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, the group may perform 1 day's worth of downtime activities without spending a campaign day."
+        ]
+      },
+      "44": {
+        "title": "Diablos Slayer",
+        "num": 1,
+        "color": "red",
+        "text": [
+          "If you complete this quest, each player may roll 1 die on the Diablos’ reward table. Place this card to the side of game table as a reminder."
+        ]
+      }
+    }
+  },
+  "maps": {
+    "barr": [
+      "0000000PP0P000020000B000000000S0SS0S",
+      "0000000P00PP00B2000P00P000P000S0SS0S",
+      "0000000PB0P00002P0000000PPPPPPS0SS0S"
+    ],
+    "g-jagr": [
+      "0000000000000002000B00B0000000S0SS0S",
+      "0000000P00000P02000B00B0000000S0SS0S",
+      "0000000P0PP00P020RRB00B0000PP0S0SS0S"
+    ],
+    "kulu": [
+      "00000S0S00S0RPP0P0P3B00R0BS0000000B0",
+      "00P00S0B0P9R0000P00S000P0BS000S0R0B0",
+      "00R00B0S4000B00B0P0000PS000P0S0B0PS0"
+    ],
+    "puke": [
+      "000000002PB0000PP00000000BSS00S0000S",
+      "0000010BP000SPP0000S00BP00S0PP0000S0",
+      "0020PB0000PPRPPB000PS0SR000000S0000S"
+    ],
+    "tobi": [
+      "000000002PB0000PPRR000000BSS00S0000S",
+      "000001RBP000S000BP0S00PP00S00R0R00S0",
+      "002R00000000RPPB000PS0SR0PP000S0R00S"
+    ],
+    "anja": [
+      "S0000S00P00RRBP90000P0000000B00S00S0",
+      "00R00000PPR00BP300SPP00S00000R0S00S0",
+      "000000PP02000S0PS0000B00000B00S00R0S"
+    ],
+    "jyur": [
+      "S0000S00P0000BP90000PPP00000P00S00S0",
+      "00P00000PPP00BP300SPPP0S000P000S00S0",
+      "0000000P0200PBPPP00S0PS000P0P0S0000S"
+    ],
+    "a-rath": [
+      "00000BR00S000BP8000PP000000PPPS00SS0",
+      "00B00000000P0PP0PP0P2000000B00SRS0SS",
+      "0000000PP0PP0B10000PP00RSS0PB000S0S0"
+    ],
+    "b-diab": [
+      "00000B0PP0100BP000R0S000000PPRS00SS0",
+      "SR00000PB00P0P020P0P00P0SP0B000S000S",
+      "0000000SP2P00BP0P00PSSS00PPPP0000000"
+    ],
+    "diab": [
+      "00000B0P000R0BP1000SP000000PPPS00SS0",
+      "00RB0000000P0PP20PRPP000000B00S0S0SS",
+      "0000P00PP0P00BP10R0PP000SS0P0000S0S0"
+    ],
+    "rath": [
+      "0000RB0PP0100BP00000S000000PPPS00SS0",
+      "000B0000000P0PP20P0PP00R000B00S0S0SS",
+      "0000P00PP0PP0BP100RPP000SS000000S0S0"
+    ],
+    "kush": [
+      "0S00S000P0PSP00P00R0B0P006000S00RP00",
+      "6P0SP0P000S000BP00S0P0000P00PR0RS000",
+      "000P000S00SRP0P90P00PP00RS00S0B00P00"
+    ],
+    "nerg": [
+      "000S000BP0B00S030R00B0S00PS0P0000B00",
+      "000S000SB0B00P0S0BR0P00006P0S0000B00",
+      "30P0B0P000000PS0SBP00S0000S00P0BRP00"
+    ],
+    "teos": [
+      "0R000000B01BB00000S0B0B00S000RSPSB00",
+      "0B0B0SS00000R0020R0B000BP000SBS00BP0",
+      "B0RS000300BSB00000S0B0P00BPPS0000B00"
+    ]
+  },
+  "items": [
+    "Monster Bone Small",
+    "Monster Bone Medium",
+    "Monster Bone Large",
+    "Monster Keenbone",
+    "Monster Hardbone",
+    "Quality Bone",
+    "Ancient Bone",
+    "Boulder Bone",
+    "Machalite Ore",
+    "Dragonite Ore",
+    "Carbalite Ore",
+    "Fucium Ore",
+    "Dragonvein Crystal",
+    "Wingdrake Hide",
+    "Auqa Sac",
+    "Bird Wyvern Gem",
+    "Black Spiral Horn",
+    "Blos Medulla",
+    "Coral Crystal",
+    "Earth Crystal",
+    "Elder Dragon Blood",
+    "Elder Dragon Bone",
+    "Electro Sac",
+    "Fertile Mud",
+    "Firecell Stone",
+    "Fire Dragon Scale",
+    "Flame Sac",
+    "Gajau Scale",
+    "Immortal Dragonscale",
+    "Inferno Sac",
+    "Majestic Horn",
+    "Novacrystal",
+    "Piercing Claw",
+    "Poison Sac",
+    "Sharp Claw",
+    "Thunder Sac",
+    "Toxic Sac",
+    "Twisted Horn",
+    "Warm Pelt",
+    "Wyvern Gem",
+    "Anjanath Fang",
+    "Anjanath Nosebone",
+    "Anjanath Pelt",
+    "Anjanath Scale",
+    "Anjanath Tail",
+    "Azure Rath Carapace",
+    "Azure Rath Marrow",
+    "Azure Rath Plate",
+    "Azure Rath Scale",
+    "Azure Rath Tail",
+    "Azure Rath Wing",
+    "Azure Rath Wingtalon",
+    "Barroth Carapace",
+    "Barroth Claw",
+    "Barroth Ridge",
+    "Barroth Shell",
+    "Black Diablos Carapace",
+    "Black Diablos Ridge",
+    "Daora Carapace",
+    "Daora Claw",
+    "Daora Dragon Scale",
+    "Daora Gem",
+    "Daora Horn",
+    "Daora Tail",
+    "Daora Webbing",
+    "Diablos Carapace",
+    "Diablos Fang",
+    "Diablos Ridge",
+    "Diablos Shell",
+    "Great Jagras Claw",
+    "Great Jagras Hide",
+    "Great Jagras Mane",
+    "Great Jagras Scale",
+    "Jyuratodus Carapace",
+    "Jyuratodus Fang",
+    "Jyuratodus Fin",
+    "Jyuratodus Scale",
+    "Jyuratodus Shell",
+    "Tobi-Kadachi Claw",
+    "Tobi-Kadachi Electrode",
+    "Tobi-Kadachi Membrane",
+    "Tobi-Kadachi Pelt",
+    "Tobi-Kadachi Scale",
+    "Kulu-Ya-Ku Beak",
+    "Kulu-Ya-Ku Hide",
+    "Kulu-Ya-Ku Plume",
+    "Kulu-Ya-Ku Scale",
+    "Nergigante Carapace",
+    "Nergigante Gem",
+    "Nergigante Horn",
+    "Nergigante Regrowth Plate",
+    "Nergigante Tail",
+    "Nergigante Talon",
+    "Pukei Carapace",
+    "Pukei Quill",
+    "Pukei Scale",
+    "Pukei Sac",
+    "Pukei Tail",
+    "Pukei Wing",
+    "Rathalos Carapace",
+    "Rathalos Marrow",
+    "Rathalos Medulla",
+    "Rathalos Plate",
+    "Rathalos Scale",
+    "Rathalos Shell",
+    "Rathalos Tail",
+    "Rathalos Webbing",
+    "Rathalos Wing",
+    "Rathalos Wingtalon",
+    "Teostra Carapace",
+    "Teostra Claw",
+    "Teostra Gem",
+    "Teostra Horn",
+    "Teostra Mane",
+    "Teostra Powder",
+    "Teostra Tail",
+    "Teostra Webbing",
+    "Lightcrystal",
+    "Torrent Sac"
+  ],
+  "part-rewards": {
+    "anja": { "leg": 43, "tail": 44, "head": 40, "torso": 29 },
+    "a-rath": { "wing": 51, "torso": 46, "tail": 49, "head": 29 },
+    "barr": { "torso": 52, "tail": 55, "head": 54, "claws": 53 },
+    "b-diab": { "tail": 57, "leg": 56, "head": 30, "claws": 16 },
+    "diab": { "tail": 67, "leg": 65, "head": 30, "claws": 68 },
+    "g-jagr": { "claws": 69, "torso": 70, "head": 71 },
+    "jyur": { "leg-l": 75, "head": 74, "tail": 27, "leg-r": 75 },
+    "kulu": { "leg": 86, "claws": 84, "head": 85 },
+    "kush": { "wing": 59, "tail": 63, "head": 62, "leg": 58 },
+    "nerg": { "head": 89, "tail": 91, "claws": 90, "wing": 92 },
+    "puke": { "head": 33, "tail": 97, "claws": 98 },
+    "rath": { "torso": 100, "tail": 102, "wing": 107, "head": 29 },
+    "teos": { "wing": 110, "head": 113, "tail": 115 },
+    "tobi": { "torso": 81, "head": 80, "tail": 79 }
+  },
+  "rewards": {
+    "common": [10, 8, 9, 11, 5, 0, 1, 2, 3, 4, 6, 7, 12, 13],
+    "other": [24],
+    "anja": [43, 42, 41, 44, 40, 3, 26, 2, 42, 2, 26, 29],
+    "a-rath": [51, 2, 48, 50, 47, 46, 49, 45, 51, 45, 49, 29],
+    "barr": [0, 53, 54, 55, 52, 53, 0, 53, 52, 55, 54, 53],
+    "b-diab": [31, 56, 16, 30, 56, 57, 17, 39, 31, 56, 30, 16],
+    "kush": [64, 61, 59, 60, 58, 62, 63, 21, 20, 62, 58, 21],
+    "diab": [68, 65, 37, 30, 66, 67, 17, 65, 66, 30, 37, 68],
+    "g-jagr": [0, 69, 70, 72, 71, 69, 34, 32, 0, 70, 72, 71],
+    "jyur": [75, 14, 76, 77, 2, 73, 74, 73, 27, 77, 76, 75],
+    "tobi": [1, 81, 82, 22, 79, 80, 3, 78, 1, 35, 3, 79],
+    "kulu": [7, 85, 83, 19, 86, 84, 86, 15, 19, 7, 84, 85],
+    "nerg": [28, 92, 87, 90, 89, 91, 21, 20, 90, 88, 21, 92],
+    "puke": [1, 98, 95, 94, 93, 33, 97, 36, 98, 95, 93, 1],
+    "rath": [108, 2, 103, 106, 105, 100, 102, 107, 99, 104, 101, 29],
+    "teos": [25, 112, 116, 111, 114, 109, 25, 31, 24, 110, 113, 115]
+  },
+  "ref": {
+    "terrain": [
+      ["[bush] Bush", "A hunter on a bush node has –4 threat."],
+      [
+        "[rock] Rock",
+        "A hunter on a rock node may move 1 node without placing attack cards on their stamina board."
+      ],
+      [
+        "[pond] Pond",
+        "When a hunter enters a pond node for any reason, they must discard 1 card from their damage deck."
+      ]
+    ],
+    "monster-status": [
+      ["[stun] Stun", "The monster’s next behavior [dodge] becomes 1."],
+      [
+        "[poison] Poison",
+        "The monster suffers 2 damage at the end of its next turn."
+      ],
+      [
+        "[sleep] Sleep",
+        "Only resolve the [hunter-turn] and [hunter-attack] on the monster’s next behavior."
+      ],
+      [
+        "[paralysis] Paralysis",
+        "If there is a [movement] on the monster’s next behavior, it has a value of 0."
+      ],
+      [
+        "[blast] Blastblight",
+        "Each part of the monster has –1 [armor] until the end of its next turn."
+      ]
+    ],
+    "hunter-status": [
+      [
+        "[stun] Stun",
+        "The hunter must place a card face-down on their stamina board if possible."
+      ],
+      [
+        "[poison] Poison",
+        "The hunter suffers 2 damage at the end of their next turn."
+      ],
+      [
+        "[sleep] Sleep",
+        "The hunter cannot place attack cards on their stamina board to attack, move, or dodge until the end of their next turn."
+      ],
+      ["[paralysis] Paralysis", "The hunter must discard down to 2 cards."],
+      [
+        "[blast] Blastblight",
+        "The hunter has -2 [armor] until the end of their next turn."
+      ],
+      [
+        "[freeze] Freeze",
+        "you gay now."
+      ]
+    ],
+    "skills": [
+      ["Agitator", "Draw +1 damage against broken parts."],
+      ["Aquatic Expert", "Gain immunity to pond nodes."],
+      [
+        "Azure Rathalos Mastery",
+        "When resolving elemental damage, draw 3 and pick one."
+      ],
+      [
+        "Black Diablos Mastery",
+        "Draw +1 damage card on non-elemental attacks."
+      ],
+      [
+        "Botanist",
+        "During the gathering phase, when the hunters gain a potion, they may all immediately recover to full health."
+      ],
+      [
+        "Critical Eye",
+        "When you draw damage, draw +1, then choose 1 to place on top of your damage deck before inflicting damage."
+      ],
+      ["Constitution", "Once per quest, discard attack cards when dodging."],
+      ["Diablos Mastery", "Draw +1 damage card on non-elemental attacks."],
+      ["Evade Extender", "Move +1 when dodging."],
+      ["Fire Attack", "Draw +1 damage card on fire attacks."],
+      ["Focus", "Reduce combo icons by 1. (Minimum of 1)"],
+      [
+        "Heroics",
+        "While at 2 health or less, draw +1 damage on non-elemental attacks."
+      ],
+      ["Guard", "Gain +1 armor when playing attacks that grant armor."],
+      [
+        "Handicraft",
+        "Once per quest, reshuffle your empty damage deck during an attack."
+      ],
+      ["Ice Attack", "Draw +1 damage card on ice attacks."],
+      ["Intimidator", "You can’t suffer damage during the gathering phase."],
+      ["Kushala Daora Flight", "Gain +1 agility when dodging or sprinting."],
+      [
+        "Latent Power",
+        "Draw +1 damage on your first attack if you suffered damage last monster turn."
+      ],
+      ["Marathon Runner", "Move 2 instead of 1 when walking."],
+      ["Maximum Might", "Draw +2 damage, but return 2 to the deck."],
+      [
+        "Nergigante Hunger",
+        "If you inflict damage to the monster during your turn, recover 1 health."
+      ],
+      ["Palico Rally", "You may use your Palico ability twice per quest."],
+      ["Part Breaker", "Cards with break gain +1 break."],
+      ["Poison Resistance", "You are immune to the poison status."],
+      [
+        "Rathalos Mastery",
+        "When applying fire, draw an elemental damage card instead of placing a fire token."
+      ],
+      [
+        "Resentment",
+        "If you recovered health during your previous turn, the first attack you play this turn gains +2 damage."
+      ],
+      ["Sleep Resistance", "You’re immune to the sleep status."],
+      ["Slugger", "Once per quest, apply +1 stun token."],
+      [
+        "Speed Eating",
+        "Once per quest, you may use combat actions and preparation actions during the same turn."
+      ],
+      [
+        "Sporepuff Expert",
+        "When you recover health from anything that isn’t a potion, recover 1 additional health."
+      ],
+      ["Stun Resistance", "You’re immune to the stun status ailment."],
+      [
+        "Teostra Technique",
+        "Once per quest, shuffle the damage cards from an attack back into the damage deck."
+      ],
+      ["Thunder Attack", "Draw +1 damage card on thunder attacks."],
+      ["Water Attack", "Draw +1 damage card on water attacks."],
+      ["Weakness Exploit", "Attack cards with 2+ combo draw +1 damage."],
+      [
+        "Weakness Exploit (Rathalos Mail)",
+        "Once per quest, you may swap your hunter token with another player, maintaining token facing."
+      ]
+    ],
+    "downtime": [
+      [
+        "",
+        "As a group, spending 1 day allow you to perform up to 3 different activities. Every hunter performs the same activity 1 time and then move on to another activity."
+      ],
+      [
+        "Resource Center",
+        "Roll 2 die and get 1 resource according to the result.",
+        "2 [item:10]",
+        "3 [item:8]",
+        "4 [item:9]",
+        "5 [item:11]",
+        "6 [item:5]",
+        "7 [item:0]",
+        "8 [item:6]",
+        "9 [item:12]",
+        "10 [item:7]",
+        "11 [item:18]",
+        "12 [item:24]"
+      ],
+      [
+        "Provisions Stockpile",
+        "Remove any 3 <b>Common</b> resource to recieve any 1 <b>Common</b> resource of your choice."
+      ],
+      [
+        "Meowscular Chef",
+        "Select 1 elemental type. Each hunter gains +1 resistance to that type during the next quest. Each hunter places a token of the selected elemental type on their weapon card as a reminder."
+      ],
+      [
+        "Handler",
+        "Replay any Investigation or Tempered Investigation quest in the next day even if you have exceeded 4 attempts."
+      ],
+      ["Pet Poogie", "Give you luck. No actual effect."]
+    ]
+  },
+  "armor": [
+    "Alloy Helm",
+    "Alloy Mail",
+    "Alloy Greaves",
+    "Bone Helm",
+    "Bone Mail",
+    "Bone Greaves",
+    "Jagras Helm",
+    "Jagras Mail",
+    "Jagras Greaves",
+    "Kadachi Helm",
+    "Kadachi Mail",
+    "Kadachi Greaves",
+    "Anja Helm",
+    "Anja Mail",
+    "Anja Greaves",
+    "Rathalos Helm",
+    "Rathalos Mail",
+    "Rathalos Greaves",
+    "Rath Soul Helm",
+    "Rath Soul Mail",
+    "Rath Soul Greaves",
+    "Barroth Helm",
+    "Barroth Mail",
+    "Barroth Greaves",
+    "Pukei Hood",
+    "Pukei Mail",
+    "Pukei Greaves",
+    "Jyura Helm",
+    "Jyura Mail",
+    "Jyura Greaves",
+    "Diablos Helm",
+    "Diablos Mail",
+    "Diablos Greaves",
+    "Diablos Nero Helm",
+    "Diablos Nero Mail",
+    "Diablos Nero Greaves",
+    "Kulu Headpiece",
+    "Kulu Mail",
+    "Kulu Greaves",
+    "Kaiser Crown",
+    "Kaiser Mail",
+    "Kaiser Greaves",
+    "Nergigante Helm",
+    "Nergigante Mail",
+    "Nergigante Greaves",
+    "Kushala Glare",
+    "Kushala Cista",
+    "Kushala Crus",
+    "Chainmail Headgear",
+    "Chainmail Vest",
+    "Chainmail Trousers",
+    "Leather Headgear",
+    "Leather Mail",
+    "Leather Trousers"
+  ],
+  "weapon": [
+    [
+      "Jagras Blade",
+      "Wrapped in supple Jagras hide, this great sword fits firmly in the user's grip."
+    ],
+    [
+      "Datura Blaze",
+      "The venom-soaked down of the Pukei-Pukei covering this blade bristles at the sight of prey."
+    ],
+    [
+      "Bone Blade",
+      "A great sword made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Carapace Buster",
+      "Adding Barroth parts only made this great sword more stark and brutish...in a good way."
+    ],
+    [
+      "Red Wing",
+      "Crafted from fiery parts in the form of a Rathalos wing, every swing produces a fiery blast."
+    ],
+    [
+      "Buster Blade",
+      "A great sword of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Blooming Blade",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Icesteel Edge",
+      "Throw some Kushala Daora bits together and call it a day. Its icy bite will silence critics."
+    ],
+    [
+      "Bone Slasher",
+      "Made from the densest of bones, this great sword offers greater power with the same ease of use."
+    ],
+    [
+      "Flame Blade",
+      "Residual heat in the Rathalos parts used in this great sword grants it a searing strike."
+    ],
+    [
+      "Nergal Judicator",
+      "The Nergigante scales on this great sword continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Razor",
+      "A lavish great sword of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Jagras Hacker",
+      "Lavish use of butter-soft Jagras hide makes this great sword feel like an extension of its user."
+    ],
+    [
+      "Daora's Decimator",
+      "Throw some Kushala Daora bits together and call it a day. Its icy bite will silence critics."
+    ],
+    [
+      "Giant Jawblade",
+      "A great sword made of modified bone. The primal force of each swing could split a boulder in two."
+    ],
+    [
+      "Barroth Shredder",
+      "Imbued with the destructive might of a Barroth, each swing carves new scars into the earth."
+    ],
+    [
+      "Purgation's Atrocity",
+      "Forged from Nergigante parts, it offers solemn judgment to the sinner made to kneel before it."
+    ],
+    [
+      "Jagras Edge",
+      "Wrapped in supple Jagras hide, this sword & shield fits firmly in the user's grip."
+    ],
+    [
+      "Datura Blossom",
+      "The venom-soaked down of the Pukei-Pukei covering this blade bristles at the sight of prey."
+    ],
+    [
+      "Bone Kukri",
+      "A sword & shield made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Flame Knife",
+      "Residual heat in the Rathalos parts used in this sword & shield grants it a searing strike."
+    ],
+    [
+      "Heat Edge",
+      "This sword & shield's blade carries the flame of a Rathalos within it, forever glowing a dull red."
+    ],
+    [
+      "Steel Knife",
+      "A sword & shield of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Carapace Edge",
+      "Adding Barroth parts only made this sword & shield more stark and brutish...in a good way."
+    ],
+    [
+      "Teostra's Spada",
+      "An emblem of the crimson flame king, this Teostra sword & shield is the key to hell's burning gates."
+    ],
+    [
+      "Chief Kukri",
+      "Made from the densest of bones, this sword & shield offers greater power with the same ease of use."
+    ],
+    [
+      "Blooming Knife",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Nergal Jack",
+      "The Nergigante scales on this sword & shield continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Slicer",
+      "A lavish sword & shield of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Jagras Garotte",
+      "Lavish use of butter-soft Jagras hide makes this sword & shield feel like an extension of its user."
+    ],
+    [
+      "Teostra's Emblem",
+      "An emblem of the crimson flame king, this Teostra sword & shield is the key to hell's burning gates."
+    ],
+    [
+      "Grand Barong",
+      "A sword & shield made of modified bone. Each primal slash is capable of cleaving solid rock."
+    ],
+    [
+      "Barroth Club",
+      "Imbued with the destructive might of a Barroth, each slash carves new scars into the earth."
+    ],
+    [
+      "Eradication Vanguard",
+      "Forged from Nergigante parts, it severs the chain of grief created by the sinner's acts."
+    ],
+    [
+      "Rending Beaks",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, these dual blades won't weigh you down."
+    ],
+    [
+      "Jyura Hatchets",
+      "Unrivaled in ferocity, a flurry of slashes from these Jyuratodus dual blades will shred anything."
+    ],
+    [
+      "Bone Hatchets",
+      "Dual blades made from easily obtainable bone. Rough-hewn, but sturdy friends to new hunters."
+    ],
+    [
+      "Blazing Hatchets",
+      "Dual blades wrapped in hide tempered hard as iron in the searing breath of an Anjanath."
+    ],
+    [
+      "Diablos Clubs",
+      "The absolute power of the tyrant's reign can be felt coursing through these dual blades with every slash."
+    ],
+    [
+      "Dual Slicers",
+      "Dual blades of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Madness Pangas",
+      "Fortified with Jyuratodus parts and caked in mud, these dual blades are as primal as they are deadly."
+    ],
+    [
+      "Twin Nails",
+      "When drawn, ice envelops one arm, flame the other, inflicting terrible pain on the wielder."
+    ],
+    [
+      "Wild Hatchets",
+      "Made from the densest of bones, these dual blades offer greater power with the same ease of use."
+    ],
+    [
+      "Diablos Hatchets",
+      "Harnessing the power of the desert tyrant, these dual blades gnash at enemies with an oppressive grin."
+    ],
+    [
+      "Nergal Gouge",
+      "The Nergigante scales on these dual blades continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Slicers",
+      "Lavish dual blades of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Kadachi Claws",
+      "The crackling shock of the Tobi- Kadachi fur saps at these dual blades' prey bit by bit."
+    ],
+    [
+      "Fire and Ice",
+      "When drawn, ice envelops one arm, flame the other, inflicting terrible pain on the wielder."
+    ],
+    [
+      "Strong Hatchets",
+      "Dual blades made of modified bone. Each primal flurry is capable of rending a boulder to thin slabs."
+    ],
+    [
+      "Arcanaria",
+      "These perfected Kulu-Ya-Ku dual blades grant the agility to dance circles around any mark."
+    ],
+    [
+      "Decimation Claws",
+      "Forged from Nergigante parts, they embrace the sinner with a promise of purification."
+    ],
+    [
+      "Pulsar Hatchets",
+      "The hanks of white Tobi-Kadachi fur wrapped around these dual blades are forever charged with static."
+    ],
+    [
+      "Anja Cyclone",
+      "These Anjanath dual blades' bite burns all who come within their reach to cinder."
+    ],
+    [
+      "First Dance",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this long sword won't weigh you down."
+    ],
+    [
+      "Dipterus",
+      "Unrivaled in ferocity, a single slash from this Jyuratodus long sword will cut through anything."
+    ],
+    [
+      "Bone Shotel",
+      "A long sword made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Blazing Shotel",
+      "A long sword wrapped in hide tempered hard as iron in the searing breath of an Anjanath."
+    ],
+    [
+      "Wyvern Blade \"Blood\"",
+      "A ruby red Rathalos long sword that baptizes its prey in a rush of heat and fire."
+    ],
+    [
+      "Iron Grace",
+      "A long sword of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Jyura Shotel",
+      "Fortified with Jyuratodus parts and caked in mud, this long sword is as primal as it is deadly."
+    ],
+    [
+      "Imperial Saber",
+      "Those entranced by the flame of this Teostra long sword are cut down in the blink of an eye."
+    ],
+    [
+      "Hard Bone Shotel",
+      "Made from the densest of bones, this long sword offers greater power with the same ease of use."
+    ],
+    [
+      "Wyvern Blade \"Fall\"",
+      "A ruby red Rathalos long sword that baptizes its prey in a rush of heat and fire."
+    ],
+    [
+      "Nergal Reaver",
+      "The Nergigante scales on this long sword continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Iron Gospel",
+      "A lavish long sword of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Kadachi Fang",
+      "The crackling shock of the Tobi- Kadachi fur saps at this long sword's prey bit by bit."
+    ],
+    [
+      "Imperial Shimmer",
+      "Those entranced by the flame of this Teostra long sword are cut down in the blink of an eye."
+    ],
+    [
+      "Bone Reaper",
+      "A long sword made of modified bone. Each primal slash is capable of cleaving solid rock."
+    ],
+    [
+      "Last Dance",
+      "This perfected Kulu-Ya-Ku long sword grants the agility to dance circles around any mark."
+    ],
+    [
+      "Extermination's Edge",
+      "Forged from Nergigante parts, it carves free the pure soul from within the sinner's body."
+    ],
+    [
+      "Pulsar Shotel",
+      "The hank of white Tobi-Kadachi fur wrapped around this long sword is forever charged with static."
+    ],
+    [
+      "Anja Scimitar",
+      "This Anjanath long sword's edge burns all who come within its reach to cinder."
+    ],
+    [
+      "Blooming Hammer",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Anja Striker",
+      "This Anjanath hammer's head burns all who come within its reach to cinder."
+    ],
+    [
+      "Bone Bludgeon",
+      "A hammer made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Kulu Beak",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this hammer won't weigh you down."
+    ],
+    [
+      "Diablos Shatterer",
+      "The absolute power of the tyrant's reign can be felt coursing through this hammer with every blow."
+    ],
+    [
+      "Iron Demon",
+      "A hammer of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Blazing Hammer",
+      "A hammer wrapped in hide tempered hard as iron in the searing breath of an Anjanath."
+    ],
+    [
+      "Icesteel Hammer",
+      "An icy Kushala Daora hammer made through a fusion of elder dragon parts. Bears a serpent motif."
+    ],
+    [
+      "Fossil Bludgeon",
+      "Made from the densest of bones, this hammer offers greater power with the same ease of use."
+    ],
+    [
+      "Diablos Sledge",
+      "Harnessing the power of the desert tyrant, this hammer crushes enemies like an oppressive fist."
+    ],
+    [
+      "Nergal Crusher",
+      "The Nergigante scales on this hammer continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Iron Archdemon",
+      "A lavish hammer of rare steel able to smash even the hardest of shells with ease."
+    ],
+    [
+      "Barroth Breaker",
+      "Imbued with the destructive might of a Barroth, each swing carves new scars into the earth."
+    ],
+    [
+      "Daora's Colossus",
+      "An icy Kushala Daora hammer made through a fusion of elder dragon parts. Bears a serpent motif."
+    ],
+    [
+      "Grandrock",
+      "A hammer made of modified bone. The primal force of each swing could split a boulder in two."
+    ],
+    [
+      "Buon Fiore",
+      "Those bewitched by this Pukei- Pukei hammer's beauty pay for it with their lives."
+    ],
+    [
+      "Obliteration's Footfall",
+      "Forged from Nergigante parts, it offers the sinner a final release from guilt and pain."
+    ],
+    [
+      "Carapace Sledge",
+      "Adding Barroth parts only made this hammer more stark and brutish...in a good way."
+    ],
+    [
+      "Crushing Beak",
+      "This perfected Kulu-Ya-Ku hammer grants the agility to dance circles around any mark."
+    ],
+    [
+      "Blooming Horn",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Anja Barone",
+      "This Anjanath hunting horn's melody burns all who come within hearing distance to cinder."
+    ],
+    [
+      "Bone Horn",
+      "A hunting horn made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Kulu Duda",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this hunting horn won't weigh you down."
+    ],
+    [
+      "Water Tamtam IV",
+      "Bold yet delicate tweaks have upped the power and water element of this hunting horn."
+    ],
+    [
+      "Great Bagpipe",
+      "A hunting horn of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Blazing Horn",
+      "A hunting horn wrapped in hide tempered hard as iron in the searing breath of an Anjanath."
+    ],
+    [
+      "Teostra's Tiple",
+      "Flame dances with each pluck at this Teostra hunting horn as it weaves its crimson melody."
+    ],
+    [
+      "Hard Bone Horn",
+      "Made from the densest of bones, this hunting horn offers crystalline sound with the same ease of use."
+    ],
+    [
+      "Aqua Bagpipe",
+      "New forging techniques have been used to give this iron hunting horn a water element coating."
+    ],
+    [
+      "Nergal Groove",
+      "The Nergigante scales on this hunting horn continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Fortissimo",
+      "A lavish hunting horn of rare steel able to smash even the hardest of shells with ease."
+    ],
+    [
+      "Lightning Drum IV",
+      "Bold yet delicate tweaks have upped the power and thunder element of this hunting horn."
+    ],
+    [
+      "Teostra's Orphée",
+      "Flame dances with each pluck at this Teostra hunting horn as it weaves its crimson melody."
+    ],
+    [
+      "Heavy Bone Horn",
+      "A hunting horn made of modified bone. The primal force of each note could shatter solid rock."
+    ],
+    [
+      "Datura Horn",
+      "The venom-soaked down of the Pukei-Pukei covering this horn bristles at the sight of prey."
+    ],
+    [
+      "Desolation's Overture",
+      "This Nergigante hunting horn sings with the voice of justice, separating guilty from innocent."
+    ],
+    [
+      "Thunder Gaida",
+      "New forging techniques have been used to give this iron hunting horn a thunder element coating."
+    ],
+    [
+      "Dancing Davul",
+      "This perfected Kulu-Ya-Ku horn grants the agility to dance circles around any mark."
+    ],
+    [
+      "Thunder Lance",
+      "New forging techniques have been used to give this iron lance a thunder element coating."
+    ],
+    [
+      "Water Spike IV",
+      "Bold yet delicate tweaks have upped the power and water element of this lance."
+    ],
+    [
+      "Bone Lance",
+      "A lance made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Kulu Lance",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this lance won't weigh you down."
+    ],
+    [
+      "Red Tail",
+      "Made from a Rathalos tail, this lance's blade is narrow but able to spew incredibly hot flames."
+    ],
+    [
+      "Steel Lance",
+      "A lance of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Aqua Horn",
+      "New forging techniques have been used to give this bone lance a water element coating."
+    ],
+    [
+      "Icesteel Spear",
+      "Drive this Kushala Daora lance into the ground and the nearby soil becomes barren permafrost."
+    ],
+    [
+      "Hard Bone Lance",
+      "Made from the densest of bones, this lance offers higher piercing power with the same ease of use."
+    ],
+    [
+      "Flame Lance",
+      "Residual heat in the Rathalos parts used in this lance grant it a searing strike."
+    ],
+    [
+      "Nergal Impaler",
+      "The Nergigante scales on this lance continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Lance",
+      "A lavish lance of rare steel able to pierce even the hardest of shells with ease."
+    ],
+    [
+      "Barroth Stinger",
+      "Imbued with the destructive might of a Barroth, each thrust carves new scars into the earth."
+    ],
+    [
+      "Daora's Fang",
+      "Drive this Kushala Daora lance into the ground and the nearby soil becomes barren permafrost."
+    ],
+    [
+      "Heavy Bone Lance",
+      "A lance of modified bone. The primal force of each thrust can handily pierce solid rock."
+    ],
+    [
+      "Lightning Spire",
+      "Bold yet delicate tweaks have upped the power and thunder element of this lance."
+    ],
+    [
+      "Perdition's Hand",
+      "Forged from Nergigante parts, it pries free the guilt hidden within the sinner's breast."
+    ],
+    [
+      "Carapace Lance",
+      "Adding Barroth parts only made this lance more stark and brutish...in a good way."
+    ],
+    [
+      "Kulu Hasta",
+      "This perfected Kulu-Ya-Ku lance grants the agility to dance circles around any mark."
+    ],
+    [
+      "Jagras Gunlance",
+      "Wrapped in supple Jagras hide, this gunlance fits firmly in the user's grip."
+    ],
+    [
+      "Jyura Buster",
+      "Unrivaled in ferocity, a salvo of shots from this Jyuratodus gunlance will aerate anything."
+    ],
+    [
+      "Bone Gunlance",
+      "A gunlance made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Carapace Cannon",
+      "Adding Barroth parts only made this gunlance more stark and brutish...in a good way."
+    ],
+    [
+      "Red Rook",
+      "This vermilion gunlance is an emblem of the Rathalos, and shares its blazing roar."
+    ],
+    [
+      "Steel Gunlance",
+      "A gunlance of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Madness Gunlance",
+      "Fortified with Jyuratodus parts and caked in mud, this gunlance is as primal as it is deadly."
+    ],
+    [
+      "Icesteel Gunlance",
+      "This Kushala Daora gunlance weds the lion's imposing roar with the biting talons of an eagle."
+    ],
+    [
+      "Bone Cannon",
+      "Made from the densest of bones, this gunlance offers more firepower with the same ease of use."
+    ],
+    [
+      "Rath Gunlance",
+      "Residual heat in the Rathalos parts used in this gunlance grants it a searing strike."
+    ],
+    [
+      "Nergal Ram",
+      "The Nergigante scales on this gunlance continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Gunlance",
+      "A lavish gunlance of rare steel able to penetrate even the hardest of shells with ease."
+    ],
+    [
+      "Glutton Gunlance",
+      "Lavish use of butter-soft Jagras hide makes this gunlance feel like an extension of its user."
+    ],
+    [
+      "Daora's Brigia",
+      "This Kushala Daora gunlance weds the lion's imposing roar with the biting talons of an eagle."
+    ],
+    [
+      "Great Bone Gunlance",
+      "A gunlance made of modified bone. The primal force of each shot can bore through solid rock."
+    ],
+    [
+      "Barroth Blaster",
+      "Imbued with the destructive might of a Barroth, each shot carves new scars into the earth."
+    ],
+    [
+      "Eradication Flame",
+      "Forged from Nergigante parts. Its fangs bared, the sinner lost in shadow at last sees light."
+    ],
+    [
+      "Carapace Axe",
+      "Adding Barroth parts only made this switch axe more stark and brutish...in a good way."
+    ],
+    [
+      "Rathbringer Axe",
+      "A switch axe made host to a Rathalos' fury, said to be able to rend earth and sky apart."
+    ],
+    [
+      "Bone Axe",
+      "A switch axe made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Flammenbeil",
+      "A consecrated cord was wrapped around this Anjanath switch axe to seal the fury within it."
+    ],
+    [
+      "Axe Semper Tyrannis",
+      "Made of a Diablos' razor-sharp armor plating, this switch axe shreds its prey with ease."
+    ],
+    [
+      "Improved Steel Axe",
+      "A switch axe of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Rathalos Axe",
+      "Residual heat in the Rathalos parts used in this switch axe grants it a searing strike."
+    ],
+    [
+      "Teostra's Arx",
+      "Flickering dragonfire coats this Teostra switch axe, soaring ever skyward on crimson wings."
+    ],
+    [
+      "Bone Smasher",
+      "Made from the densest of bones, this switch axe offers greater power with the same ease of use."
+    ],
+    [
+      "Diablos Axe",
+      "Harnessing the power of the desert tyrant, this switch axe gnashes at enemies with an oppressive grin."
+    ],
+    [
+      "Nergal Gash",
+      "The Nergigante scales on this switch axe continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Perfected Alloy Axe",
+      "A lavish switch axe of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Barroth Grinder",
+      "Imbued with the destructive might of a Barroth, each swing carves new scars into the earth."
+    ],
+    [
+      "Teostra's Castle",
+      "Flickering dragonfire coats this Teostra switch axe, soaring ever skyward on crimson wings."
+    ],
+    [
+      "Power Smasher",
+      "A switch axe made of modified bone. The primal force of each swing could split a boulder in two."
+    ],
+    [
+      "Gnashing Flammenbeil",
+      "A consecrated cord was wrapped around this Anjanath switch axe to seal the fury within it."
+    ],
+    [
+      "Dying Light",
+      "Forged from Nergigante parts, its blade represents the two choices the sinner faces."
+    ],
+    [
+      "Jagras Strongarm",
+      "Wrapped in supple Jagras hide, this charge blade fits firmly in the user's grip."
+    ],
+    [
+      "Jyura Depth",
+      "Unrivaled in ferocity, a single blow from this Jyuratodus charge blade will tear anything apart."
+    ],
+    [
+      "Bone Strongarm",
+      "A charge blade made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Pulsar Strongarm",
+      "The hank of white Tobi-Kadachi fur wrapped around this charge blade is forever charged with static."
+    ],
+    [
+      "Diablos Tyrannis",
+      "The absolute power of the tyrant's reign can be felt coursing through this charge blade with every blow."
+    ],
+    [
+      "Elite Commission Axe",
+      "A charge blade of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Mudslide Blade",
+      "Fortified with Jyuratodus parts and caked in mud, this charge blade is as primal as it is deadly."
+    ],
+    [
+      "Daora's Casca",
+      "A Kushala Daora charge blade in the likeness of a northern god. The wise shield repels danger."
+    ],
+    [
+      "Hard Bone Strongarm",
+      "Made from the densest of bones, this charge blade offers greater power with the same ease of use."
+    ],
+    [
+      "Diablos Wall",
+      "Harnessing the power of the desert tyrant, this charge blade gnashes at enemies with an oppressive grin."
+    ],
+    [
+      "Nergal Lacerator",
+      "The Nergigante scales on this charge blade continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Guardian",
+      "A lavish charge blade of rare steel able to split even the hardest of shells with ease."
+    ],
+    [
+      "Jagras Escudo",
+      "Lavish use of butter-soft Jagras hide makes this charge blade feel like a part of its user."
+    ],
+    [
+      "Daora's Thwartoise",
+      "A Kushala Daora charge blade in the likeness of a northern god. The wise shield repels danger."
+    ],
+    [
+      "Mighty Strongarm",
+      "A charge blade made of modified bone. The primal force of each swing could split a boulder in two."
+    ],
+    [
+      "Kadachi Kaina",
+      "The crackling shock of the Tobi- Kadachi fur saps at this charge blade's prey bit by bit."
+    ],
+    [
+      "Devastation's Thorns",
+      "Forged from Nergigante parts, its every spike reflects a sin, each stab an act of absolution."
+    ],
+    [
+      "Kulu Blade",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this insect glaive won't weigh you down."
+    ],
+    [
+      "Rathmaul",
+      "An insect glaive made host to a Rathalos' fury, said to be able to rend earth and sky apart."
+    ],
+    [
+      "Bone Rod",
+      "An insect glaive made of easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Flammenkaefer",
+      "When blood fills the cracks upon this Anjanath insect glaive's surface, it pulses with heat."
+    ],
+    [
+      "Tyrannis Glaive",
+      "The absolute power of the tyrant's reign can be felt coursing through this insect glaive with every blow."
+    ],
+    [
+      "Steel Blade",
+      "An insect glaive of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Flame Glaive",
+      "Residual heat in the Rathalos parts used in this insect glaive grants it a searing strike."
+    ],
+    [
+      "Daora's Entom",
+      "This Kushala Daora insect glaive flashes like a bolt hitting the icy sea as it claims its prey."
+    ],
+    [
+      "Hard Bone Rod",
+      "Made from the densest of bones, this insect glaive offers more power with the same ease of use."
+    ],
+    [
+      "Diablos Rod",
+      "Harnessing the power of the desert tyrant, this insect glaive smashes enemies like an oppressive fist."
+    ],
+    [
+      "Nergal Reaper",
+      "The Nergigante scales on this insect glaive continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Blade",
+      "A lavish insect glaive of rare steel able to smash even the hardest of shells with ease."
+    ],
+    [
+      "Datura Blade",
+      "The venom-soaked down of the Pukei-Pukei covering this glaive bristles at the sight of prey."
+    ],
+    [
+      "Daora's Tethidine",
+      "This Kushala Daora insect glaive flashes like a bolt hitting the icy sea as it claims its prey."
+    ],
+    [
+      "Aerial Magus",
+      "An insect glaive made of only the rarest bones. Powerful enough to pulverize steel."
+    ],
+    [
+      "Ya-Ku Wrath",
+      "This perfected Kulu-Ya-Ku insect glaive grants the agility to dance circles around any mark."
+    ],
+    [
+      "Catastrophe's Light",
+      "Forged from Nergigante parts, its twin horns point heavenward to show the way to sinners."
+    ],
+    [
+      "Blooming Glaive",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Gnashing Flammensucher",
+      "A pulsing heat builds within the blade from this Anjanath sword & shield set with every bloodthirsty strike."
+    ],
+    [
+      "Blooming Arch",
+      "The Pukei-Pukei's colorful down hides potent venom, a deadly secret that catches prey unaware."
+    ],
+    [
+      "Anja Arch",
+      "The scorching arrows from this Anjanath bow cauterize flesh as they penetrate their prey."
+    ],
+    [
+      "Hunter's Bow",
+      "A bow made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Kulu Arrow",
+      "Fortified with thin yet durable Kulu-Ya-Ku hide, this bow won't weigh you down."
+    ],
+    [
+      "Diablos Coilbender",
+      "The heavy resistance provided by its twin Diablos horns makes this bow a challenge to draw."
+    ],
+    [
+      "Steel Bow",
+      "A bow of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Blazing Bow",
+      "A bow wrapped in hide tempered hard as iron in the searing breath of an Anjanath."
+    ],
+    [
+      "Icesteel Bow",
+      "Bearing a flying steed motif, this Kushala Daora bow is valued as a work of fine art."
+    ],
+    [
+      "Hunter's Stoutbow",
+      "Made from the densest of bones, this bow offers greater piercing with ease of use."
+    ],
+    [
+      "Diablos Bow",
+      "Harnessing the power of the desert tyrant, this bow looses arrows with absolute authority."
+    ],
+    [
+      "Nergal Whisper",
+      "The Nergigante scales on this bow continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Alloy Bow",
+      "A lavish bow of rare steel able to penetrate even the hardest of shells with ease."
+    ],
+    [
+      "Flying Kadachi Strikebow",
+      "Made of electrified Tobi-Kadachi parts, this bow amplifies the static produced when firing."
+    ],
+    [
+      "Daora's Sagittarii",
+      "Bearing a flying steed motif, this Kushala Daora bow is valued as a work of fine art."
+    ],
+    [
+      "Hunter's Proudbow",
+      "A bow of modified bone. The blinding speed of each shot can easily penetrate solid rock."
+    ],
+    [
+      "Datura String",
+      "The venom-soaked down of the Pukei-Pukei covering this bow bristles at the sight of prey."
+    ],
+    [
+      "Doom's Shaft",
+      "Forged from Nergigante parts, it is drawn to the sinner, its roar an arrow of holy judgment."
+    ],
+    [
+      "Pulsar Bow",
+      "The hank of white Tobi-Kadachi fur wrapped around this bow is forever charged with static."
+    ],
+    [
+      "Archer's Dance",
+      "This perfected Kulu-Ya-Ku bow grants the agility to dance circles around any mark."
+    ],
+    [
+      "Jagras Blitz",
+      "Wrapped in supple Jagras hide, this light bowgun fits firmly in the user's grip."
+    ],
+    [
+      "Jyura Bullet IV",
+      "Unrivaled in ferocity, a salvo of shots from this Jyuratodus bowgun will aerate anything."
+    ],
+    [
+      "Hunter's Rifle",
+      "A light bowgun made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Carapace Rifle",
+      "Adding Barroth parts only made this light bowgun more stark and brutish...in a good way."
+    ],
+    [
+      "Rathbuster",
+      "A light bowgun made host to a Rathalos' fury, said to be able to rend earth and sky apart."
+    ],
+    [
+      "High Chain Blitz",
+      "A light bowgun of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Madness Rifle",
+      "Fortified with Jyuratodus parts and caked in mud, this light bowgun is as primal as it is deadly."
+    ],
+    [
+      "Icesteel Wasp",
+      "This Kushala Daora light bowgun rains a storm of icy bullets fit to shame the worst winter hail."
+    ],
+    [
+      "Power Rifle",
+      "Made from the densest of bones, this light bowgun adds firepower with the same ease of use."
+    ],
+    [
+      "Flame Blitz",
+      "Residual heat in the Rathalos parts used in this light bowgun grants its bolts a searing bite."
+    ],
+    [
+      "Nergal Spitter",
+      "This light bowgun's Nergigante scales constantly regrow, promising unending pain to foes."
+    ],
+    [
+      "Cross Blitz",
+      "A lavish light bowgun of rare steel able to pierce even the hardest of shells with ease."
+    ],
+    [
+      "Jagras Fire",
+      "Lavish use of butter-soft Jagras hide makes this light bowgun feel like a part of its user."
+    ],
+    [
+      "Daora's Hornet",
+      "This Kushala Daora light bowgun rains a storm of icy bullets fit to shame the worst winter hail."
+    ],
+    [
+      "Sniper Shot",
+      "A light bowgun of modified bone. The blinding speed of each shot can easily penetrate solid rock."
+    ],
+    [
+      "Barroth Shot",
+      "Imbued with the destructive might of a Barroth, each shot carves new scars into the earth."
+    ],
+    [
+      "Cataclysm's Trigger",
+      "The bolts fired from this Nergigante light bowgun protrude from prey like grave markers."
+    ],
+    [
+      "Jagras Assault",
+      "Wrapped in supple Jagras hide, this heavy bowgun fits firmly in the user's grip."
+    ],
+    [
+      "Datura Blaster IV",
+      "The venom-soaked down of the Pukei-Pukei covering this bowgun bristles at the sight of prey."
+    ],
+    [
+      "Bone Shooter",
+      "A heavy bowgun made from easily obtainable bone. Rough-hewn, but a sturdy friend to new hunters."
+    ],
+    [
+      "Pulsar Shooter",
+      "The hank of white Tobi-Kadachi fur wrapped around this heavy bowgun is forever charged with static."
+    ],
+    [
+      "Dual Threat",
+      "A Diablos heavy bowgun adorned with two proud horns. Made with one-on-one showdowns in mind."
+    ],
+    [
+      "Steel Assault",
+      "A heavy bowgun of fine steel, with improved durability and power for more demanding hunts."
+    ],
+    [
+      "Blooming Shooter",
+      "The Pukei-Pukei's colorful down hides potent venom, making this a lot less cute than it looks."
+    ],
+    [
+      "Teostra's Artillery",
+      "Beneath the beautiful exterior of this Teostra heavy bowgun beats a heart of searing fire."
+    ],
+    [
+      "Heavy Shooter",
+      "Made from the densest of bones, this heavy bowgun adds firepower with the same ease of use."
+    ],
+    [
+      "Diablos Shooter",
+      "Harnessing the power of the desert tyrant, this heavy bowgun oppresses enemies with its almighty power."
+    ],
+    [
+      "Nergal Roar",
+      "The Nergigante scales on this heavy bowgun continually regrow, promising unending pain to foes."
+    ],
+    [
+      "Chrome Assault",
+      "A lavish heavy bowgun of rare steel able to pierce even the hardest of shells with ease."
+    ],
+    [
+      "Jagras Cannon",
+      "Lavish use of butter-soft Jagras hide makes this heavy bowgun feel like a part of its user."
+    ],
+    [
+      "Teostra's Flames",
+      "Beneath the beautiful exterior of this Teostra heavy bowgun beats a heart of searing fire."
+    ],
+    [
+      "Power Shooter",
+      "A heavy bowgun of modified bone. The primal force of each shot can bore through solid rock."
+    ],
+    [
+      "Kadachi Lion IV",
+      "The crackling shock of the Tobi- Kadachi fur saps at this heavy bowgun's prey bit by bit."
+    ],
+    [
+      "Destruction's Fusillade",
+      "Forged from Nergigante parts, its thorns pierce the sinner's flesh and cleanse their soul."
+    ],
+    [
+      "Buster Sword",
+      "A crude iron great sword that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Hunter's Knife",
+      "A crude iron sword & shield that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Matched Slicers",
+      "A crude set of iron dual blades that, despite their mass-produced quality, pack quite a punch."
+    ],
+    [
+      "Iron Katana",
+      "A crude iron long sword that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Hammer",
+      "A crude iron hammer that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Metal Bagpipe",
+      "A crude iron hunting horn that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Lance",
+      "A crude iron lance that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Gunlance",
+      "A crude iron gunlance that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Proto Iron Axe",
+      "A crude iron switch axe that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Proto Commission Axe",
+      "A crude iron charge blade that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Blade",
+      "A crude iron insect glaive that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Bow",
+      "A crude iron bow that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Chain Blitz",
+      "A crude iron light bowgun that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Iron Assault",
+      "A crude iron heavy bowgun that, despite its mass-produced quality, packs quite a punch."
+    ],
+    [
+      "Twin Nails",
+      "When drawn, ice envelops one arm, flame the other, inflicting terrible pain on the wielder."
+    ],
+    [
+      "Fire and Ice",
+      "When drawn, ice envelops one arm, flame the other, inflicting terrible pain on the wielder."
+    ]
+  ],
+  "armor-set": {
+    "leather": "Armor made of treated monster hide. A safe choice, designed for multi-purpose use.",
+    "chainmail": "Armor made of woven chain links. Its familiar design inspires trust in hunters who wear it.",
+    "alloy": "Armor made of fine machalite ore. What it lacks in charm it more than makes up in defense.",
+    "bone": "Traditional armor crafted from monster bones. Believe it or not, it offers pretty good insulation.",
+    "barr": "A wyvern could trample this armor made of Barroth shell and not leave a single crack.",
+    "g-jagr": "Diligently polished Great Jagras scale marries steel in beautiful harmony in this armor.",
+    "kulu": "The elegant color and beautiful design of this Kulu-Ya-Ku armor make it perennially popular.",
+    "puke": "Pukei-Pukei armor engineered to protect vital body parts with a very modest amount of materials.",
+    "tobi": "Exquisitely light, this soft Tobi-Kadachi armor is so comfy you can barely feel it on.",
+    "anja": "Modeled after an unknown hunting tribe's hunting garb, the Anja armor's design is a symbol of bravery.",
+    "jyur": "A special process was used to treat the hard mud caked on this Jyuratodus armor in order to improve durability.",
+    "a-rath": "Azure armor imbued with absolute power. Those who wear it are destined to make history.",
+    "b-diab": "Brutal-looking armor made from Black Diablos parts. So imposing none so much as dare approach it.",
+    "diab": "The bold horns on this Diablos armor are a challenge to any who doubt your rule over the sands.",
+    "rath": "Crafted from parts carved from the King of the Skies, this crimson armor boasts overwhelming defense.",
+    "kush": "Uniquely crafted Kushala Daora armor. The immeasurable strength of a tempered monster dwells within.",
+    "nerg": "Uniquely crafted Nergigante armor. The immeasurable strength of a tempered monster dwells within.",
+    "teos": "Uniquely crafted Teostra armor. The immeasurable strength of a tempered monster dwells within."
+  },
+  "forge": {
+    "armor-set": {
+      "leather": {
+        "rare": 1,
+        "pcs": [51, 52, 53]
+      },
+      "chainmail": {
+        "rare": 1,
+        "pcs": [48, 49, 50]
+      },
+      "alloy": {
+        "rare": 2,
+        "pcs": [0, 1, 2]
+      },
+      "bone": {
+        "rare": 2,
+        "pcs": [3, 4, 5]
+      },
+      "barr": {
+        "rare": 3,
+        "pcs": [21, 22, 23]
+      },
+      "g-jagr": {
+        "rare": 3,
+        "pcs": [6, 7, 8]
+      },
+      "kulu": {
+        "rare": 3,
+        "pcs": [36, 37, 38]
+      },
+      "puke": {
+        "rare": 3,
+        "pcs": [24, 25, 26]
+      },
+      "tobi": {
+        "rare": 3,
+        "pcs": [9, 10, 11]
+      },
+      "anja": {
+        "rare": 3,
+        "pcs": [12, 13, 14]
+      },
+      "jyur": {
+        "rare": 3,
+        "pcs": [27, 28, 29]
+      },
+      "a-rath": {
+        "rare": 4,
+        "pcs": [18, 19, 20]
+      },
+      "b-diab": {
+        "rare": 4,
+        "pcs": [33, 34, 35]
+      },
+      "diab": {
+        "rare": 4,
+        "pcs": [30, 31, 32]
+      },
+      "rath": {
+        "rare": 4,
+        "pcs": [15, 16, 17]
+      },
+      "kush": {
+        "rare": 5,
+        "pcs": [45, 46, 47]
+      },
+      "nerg": {
+        "rare": 5,
+        "pcs": [42, 43, 44]
+      },
+      "teos": {
+        "rare": 5,
+        "pcs": [39, 40, 41]
+      }
+    },
+    "weapon-type": {
+      "bow": {
+        "alloy": [263, 204, 210],
+        "bone": [201, 207, 213],
+        "tobi": [201, 216, 211],
+        "anja": [201, 205, 200],
+        "puke": [201, 199, 214],
+        "diab": [201, 208, 203],
+        "kulu": [263, 202, 217],
+        "kush": [263, 206, 212],
+        "nerg": [263, 209, 215]
+      },
+      "blade": {
+        "alloy": [261, 168, 174],
+        "bone": [165, 171, 177],
+        "g-jagr": [165, 163, 175],
+        "tobi": [165, 166, 178],
+        "jyur": [261, 169, 164],
+        "diab": [165, 172, 167],
+        "kush": [261, 170, 176],
+        "nerg": [261, 173, 179]
+      },
+      "blades": {
+        "alloy": [254, 39, 45],
+        "bone": [36, 42, 48],
+        "tobi": [36, 51, 46],
+        "anja": [36, 37, 52],
+        "jyur": [36, 40, 35],
+        "diab": [36, 43, 38],
+        "kulu": [254, 34, 49],
+        "teos": [254, 41, 47],
+        "kush": [254, 266, 267],
+        "nerg": [254, 44, 50]
+      },
+      "g-sword": {
+        "alloy": [252, 5, 11],
+        "bone": [2, 8, 14],
+        "g-jagr": [252, 0, 12],
+        "rath": [252, 9, 4],
+        "puke": [252, 6, 1],
+        "barr": [2, 3, 15],
+        "kush": [252, 7, 13],
+        "nerg": [252, 10, 16]
+      },
+      "gunlance": {
+        "alloy": [259, 134, 140],
+        "bone": [131, 137, 143],
+        "g-jagr": [131, 129, 141],
+        "rath": [259, 138, 133],
+        "barr": [131, 132, 144],
+        "jyur": [259, 135, 130],
+        "kush": [259, 136, 142],
+        "nerg": [259, 139, 145]
+      },
+      "hammer": {
+        "alloy": [256, 77, 83],
+        "bone": [74, 80, 86],
+        "anja": [74, 78, 73],
+        "barr": [74, 89, 84],
+        "puke": [256, 72, 87],
+        "diab": [74, 81, 76],
+        "kulu": [74, 75, 90],
+        "kush": [256, 79, 85],
+        "nerg": [256, 82, 88]
+      },
+      "h-bowgun": {
+        "alloy": [265, 240, 246],
+        "bone": [237, 243, 249],
+        "g-jagr": [265, 235, 247],
+        "tobi": [237, 238, 250],
+        "puke": [237, 241, 236],
+        "diab": [237, 244, 239],
+        "teos": [265, 242, 248],
+        "nerg": [265, 245, 251]
+      },
+      "horn": {
+        "alloy": [257, 96, 102],
+        "bone": [93, 99, 105],
+        "tobi": [93, 108, 103],
+        "anja": [257, 97, 92],
+        "puke": [93, 91, 106],
+        "jyur": [93, 100, 95],
+        "kulu": [257, 94, 109],
+        "teos": [257, 98, 104],
+        "nerg": [257, 101, 107]
+      },
+      "glaive": {
+        "alloy": [262, 185, 191],
+        "bone": [182, 188, 194],
+        "anja": [182, 183, 198],
+        "rath": [262, 186, 181],
+        "puke": [262, 197, 192],
+        "diab": [182, 189, 184],
+        "kulu": [182, 180, 195],
+        "kush": [182, 187, 193],
+        "nerg": [182, 190, 196]
+      },
+      "lance": {
+        "alloy": [258, 115, 121],
+        "bone": [112, 118, 124],
+        "tobi": [112, 110, 125],
+        "rath": [258, 119, 114],
+        "barr": [112, 127, 122],
+        "jyur": [112, 116, 111],
+        "kulu": [258, 113, 128],
+        "kush": [258, 117, 123],
+        "nerg": [258, 120, 126]
+      },
+      "l-bowgun": {
+        "alloy": [264, 223, 229],
+        "bone": [220, 226, 232],
+        "g-jagr": [264, 218, 230],
+        "rath": [264, 227, 222],
+        "barr": [220, 221, 233],
+        "jyur": [220, 224, 219],
+        "kush": [264, 225, 231],
+        "nerg": [264, 228, 234]
+      },
+      "l-sword": {
+        "alloy": [255, 58, 64],
+        "bone": [55, 61, 67],
+        "jyur": [55, 59, 54],
+        "tobi": [55, 70, 65],
+        "anja": [55, 56, 71],
+        "rath": [255, 62, 57],
+        "kulu": [255, 53, 68],
+        "teos": [255, 60, 66],
+        "nerg": [255, 63, 69]
+      },
+      "axe": {
+        "alloy": [260, 151, 157],
+        "bone": [148, 154, 160],
+        "anja": [148, 149, 161],
+        "rath": [260, 152, 147],
+        "barr": [148, 146, 158],
+        "diab": [148, 155, 150],
+        "teos": [260, 153, 159],
+        "nerg": [260, 156, 162]
+      },
+      "shield": {
+        "alloy": [253, 22, 28],
+        "bone": [19, 25, 31],
+        "g-jagr": [19, 17, 29],
+        "rath": [253, 20, 21],
+        "puke": [253, 26, 18],
+        "barr": [19, 23, 32],
+        "teos": [253, 24, 30],
+        "nerg": [253, 27, 33]
+      }
+    }
+  },
+  "track-token": {
+    "-2": 1,
+    "-1": 1,
+    "0": 2,
+    "1": 13,
+    "2": 3
+  },
+  "ele-damage": {
+    "1": 3,
+    "2": 3,
+    "3": 3,
+    "4": 1
+  },
+  "scoutfly": [
+    [2, 5],
+    [3, 6],
+    [4, 7]
+  ]
+}

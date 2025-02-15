@@ -1,0 +1,372 @@
+{
+  "legi": {
+    "species": "Flying Wyvern",
+    "name": "Legiana",
+    "resistance": {
+      "fire": 2,
+      "ice": 0,
+      "water": 0,
+      "dragon": 0,
+      "thunder": 1,
+      "paralysis": 1,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "difficulty": [1, 2, 3],
+    "arrange": ["head", "wing", "torso", "tail"],
+    "levels": [
+      {
+        "hp": 80,
+        "head": {
+          "arc": "8",
+          "armor": 3,
+          "break": 6,
+          "broken": "Behaviours with [ice] have -1 [attack]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 3,
+          "break": 5,
+          "broken": "Behaviors with [wing] get +1 [hunter-turn] and +1 [hunter-card]."
+        },
+        "torso": {
+          "arc": "46",
+          "armor": 4,
+          "break": 6,
+          "broken": "Behaviors with [ice] get +1 [hunter-turn]."
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 3,
+          "break": 6,
+          "broken": "Discard the top card of the behavior deck."
+        }
+      },
+      {
+        "hp": 85,
+        "head": {
+          "arc": "8",
+          "armor": 3,
+          "break": 6,
+          "broken": "Behaviours with [ice] have -1 [attack]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 4,
+          "break": 6,
+          "broken": "Behaviors with [wing] get +1 [hunter-turn] and +1 [hunter-card]."
+        },
+        "torso": {
+          "arc": "46",
+          "armor": 4,
+          "break": 6,
+          "broken": "Behaviors with [ice] get +1 [hunter-turn]."
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 4,
+          "break": 6,
+          "broken": "Discard the top card of the behavior deck."
+        }
+      },
+      {
+        "hp": 90,
+        "head": {
+          "arc": "8",
+          "armor": 4,
+          "break": 7,
+          "broken": "Behaviours with [ice] have -1 [attack]."
+        },
+        "wing": {
+          "arc": "46",
+          "armor": 4,
+          "break": 6,
+          "broken": "Behaviors with [wing] get +1 [hunter-turn] and +1 [hunter-card]."
+        },
+        "torso": {
+          "arc": "46",
+          "armor": 5,
+          "break": 7,
+          "broken": "Behaviors with [ice] get +1 [hunter-turn]."
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 4,
+          "break": 6,
+          "broken": "Discard the top card of the behavior deck."
+        }
+      }
+    ],
+    "skills": [
+      {
+        "skill-name": "Flying Menace",
+        "skill": "At 35 health, remove [bite] and [tackle] from the behavior deck."
+      },
+      {
+        "skill-name": "Flying Predator",
+        "skill": "At 50 health, remove [bite] and [tackle] from the behavior deck. Behaviors with [ice] get +1 [attack]."
+      },
+      {
+        "skill-name": "Flying Tyrant",
+        "skill": "At 55 health, remove [bite] and [tackle] from the behavior deck. Behaviors get +1 [attack]."
+      }
+    ],
+    "rewards": {
+      "1": "Coral Crystal",
+      "2": "Tzitzi-ya-ku Scale",
+      "3": "Tzitzi-ya-ku Photophore",
+      "4": "Tzitzi-ya-ku Hide",
+      "5": "Tzitzi-ya-ku Claw",
+      "6": "Tzitzi-ya-ku Scale",
+      "7": "Tzitzi-ya-ku Scale",
+      "8": "Bird Wyvern Gem",
+      "9": "Tzitzi-ya-ku Claw",
+      "10": "Tzitzi-ya-ku Hide",
+      "11": "Coral Crystal",
+      "12": "Tzitzi-ya-ku Photophore"
+    },
+    "part-rewards": {
+      "head": "Tzitzi-ya-ku Photophore",
+      "claws": "Tzitzi-ya-ku Claw",
+      "tail": "Tzitzi-ya-ku Scale"
+    },
+    "behavior-names": [
+      "Bite",
+      "Tackle",
+      "Flying Stomp",
+      "Swooping Strike",
+      "Scratch",
+      "Tail Sweep Left",
+      "Tail Sweep Right",
+      "Tail Slam",
+      "Icy Tail Slam",
+      "Flying Torpedo",
+      "Icy Torpedo",
+      "Ice Blast",
+      "Ice Wave"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 0, "dir": 8 },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1002,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "86"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1003,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 4,
+            "dir": "82"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "id": 1004,
+        "part": "torso",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "82"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1005,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 1 }
+        ]
+      },
+      {
+        "id": 1006,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "42"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1007,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "62"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1008,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1009,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "ele": "ice",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1010,
+        "part": "wing",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "82"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1011,
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "ele": "ice",
+            "value": 9,
+            "range": 1,
+            "dodge": 5,
+            "dir": "82",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "id": 1012,
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 0, "dir": "8" },
+          {
+            "type": "attack",
+            "ele": "ice",
+            "value": 10,
+            "range": 4,
+            "dodge": 4,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1013,
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 0, "dir": "8" },
+          {
+            "type": "attack",
+            "ele": "ice",
+            "value": 9,
+            "range": 2,
+            "dodge": 4,
+            "dir": "846",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      }
+    ]
+  }
+}

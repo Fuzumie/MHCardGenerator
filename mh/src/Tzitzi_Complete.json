@@ -1,0 +1,340 @@
+{
+  "tzit": {
+    "species": "Bird Wyvern",
+    "name": "Tzitzi-ya-ku",
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "difficulty": [1, 2, 3],
+    "arrange": ["head", "", "claws", "tail"],
+    "levels": [
+      {
+        "hp": 60,
+        "head": {
+          "arc": "8",
+          "armor": 1,
+          "break": 3,
+          "broken": "Behaviours with [flash] have -2 [range]."
+        },
+        "claws": { "arc": "46", "armor": 1, "break": 4, "broken": "" },
+        "tail": { "arc": "2", "armor": 1, "break": 4, "broken": "" }
+      },
+      {
+        "hp": 65,
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 5,
+          "broken": "Behaviours with [flash] have -2 [range]."
+        },
+        "claws": {
+          "arc": "46",
+          "armor": 2,
+          "break": 5,
+          "broken": "Behaviours with [claws] have -1 [attack]."
+        },
+        "tail": { "arc": "2", "armor": 1, "break": 4, "broken": "" }
+      },
+      {
+        "hp": 70,
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 5,
+          "broken": "Behaviours with [flash] have -2 [range]."
+        },
+        "claws": {
+          "arc": "46",
+          "armor": 2,
+          "break": 5,
+          "broken": "Behaviours with [claws] have -1 [attack]."
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 2,
+          "break": 5,
+          "broken": "Remove the top card from the behavior deck. Shuffle the behavior discard into the behavior deck."
+        }
+      }
+    ],
+    "skills": [
+      {
+        "skill-name": "Photogenic",
+        "skill": "If any hunter is hit by a [flash] attack, reduce [hunter-turn] to 0."
+      },
+      {
+        "skill-name": "Flash Photography",
+        "skill": "If any hunter is hit by a [flash] attack, reduce [hunter-turn] to 0 and the monster's next behavior has +1 [attack]."
+      },
+      {
+        "skill-name": "Blinding Pulse",
+        "skill": "If any hunter is hit by a [flash] attack, reduce [hunter-turn] to 0 and the monster's next behavior has +1 [attack] and +1 [dodge]."
+      }
+    ],
+    "rewards": {
+      "1": "Coral Crystal",
+      "2": "Tzitzi-ya-ku Scale",
+      "3": "Tzitzi-ya-ku Photophore",
+      "4": "Tzitzi-ya-ku Hide",
+      "5": "Tzitzi-ya-ku Claw",
+      "6": "Tzitzi-ya-ku Scale",
+      "7": "Tzitzi-ya-ku Scale",
+      "8": "Bird Wyvern Gem",
+      "9": "Tzitzi-ya-ku Claw",
+      "10": "Tzitzi-ya-ku Hide",
+      "11": "Coral Crystal",
+      "12": "Tzitzi-ya-ku Photophore"
+    },
+    "part-rewards": {
+      "head": "Tzitzi-ya-ku Photophore",
+      "claws": "Tzitzi-ya-ku Claw",
+      "tail": "Tzitzi-ya-ku Scale"
+    },
+    "behavior-names": [
+      "Flash",
+      "Sidestep Flash",
+      "Swipe",
+      "Slash Left",
+      "Slash Right",
+      "Tail Sweep Left",
+      "Tail Sweep Right",
+      "Backwards Left Kick",
+      "Backwards Right Kick",
+      "Pounce",
+      "Retreating Flash",
+      "Double Swipe",
+      "Jumping Slam"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "part": "head",
+        "target": "close",
+        "extra": "flash",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 1 },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1002,
+        "part": "head",
+        "target": "far",
+        "extra": "flash",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 1 },
+          { "type": "move", "value": 1, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1003,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "id": 1004,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "84"
+          },
+          { "type": "move", "value": 1, "dir": "6" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1005,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 4,
+            "dir": "86"
+          },
+          { "type": "move", "value": 1, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1006,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "842"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1007,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "862"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1008,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "42"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1009,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "62"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1010,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "846",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1011,
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "extra": "flash",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 1 },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1012,
+        "part": "claws",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "846",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1013,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8462",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 3 }
+        ]
+      }
+    ]
+  }
+}
