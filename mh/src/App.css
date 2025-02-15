@@ -172,8 +172,10 @@
   transform: translate(-50%, -50%) scaleX(0.9);
   color: #fff;
   font-size: 4em;
-  font-family: "Roboto", sans-serif;
-  -webkit-text-stroke: 3px #000;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
   letter-spacing: -0.1em;
 }
 .target-area {
