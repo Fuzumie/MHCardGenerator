@@ -501,6 +501,9 @@
 .sharpen {
   background: url(assets/sharpen.png) center center/contain;
 }
+.tail {
+  background: url(assets/part/tail.png) center center/contain;
+}
 .icon-status {
   position: relative;
   top: -0.3em;
@@ -508,7 +511,7 @@
   width: 1.25em;
   aspect-ratio: 1;
   margin: -0.25em 0;
-  isolation: isolate;
+  /*isolation: isolate;*/
   align-items: center;
   justify-content: center;
 }
