@@ -321,7 +321,7 @@
   width: 4.375em;
   aspect-ratio: 1;
   right: 1%;
-  transform: translateY(-165%) translateX(30%);
+  transform: translateY(-175%) translateX(50%);
   top: 50%;
   background: url(assets/behavior-arcs.png) center center/contain no-repeat;
 }
@@ -329,6 +329,37 @@
 .dir.node {
   background: url(assets/behavior-node.png) center center/contain no-repeat;
 }
+.dir .atk {
+  background: url(assets/behavior-node.png) center center/contain no-repeat;
+  font-size: 8px;
+}
+
+.dir .atkdir-9 {
+  transform: translate(150%, -300%);
+}
+.dir .atkdir-8 {
+  transform: translate(-50%, -300%);
+}
+.dir .atkdir-7 {
+  transform: translate(-250%, -300%);
+}
+.dir .atkdir-6 {
+  transform: translate(150%, -50%) rotate(90deg);
+}
+.dir .atkdir-4 {
+  transform: translate(-250%, -50%) rotate(-90deg);
+}
+.dir .atkdir-3 {
+  transform: translate(150%, 200%) rotate(-90deg);
+}
+.dir .atkdir-2 {
+  transform: translate(-50%, 200%) rotate(180deg);
+}
+.dir .atkdir-1 {
+  transform: translate(-250%, 200%) rotate(180deg);
+}
+
+
 .dir > div {
   position: absolute;
   width: 2em;

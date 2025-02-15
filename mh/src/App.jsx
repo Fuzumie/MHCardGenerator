@@ -104,9 +104,22 @@ function App() {
                                 <div className={`dir node`} />
                               ) : (
                                 <div className={`dir`}>
-                                  {Object.entries(a.dir).map(([, d]) => (
-                                    <div className={`dir-${d}`} key={d} />
+                                  {Object.entries(a.dir || {}).map(([, d]) => (
+                                    <div
+                                      className={`dir-${d}`}
+                                      key={`dir-${d}`}
+                                    />
                                   ))}
+
+                                  {a.atkdir &&
+                                    Object.entries(a.atkdir || {}).map(
+                                      ([, d]) => (
+                                        <div
+                                          className={`atkdir-${d} atk`}
+                                          key={`atkdir-${d}`}
+                                        />
+                                      )
+                                    )}
                                 </div>
                               )}
                               {a.ele &&

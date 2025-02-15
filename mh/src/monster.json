@@ -80,7 +80,8 @@
             "value": 8,
             "range": 4,
             "dodge": 4,
-            "dir": "8",
+            "dir": "82",
+            "atkdir": "91",
             "ele": "fire"
           },
           { "type": "hunter", "turn": 1, "card": 3 },
