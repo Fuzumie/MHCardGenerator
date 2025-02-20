@@ -64,6 +64,8 @@ function App() {
                       }}
                     />
                   )}
+
+                  {/* CARD AREA */}
                   <div className="card-area">
                     <div className="title">
                       {(m["behavior-names"] && m["behavior-names"][key]) ||
@@ -90,6 +92,7 @@ function App() {
                     </div>
                     <div className="action-area">
                       {Object.entries(v.actions).map(([i, a]) => {
+                        // ATTACK----------------------------------------------
                         if (a.type === "attack")
                           return (
                             <div className="action attack" key={i}>
@@ -132,6 +135,8 @@ function App() {
                               {a.eff && <div className={`icon eff ${a.eff}`} />}
                             </div>
                           );
+
+                        // MOVE----------------------------------------
                         if (a.type === "move")
                           return (
                             <div className="action move" key={i}>
@@ -141,12 +146,13 @@ function App() {
                               </div>
                             </div>
                           );
-                          
+                        //TEXT-----------------------------------------
                         if (a.type === "text")
                           return <div className="text">{parse(a.value)}</div>;
                       })}
                     </div>
 
+                    {/* BOTTOM TEXT AREA */}
                     <div classname="draganjegay">
                       {Object.entries(v.actions).map(([i, a]) => {
                         if (a.type === "bottom")
@@ -157,6 +163,8 @@ function App() {
                           );
                       })}
                     </div>
+
+                    {/* HUNTER AREA */}
                     {(hunterTurn !== null || v.extra) && (
                       <div className="hunter-area">
                         {v.extra && <div className={`icon ${v.extra}`}></div>}
