@@ -53,8 +53,7 @@
   inset: 11% 9%;
 }
 
-
-.draganjegay{
+.draganjegay {
   position: absolute;
   justify-content: center;
 }
@@ -240,7 +239,7 @@
 }
 
 /*number top*/
-.num.dir-8 { 
+.num.dir-8 {
   transform: translate(-50%, -113%) scaleX(0.9);
 }
 
@@ -253,7 +252,6 @@
 .num.dir-2 {
   transform: translate(-50%, 18%) scaleX(0.9);
 }
-
 
 .move-dir.dir-4 {
   transform: translate(-139%, -49%) rotate(-90deg);
@@ -284,7 +282,7 @@
   background: url(assets/range.png) center center/contain no-repeat;
   mix-blend-mode: normal;
 }
-.range{
+.range {
   background: url(assets/range.png) center center/contain no-repeat;
 }
 :not(.icon-status).dodge {
@@ -299,7 +297,7 @@
 :not(.icon-status).stun {
   background: url(assets/stun.png) center center/contain no-repeat;
 }
-.stun{
+.stun {
   background: url(assets/stun.png) center center/contain no-repeat;
 }
 :not(.icon-status).blast {
@@ -320,10 +318,9 @@
 :not(.icon-status).freeze {
   background: url(assets/freeze.png) center center/contain no-repeat;
 }
-.freeze{
+.freeze {
   background: url(assets/freeze.png) center center/contain no-repeat;
 }
-
 
 /* DIRECTIONS */
 .dir {
@@ -369,7 +366,6 @@
   transform: translate(-215%, 150%) rotate(180deg);
 }
 
-
 .dir > div {
   position: absolute;
   width: 2em;
@@ -398,6 +394,7 @@
   left: 50%;
   filter: saturate(1.25);
 }
+/* Elements */
 .fire {
   background: url(assets/fire.png) center center/contain no-repeat;
 }
@@ -412,6 +409,14 @@
 }
 .water {
   background: url(assets/water.png) center center/contain no-repeat;
+}
+/* Status effects */
+.bleed {
+  background: url(assets/bleed.png) center center/contain;
+}
+/* Monster dodge */
+.m-dodge {
+  background: url(assets/m-dodge.png) center center/contain;
 }
 .ele.dir-8 {
   transform: translate(-50%, -175%);
@@ -472,7 +477,6 @@
   mix-blend-mode: multiply;
 }
 
-
 /* MONSTER ICONS */
 .anja {
   background-image: url(assets/monster/anja.png) !important;
@@ -531,8 +535,9 @@
 .gamm {
   background-image: url(assets/monster/gamm.png) !important;
 }
-
-
+.sereg {
+  background-image: url(assets/monster/sereg.png) !important;
+}
 
 /* STATUS EFFECTS ICON */
 .flash {
@@ -554,7 +559,7 @@
 .tail {
   background: url(assets/part/tail.png) center center/contain;
 }
-.dodge{
+.dodge {
   background: url(assets/dodge.png) center center/contain no-repeat;
 }
 
@@ -628,7 +633,7 @@
 }
 .bottom-long {
   font-size: 1.1em;
-  justify-content: center
+  justify-content: center;
 }
 .text {
   position: absolute;
