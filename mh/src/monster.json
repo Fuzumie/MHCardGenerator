@@ -596,6 +596,300 @@
         ]
       }
   ]
+  },
+    "sereg": {
+      "resistance": {
+        "fire": 2,
+        "ice": 1,
+        "water": 2,
+        "dragon": 2,
+        "thunder": 1,
+        "paralysis": 2,
+        "blast": 2,
+        "poison": 2,
+        "stun": 2,
+        "sleep": 2
+      },
+      "levels": [
+        {
+          "hp": 60,
+          "head": { "arc": "8", "armor": 1, "break": 3 },
+          "claws": { "arc": "46", "armor": 1, "break": 4 },
+          "tail": { "arc": "2", "armor": 1, "break": 4 }
+        },
+        {
+          "hp": 65,
+          "head": { "arc": "8", "armor": 2, "break": 5 },
+          "claws": { "arc": "46", "armor": 2, "break": 5 },
+          "tail": { "arc": "2", "armor": 1, "break": 4 }
+        },
+        {
+          "hp": 70,
+          "head": { "arc": "8", "armor": 2, "break": 5 },
+          "claws": { "arc": "46", "armor": 2, "break": 5 },
+          "tail": { "arc": "2", "armor": 2, "break": 5 }
+        }
+      ],
+      "behavior-names": [
+        "Piercing Stars",
+        "Swirling Grab",
+        "Skydive Rush",
+        "Sliding Tackle",
+        "Thousand Blades",
+        "Scratching Talons",
+        "Falling Airblades",
+        "Bleeding Bullets",
+        "Impaired Sweep",
+        "Scale Toss",
+        "Aerial Kick",
+        "Breacher's Slam",
+        "Spinning Claws"
+      ],
+      "behavior": [
+        {
+          "id": 1027,
+          "part": "wing",
+          "target": "close",
+          "actions": [
+            { "type": "wind-up", "turn": 2, "card": 1 },
+            {
+              "type": "attack",
+              "value": 9,
+              "range": 1,
+              "dodge": 5,
+              "dir": "486"
+            },
+            { "type": "move", "value": 5, "dir": "2" },
+            { "type": "hunter", "turn": 2, "card": 2 }
+          ]
+        },
+        {
+          "id": 1028,
+          "part": "leg",
+          "target": "far",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 8,
+              "range": 1,
+              "dodge": 3,
+              "dir": "n"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 }
+          ]
+        },
+        {
+          "id": 1029,
+          "part": "wing",
+          "target": "far",
+          "extra": "m-dodge",
+          "actions": [
+            { "type": "move", "value": 4, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 9,
+              "range": 1,
+              "dodge": 2,
+              "dir": "68",
+              "eff": "stun"
+            },
+            { "type": "hunter", "turn": 3, "card": 2 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1030,
+          "part": "leg",
+          "target": "close",
+          "extra": "m-dodge",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 1,
+              "dodge": 3,
+              "dir": "8"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1031,
+          "part": "tail",
+          "target": "far",
+          "extra": "m-dodge",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 5,
+              "range": 3,
+              "dodge": 4,
+              "dir": "426",
+              "atkdir": "41236",
+              "eff": "bleed"
+            },
+            { "type": "hunter", "turn": 2, "card": 3 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1032,
+          "part": "leg",
+          "target": "close",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 3,
+              "range": 2,
+              "dodge": 6,
+              "dir": "2468",
+              "eff": "bleed"
+            },
+            { "type": "move", "value": 1, "dir": "4" },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1033,
+          "part": "wing",
+          "target": "close",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "6" },
+            {
+              "type": "attack",
+              "value": 8,
+              "range": 2,
+              "dodge": 4,
+              "dir": "86",
+              "atkdir": "896",
+              "eff": "bleed"
+            },
+            { "type": "hunter", "turn": 1, "card": 2 }
+          ]
+        },
+        {
+          "id": 1034,
+          "part": "wing",
+          "target": "far",
+          "extra": "m-dodge",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "2" },
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 4,
+              "dodge": 4,
+              "dir": "486",
+              "atkdir": "47896",
+              "eff": "bleed"
+            },
+            { "type": "hunter", "turn": 2, "card": 3 }
+          ]
+        },
+        {
+          "id": 1035,
+          "part": "tail",
+          "target": "close",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 2,
+              "dodge": 2,
+              "dir": "248",
+              "atkdir": "74123",
+              "eff": "bleed"
+            },
+            { "type": "move", "value": 1, "dir": "6" },
+            { "type": "hunter", "turn": 1, "card": 3 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1036,
+          "part": "head",
+          "target": "far",
+          "extra": "m-dodge",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 3,
+              "dodge": 4,
+              "dir": "8",
+              "atkdir": "789",
+              "eff": "bleed"
+            },
+            { "type": "move", "value": 1, "dir": "2" },
+            { "type": "hunter", "turn": 3, "card": 2 },
+            { "bottom": "If this monster is [enraged], repeat the attack." }
+          ]
+        },
+        {
+          "id": 1037,
+          "part": "leg",
+          "target": "far",
+          "type": "track",
+          "actions": [
+            { "type": "move", "value": 2, "dir": "6" },
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 1,
+              "dodge": 5,
+              "dir": "26",
+              "atkdir": "12369",
+              "eff": "bleed"
+            },
+            { "type": "hunter", "turn": 3, "card": 2 }
+          ]
+        },
+        {
+          "id": 1038,
+          "part": "head",
+          "target": "close",
+          "extra": "m-dodge",
+          "type": "track",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 10,
+              "range": 1,
+              "dodge": 6,
+              "dir": "486"
+            },
+            { "type": "move", "value": 3, "dir": "6" },
+            { "type": "hunter", "turn": 3, "card": 2 }
+          ]
+        },
+
+        
+        {
+          "_comment": "comment text goes here...",
+          "id": 1013,
+          "part": "leg",
+          "target": "far",
+          "type": "track",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 2,
+              "dodge": 3,
+              "dir": "486"
+            },
+            { "type": "move", "value": 2, "dir": "4" },
+            { "type": "hunter", "turn": 2, "card": 3 },
+            { "bottom": "If this monster is [enraged], +2 [m-dodge]." }
+          ]
+        }
+      ]
+    }
   }
- 
-}
+
+

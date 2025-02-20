@@ -52,6 +52,13 @@
   position: absolute;
   inset: 11% 9%;
 }
+
+
+.draganjegay{
+  position: absolute;
+  justify-content: center;
+}
+
 .title {
   position: absolute;
   display: flex;
@@ -316,12 +323,15 @@
 .freeze{
   background: url(assets/freeze.png) center center/contain no-repeat;
 }
+
+
+/* DIRECTIONS */
 .dir {
   position: absolute;
   width: 4.375em;
   aspect-ratio: 1;
   right: 1%;
-  transform: translateY(-175%) translateX(50%);
+  transform: translateY(-140%) translateX(10%);
   top: 50%;
   background: url(assets/behavior-arcs.png) center center/contain no-repeat;
 }
@@ -335,13 +345,13 @@
 }
 
 .dir .atkdir-9 {
-  transform: translate(150%, -300%);
+  transform: translate(115%, -250%);
 }
 .dir .atkdir-8 {
   transform: translate(-50%, -300%);
 }
 .dir .atkdir-7 {
-  transform: translate(-250%, -300%);
+  transform: translate(-225%, -250%);
 }
 .dir .atkdir-6 {
   transform: translate(150%, -50%) rotate(90deg);
@@ -350,13 +360,13 @@
   transform: translate(-250%, -50%) rotate(-90deg);
 }
 .dir .atkdir-3 {
-  transform: translate(150%, 200%) rotate(-90deg);
+  transform: translate(115%, 150%) rotate(-90deg);
 }
 .dir .atkdir-2 {
   transform: translate(-50%, 200%) rotate(180deg);
 }
 .dir .atkdir-1 {
-  transform: translate(-250%, 200%) rotate(180deg);
+  transform: translate(-215%, 150%) rotate(180deg);
 }
 
 
@@ -461,6 +471,9 @@
 .monster.diab {
   mix-blend-mode: multiply;
 }
+
+
+/* MONSTER ICONS */
 .anja {
   background-image: url(assets/monster/anja.png) !important;
 }
@@ -519,6 +532,9 @@
   background-image: url(assets/monster/gamm.png) !important;
 }
 
+
+
+/* STATUS EFFECTS ICON */
 .flash {
   background: url(assets/flash.png) center center/contain;
 }
@@ -527,6 +543,7 @@
 }
 .enraged {
   background: url(assets/eye-enraged.png) center center/contain;
+  filter: saturate(2);
 }
 .search {
   background: url(assets/eye-search.png) center center/contain;
@@ -537,6 +554,10 @@
 .tail {
   background: url(assets/part/tail.png) center center/contain;
 }
+.dodge{
+  background: url(assets/dodge.png) center center/contain no-repeat;
+}
+
 .icon-status {
   position: relative;
   top: -0.3em;
@@ -594,18 +615,20 @@
 .bottom,
 .bottom-long {
   position: absolute;
-  width: 100%;
   height: 3em;
-  bottom: 2%;
-  left: 0%;
+  bottom: 1%;
+  left: 15%;
+  right: 25%;
   line-height: 1;
   display: grid;
   align-items: center;
+  width: 75%;
+  justify-content: center;
+  margin: auto;
 }
 .bottom-long {
-  width: 150%;
-  left: -25%;
   font-size: 1.1em;
+  justify-content: center
 }
 .text {
   position: absolute;

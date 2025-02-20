@@ -141,14 +141,20 @@ function App() {
                               </div>
                             </div>
                           );
+                          
+                        if (a.type === "text")
+                          return <div className="text">{parse(a.value)}</div>;
+                      })}
+                    </div>
+
+                    <div classname="draganjegay">
+                      {Object.entries(v.actions).map(([i, a]) => {
                         if (a.type === "bottom")
                           return <div className="bottom">{parse(a.value)}</div>;
                         if (a.type === "bottom-long")
                           return (
                             <div className="bottom-long">{parse(a.value)}</div>
                           );
-                        if (a.type === "text")
-                          return <div className="text">{parse(a.value)}</div>;
                       })}
                     </div>
                     {(hunterTurn !== null || v.extra) && (
