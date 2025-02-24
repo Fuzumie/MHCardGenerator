@@ -39,7 +39,7 @@
       "Foward Bite",
       "Bitter Slash",
       "Side Slice",
-      "Sharpening Blade",
+      "Flaming Valley",
       "Sharpening Blade",
       "Sharpening Blade",
       "Spinning Blade",
@@ -49,6 +49,7 @@
     ],
     "behavior": [
       {
+        "_comment1": "Tail Swipe",
         "id": 1001,
         "part": "tail",
         "target": "close",
@@ -69,20 +70,21 @@
         ]
       },
       {
+        "_comment1": "Flaming Chakram",
         "id": 1002,
         "part": "head",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 2, "dir": "2" },
           {
             "type": "attack",
             "value": 8,
             "range": 4,
             "dodge": 4,
-            "dir": "8",
+            "dir": "n",
             "ele": "fire"
           },
           { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "move", "value": 2, "dir": "2" },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -90,6 +92,7 @@
         ]
       },
       {
+        "_comment1": "Edge Side Cut",
         "id": 1003,
         "part": "tail",
         "target": "close",
@@ -110,6 +113,7 @@
         ]
       },
       {
+        "_comment1": "Foward Bite",
         "id": 1004,
         "part": "head",
         "target": "far",
@@ -119,18 +123,19 @@
             "type": "attack",
             "value": 8,
             "range": 1,
-            "dodge": 5,
+            "dodge": 4,
             "dir": "n"
           },
 
           { "type": "hunter", "turn": 1, "card": 3 },
           {
             "type": "bottom",
-            "value": "If this monster is [enraged], +2 [dodge]."
+            "value": "If this monster is [enraged], repeat the attack."
           }
         ]
       },
       {
+        "_comment1": "Bitter Slash",
         "id": 1005,
         "part": "tail",
         "target": "far",
@@ -153,6 +158,7 @@
         ]
       },
       {
+        "_comment1": "Side Slice",
         "id": 1006,
         "part": "tail",
         "target": "far",
@@ -173,19 +179,25 @@
         ]
       },
       {
+        "_comment1": "Flaming Valley",
         "id": 1007,
         "part": "head",
         "target": "close",
-        "extra": "sharpen",
         "actions": [
           {
-            "type": "text",
-            "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+        "type": "attack",
+            "value": 6,
+            "range": 3,
+            "dodge": 4,
+            "dir": "8",
+            "atkdir": "789",
+            "ele": "fire"
           },
-          { "type": "hunter", "turn": 1, "card": 2 }
+          { "type": "hunter", "turn": 2, "card": 3 }
         ]
       },
       {
+        "_comment1": "Sharpening Blade",
         "id": 1008,
         "part": "head",
         "target": "close",
@@ -193,12 +205,13 @@
         "actions": [
           {
             "type": "text",
-            "value": "Next [tail] behaviour deals\\[fire] damage  and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
       },
       {
+        "_comment1": "Sharpening Blade",
         "id": 1009,
         "part": "head",
         "target": "far",
@@ -206,12 +219,13 @@
         "actions": [
           {
             "type": "text",
-            "value": "Next [tail] behaviour deals\\[fire] damage  and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
       },
       {
+        "_comment1": "Spinning Blade",
         "id": 1010,
         "part": "tail",
         "target": "far",
@@ -233,6 +247,7 @@
         ]
       },
       {
+        "_comment1": "Lunging Strike",
         "id": 1011,
         "part": "tail",
         "target": "close",
@@ -252,6 +267,7 @@
         ]
       },
       {
+        "_comment1": "Tail Jumpswipe",
         "id": 1012,
         "part": "tail",
         "target": "far",
@@ -273,6 +289,7 @@
         ]
       },
       {
+        "_comment1": "Assault Leap",
         "id": 1013,
         "part": "tail",
         "target": "far",

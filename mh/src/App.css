@@ -23,7 +23,7 @@
 .card {
   position: relative;
   width: 744px;
-  background: url(assets/behavior-back.png) center center/contain;
+  background: url(assets/behavior-back-old.png) center center/contain;
   color: #272422;
   aspect-ratio: 744/520;
 }
@@ -119,8 +119,12 @@
 .part::after {
   content: "";
   position: absolute;
-  inset: 10%;
+  inset: 7%;
   filter: drop-shadow(0 0 0 #f0e9e0);
+}
+/* Remove inset for tail */
+.part.tail::after {
+  inset: 0;
 }
 .part.head::after {
   background: url(assets/part/head.png) center center/contain;
@@ -444,17 +448,17 @@
 }
 .back .target {
   position: absolute;
-  right: -7px;
-  top: 125px;
-  width: 160px;
+  right: 13px;
+  top: 145px;
+  width: 108px;
   mix-blend-mode: normal;
 }
 .back .part,
 .back .type {
   position: absolute;
-  left: -11px;
-  top: 125px;
-  width: 160px;
+  left: 13px;
+  top: 145px;
+  width: 108px;
 }
 .back .part::before {
   content: none;
