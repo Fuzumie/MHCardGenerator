@@ -42,6 +42,7 @@
       "Glacial Roar",
       "Glacial Roar",
       "Snow Recreation",
+      "Frost Stagger",
       "Raging Avalanche",
       "Right Trample",
       "Tusk Swipe",
@@ -59,7 +60,7 @@
             "value": 10,
             "range": 3,
             "dodge": 3,
-            "dir": "8",
+            "dir": "n",
             "eff": "stun"
           },
           { "type": "hunter", "turn": 3, "card": 2 },
@@ -229,8 +230,29 @@
         ]
       },
       {
-        "_comment1": "Raging Avalanche",
+        "_comment1": "Frost Stagger",
         "id": 22,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 3,
+            "dodge": 7,
+            "dir": "486",
+            "eff": "freeze"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Raging Avalanche",
+        "id": 23,
         "part": "leg",
         "target": "close",
         "actions": [
@@ -253,7 +275,7 @@
       },
       {
         "_comment1": "Right Trample",
-        "id": 23,
+        "id": 24,
         "part": "leg",
         "target": "close",
         "type": "track",
@@ -267,13 +289,13 @@
             "eff": "stun"
           },
           { "type": "move", "value": 2, "dir": "6" },
-          { "type": "hunter", "turn": 1, "card": 4 },
+          { "type": "hunter", "turn": 2, "card": 4 },
           { "bottom": "If this monster is [enraged], +2 [dodge]." }
         ]
       },
       {
         "_comment1": "Tusk Swipe",
-        "id": 24,
+        "id": 25,
         "part": "claws",
         "target": "far",
         "type": "track",
@@ -293,7 +315,7 @@
       },
       {
         "_comment1": "Frosty Slam",
-        "id": 25,
+        "id": 26,
         "part": "leg",
         "target": "close",
         "type": "track",

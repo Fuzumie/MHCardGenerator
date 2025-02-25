@@ -418,6 +418,9 @@
 .bleed {
   background: url(assets/bleed.png) center center/contain;
 }
+.bubble {
+  background: url(assets/bubble.png) center center/contain;
+}
 /* Monster dodge */
 .m-dodge {
   background: url(assets/m-dodge.png) center center/contain;
@@ -541,6 +544,12 @@
 }
 .sereg {
   background-image: url(assets/monster/sereg.png) !important;
+}
+.mizu {
+  background-image: url(assets/monster/mizu.png) !important;
+}
+.gara {
+  background-image: url(assets/monster/gara.png) !important;
 }
 
 /* STATUS EFFECTS ICON */
