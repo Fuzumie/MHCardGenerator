@@ -575,6 +575,12 @@
 .dodge {
   background: url(assets/dodge.png) center center/contain no-repeat;
 }
+.scales {
+  background: url(assets/scales.png) center center/contain;
+}
+.fire-blade {
+  background: url(assets/fire-blade.png) center center/contain;
+}
 
 .icon-status {
   position: relative;

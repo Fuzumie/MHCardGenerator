@@ -1,5 +1,5 @@
 {
-  "gamm": {
+  "glav": {
     "resistance": {
       "fire": 2,
       "ice": 1,
@@ -33,59 +33,145 @@
       }
     ],
     "behavior-names": [
-      "Trunk Smash",
-      "Snow Stomp",
-      "Freezing Inhale Pull",
-      "Left Trample",
-      "Snowrock Throw",
-      "Blizzard Crush",
-      "Glacial Roar",
-      "Glacial Roar",
-      "Snow Recreation",
-      "Frost Stagger",
-      "Raging Avalanche",
-      "Right Trample",
-      "Tusk Swipe",
-      "Frosty Slam"
+      "Tail Swipe",
+      "Flaming Chakram",
+      "Edge Side Cut",
+      "Foward Bite",
+      "Bitter Slash",
+      "Side Slice",
+      "Flaming Valley",
+      "Sharpening Blade",
+      "Sharpening Blade",
+      "Spinning Blade",
+      "Lunging Strike",
+      "Tail Jumpswipe",
+      "Assault Leap"
     ],
     "behavior": [
       {
-        "_comment1": "Trunk Smash",
-        "id": 13,
-        "part": "torso",
+        "_comment1": "Tail Swipe",
+        "id": 1001,
+        "part": "tail",
         "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 3,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Flaming Chakram",
+        "id": 1002,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Edge Side Cut",
+        "id": 1003,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 4,
+            "dir": "624",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Foward Bite",
+        "id": 1004,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "n"
+          },
+
+          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bitter Slash",
+        "id": 1005,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 2,
+            "dir": "846",
+            "eff": "stun"
+          },
+
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Side Slice",
+        "id": 1006,
+        "part": "tail",
+        "target": "far",
         "actions": [
           {
             "type": "attack",
             "value": 10,
             "range": 3,
             "dodge": 3,
-            "dir": "n",
-            "eff": "stun"
+            "dir": "46"
           },
+          { "type": "move", "value": 2, "dir": "8" },
           { "type": "hunter", "turn": 3, "card": 2 },
-          { "type": "move", "value": 1, "dir": "8" },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
-        ]
-      },
-      {
-        "_comment1": "Snow Stomp",
-        "id": 14,
-        "part": "leg",
-        "target": "close",
-        "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 9,
-            "range": 1,
-            "dodge": 4,
-            "dir": "486"
-          },
-          { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -93,243 +179,136 @@
         ]
       },
       {
-        "_comment1": "Freezing Inhale Pull",
-        "id": 15,
-        "part": "torso",
-        "target": "far",
+        "_comment1": "Flaming Valley",
+        "id": 1007,
+        "part": "head",
+        "target": "close",
         "actions": [
-          { "type": "wind-up", "turn": 1, "card": 2 },
           {
             "type": "attack",
-            "value": 9,
+            "value": 6,
             "range": 3,
             "dodge": 4,
-            "dir": "486",
-            "eff": "freeze",
-            "ele": "ice"
+            "dir": "8",
+            "atkdir": "789",
+            "ele": "fire"
           },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], then it will pull hunters within range to itself."
-          }
+          { "type": "hunter", "turn": 2, "card": 3 }
         ]
       },
       {
-        "_comment1": "Left Trample",
-        "id": 16,
-        "part": "leg",
-        "target": "far",
-        "actions": [
-          { "type": "wind-up", "turn": 1, "card": 3 },
-          { "type": "move", "value": 2, "dir": "4" },
-          {
-            "type": "attack",
-            "value": 8,
-            "range": 1,
-            "dodge": 5,
-            "dir": "48",
-            "eff": "stun"
-          },
-          {
-            "type": "bottom",
-            "turn": 2,
-            "card": 2,
-            "value": "If this monster is [enraged], +2 [dodge]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Snowrock Throw",
-        "id": 17,
-        "part": "claws",
-        "target": "far",
-        "actions": [
-          { "type": "move", "value": 2, "dir": "2" },
-          {
-            "type": "attack",
-            "value": 9,
-            "range": 4,
-            "dodge": 5,
-            "dir": "n",
-            "eff": "freeze",
-            "ele": "ice"
-          },
-
-          { "type": "hunter", "turn": 2, "card": 2 },
-          {
-            "type": "bottom",
-            "turn": 2,
-            "card": 2,
-            "value": "If this monster is [enraged], +2 [dodge]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Blizzard Crush",
-        "id": 18,
-        "part": "leg",
+        "_comment1": "Sharpening Blade",
+        "id": 1008,
+        "part": "head",
         "target": "close",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 8,
-            "range": 2,
-            "dodge": 4,
-            "dir": "4862",
-            "eff": "freeze",
-            "ele": "ice"
-          },
-          { "type": "move", "value": 3, "dir": "2" },
-          { "type": "hunter", "turn": 3, "card": 1 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], +1 [range]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Glacial Roar",
-        "id": 19,
-        "part": "torso",
-        "target": "close",
-        "extra": "freeze",
-        "actions": [
-          { "type": "hunter", "turn": 2, "card": 2 },
-          {
-            "type": "text",
-            "value": "Next 2 behaviours will have 2+ [move] and hunters within 3 [range] receive [stun].\\This effect stacks."
-          }
-        ]
-      },
-      {
-        "_comment1": "Glacial Roar",
-        "id": 20,
-        "part": "torso",
-        "target": "close",
-        "extra": "freeze",
-        "actions": [
-          { "type": "hunter", "turn": 2, "card": 2 },
-          {
-            "type": "text",
-            "value": "Next 2 behaviours will have 2+ [move] and hunters within 3 [range] receive [stun].\\This effect stacks."
-          }
-        ]
-      },
-      {
-        "_comment1": "Snow Recreation",
-        "id": 21,
-        "part": "torso",
-        "target": "far",
-        "extra": "freeze",
+        "extra": "sharpen",
         "actions": [
           {
             "type": "text",
-            "value": "Armor on each unbroken bodypart regains 2 health and hunters\\within 3 [range] receive [freeze]."
+            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
       },
       {
-        "_comment1": "Frost Stagger",
-        "id": 22,
-        "part": "claws",
-        "target": "close",
+        "_comment1": "Sharpening Blade",
+        "id": 1009,
+        "part": "head",
+        "target": "far",
+        "extra": "sharpen",
         "actions": [
-          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "text",
+            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Spinning Blade",
+        "id": 1010,
+        "part": "tail",
+        "target": "far",
+        "type": "fire-blade",
+        "actions": [
           {
             "type": "attack",
-            "value": 10,
+            "value": 11,
             "range": 3,
-            "dodge": 7,
-            "dir": "486",
-            "eff": "freeze"
+            "dodge": 6,
+            "dir": "846",
+            "ele": "fire"
           },
+          { "type": "move", "value": 5, "dir": "8" },
+          { "type": "hunter", "turn": 3, "card": 3 },
           {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
+            "type": "bottom-long",
+            "value": "This behaviour can only be used if *Sharpening Blade* has been played at least once in the game. Otherwise discard this card and draw another."
           }
         ]
       },
       {
-        "_comment1": "Raging Avalanche",
-        "id": 23,
-        "part": "leg",
+        "_comment1": "Lunging Strike",
+        "id": 1011,
+        "part": "tail",
         "target": "close",
+        "type": "track",
         "actions": [
           { "type": "wind-up", "turn": 1, "card": 2 },
           {
             "type": "attack",
-            "value": 12,
-            "range": 4,
-            "dodge": 7,
-            "dir": "4862",
-            "eff": "freeze",
-            "ele": "ice"
+            "value": 10,
+            "range": 2,
+            "dodge": 3,
+            "dir": "8462",
+            "eff": "stun"
           },
-          { "type": "hunter", "turn": 3, "card": 3 },
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Tail Jumpswipe",
+        "id": 1012,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 3,
+            "dodge": 2,
+            "dir": "82"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
           {
             "type": "bottom",
-            "value": "May use after walking 10 nodes with same Snow Armor."
+            "value": "If this monster is [enraged], +2 [dodge]."
           }
         ]
       },
       {
-        "_comment1": "Right Trample",
-        "id": 24,
-        "part": "leg",
-        "target": "close",
-        "type": "track",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 10,
-            "range": 2,
-            "dodge": 5,
-            "dir": "86",
-            "eff": "stun"
-          },
-          { "type": "move", "value": 2, "dir": "6" },
-          { "type": "hunter", "turn": 2, "card": 4 },
-          { "bottom": "If this monster is [enraged], +2 [dodge]." }
-        ]
-      },
-      {
-        "_comment1": "Tusk Swipe",
-        "id": 25,
-        "part": "claws",
+        "_comment1": "Assault Leap",
+        "id": 1013,
+        "part": "tail",
         "target": "far",
         "type": "track",
         "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "86"
+          },
           { "type": "move", "value": 2, "dir": "8" },
+          { "type": "hunter", "turn": 1, "card": 3 },
           {
-            "type": "attack",
-            "value": 6,
-            "range": 2,
-            "dodge": 4,
-            "dir": "8",
-            "ele": "ice"
-          },
-          { "type": "hunter", "turn": 2, "card": 2 },
-          { "bottom": "If this monster is [enraged], repeat the attack." }
-        ]
-      },
-      {
-        "_comment1": "Frosty Slam",
-        "id": 26,
-        "part": "leg",
-        "target": "close",
-        "type": "track",
-        "actions": [
-          { "type": "wind-up", "turn": 1, "card": 3 },
-          {
-            "type": "attack",
-            "value": 11,
-            "range": 2,
-            "dodge": 5,
-            "dir": "462",
-            "eff": "freeze"
-          },
-          { "type": "move", "value": 2, "dir": "8" }
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
         ]
       }
     ]
