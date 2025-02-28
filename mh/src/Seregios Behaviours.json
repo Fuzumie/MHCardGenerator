@@ -41,11 +41,12 @@
       "Scratching Talons",
       "Falling Airblades",
       "Bleeding Bullets",
-      "Impaired Sweep",
+      "Pinecone Sweep",
       "Scale Toss",
       "Aerial Kick",
       "Breacher's Slam",
-      "Spinning Claws"
+      "Spinning Claws",
+      "Aerial Rake"
     ],
     "behavior": [
       {
@@ -54,12 +55,12 @@
         "part": "wing",
         "target": "close",
         "actions": [
-          { "type": "wind-up", "turn": 2, "card": 1 },
+          { "type": "wind-up", "turn": 1, "card": 2 },
           {
             "type": "attack",
-            "value": 9,
+            "value": 12,
             "range": 1,
-            "dodge": 5,
+            "dodge": 6,
             "dir": "486"
           },
           { "type": "move", "value": 5, "dir": "2" },
@@ -69,7 +70,7 @@
       {
         "_comment1": "Swirling Grab",
         "id": 1028,
-        "part": "leg",
+        "part": "claws",
         "target": "far",
         "actions": [
           { "type": "move", "value": 2, "dir": "8" },
@@ -77,10 +78,15 @@
             "type": "attack",
             "value": 8,
             "range": 1,
-            "dodge": 3,
-            "dir": "n"
+            "dodge": 4,
+            "dir": "n",
+            "eff": "stun"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
         ]
       },
       {
@@ -95,7 +101,7 @@
             "type": "attack",
             "value": 9,
             "range": 1,
-            "dodge": 2,
+            "dodge": 3,
             "dir": "68",
             "eff": "stun"
           },
@@ -109,7 +115,7 @@
       {
         "_comment1": "Sliding Tackle",
         "id": 1030,
-        "part": "leg",
+        "part": "claws",
         "target": "close",
         "extra": "m-dodge",
         "actions": [
@@ -117,7 +123,7 @@
           {
             "type": "attack",
             "value": 7,
-            "range": 1,
+            "range": 2,
             "dodge": 3,
             "dir": "8"
           },
@@ -134,15 +140,16 @@
         "part": "tail",
         "target": "far",
         "extra": "m-dodge",
+        "type": "scales",
         "actions": [
           { "type": "move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 5,
-            "range": 3,
+            "value": 9,
+            "range": 4,
             "dodge": 4,
             "dir": "426",
-            "atkdir": "41236",
+            "atkdir": "4123679",
             "eff": "bleed"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
@@ -155,19 +162,19 @@
       {
         "_comment1": "Scratching Talons",
         "id": 1032,
-        "part": "leg",
+        "part": "claws",
         "target": "close",
         "actions": [
           {
             "type": "attack",
-            "value": 3,
+            "value": 5,
             "range": 2,
             "dodge": 6,
             "dir": "2468",
             "eff": "bleed"
           },
           { "type": "move", "value": 1, "dir": "4" },
-          { "type": "hunter", "turn": 2, "card": 2 },
+          { "type": "hunter", "turn": 1, "card": 3 },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -179,12 +186,13 @@
         "id": 1033,
         "part": "wing",
         "target": "close",
+        "type": "scales",
         "actions": [
           { "type": "move", "value": 2, "dir": "6" },
           {
             "type": "attack",
             "value": 8,
-            "range": 2,
+            "range": 3,
             "dodge": 4,
             "dir": "86",
             "atkdir": "896",
@@ -199,12 +207,13 @@
         "part": "wing",
         "target": "far",
         "extra": "m-dodge",
+        "type": "scales",
         "actions": [
           { "type": "move", "value": 2, "dir": "2" },
           {
             "type": "attack",
-            "value": 6,
-            "range": 4,
+            "value": 10,
+            "range": 5,
             "dodge": 4,
             "dir": "486",
             "atkdir": "47896",
@@ -214,18 +223,20 @@
         ]
       },
       {
-        "_comment1": "Impaired Sweep",
+        "_comment1": "Pinecone Sweep",
         "id": 1035,
         "part": "tail",
         "target": "close",
+        "type": "scales",
+        "extra": "m-dodge",
         "actions": [
           {
             "type": "attack",
-            "value": 6,
+            "value": 8,
             "range": 2,
-            "dodge": 2,
+            "dodge": 3,
             "dir": "248",
-            "atkdir": "74123",
+            "atkdir": "7412389",
             "eff": "bleed"
           },
           { "type": "move", "value": 1, "dir": "6" },
@@ -242,11 +253,12 @@
         "part": "head",
         "target": "far",
         "extra": "m-dodge",
+        "type": "scales",
         "actions": [
           {
             "type": "attack",
-            "value": 7,
-            "range": 3,
+            "value": 9,
+            "range": 4,
             "dodge": 4,
             "dir": "8",
             "atkdir": "789",
@@ -263,15 +275,15 @@
       {
         "_comment1": "Aerial Kick",
         "id": 1037,
-        "part": "leg",
+        "part": "claws",
         "target": "far",
-        "type": "track",
+        "type": "scales",
         "actions": [
           { "type": "move", "value": 2, "dir": "6" },
           {
             "type": "attack",
             "value": 7,
-            "range": 1,
+            "range": 2,
             "dodge": 5,
             "dir": "26",
             "atkdir": "12369",
@@ -303,15 +315,15 @@
       {
         "_comment1": "Spinning Claws",
         "id": 1013,
-        "part": "leg",
+        "part": "claws",
         "target": "far",
         "type": "track",
         "actions": [
           {
             "type": "attack",
-            "value": 7,
+            "value": 9,
             "range": 2,
-            "dodge": 3,
+            "dodge": 4,
             "dir": "486"
           },
           { "type": "move", "value": 2, "dir": "4" },
@@ -319,6 +331,29 @@
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Aerial Rake",
+        "id": 1014,
+        "part": "wing",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 2,
+            "dodge": 3,
+            "dir": "2468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
           }
         ]
       }

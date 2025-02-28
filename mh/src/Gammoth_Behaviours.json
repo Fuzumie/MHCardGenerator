@@ -99,10 +99,11 @@
         "target": "far",
         "actions": [
           { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "move", "value": 1, "dir": "2" },
           {
             "type": "attack",
             "value": 9,
-            "range": 3,
+            "range": 4,
             "dodge": 4,
             "dir": "486",
             "eff": "freeze",
@@ -110,7 +111,7 @@
           },
           {
             "type": "bottom",
-            "value": "If this monster is [enraged], then it will pull hunters within range to itself."
+            "value": "Before this monster attacks it will pull hunters within range to itself."
           }
         ]
       },
