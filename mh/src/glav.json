@@ -185,7 +185,7 @@
         "target": "close",
         "actions": [
           {
-        "type": "attack",
+            "type": "attack",
             "value": 6,
             "range": 3,
             "dodge": 4,
@@ -229,12 +229,13 @@
         "id": 1010,
         "part": "tail",
         "target": "far",
+        "type": "fire-blade",
         "actions": [
-          { "type": "move", "value": 5, "dir": "8" },
+          { "type": "atk-move", "value": 5, "dir": "8" },
           {
             "type": "attack",
             "value": 11,
-            "range": 3,
+            "range": 2,
             "dodge": 6,
             "dir": "846",
             "ele": "fire"

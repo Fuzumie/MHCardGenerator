@@ -92,7 +92,7 @@ function App() {
                     </div>
                     <div className="action-area">
                       {Object.entries(v.actions).map(([i, a]) => {
-                        // ATTACK----------------------------------------------
+                        // *ATTACK----------------------------------------------
                         if (a.type === "attack")
                           return (
                             <div className="action attack" key={i}>
@@ -136,7 +136,7 @@ function App() {
                             </div>
                           );
 
-                        // MOVE----------------------------------------
+                        // *MOVE----------------------------------------
                         if (a.type === "move")
                           return (
                             <div className="action move" key={i}>
@@ -146,7 +146,17 @@ function App() {
                               </div>
                             </div>
                           );
-                        //TEXT-----------------------------------------
+                        // *ATTACK MOVE----------------------------------------
+                        if (a.type === "atk-move")
+                          return (
+                            <div className="action atk-move" key={i}>
+                              <div className={`move-dir dir-${a.dir}`}></div>
+                              <div className={`num dir-${a.dir}`}>
+                                {a.value}
+                              </div>
+                            </div>
+                          );
+                        // *TEXT-----------------------------------------
                         if (a.type === "text")
                           return <div className="text">{parse(a.value)}</div>;
                       })}

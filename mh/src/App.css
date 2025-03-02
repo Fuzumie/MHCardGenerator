@@ -226,6 +226,10 @@
 .move {
   background: url(assets/behavior-dir-pad.png) center center/contain no-repeat;
 }
+.atk-move {
+  background: url(assets/atk-behavior-dir-pad.png) center center/contain
+    no-repeat;
+}
 .attack {
   background: url(assets/behavior-damage.png) center center/contain no-repeat;
 }
@@ -551,6 +555,9 @@
 .gara {
   background-image: url(assets/monster/gara.png) !important;
 }
+.tetsu {
+  background-image: url(assets/monster/tetsu.png) !important;
+}
 
 /* STATUS EFFECTS ICON */
 .flash {
@@ -629,6 +636,40 @@
   width: 80%;
   filter: drop-shadow(0 0 1px #000);
 }
+/* !made so the fucking part icons fit into the fucking text */
+.icon-status[class*="head"]::after,
+.icon-status[class*="torso"]::after,
+.icon-status[class*="wing"]::after,
+.icon-status[class*="claws"]::after,
+.icon-status[class*="leg"]::after,
+.icon-status[class*="tail"]::after {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  filter: drop-shadow(0 0 0 #f0e9e0);
+  background-position: center center;
+  background-size: contain;
+}
+
+.icon-status.head::after {
+  background-image: url(assets/part/head.png);
+}
+.icon-status.torso::after {
+  background-image: url(assets/part/torso.png);
+}
+.icon-status.wing::after {
+  background-image: url(assets/part/wing.png);
+}
+.icon-status.claws::after {
+  background-image: url(assets/part/claws.png);
+}
+.icon-status.leg::after {
+  background-image: url(assets/part/leg.png);
+}
+.icon-status.tail::after {
+  background-image: url(assets/part/tail.png);
+}
+
 .bottom,
 .bottom-long,
 .text {
