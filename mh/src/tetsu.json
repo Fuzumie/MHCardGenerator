@@ -270,7 +270,7 @@
       },
       {
         "_comment1": "Tusk Bite",
-        "id": 1057,
+        "id": 1067,
         "part": "claws",
         "target": "close",
         "type": "track",
@@ -292,7 +292,7 @@
       },
       {
         "_comment1": "Vault Crush",
-        "id": 1057,
+        "id": 1068,
         "part": "leg",
         "target": "far",
         "type": "track",

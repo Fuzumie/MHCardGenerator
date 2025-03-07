@@ -558,6 +558,9 @@
 .tetsu {
   background-image: url(assets/monster/tetsu.png) !important;
 }
+.chata {
+  background-image: url(assets/monster/chata.png) !important;
+}
 
 /* STATUS EFFECTS ICON */
 .flash {
