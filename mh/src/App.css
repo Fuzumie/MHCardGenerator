@@ -484,7 +484,10 @@
   background-repeat: no-repeat;
 }
 .monster.kulu,
-.monster.diab {
+.monster.diab,
+.monster.jaggi,
+.monster.sereg,
+.monster.mizu {
   mix-blend-mode: multiply;
 }
 
@@ -560,6 +563,36 @@
 }
 .chata {
   background-image: url(assets/monster/chata.png) !important;
+}
+.gjaggi {
+  background-image: url(assets/monster/gjaggi.png) !important;
+}
+.dodo {
+  background-image: url(assets/monster/dodo.png) !important;
+}
+.khez {
+  background-image: url(assets/monster/khez.png) !important;
+}
+.que {
+  background-image: url(assets/monster/que.png) !important;
+}
+.konga {
+  background-image: url(assets/monster/konga.png) !important;
+}
+.gyp {
+  background-image: url(assets/monster/gyp.png) !important;
+}
+.bal {
+  background-image: url(assets/monster/bal.png) !important;
+}
+.hira {
+  background-image: url(assets/monster/hira.png) !important;
+}
+.yian {
+  background-image: url(assets/monster/yian.png) !important;
+}
+.jaggi {
+  background-image: url(assets/monster/jaggi.png) !important;
 }
 
 /* STATUS EFFECTS ICON */
