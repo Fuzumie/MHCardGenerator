@@ -286,9 +286,8 @@
         "actions": [
           {
             "type": "text",
-            "value": "If this monster is [enraged] it will repair its [claws] if there is any coating remaining. \\If its not [enraged] or the [claws] are still fully coated, discard this behaviour."
-          },
-          { "type": "hunter", "turn": 1, "card": 2 }
+            "value": "If this monster is [enraged] remove a break token from any stone symbol. \\If its not [enraged] or the stone symbol are still fully coated, discard this behaviour."
+          }
         ]
       },
       {
@@ -300,9 +299,8 @@
         "actions": [
           {
             "type": "text",
-            "value": "If this monster is [enraged] it will repair its [claws] if there is any coating remaining. \\If its not [enraged] or the [claws] are still fully coated, discard this behaviour."
-          },
-          { "type": "hunter", "turn": 1, "card": 1 }
+            "value": "If this monster is [enraged] remove a break token from any stone symbol. \\If its not [enraged] or the stone symbol are still fully coated, discard this behaviour."
+          }
         ]
       }
     ]
