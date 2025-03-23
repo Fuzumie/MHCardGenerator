@@ -1,5 +1,5 @@
 {
-  "mizu": {
+  "yian": {
     "resistance": {
       "fire": 2,
       "ice": 1,
@@ -33,183 +33,79 @@
       }
     ],
     "behavior-names": [
-      "Leaping Slam",
-      "Diving Foreleg",
-      "Twin Lunge Combo",
-      "Sliding Tackle",
-      "Quick Bite",
-      "Tail Spin",
-      "Sliding Tail Slam",
-      "Bubble Breath",
-      "Up and Around Combo",
-      "Sliding Water Breath",
-      "Tail Flick",
-      "Spinning Bite",
-      "Jet Stream",
-      "Blissful Swash",
-      "Offensive Swash"
+      "Close Tail Sweep",
+      "Far Tail Sweep",
+      "Chaotic Fireball Spit",
+      "Close Fireball Shot",
+      "Far Fireball Shot",
+      "Close Swift Charge",
+      "Far Swift Charge",
+      "Beak Attack",
+      "Jumping Beak Attack",
+      "Rush",
+      "Bite",
+      "Aerial Maneuver",
+      "Rush Tail Sweep",
+      "Large Fireball"
     ],
     "behavior": [
       {
-        "_comment1": "Leaping Slam",
-        "id": 1040,
-        "part": "claws",
-        "target": "far",
+        "_comment1": "Close Tail Sweep",
+        "id": 1100,
+        "part": "tail",
+        "target": "close",
         "actions": [
           { "type": "wind-up", "turn": 1, "card": 2 },
-          { "type": "move", "value": 3, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 14,
-            "range": 1,
-            "dodge": 4,
-            "dir": "4862"
-          },
-          { "type": "hunter", "turn": 3, "card": 2 }
-        ]
-      },
-      {
-        "_comment1": "Diving Foreleg",
-        "id": 1041,
-        "part": "claws",
-        "target": "far",
-        "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
           {
             "type": "attack",
             "value": 8,
-            "range": 2,
-            "dodge": 3,
-            "dir": "8"
-          },
-          { "type": "hunter", "turn": 2, "card": 3 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
-        ]
-      },
-      {
-        "_comment1": "Twin Lunge Combo",
-        "id": 1042,
-        "part": "head",
-        "target": "close",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 7,
-            "range": 2,
-            "dodge": 5,
-            "dir": "8",
-            "atkdir": "794613",
-            "eff": "bubble"
-          },
-          { "type": "move", "value": 2, "dir": "8" },
-          { "type": "hunter", "turn": 1, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
-        ]
-      },
-      {
-        "_comment1": "Sliding Tackle",
-        "id": 1043,
-        "part": "claws",
-        "target": "far",
-        "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 7,
             "range": 1,
             "dodge": 3,
-            "dir": "8"
+            "dir": "2468"
           },
           { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
+            "value": "If this behaviour is played, repeat the attack."
           }
         ]
       },
       {
-        "_comment1": "Quick Bite",
-        "id": 1044,
-        "part": "head",
-        "target": "close",
+        "_comment1": "Far Tail Sweep",
+        "id": 1101,
+        "part": "tail",
+        "target": "far",
         "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
           {
             "type": "attack",
-            "value": 5,
+            "value": 6,
             "range": 1,
-            "dodge": 5,
-            "dir": "n",
-            "eff": "bubble"
+            "dodge": 2,
+            "dir": "2468"
           },
-          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
+            "value": "If this behaviour is played, repeat the attack."
           }
         ]
       },
       {
-        "_comment1": "Tail Spin",
-        "id": 1045,
-        "part": "tail",
-        "target": "close",
+        "_comment1": "Chaotic Fireball Spit",
+        "id": 1102,
+        "part": "head",
+        "target": "far",
         "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 7,
+            "value": 6,
             "range": 2,
-            "dodge": 4,
-            "dir": "428",
+            "dodge": 2,
+            "dir": "8",
             "atkdir": "79",
-            "eff": "bubble"
-          },
-          { "type": "hunter", "turn": 1, "card": 2 }
-        ]
-      },
-
-      {
-        "_comment1": "Sliding Tail Slam",
-        "id": 1046,
-        "part": "tail",
-        "target": "close",
-        "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 10,
-            "range": 2,
-            "dodge": 5,
-            "dir": "8",
-            "ele": "water"
-          },
-          { "type": "hunter", "turn": 3, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
-        ]
-      },
-      {
-        "_comment1": "Bubble Breath",
-        "id": 1047,
-        "part": "head",
-        "target": "close",
-        "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 5,
-            "range": 2,
-            "dodge": 6,
-            "dir": "8",
-            "atkdir": "789"
+            "ele": "fire"
           },
           { "type": "hunter", "turn": 2, "card": 2 },
           {
@@ -219,117 +115,21 @@
         ]
       },
       {
-        "_comment1": "Up and Around Combo",
-        "id": 1048,
-        "part": "head",
-        "target": "far",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 8,
-            "range": 4,
-            "dodge": 3,
-            "dir": "n",
-            "ele": "water"
-          },
-          {
-            "type": "attack",
-            "value": 8,
-            "range": 4,
-            "dodge": 4,
-            "dir": "486",
-            "atkdir": "789",
-            "ele": "water"
-          },
-          { "type": "hunter", "turn": 4, "card": 2 }
-        ]
-      },
-      {
-        "_comment1": "Sliding Water Breath",
-        "id": 1049,
-        "part": "head",
-        "target": "far",
-        "actions": [
-          { "type": "move", "value": 4, "dir": "6" },
-          {
-            "type": "attack",
-            "value": 9,
-            "range": 1,
-            "dodge": 5,
-            "dir": "8",
-            "atkdir": "87946231",
-            "ele": "water",
-            "eff": "bubble"
-          },
-          { "type": "hunter", "turn": 3, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "This monster contiues this attack by each node it can walk without changing the direction it's facing even if it hit it's target."
-          }
-        ]
-      },
-      {
-        "_comment1": "Tail Flick",
-        "id": 1050,
-        "part": "tail",
-        "target": "far",
-        "type": "track",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 8,
-            "range": 2,
-            "dodge": 5,
-            "dir": "486",
-            "atkdir": "789",
-            "eff": "bubble"
-          },
-          { "type": "move", "value": 2, "dir": "2" },
-          { "type": "hunter", "turn": 2, "card": 3 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
-        ]
-      },
-      {
-        "_comment1": "Spinning Bite",
-        "id": 1051,
+        "_comment1": "Close Fireball Shot",
+        "id": 1103,
         "part": "head",
         "target": "close",
-        "type": "track",
         "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
           {
             "type": "attack",
-            "value": 10,
-            "range": 2,
-            "dodge": 6,
-            "dir": "86",
-            "atkdir": "123789",
-            "eff": "bubble"
-          },
-          { "type": "move", "value": 1, "dir": "4" },
-          { "type": "hunter", "turn": 2, "card": 2 }
-        ]
-      },
-      {
-        "_comment1": "Jet Stream",
-        "id": 1052,
-        "part": "head",
-        "target": "close",
-        "type": "track",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 12,
+            "value": 7,
             "range": 3,
-            "dodge": 5,
-            "dir": "4826",
-            "atkdir": "1379",
-            "eff": "bubble",
-            "ele": "water"
+            "dodge": 2,
+            "dir": "n",
+            "ele": "fire"
           },
-          { "type": "hunter", "turn": 3, "card": 3 },
+          { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -337,31 +137,202 @@
         ]
       },
       {
-        "_comment1": "Blissful Swash",
-        "id": 1053,
-        "part": "tail",
-        "target": "close",
-        "extra": "bubble",
+        "_comment1": "Far Fireball Shot",
+        "id": 1104,
+        "part": "head",
+        "target": "far",
         "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "2" },
           {
-            "type": "text",
-            "value": "Next [bubble] behaviour heals player by 4 hp if they are hit with [bubble] from it.\\The monster will wash off it's wounds, remove 2 part break tokens on the body part that has most of them."
+            "type": "attack",
+            "value": 7,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n",
+            "ele": "fire"
           },
-          { "type": "hunter", "turn": 1, "card": 3 }
+          { "type": "hunter", "turn": 1, "card": 2 }
         ]
       },
       {
-        "_comment1": "Offensive Swash",
-        "id": 1054,
-        "part": "tail",
-        "target": "far",
-        "extra": "bubble",
+        "_comment1": "Close Swift Charge",
+        "id": 1105,
+        "part": "head",
+        "target": "close",
         "actions": [
+          { "type": "wind-up", "turn": 1, "card": 3 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
           {
-            "type": "text",
-            "value": "Next [bubble] behaviour gives 2+ [hunter-attack] if they are hit with [bubble].\\The monster will enchance it's next [bubble] behaviour by 5+ [attack]."
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n",
+            "eff": "stun"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Swift Charge",
+        "id": 1106,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 1 },
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n",
+            "eff": "stun"
+          }
+        ]
+      },
+      {
+        "_comment1": "Beak Attack",
+        "id": 1107,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 1,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack seven times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Jumping Beak Attack",
+        "id": 1108,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 2,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Rush",
+        "id": 1109,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          { 
+              "type": "attack", 
+              "value": 6,
+              "range": 1,
+              "dodge": 2,
+              "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 1 }
+        ]
+      },
+      {
+        "_comment1": "Bite",
+        "id": 1110,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { 
+              "type": "attack", 
+              "value": 7,
+              "range": 1,
+              "dodge": 3,
+              "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Aerial Maneuver",
+        "id": 1112,
+        "part": "wing",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Rush Tail Sweep",
+        "id": 1111,
+        "part": "tail",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          { 
+              "type": "attack", 
+              "value": 5,
+              "range": 1,
+              "dodge": 3,
+              "dir": "n"
+          },
+          {
+              "type": "attack",
+              "value": 7,
+              "range": 1,
+              "dodge": 2,
+              "dir": "2468"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Large Fireball",
+        "id": 1113,
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 4,
+            "dodge": 5,
+            "dir": "n",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
         ]
       }
     ]

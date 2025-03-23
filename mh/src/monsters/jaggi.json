@@ -1,92 +1,91 @@
 {
-    "jaggi": {
-      "resistance": {
-        "fire": 2,
-        "ice": 1,
-        "water": 2,
-        "dragon": 2,
-        "thunder": 1,
-        "paralysis": 2,
-        "blast": 2,
-        "poison": 2,
-        "stun": 2,
-        "sleep": 2
+  "jaggi": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
       },
-      "levels": [
-        {
-          "hp": 60,
-          "head": { "arc": "8", "armor": 1, "break": 3 },
-          "claws": { "arc": "46", "armor": 1, "break": 4 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 65,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 70,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 2, "break": 5 }
-        }
-      ],
-      "behavior-names": [
-        "Leap Bite",
-        "Close Bite",
-        "Far Bite"
-      ],
-      "behavior": [
-        {
-          "_comment1": "Leap Bite",
-          "id": 1097,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { "type": "move", "value": 2, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 4,
-              "range": 1,
-              "dodge": 1,
-              "dir": "n"
-            }
-          ]
-        },
-        {
-          "_comment1": "Close Bite",
-          "id": 1098,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 4,
-              "range": 1,
-              "dodge": 1,
-              "dir": "n"
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Bite",
-          "id": 1099,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 4,
-              "range": 1,
-              "dodge": 1,
-              "dir": "n"
-            }
-          ]
-        }
-      ]
-    }
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Leap Bite",
+      "Close Bite",
+      "Far Bite"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Leap Bite",
+        "id": 1097,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 1,
+            "dir": "n"
+          }
+        ]
+      },
+      {
+        "_comment1": "Close Bite",
+        "id": 1098,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 1,
+            "dir": "n"
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Bite",
+        "id": 1099,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          }
+        ]
+      }
+    ]
   }
-  
+}

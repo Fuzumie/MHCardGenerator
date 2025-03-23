@@ -1,323 +1,322 @@
 {
-    "gjaggi": {
-      "resistance": {
-        "fire": 2,
-        "ice": 1,
-        "water": 2,
-        "dragon": 2,
-        "thunder": 1,
-        "paralysis": 2,
-        "blast": 2,
-        "poison": 2,
-        "stun": 2,
-        "sleep": 2
+  "gjaggi": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
       },
-      "levels": [
-        {
-          "hp": 60,
-          "head": { "arc": "8", "armor": 1, "break": 3 },
-          "claws": { "arc": "46", "armor": 1, "break": 4 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 65,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 70,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 2, "break": 5 }
-        }
-      ],
-      "behavior-names": [
-        "Close Tail Spin",
-        "Far Tail Spin",
-        "Far Leap",
-        "Close Leap",
-        "Far Bite",
-        "Close Bite",
-        "Double Bite",
-        "Jump Back",
-        "Left Body Slam",
-        "Empowering Roar",
-        "Hasteful Roar",
-        "Summoning Roar",
-        "Right Body Slam",
-        "Wide Bite"
-      ],
-      "behavior": [
-        {
-          "_comment1": "Close Tail Spin",
-          "id": 1083,
-          "part": "tail",
-          "target": "close",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 8,
-              "range": 1,
-              "dodge": 3,
-              "dir": "2468"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Tail Spin",
-          "id": 1084,
-          "part": "tail",
-          "target": "far",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            {
-              "type": "attack",
-              "value": 8,
-              "range": 1,
-              "dodge": 3,
-              "dir": "2468"
-            },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Leap",
-          "id": 1085,
-          "part": "torso",
-          "target": "far",
-          "actions": [
-            { "type": "atk-move", "value": 3, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 3,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Close Leap",
-          "id": 1086,
-          "part": "torso",
-          "target": "close",
-          "actions": [
-            { "type": "wind-up", "turn": 1, "card": 3 },
-            { "type": "atk-move", "value": 3, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 3,
-              "dir": "n"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Bite",
-          "id": 1087,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Close Bite",
-          "id": 1088,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Double Bite",
-          "id": 1089,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { "type": "atk-move", "value": 2, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 4,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Jump Back",
-          "id": 1090,
-          "part": "torso",
-          "target": "far",
-          "actions": [
-            { "type": "atk-move", "value": 2, "dir": "2" },
-            {
-              "type": "attack",
-              "value": 5,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Left Body Slam",
-          "id": 1091,
-          "part": "torso",
-          "target": "close",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 2,
-              "dir": "4",
-              "eff": "stun"
-            },
-            { "type": "atk-move", "value": 2, "dir": "4" },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Empowering Roar",
-          "id": 1092,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "Jaggis within range of 2 nodes receive +2 [attack] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Hasteful Roar",
-          "id": 1093,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "Jaggis within range of 2 nodes receive +2 [dodge] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Summoning Roar",
-          "id": 1094,
-          "part": "head",
-          "target": "close",
-          "type": "track",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "The monster will summon one Jaggi into the hunt."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Right Body Slam",
-          "id": 1095,
-          "part": "torso",
-          "target": "far",
-          "type": "track",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 2,
-              "dir": "6",
-              "eff": "stun"
-            },
-            { "type": "atk-move", "value": 2, "dir": "6" },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Wide Bite",
-          "id": 1096,
-          "part": "head",
-          "target": "close",
-          "type": "track",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 3,
-              "dir": "468"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        }
-      ]
-    }
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Close Tail Spin",
+      "Far Tail Spin",
+      "Far Leap",
+      "Close Leap",
+      "Far Bite",
+      "Close Bite",
+      "Double Bite",
+      "Jump Back",
+      "Left Body Slam",
+      "Empowering Roar",
+      "Hasteful Roar",
+      "Summoning Roar",
+      "Right Body Slam",
+      "Wide Bite"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Close Tail Spin",
+        "id": 1083,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 2,
+            "dir": "2468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Tail Spin",
+        "id": 1084,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "2468"
+          },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Leap",
+        "id": 1085,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Close Leap",
+        "id": 1086,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 3 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "n"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Bite",
+        "id": 1087,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Close Bite",
+        "id": 1088,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Double Bite",
+        "id": 1089,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Jump Back",
+        "id": 1090,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Left Body Slam",
+        "id": 1091,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "4",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Empowering Roar",
+        "id": 1092,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { 
+              "type": "text", 
+              "value": "Jaggis within range of 2 nodes receive +2 [attack] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Hasteful Roar",
+        "id": 1093,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { 
+              "type": "text", 
+              "value": "Jaggis within range of 2 nodes receive +2 [dodge] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Summoning Roar",
+        "id": 1094,
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { 
+              "type": "text", 
+              "value": "The monster will summon one Jaggi into the hunt."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Right Body Slam",
+        "id": 1095,
+        "part": "torso",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "6",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Wide Bite",
+        "id": 1096,
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      }
+    ]
   }
-  
+}

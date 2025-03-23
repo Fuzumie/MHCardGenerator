@@ -60,7 +60,7 @@
             "type": "attack",
             "value": 6,
             "range": 1,
-            "dodge": 5,
+            "dodge": 3,
             "dir": "8"
           },
           { "type": "hunter", "turn": 1, "card": 3 }
@@ -76,7 +76,7 @@
             "type": "attack",
             "value": 7,
             "range": 1,
-            "dodge": 4,
+            "dodge": 2,
             "dir": "468"
           },
           { "type": "hunter", "turn": 2, "card": 2 }
@@ -91,9 +91,9 @@
           { "type": "move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 6,
+            "value": 5,
             "range": 1,
-            "dodge": 6,
+            "dodge": 4,
             "dir": "n"
           },
           { "type": "hunter", "turn": 1, "card": 2 },
@@ -112,7 +112,7 @@
           { "type": "move", "value": 2, "dir": "4" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 7,
             "range": 1,
             "dodge": 3,
             "dir": "48"
@@ -133,7 +133,7 @@
           { "type": "move", "value": 2, "dir": "6" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 7,
             "range": 1,
             "dodge": 3,
             "dir": "68"
@@ -157,7 +157,7 @@
             "type": "attack",
             "value": 10,
             "range": 1,
-            "dodge": 5,
+            "dodge": 4,
             "dir": "468"
           },
           { "type": "hunter", "turn": 2, "card": 2 }
