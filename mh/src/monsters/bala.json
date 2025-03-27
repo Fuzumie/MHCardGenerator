@@ -1,0 +1,344 @@
+{
+    "bala": {
+      "resistance": {
+        "fire": 2,
+        "ice": 1,
+        "water": 2,
+        "dragon": 2,
+        "thunder": 1,
+        "paralysis": 2,
+        "blast": 2,
+        "poison": 2,
+        "stun": 2,
+        "sleep": 2
+      },
+      "levels": [
+        {
+          "hp": 60,
+          "head": { "arc": "8", "armor": 1, "break": 3 },
+          "claws": { "arc": "46", "armor": 1, "break": 4 },
+          "tail": { "arc": "2", "armor": 1, "break": 4 }
+        },
+        {
+          "hp": 65,
+          "head": { "arc": "8", "armor": 2, "break": 5 },
+          "claws": { "arc": "46", "armor": 2, "break": 5 },
+          "tail": { "arc": "2", "armor": 1, "break": 4 }
+        },
+        {
+          "hp": 70,
+          "head": { "arc": "8", "armor": 2, "break": 5 },
+          "claws": { "arc": "46", "armor": 2, "break": 5 },
+          "tail": { "arc": "2", "armor": 2, "break": 5 }
+        }
+      ],
+      "behavior-names": [
+        "Sand Trap",
+        "Pillar Climb",
+        "Close Submerged Leap",
+        "Far Submerged Leap",
+        "Twisting Thrust",
+        "Charged Mud Spit",
+        "Close Mud Spit",
+        "Far Mud Spit",
+        "Sweeping Bite",
+        "Tail Sweep",
+        "Far Lunging Bite",
+        "Close Lunging Bite",
+        "Tail Jab",
+        "Large Charged Mud Spit"
+      ],
+      "behavior": [
+        {
+          "_comment1": "Sand Trap",
+          "id": 1100,
+          "part": "head",
+          "target": "far",
+          "type": "dig",
+          "actions": [
+            { "type": "wind-up", "turn": 1, "card": 2 },
+            { "type": "atk-move", "value": 2, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 1,
+              "dodge": 3,
+              "dir": "n",
+              "eff": "stun"
+            },
+            { "type": "hunter", "turn": 1, "card": 2 },
+            {
+              "type": "bottom",
+              "value": "Before this monster attacks, It will pull hunters within 4 [range] to itself, then repeat the attack. "
+            }
+          ]
+        },
+        {
+          "_comment1": "Pillar Climb",
+          "id": 1101,
+          "part": "torso",
+          "target": "close",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 3,
+              "dodge": 4,
+              "dir": "n",
+              "ele": "water"
+            },
+            { "type": "hunter", "turn": 3, "card": 3 },
+            {
+              "type": "bottom",
+              "value": "Before this monster attacks, it will move to the closest rock node and will be +1 [range] from hunters."
+            }
+          ]
+        },
+        {
+          "_comment1": "Close Submerged Leap",
+          "id": 1102,
+          "part": "head",
+          "target": "close",
+          "type": "dig",
+          "actions": [
+            { "type": "atk-move", "value": 3, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 1,
+              "dodge": 2,
+              "dir": "n"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], repeat the attack."
+            }
+          ]
+        },
+        {
+          "_comment1": "Far Submerged Leap",
+          "id": 1102,
+          "part": "head",
+          "target": "far",
+          "type": "dig",
+          "actions": [
+            { "type": "atk-move", "value": 4, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 1,
+              "dodge": 2,
+              "dir": "n"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], repeat the attack."
+            }
+          ]
+        },
+        {
+          "_comment1": "Twisting Thrust",
+          "id": 1103,
+          "part": "tail",
+          "target": "far",
+          "actions": [
+            { "type": "wind-up", "turn": 2, "card": 3 },
+            { "type": "atk-move", "value": 5, "dir": "8" },
+            {
+              "type": "attack",
+              "value": 8,
+              "range": 1,
+              "dodge": 4,
+              "dir": "n"
+            },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], +2 [dodge]."
+            }
+          ]
+        },
+        {
+          "_comment1": "Charged Mud Spit",
+          "id": 1104,
+          "part": "head",
+          "target": "close",
+          "actions": [
+            { "type": "wind-up", "turn": 2, "card": 2 },
+            { "type": "move", "value": 1, "dir": "2" },
+            {
+              "type": "attack",
+              "value": 6,
+              "range": 3,
+              "dodge": 4,
+              "dir": "8",
+              "ele": "water"
+            },
+            { "type": "hunter", "turn": 1, "card": 2 }
+          ]
+        },
+        {
+          "_comment1": "Close Mud Spit",
+          "id": 1105,
+          "part": "head",
+          "target": "close",
+          "actions": [
+            { "type": "move", "value": 1, "dir": "4" },
+            {
+              "type": "attack",
+              "value": 5,
+              "range": 3,
+              "dodge": 2,
+              "dir": "n",
+              "ele": "water"
+            },
+            { "type": "hunter", "turn": 1, "card": 3 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], +1 [range]."
+            }
+            
+          ]
+        },
+        {
+          "_comment1": "Far Mud Spit",
+          "id": 1106,
+          "part": "head",
+          "target": "far",
+          "actions": [
+            { "type": "move", "value": 1, "dir": "6" },
+            {
+              "type": "attack",
+              "value": 5,
+              "range": 4,
+              "dodge": 2,
+              "dir": "n",
+              "ele": "water"
+            },
+            { "type": "hunter", "turn": 1, "card": 3 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], +1 [range]."
+            }
+          ]
+        },
+        {
+          "_comment1": "Sweeping Bite",
+          "id": 1107,
+          "part": "head",
+          "target": "close",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 1,
+              "dodge": 2,
+              "dir": "468"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], +2 [dodge]."
+            }
+          ]
+        },
+        {
+          "_comment1": "Tail Sweep",
+          "id": 1109,
+          "part": "tail",
+          "target": "close",
+          "actions": [
+            { 
+                "type": "attack", 
+                "value": 7,
+                "range": 2,
+                "dodge": 3,
+                "dir": "2"
+            },
+            { "type": "hunter", "turn": 1, "card": 4 }
+          ]
+        },
+        {
+          "_comment1": "Far Lunging Bite",
+          "id": 1110,
+          "part": "head",
+          "target": "far",
+          "actions": [
+            { "type": "move", "value": 1, "dir": "8" },
+            { 
+                "type": "attack", 
+                "value": 8,
+                "range": 1,
+                "dodge": 2,
+                "dir": "n"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 },
+            {
+              "type": "bottom",
+              "value": "If this monster is [enraged], repeat the attack."
+            }
+          ]
+        },
+        {
+          "_comment1": "Close Lunging Bite",
+          "id": 1112,
+          "part": "head",
+          "target": "close",
+          "type": "track",
+          "actions": [
+            { "type": "move", "value": 1, "dir": "8" },
+            { 
+              "type": "attack", 
+              "value": 5,
+              "range": 1,
+              "dodge": 4,
+              "dir": "n"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+        },
+        {
+          "_comment1": "Tail Jab",
+          "id": 1111,
+          "part": "tail",
+          "target": "close",
+          "type": "track",
+          "actions": [
+            { 
+                "type": "attack", 
+                "value": 7,
+                "range": 2,
+                "dodge": 4,
+                "dir": "2"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 }
+          ]
+        },
+        {
+          "_comment1": "Large Charged Mud Spit",
+          "id": 1104,
+          "part": "head",
+          "target": "far",
+          "type": "track",
+          "actions": [
+            { "type": "wind-up", "turn": 2, "card": 2 },
+            { "type": "move", "value": 1, "dir": "2" },
+            {
+              "type": "attack",
+              "value": 7,
+              "range": 4,
+              "dodge": 5,
+              "dir": "468",
+              "ele": "water"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
