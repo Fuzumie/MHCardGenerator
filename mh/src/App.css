@@ -627,6 +627,9 @@
 .fire-blade {
   background: url(assets/fire-blade.png) center center/contain;
 }
+.avalanche {
+  background: url(assets/avalanche.png) center center/contain;
+}
 
 .icon-status {
   position: relative;

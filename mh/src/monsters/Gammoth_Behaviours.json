@@ -103,15 +103,16 @@
           {
             "type": "attack",
             "value": 9,
-            "range": 4,
+            "range": 2,
             "dodge": 4,
             "dir": "486",
             "eff": "freeze",
             "ele": "ice"
           },
+          { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
-            "value": "Before this monster attacks it will pull hunters within range to itself."
+            "value": "Before this monster attacks it will pull hunters within 4 [range] to itself."
           }
         ]
       },
@@ -121,16 +122,16 @@
         "part": "leg",
         "target": "far",
         "actions": [
-          { "type": "wind-up", "turn": 1, "card": 3 },
-          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "wind-up", "turn": 1, "card": 4 },
           {
             "type": "attack",
             "value": 8,
-            "range": 1,
+            "range": 2,
             "dodge": 5,
             "dir": "48",
             "eff": "stun"
           },
+          { "type": "atk-move", "value": 2, "dir": "4" },
           {
             "type": "bottom",
             "turn": 2,
@@ -225,7 +226,7 @@
         "actions": [
           {
             "type": "text",
-            "value": "Armor on each unbroken bodypart regains 2 health and hunters\\within 3 [range] receive [freeze]."
+            "value": "Coat on each unbroken bodypart regains 2 health and hunters\\within 3 [range] receive [freeze]."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
@@ -256,6 +257,7 @@
         "id": 23,
         "part": "leg",
         "target": "close",
+        "type": "avalanche",
         "actions": [
           { "type": "wind-up", "turn": 1, "card": 2 },
           {
@@ -270,7 +272,7 @@
           { "type": "hunter", "turn": 3, "card": 3 },
           {
             "type": "bottom",
-            "value": "May use after walking 10 nodes with same Snow Armor."
+            "value": "May use after walking 10 nodes with same snow coat."
           }
         ]
       },
@@ -289,7 +291,7 @@
             "dir": "86",
             "eff": "stun"
           },
-          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "atk-move", "value": 2, "dir": "6" },
           { "type": "hunter", "turn": 2, "card": 4 },
           { "bottom": "If this monster is [enraged], +2 [dodge]." }
         ]
@@ -301,7 +303,7 @@
         "target": "far",
         "type": "track",
         "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
+          { "type": "atk-move", "value": 2, "dir": "8" },
           {
             "type": "attack",
             "value": 6,
