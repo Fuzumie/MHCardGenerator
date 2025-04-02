@@ -594,8 +594,11 @@
 .jaggi {
   background-image: url(assets/monster/jaggi.png) !important;
 }
+.rey {
+  background-image: url(assets/monster/rey.png) !important;
+}
 
-/* STATUS EFFECTS ICON */
+/* STATUS EFFECTS ICONS */
 .flash {
   background: url(assets/flash.png) center center/contain;
 }
@@ -630,6 +633,13 @@
 .avalanche {
   background: url(assets/avalanche.png) center center/contain;
 }
+.railgun {
+  background: url(assets/railgun.png) center center/contain;
+}
+.amp {
+  background: url(assets/amp.png) center center/contain;
+}
+
 
 .icon-status {
   position: relative;
