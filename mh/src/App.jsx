@@ -156,6 +156,49 @@ function App() {
                               </div>
                             </div>
                           );
+                        // *ATTACK LOCK----------------------------------------
+                        if (a.type === "atk-lock")
+                          return (
+                            <div className="action atk-lock" key={i}>
+                              <div className="num">{a.value}</div>
+                              <div className="icon dodge">
+                                <div className="num">{a.dodge}</div>
+                              </div>
+                              <div className="icon range">
+                                <div className="num">{a.range}</div>
+                              </div>
+                              {a.dir === "n" ? (
+                                <div className={`dir node`} />
+                              ) : (
+                                <div className={`dir`}>
+                                  {Object.entries(a.dir || {}).map(([, d]) => (
+                                    <div
+                                      className={`dir-${d}`}
+                                      key={`dir-${d}`}
+                                    />
+                                  ))}
+
+                                  {a.atkdir &&
+                                    Object.entries(a.atkdir || {}).map(
+                                      ([, d]) => (
+                                        <div
+                                          className={`atkdir-${d} atk`}
+                                          key={`atkdir-${d}`}
+                                        />
+                                      )
+                                    )}
+                                </div>
+                              )}
+                              {a.ele &&
+                                [2, 4, 6, 8].map((d) => (
+                                  <div
+                                    className={`ele ${a.ele} dir-${d}`}
+                                    key={d}
+                                  />
+                                ))}
+                              {a.eff && <div className={`icon eff ${a.eff}`} />}
+                            </div>
+                          );
                         // *TEXT-----------------------------------------
                         if (a.type === "text")
                           return <div className="text">{parse(a.value)}</div>;

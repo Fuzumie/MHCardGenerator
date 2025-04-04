@@ -57,15 +57,15 @@
         "type": "railgun",
         "actions": [
           { "type": "wind-up", "turn": 2, "card": 2 },
-          { "type": "move", "value": 1, "dir": "2" },
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 12,
             "range": 5,
             "dodge": 6,
             "dir": "n",
             "ele": "thunder"
           },
+          { "type": "move", "value": 2, "dir": "2" },
           {
             "type": "bottom",
             "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 2 [range]."
@@ -185,9 +185,8 @@
         "target": "close",
         "type": "amp",
         "actions": [
-          { "type": "move", "value": 1, "dir": "2" },
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 6,
             "range": 4,
             "dodge": 4,
@@ -209,15 +208,15 @@
         "type": "amp",
         "actions": [
           { "type": "wind-up", "turn": 2, "card": 2 },
-          { "type": "move", "value": 1, "dir": "2" },
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 10,
             "range": 5,
             "dodge": 6,
             "dir": "n",
             "ele": "thunder"
-          }
+          },
+          { "type": "move", "value": 1, "dir": "2" }
         ]
       },
       {

@@ -230,6 +230,9 @@
   background: url(assets/atk-behavior-dir-pad.png) center center/contain
     no-repeat;
 }
+.atk-lock {
+  background: url(assets/lockata.png) center center/contain no-repeat;
+}
 .attack {
   background: url(assets/behavior-damage.png) center center/contain no-repeat;
 }
