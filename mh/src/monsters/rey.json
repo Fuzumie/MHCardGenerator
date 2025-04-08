@@ -1,340 +1,338 @@
 {
-    "rey": {
-      "resistance": {
-        "fire": 2,
-        "ice": 1,
-        "water": 2,
-        "dragon": 2,
-        "thunder": 1,
-        "paralysis": 2,
-        "blast": 2,
-        "poison": 2,
-        "stun": 2,
-        "sleep": 2
+  "rey": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
       },
-      "levels": [
-        {
-          "hp": 60,
-          "head": { "arc": "8", "armor": 1, "break": 3 },
-          "claws": { "arc": "46", "armor": 1, "break": 4 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 65,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 70,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 2, "break": 5 }
-        }
-      ],
-      "behavior-names": [
-        "Lightning Railgun",
-        "Horn Thrust",
-        "Left Wing Drag",
-        "Right Wing Slam",
-        "Double Tail Slam",
-        "Flying Wing Slam",
-        "Quickfire Beam",
-        "Lightning Beam",
-        "Flip Slam",
-        "Direct Thunder Hit",
-        "Direct Thunder Hit",
-        "Left Wing Slam",
-        "Heavy Tail Slam",
-        "Right Wing Drag"
-      ],
-      "behavior": [
-        {
-          "_comment1": "Lightning Railgun",
-          "id": 1027,
-          "part": "head",
-          "target": "far",
-          "type": "railgun",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            { "type": "move", "value": 1, "dir": "2" },
-            {
-              "type": "attack",
-              "value": 12,
-              "range": 5,
-              "dodge": 6,
-              "dir": "n",
-              "ele": "thunder"
-            },
-            {
-              "type": "bottom",
-              "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 2 [range]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Horn Thrust",
-          "id": 1028,
-          "part": "head",
-          "target": "close",
-          "type": "amp",
-          "actions": [
-            { "type": "move", "value": 2, "dir": "6" },
-            {
-              "type": "attack",
-              "value": 9,
-              "range": 1,
-              "dodge": 6,
-              "dir": "n",
-              "ele": "thunder"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Left Wing Drag",
-          "id": 1029,
-          "part": "wing",
-          "target": "close",
-          "actions": [
-            { "type": "atk-move", "value": 2, "dir": "4" },
-            {
-              "type": "attack",
-              "value": 9,
-              "range": 1,
-              "dodge": 4,
-              "dir": "48",
-              "eff": "stun"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], deals [thunder] damage."
-            }
-          ]
-        },
-        {
-          "_comment1": "Right Wing Slam",
-          "id": 1030,
-          "part": "wing",
-          "target": "close",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            { "type": "wind-up", "turn": 1, "card": 4 },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 4,
-              "dir": "68",
-              "eff": "stun"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], deals [thunder] damage."
-            }
-          ]
-        },
-        {
-          "_comment1": "Double Tail Slam",
-          "id": 1031,
-          "part": "tail",
-          "target": "close",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 2,
-              "dodge": 3,
-              "dir": "246",
-              "eff": "stun"
-            },
-            { "type": "hunter", "turn": 4, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Flying Wing Slam",
-          "id": 1029,
-          "part": "wing",
-          "target": "far",
-          "actions": [
-            { "type": "atk-move", "value": 4, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 5,
-              "dir": "n",
-              "eff": "stun"
-            },
-            { "type": "hunter", "turn": 3, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], deals [thunder] damage."
-            }
-          ]
-        },
-        {
-          "_comment1": "Quickfire Beam",
-          "id": 1033,
-          "part": "head",
-          "target": "close",
-          "type": "amp",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "2" },
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 4,
-              "dodge": 4,
-              "dir": "n",
-              "ele": "thunder"
-            },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Lightning Beam",
-          "id": 1034,
-          "part": "head",
-          "target": "far",
-          "type": "amp",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            { "type": "move", "value": 1, "dir": "2" },
-            {
-              "type": "attack",
-              "value": 10,
-              "range": 5,
-              "dodge": 6,
-              "dir": "n",
-              "ele": "thunder"
-            }
-          ]
-        },
-        {
-          "_comment1": "Flip Slam",
-          "id": 1035,
-          "part": "tail",
-          "target": "far",
-          "actions": [
-            { "type": "move", "value": 3, "dir": "8" },
-            { "type": "wind-up", "turn": 2, "card": 3 },
-            {
-              "type": "attack",
-              "value": 8,
-              "range": 2,
-              "dodge": 4,
-              "dir": "8",
-              "eff": "stun"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Direct Thunder Hit",
-          "id": 1036,
-          "part": "torso",
-          "target": "far",
-          "type": "amp",
-          "actions": [
-            {
-              "type": "text",
-              "value": "This Monster gains +1 [amp] and its next [wing] behaviour is [thunder]."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Direct Thunder Hit",
-          "id": 1036,
-          "part": "torso",
-          "target": "close",
-          "type": "amp",
-          "actions": [
-            {
-              "type": "text",
-              "value": "This Monster gains +1 [amp] and its next [tail] behaviour is [thunder]."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Left Wing Slam",
-          "id": 1030,
-          "part": "wing",
-          "target": "close",
-          "type": "track",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            {
-              "type": "attack",
-              "value": 9,
-              "range": 1,
-              "dodge": 3,
-              "dir": "48",
-              "eff": "stun"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], deals [thunder] damage."
-            }
-          ]
-        },
-        {
-          "_comment1": "Heavy Tail Slam",
-          "id": 1031,
-          "part": "tail",
-          "target": "far",
-          "type": "track",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 10,
-              "range": 2,
-              "dodge": 5,
-              "dir": "246",
-              "eff": "stun"
-            },
-            { "type": "hunter", "turn": 2, "card": 3 }
-          ]
-        },
-        {
-          "_comment1": "Right Wing Drag",
-          "id": 1029,
-          "part": "wing",
-          "target": "far",
-          "type": "track",
-          "actions": [
-            { "type": "atk-move", "value": 2, "dir": "6" },
-            {
-              "type": "attack",
-              "value": 8,
-              "range": 1,
-              "dodge": 5,
-              "dir": "68",
-              "eff": "stun"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], deals [thunder] damage."
-            }
-          ]
-        }
-      ]
-    }
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Lightning Railgun",
+      "Horn Thrust",
+      "Left Wing Drag",
+      "Right Wing Slam",
+      "Double Tail Slam",
+      "Flying Wing Slam",
+      "Quickfire Beam",
+      "Lightning Beam",
+      "Flip Slam",
+      "Direct Thunder Hit",
+      "Direct Thunder Hit",
+      "Left Wing Slam",
+      "Heavy Tail Slam",
+      "Right Wing Drag"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Lightning Railgun",
+        "id": 1027,
+        "part": "head",
+        "target": "far",
+        "type": "railgun",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 12,
+            "range": 5,
+            "dodge": 6,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 2 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Horn Thrust",
+        "id": 1028,
+        "part": "head",
+        "target": "close",
+        "type": "amp",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 6,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Left Wing Drag",
+        "id": 1029,
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 4,
+            "dir": "48",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Right Wing Slam",
+        "id": 1030,
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "68",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Double Tail Slam",
+        "id": 1031,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 3,
+            "dir": "246",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 4, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Flying Wing Slam",
+        "id": 1029,
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Quickfire Beam",
+        "id": 1033,
+        "part": "head",
+        "target": "close",
+        "type": "amp",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 6,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Lightning Beam",
+        "id": 1034,
+        "part": "head",
+        "target": "far",
+        "type": "amp",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 10,
+            "range": 5,
+            "dodge": 6,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "move", "value": 1, "dir": "2" }
+        ]
+      },
+      {
+        "_comment1": "Flip Slam",
+        "id": 1035,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 4,
+            "dir": "8",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Direct Thunder Hit",
+        "id": 1036,
+        "part": "torso",
+        "target": "far",
+        "type": "amp",
+        "actions": [
+          {
+            "type": "text",
+            "value": "This Monster gains +1 [amp] and its next [wing] behaviour is [thunder]."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Direct Thunder Hit",
+        "id": 1036,
+        "part": "torso",
+        "target": "close",
+        "type": "amp",
+        "actions": [
+          {
+            "type": "text",
+            "value": "This Monster gains +1 [amp] and its next [tail] behaviour is [thunder]."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Left Wing Slam",
+        "id": 1030,
+        "part": "wing",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 3,
+            "dir": "48",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Heavy Tail Slam",
+        "id": 1031,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "246",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Right Wing Drag",
+        "id": 1029,
+        "part": "wing",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "68",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      }
+    ]
   }
-  
+}

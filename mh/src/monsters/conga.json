@@ -1,0 +1,341 @@
+{
+  "conga": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Claw Swipe",
+      "Consecutive Swipes",
+      "Enlarge Belly",
+      "Fart",
+      "Smelly Fart",
+      "Breath Attack",
+      "Halitosis Attack",
+      "Jump and Slash",
+      "Dung Throw",
+      "Tail Snatch",
+      "Leap Belly Slam",
+      "Consecutive Swipes",
+      "Belly Slam",
+      "Tummy Full Of Gas"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Claw Swipe",
+        "id": 1027,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Consecutive Swipes",
+        "id": 1028,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 4, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack four times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Enlarge Belly",
+        "id": 1029,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, hunters attacks in the front arc will bounce off."
+          }
+        ]
+      },
+      {
+        "_comment1": "Fart",
+        "id": 1030,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "246",
+            "eff": "stench"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Smelly Fart",
+        "id": 1031,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 3,
+            "dir": "246",
+            "eff": "stench"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Breath Attack",
+        "id": 1029,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 2,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "stench"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Halitosis Attack",
+        "id": 1029,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 6,
+            "range": 3,
+            "dodge": 4,
+            "dir": "468",
+            "eff": "stench"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Jump and Slash",
+        "id": 1034,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "8",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Dung Throw",
+        "id": 1035,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 5,
+            "dodge": 4,
+            "dir": "n",
+            "eff": "stench"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Tail Snatch",
+        "id": 1031,
+        "part": "tail",
+        "target": "far",
+        "type": "shroom",
+        "actions": [
+          {
+            "type": "text",
+            "value": "This monster will become [enraged] and instead of eating the closest [shroom] it will eat the farthest [shroom] instead."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is already [enraged], discard this behaviour."
+          }
+        ]
+      },
+      {
+        "_comment1": "Leap Belly Slam",
+        "id": 1037,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Consecutive Swipes",
+        "id": 1030,
+        "part": "claws",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 4, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack four times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Belly Slam",
+        "id": 1036,
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Tummy Full Of Gas",
+        "id": 1029,
+        "part": "torso",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, hunters attacks in the front arc will bounce off."
+          }
+        ]
+      }
+    ]
+  }
+}

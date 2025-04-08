@@ -579,9 +579,6 @@
 .que {
   background-image: url(assets/monster/que.png) !important;
 }
-.konga {
-  background-image: url(assets/monster/konga.png) !important;
-}
 .gyp {
   background-image: url(assets/monster/gyp.png) !important;
 }
@@ -599,6 +596,9 @@
 }
 .rey {
   background-image: url(assets/monster/rey.png) !important;
+}
+.conga {
+  background-image: url(assets/monster/konga.png) !important;
 }
 
 /* STATUS EFFECTS ICONS */
@@ -641,6 +641,12 @@
 }
 .amp {
   background: url(assets/amp.png) center center/contain;
+}
+.stench {
+  background: url(assets/stench.png) center center/contain;
+}
+.shroom {
+  background: url(assets/shroom.png) center center/contain;
 }
 
 
