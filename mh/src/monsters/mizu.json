@@ -95,6 +95,7 @@
         "part": "head",
         "target": "close",
         "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
           {
             "type": "attack",
             "value": 7,
@@ -104,7 +105,6 @@
             "atkdir": "794613",
             "eff": "bubble"
           },
-          { "type": "move", "value": 2, "dir": "8" },
           { "type": "hunter", "turn": 1, "card": 2 },
           {
             "type": "bottom",
@@ -139,7 +139,7 @@
         "part": "head",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "atk-move", "value": 1, "dir": "8" },
           {
             "type": "attack",
             "value": 5,
@@ -225,7 +225,7 @@
         "target": "far",
         "actions": [
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 8,
             "range": 4,
             "dodge": 3,
@@ -233,7 +233,7 @@
             "ele": "water"
           },
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 8,
             "range": 4,
             "dodge": 4,
@@ -250,22 +250,18 @@
         "part": "head",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 4, "dir": "6" },
           {
-            "type": "attack",
+            "type": "atk-lock",
             "value": 9,
-            "range": 1,
+            "range": 3,
             "dodge": 5,
             "dir": "8",
             "atkdir": "87946231",
             "ele": "water",
             "eff": "bubble"
           },
-          { "type": "hunter", "turn": 3, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "This monster contiues this attack by each node it can walk without changing the direction it's facing even if it hit it's target."
-          }
+          { "type": "atk-move", "value": 4, "dir": "6" },
+          { "type": "hunter", "turn": 3, "card": 2 }
         ]
       },
       {
@@ -341,11 +337,11 @@
         "id": 1053,
         "part": "tail",
         "target": "close",
-        "extra": "bubble",
+        "extra": "bubble-bliss",
         "actions": [
           {
             "type": "text",
-            "value": "Next [bubble] behaviour heals player by 4 hp if they are hit with [bubble] from it.\\The monster will wash off it's wounds, remove 2 part break tokens on the body part that has most of them."
+            "value": "Next [bubble-bliss] behaviour heals player by 4 hp if they are hit with [bubble-bliss] from it.\\The monster will wash off it's wounds, remove 2 part break tokens on the body part that has most of them."
           },
           { "type": "hunter", "turn": 1, "card": 3 }
         ]
@@ -355,11 +351,11 @@
         "id": 1054,
         "part": "tail",
         "target": "far",
-        "extra": "bubble",
+        "extra": "bubble-off",
         "actions": [
           {
             "type": "text",
-            "value": "Next [bubble] behaviour gives 2+ [hunter-attack] if they are hit with [bubble].\\The monster will enchance it's next [bubble] behaviour by 5+ [attack]."
+            "value": "Next [bubble-off] behaviour gives +3 [attack-cards] if they are hit with [bubble-off].\\The monster will enchance it's next [bubble-off] behaviour by 5+ [attack]."
           },
           { "type": "hunter", "turn": 2, "card": 2 }
         ]

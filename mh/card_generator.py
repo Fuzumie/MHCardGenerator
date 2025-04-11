@@ -105,15 +105,52 @@ def generate_cards(output_folder="generated_cards"):
                 safe_name = "".join(c if c.isalnum() or c in [' ', '_', '-'] else '_' for c in card_name)
                 safe_name = safe_name.replace(' ', '_')
                 
-                # Handle duplicate names by adding target or ID as suffix
-                # Check if this is a duplicate name by looking at the behavior ID
+                # Track card names to detect duplicates
+                if not hasattr(generate_cards, 'card_names'):
+                    generate_cards.card_names = {}
+                
+                # Get the target attribute (close, far, etc.)
+                target = behavior.get("target", "")
+                
+                # Create filename using just the card name
                 filename = safe_name
                 
-                # If it's one of the duplicate "Mending Lick" cards, add the target as suffix
-                if card_name == "Mending Lick":
-                    target = behavior.get("target", "")
+                # Check if this card name has been seen before
+                monster_key = f"{monster_id}:{card_name}"
+                if monster_key in generate_cards.card_names:
+                    # This is a duplicate name - add the target as suffix
                     if target:
                         filename = f"{safe_name}_{target}"
+                    else:
+                        # Fallback to ID if no target is available
+                        card_id = behavior.get("id", i)
+                        filename = f"{safe_name}_{card_id}"
+                    
+                    # Also update the first occurrence if it didn't have a suffix
+                    if generate_cards.card_names[monster_key] == safe_name and target:
+                        # Get the target of the first occurrence
+                        first_target = monster_info["behavior"][generate_cards.card_names[monster_key + "_index"]]["target"]
+                        if first_target:
+                            # Rename the first file with its target
+                            first_filename = f"{safe_name}_{first_target}"
+                            
+                            # If files already exist, rename them
+                            old_front = os.path.join(output_folder, f"{safe_name}_front.png")
+                            old_back = os.path.join(output_folder, f"{safe_name}_back.png")
+                            new_front = os.path.join(output_folder, f"{first_filename}_front.png")
+                            new_back = os.path.join(output_folder, f"{first_filename}_back.png")
+                            
+                            if os.path.exists(old_front):
+                                os.rename(old_front, new_front)
+                            if os.path.exists(old_back):
+                                os.rename(old_back, new_back)
+                            
+                            # Update the tracking dictionary
+                            generate_cards.card_names[monster_key] = first_filename
+                else:
+                    # First occurrence of this name - track it
+                    generate_cards.card_names[monster_key] = filename
+                    generate_cards.card_names[monster_key + "_index"] = i
                 
                 print(f"  Processing card: {card_name}")
                 

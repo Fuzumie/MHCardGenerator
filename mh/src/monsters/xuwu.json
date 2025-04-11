@@ -1,0 +1,354 @@
+{
+  "xuwu": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Upside Down Dash",
+      "Upside Down Jump",
+      "Left Tentacle Strike",
+      "Leaping Tentacle Strike",
+      "Tentacle Slam",
+      "Far Piercing Tentacle",
+      "Tentacle Sweep",
+      "Blade Projectiles",
+      "Blade Slam",
+      "Crawl Ambush",
+      "Blade Embrace",
+      "Right Tentacle Slam",
+      "Close Piercing Tentacle",
+      "Grab Attack"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Upside Down Dash",
+        "id": 1027,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 13,
+            "range": 1,
+            "dodge": 6,
+            "dir": "8"
+          }
+        ]
+      },
+      {
+        "_comment1": "Upside Down Jump",
+        "id": 1028,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Left Tentacle Strike",
+        "id": 1029,
+        "part": "claws",
+        "target": "close",
+        "extra": "m-dodge",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 3,
+            "dodge": 4,
+            "dir": "84"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Leaping Tentacle Strike",
+        "id": 1030,
+        "part": "claws",
+        "target": "close",
+        "extra": "m-dodge",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 4,
+            "dir": "468"
+          },
+          { "type": "move", "value": 3, "dir": "6" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tentacle Slam",
+        "id": 1031,
+        "part": "claws",
+        "target": "far",
+        "extra": "m-dodge",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range":2,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Piercing Tentacle",
+        "id": 1032,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "move", "value": 3, "dir": "8" },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tentacle Sweep",
+        "id": 1033,
+        "part": "claws",
+        "target": "close",
+        "extra": "m-dodge",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2486",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Blade Projectiles",
+        "id": 1034,
+        "part": "claws",
+        "target": "far",
+        "type": "xuwu-blade",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 5,
+            "dodge": 5,
+            "atkdir": "4789"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 3, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Blade Slam",
+        "id": 1035,
+        "part": "claws",
+        "target": "close",
+        "type": "xuwu-blade",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 4,
+            "dodge": 4,
+            "atkdir": "6789"
+          },
+          { "type": "move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Crawl Ambush",
+        "id": 1036,
+        "part": "head",
+        "target": "far",
+        "extra": "m-dodge",
+        "actions": [
+          {
+            "type": "text",
+            "value": "Shuffle the behaviour and discard behaviours until you draw Upside Down Dash behaviour"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Blade Embrace",
+        "id": 1037,
+        "part": "claws",
+        "target": "far",
+        "type": "xuwu-blade",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 3,
+            "dodge": 4,
+            "atkdir": "47896"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Right Tentacle Slam",
+        "id": 1038,
+        "part": "claws",
+        "target": "far",
+        "extra": "m-dodge",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 5,
+            "dir": "68"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Piercing Tentacle",
+        "id": 1013,
+        "part": "claws",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "move", "value": 3, "dir": "8" },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Grab Attack",
+        "id": 1014,
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 7,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "Hunter hit is incapacitated and cannot play their turns."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -175,6 +175,9 @@
   background: url(assets/behavior-hunter-attack.png) center center/contain;
   mix-blend-mode: darken;
 }
+.attack-cards {
+  background: url(assets/attack-cards.png) center center/contain;
+}
 .num {
   position: absolute;
   left: calc(50% - 0.05em);
@@ -428,6 +431,12 @@
 .bubble {
   background: url(assets/bubble.png) center center/contain;
 }
+.bubble-off {
+  background: url(assets/offensive_bub.png) center center/contain;
+}
+.bubble-bliss {
+  background: url(assets/blissful_bub.png) center center/contain;
+}
 /* Monster dodge */
 .m-dodge {
   background: url(assets/m-dodge.png) center center/contain;
@@ -600,6 +609,12 @@
 .conga {
   background-image: url(assets/monster/konga.png) !important;
 }
+.xuwu {
+  background-image: url(assets/monster/xuwu.png) !important;
+}
+.quru {
+  background-image: url(assets/monster/quru.png) !important;
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {
@@ -647,6 +662,9 @@
 }
 .shroom {
   background: url(assets/shroom.png) center center/contain;
+}
+.xuwu-blade {
+  background: url(assets/xuwu-blade.png) center center/contain;
 }
 
 
