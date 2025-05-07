@@ -172,10 +172,14 @@
             "value": 6,
             "range": 3,
             "dodge": 4,
-            "dir": "8",
+            "dir": "n",
             "ele": "water"
           },
-          { "type": "hunter", "turn": 1, "card": 2 }
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+          }
         ]
       },
       {
@@ -333,8 +337,12 @@
             "value": 7,
             "range": 4,
             "dodge": 5,
-            "dir": "468",
+            "dir": "n",
             "ele": "water"
+          },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 2 [range]."
           }
         ]
       }

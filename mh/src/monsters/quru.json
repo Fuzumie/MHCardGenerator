@@ -1,323 +1,323 @@
 {
-    "quru": {
-      "resistance": {
-        "fire": 2,
-        "ice": 1,
-        "water": 2,
-        "dragon": 2,
-        "thunder": 1,
-        "paralysis": 2,
-        "blast": 2,
-        "poison": 2,
-        "stun": 2,
-        "sleep": 2
+  "quru": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
       },
-      "levels": [
-        {
-          "hp": 60,
-          "head": { "arc": "8", "armor": 1, "break": 3 },
-          "claws": { "arc": "46", "armor": 1, "break": 4 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 65,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 1, "break": 4 }
-        },
-        {
-          "hp": 70,
-          "head": { "arc": "8", "armor": 2, "break": 5 },
-          "claws": { "arc": "46", "armor": 2, "break": 5 },
-          "tail": { "arc": "2", "armor": 2, "break": 5 }
-        }
-      ],
-      "behavior-names": [
-        "Close Tail Swipe",
-        "Far Tail Swipe",
-        "Colorful Peck",
-        "Far Flint Chalking",
-        "Close Flint Chalking",
-        "Retreating Fluid Spit",
-        "Forward Dash",
-        "Explosive Fluid Spit",
-        "Empowering Song",
-        "Hasteful Song",
-        "Healing Song",
-        "Defense Up Song",
-        "Forward Peck",
-        "Flint Explosion"
-      ],
-      "behavior": [
-        {
-          "_comment1": "Close Tail Swipe",
-          "id": 1083,
-          "part": "tail",
-          "target": "close",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 5,
-              "range": 1,
-              "dodge": 2,
-              "dir": "2468"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Tail Swipe",
-          "id": 1084,
-          "part": "tail",
-          "target": "far",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 3,
-              "dir": "2468"
-            },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Leap",
-          "id": 1085,
-          "part": "torso",
-          "target": "far",
-          "actions": [
-            { "type": "atk-move", "value": 3, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 3,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Close Leap",
-          "id": 1086,
-          "part": "torso",
-          "target": "close",
-          "actions": [
-            { "type": "wind-up", "turn": 1, "card": 3 },
-            { "type": "atk-move", "value": 3, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 3,
-              "dir": "n"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Far Bite",
-          "id": 1087,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Close Bite",
-          "id": 1088,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { "type": "wind-up", "turn": 2, "card": 2 },
-            { "type": "move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Double Bite",
-          "id": 1089,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { "type": "atk-move", "value": 1, "dir": "8" },
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this behaviour is played, repeat the attack."
-            }
-          ]
-        },
-        {
-          "_comment1": "Jump Back",
-          "id": 1090,
-          "part": "torso",
-          "target": "far",
-          "actions": [
-            { "type": "atk-move", "value": 2, "dir": "2" },
-            {
-              "type": "attack",
-              "value": 5,
-              "range": 1,
-              "dodge": 2,
-              "dir": "n"
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Left Body Slam",
-          "id": 1091,
-          "part": "torso",
-          "target": "close",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 2,
-              "dir": "4",
-              "eff": "stun"
-            },
-            { "type": "atk-move", "value": 2, "dir": "4" },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Empowering Roar",
-          "id": 1092,
-          "part": "head",
-          "target": "close",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "Jaggis within range of 2 nodes receive +2 [attack] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Hasteful Roar",
-          "id": 1093,
-          "part": "head",
-          "target": "far",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "Jaggis within range of 2 nodes receive +2 [dodge] to their next behaviour. \\If there are no Jaggis in range discard this card instead."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Summoning Roar",
-          "id": 1094,
-          "part": "head",
-          "target": "close",
-          "type": "track",
-          "actions": [
-            { 
-                "type": "text", 
-                "value": "The monster will summon one Jaggi into the hunt."
-            },
-            { "type": "hunter", "turn": 1, "card": 2 }
-          ]
-        },
-        {
-          "_comment1": "Right Body Slam",
-          "id": 1095,
-          "part": "torso",
-          "target": "far",
-          "type": "track",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 7,
-              "range": 1,
-              "dodge": 2,
-              "dir": "6",
-              "eff": "stun"
-            },
-            { "type": "atk-move", "value": 2, "dir": "6" },
-            { "type": "hunter", "turn": 2, "card": 3 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        },
-        {
-          "_comment1": "Wide Bite",
-          "id": 1096,
-          "part": "head",
-          "target": "close",
-          "type": "track",
-          "actions": [
-            {
-              "type": "attack",
-              "value": 6,
-              "range": 1,
-              "dodge": 3,
-              "dir": "468"
-            },
-            { "type": "hunter", "turn": 2, "card": 2 },
-            {
-              "type": "bottom",
-              "value": "If this monster is [enraged], +2 [dodge]."
-            }
-          ]
-        }
-      ]
-    }
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Close Tail Swipe",
+      "Far Tail Swipe",
+      "Colorful Peck",
+      "Far Flint Chalking",
+      "Close Flint Chalking",
+      "Retreating Fluid Spit",
+      "Forward Dash",
+      "Explosive Fluid Spit",
+      "Empowering Song",
+      "Hasteful Song",
+      "Healing Song",
+      "Defense Up Song",
+      "Flying Bite",
+      "Flint Explosion"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Close Tail Swipe",
+        "id": 1083,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "2468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Tail Swipe",
+        "id": 1084,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "2468"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Colorful Peck",
+        "id": 1085,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack four times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Far Flint Chalking",
+        "id": 1086,
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 3, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "ele": "fire",
+            "dir": "n"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack twice."
+          }
+        ]
+      },
+      {
+        "_comment1": "CLose Flint Chalking",
+        "id": 1087,
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "ele": "fire",
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Retreating Fluid Spit",
+        "id": 1088,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 4,
+            "dodge": 5,
+            "ele": "water",
+            "atkdir": "789"
+          },
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Forward Dash",
+        "id": 1089,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Explosive Fluid Spit",
+        "id": 1090,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 3,
+            "dodge":4,
+            "ele": "water",
+            "atkdir": "789"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 3, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Empowering Song",
+        "id": 1091,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+              "type": "text", 
+              "value": "This monster and monsters within range of 3 nodes receive +3 [attack] to their next behaviour.\\ For the duration of 3 turns."
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Hasteful Song",
+        "id": 1092,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+              "type": "text", 
+              "value": "Discard five timecards from the timecard deck and reshuffle the deck."
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Healing Song",
+        "id": 1093,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+              "type": "text", 
+              "value": "This monster and monsters within range of 3 nodes recover +5 health."
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Defense Up Song",
+        "id": 1094,
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { 
+              "type": "text", 
+              "value": "This monster and monsters within range of 3 nodes receive +1 armor on each body part.\\ For the duration of 3 turns."
+          },
+          { "type": "hunter", "turn": 3, "card": 1 }
+        ]
+      },
+      {
+        "_comment1": "Flying Bite",
+        "id": 1095,
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 3,
+            "dir": "n",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Flint Explosion",
+        "id": 1096,
+        "part": "wing",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 9,
+            "range": 2,
+            "dodge": 5,
+            "ele": "fire",
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 4, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+          }
+        ]
+      }
+    ]
   }
-  
+}

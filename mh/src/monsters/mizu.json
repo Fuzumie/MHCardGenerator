@@ -209,7 +209,8 @@
             "range": 2,
             "dodge": 6,
             "dir": "8",
-            "atkdir": "789"
+            "atkdir": "789",
+            "eff": "bubble"
           },
           { "type": "hunter", "turn": 2, "card": 2 },
           {
