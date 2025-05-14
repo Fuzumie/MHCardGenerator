@@ -1,0 +1,214 @@
+{
+  "luna": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Furios Swipes",
+      "Tail Flip",
+      "Righ Hind Kick",
+      "Ground Swipe",
+      "Body Slam",
+      "Leaping Slash",
+      "Left Hind Kick",
+      "Freezing Breath",
+      "Winter Howl"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Furios Swipes",
+        "id": 1055,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 2, "card": 2},
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "freeze"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack five times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tail Flip",
+        "id": 1056,
+        "part": "tail",
+        "target": "exhaust",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 4 }
+        ]
+      },
+      {
+        "_comment1": "Right Hind Kick",
+        "id": 1067,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 6,
+            "dir": "26",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Ground Swipe",
+        "id": 1058,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 12,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Body Slam",
+        "id": 1059,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 7,
+            "dodge": 5,
+            "dir": "4682",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          { "type": "hunter", "turn": 4, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Leaping Slash",
+        "id": 1060,
+        "part": "claws",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 13,
+            "range": 1,
+            "dodge": 6,
+            "dir": "8",
+            "ele": "ice"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Left Hind Kick",
+          "id": 1067,
+          "part": "claws",
+          "type": "track",
+          "target": "far",
+          "actions": [
+            {
+              "type": "attack",
+              "value": 11,
+              "range": 1,
+              "dodge": 6,
+              "dir": "24",
+              "eff": "stun"
+            },
+            { "type": "hunter", "turn": 2, "card": 2 }
+          ]
+        },
+      {
+        "_comment1": "Freezing Breath",
+        "id": 1063,
+        "part": "head",
+        "type": "track",
+        "target": "exhaust",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 1,
+            "dodge": 6,
+            "dir": "24",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+          
+
+      {
+        "_comment1": "Winter Howl",
+        "id": 1064,
+        "part": "head",
+        "type": "track",
+        "target": "close",
+        "actions": [
+          {
+            "type": "text",
+            "value": "All hunters within 3 [range] suffer 4 [ice] damage."
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      }
+        ]
+      }
+     }

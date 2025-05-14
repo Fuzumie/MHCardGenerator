@@ -209,6 +209,10 @@
   background: url(assets/far.png) center center/contain;
   mix-blend-mode: normal;
 }
+.exhaust {
+  background: url(assets/exhaust.png) center center/contain;
+  mix-blend-mode: normal;
+}
 .action-area {
   position: absolute;
   left: calc(85px + 1em);
@@ -425,6 +429,9 @@
   background: url(assets/water.png) center center/contain no-repeat;
 }
 /* Status effects */
+.egg {
+  background: url(assets/egg.png) center center/contain;
+}
 .bleed {
   background: url(assets/bleed.png) center center/contain;
 }
@@ -615,6 +622,15 @@
 .quru {
   background-image: url(assets/monster/quru.png) !important;
 }
+.luna {
+  background-image: url(assets/monster/luna.png) !important;
+}
+.gigi{
+  background-image:url(assets/monster/gigi.png)
+}
+.gig{
+  background-image:url(assets/monster/gig.png)
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {
@@ -715,7 +731,7 @@
   width: 80%;
   filter: drop-shadow(0 0 1px #000);
 }
-/* !made so the fucking part icons fit into the fucking text */
+/* !made so the part icons fit into the fucking text */
 .icon-status[class*="head"]::after,
 .icon-status[class*="torso"]::after,
 .icon-status[class*="wing"]::after,

@@ -19,7 +19,7 @@ function App() {
     let r = "";
     text.forEach((t) => {
       t = t.replaceAll(
-        /\[(blast|paralysis|poison|sleep|stun|dragon|fire|freeze|ice|thunder|water|r-dragon|r-fire|r-ice|r-thunder|r-water|bush|rock|pond|agility|armor|attack|closest|farthest|dodge|movement|range|break|move|hunter-turn|hunter-attack|supernova|nerg-dive|spike|claws|head|leg|tail|torso|wing|track|flash|sharpen|enraged|bubble|scales|amp|stench|shroom|bubble-off|bubble-bliss|attack-cards)\]/g,
+        /\[(blast|paralysis|poison|sleep|stun|dragon|fire|freeze|ice|thunder|water|r-dragon|r-fire|r-ice|r-thunder|r-water|bush|rock|pond|agility|armor|attack|closest|farthest|dodge|movement|range|break|move|hunter-turn|hunter-attack|supernova|nerg-dive|spike|claws|head|leg|tail|torso|wing|track|flash|sharpen|enraged|bubble|scales|amp|stench|shroom|bubble-off|bubble-bliss|attack-cards|egg)\]/g,
         (m, m1) => {
           return `<div className="icon-status ${m1}"><img src="icons/${m1}.png" alt=""></div>`;
         }
@@ -215,22 +215,24 @@ function App() {
                             <div className="bottom-long">{parse(a.value)}</div>
                           );
                       })}
-                    </div>
-
-                    {/* HUNTER AREA */}
+                    </div>                    {/* HUNTER AREA */}
                     {(hunterTurn !== null || v.extra) && (
                       <div className="hunter-area">
                         {v.extra && <div className={`icon ${v.extra}`}></div>}
-                        <div className={`icon hunter-turn`}>
-                          <div className="num">
-                            {v.actions[hunterTurn].turn}
-                          </div>
-                        </div>
-                        <div className={`icon hunter-attack`}>
-                          <div className="num">
-                            {v.actions[hunterTurn].card}
-                          </div>
-                        </div>
+                        {hunterTurn !== null && (
+                          <>
+                            <div className={`icon hunter-turn`}>
+                              <div className="num">
+                                {v.actions[hunterTurn].turn}
+                              </div>
+                            </div>
+                            <div className={`icon hunter-attack`}>
+                              <div className="num">
+                                {v.actions[hunterTurn].card}
+                              </div>
+                            </div>
+                          </>
+                        )}
                       </div>
                     )}
                   </div>
