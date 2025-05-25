@@ -184,9 +184,9 @@
           {
             "type": "atk-lock",
             "value": 8,
-            "range": 1,
+            "range": 3,
             "dodge": 6,
-            "dir": "24",
+            "dir": "8",
             "ele": "ice",
             "eff": "freeze"
           },

@@ -52,7 +52,7 @@
             "type": "attack",
             "value": 10,
             "range": 1,
-            "dodge": 6,
+            "dodge": 5,
             "dir": "468",
             "eff": "stun"
           },
@@ -88,7 +88,7 @@
           { "type": "atk-move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 7,
             "range": 1,
             "dodge": 4,
             "dir": "n"
@@ -109,7 +109,7 @@
           { "type": "move", "value": 4, "dir": "8" },
           {
             "type": "attack", 
-            "value": 12,
+            "value": 8,
             "range": 2,
             "dodge": 5,
             "dir": "468"
@@ -131,16 +131,12 @@
           { "type": "move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 11,
+            "value": 10,
             "range": 1,
             "dodge": 6,
             "dir": "468"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], repeat the attack."
-          }
+          { "type": "hunter", "turn": 2, "card": 3 }
         ]
       },
       {

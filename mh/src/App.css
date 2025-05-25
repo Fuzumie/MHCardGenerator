@@ -506,6 +506,7 @@
 .monster.diab,
 .monster.jaggi,
 .monster.sereg,
+.monster.gig,
 .monster.mizu {
   mix-blend-mode: multiply;
 }
@@ -630,6 +631,9 @@
 }
 .gig{
   background-image:url(assets/monster/gig.png)
+}
+.odogaron{
+  background-image:url(assets/monster/odogaron.png)
 }
 
 /* STATUS EFFECTS ICONS */

@@ -1,0 +1,107 @@
+{
+  "gig": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Leech Bite",
+      "Wound Suction",
+      "Razor Teeth Jump"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Leap Bite",
+        "id": 1097,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 1,
+            "range": 1,
+            "dodge": 1,
+            "dir": "n",
+            "eff": "bleed"
+          },
+         {
+            "type": "bottom",
+            "value": "When a Giggi hits, remove it. Hunter gains +1 [bleed] per Giggi on them. For each [dodge] remove 1 Giggi."
+          }
+        ]
+      },
+      {
+        "_comment1": "Wound Suction",
+        "id": 1098,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 1,
+            "range": 1,
+            "dodge": 2,
+            "dir": "n",
+            "eff": "bleed"
+          },
+          {
+            "type": "bottom",
+            "value": "When a Giggi hits, remove it. Hunter gains +1 [bleed] per Giggi on them. For each [dodge] remove 1 Giggi."
+          }
+          
+        ]
+      },
+      {
+        "_comment1": "Razor Teeth Jump",
+        "id": 1099,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 1,
+            "range": 1,
+            "dodge": 1,
+            "dir": "n",
+            "eff": "bleed"
+          },
+          {
+            "type": "bottom",
+            "value": "When a Giggi hits, remove it. Hunter gains +1 [bleed] per Giggi on them. For each [dodge] remove 1 Giggi."
+          }
+        ]
+      }
+    ]
+  }
+}

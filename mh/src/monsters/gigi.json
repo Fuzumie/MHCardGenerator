@@ -58,9 +58,9 @@
           { "type": "atk-move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 9,
+            "value": 5,
             "range": 2,
-            "dodge": 5,
+            "dodge": 6,
             "dir": "86",
             "eff": "bleed"
           },
@@ -80,9 +80,9 @@
           { "type": "atk-move", "value": 2, "dir": "8" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 6,
             "range": 2,
-            "dodge": 4,
+            "dodge": 5,
             "dir": "48",
             "eff": "bleed"
           },
@@ -99,7 +99,6 @@
         "part": "head",
         "target": "far",
         "actions": [
-          { "type": "atk-move", "value": 4, "dir": "8" },
           {
             "type": "atk-lock",
             "value": 7,
@@ -194,7 +193,7 @@
           },
           {
             "type": "bottom",
-            "value": "Before hunters attack, monster will move to the closest rock node and will be +3 [range] from hunters."
+            "value": "Before hunters attack, monster will move to the farthest rock node and will be +3 [range] from hunters."
           }
         ]
       },
@@ -206,9 +205,9 @@
         "actions": [
           {
             "type": "atk-lock",
-            "value": 11,
+            "value": 6,
             "range": 2,
-            "dodge": 4,
+            "dodge": 5,
             "dir": "n",
             "eff": "poison"
           },
@@ -316,10 +315,11 @@
           { "type": "wind-up", "turn": 2, "card": 2 },
           {
             "type": "atk-lock",
-            "value": 9,
+            "value": 7,
             "range": 4,
-            "dodge": 4,
-            "dir": "n"
+            "dodge": 5,
+            "dir": "n",
+            "eff": "poison"
           },
           {
             "type": "bottom",
