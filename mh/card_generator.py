@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import zipfile # Import the zipfile module
 from selenium import webdriver
 # Import Firefox-specific service and options
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -167,112 +168,130 @@ def generate_cards(output_folder="generated_cards", monster_id_to_generate=None)
         cards = driver.find_elements(By.CSS_SELECTOR, ".card")
         print(f"Found {len(cards)} card elements on the page.")
 
-        # If no cards are found, take a screenshot for debugging (this is a fallback now)
+        # If no cards are found, print a message and exit
         if not cards:
-            print("No cards found.") # Keep a print statement
+            print("No cards found.")
             return # Exit the function if no cards are found
 
-        # Process each behavior card of the current monster
-        print(f"Processing {len(cards)} found cards...")
-        
-        # Add print statements to inspect monster data and behavior list
-        print(f"Current monster data structure: {type(current_monster)}")
-        if isinstance(current_monster, dict):
-            print(f"Current monster keys: {list(current_monster.keys())}")
-            behavior_list = current_monster.get("behavior", [])
-            print(f"Behavior list type: {type(behavior_list)}")
-            if isinstance(behavior_list, list):
-                print(f"Behavior list length: {len(behavior_list)}")
-            else:
-                print("'behavior' key does not contain a list.")
-        else:
-            print("Current monster is not a dictionary.")
+        # Define zip file paths
+        front_zip_path = os.path.join(output_folder, f"{monster_id_to_generate}_front.zip")
+        back_zip_path = os.path.join(output_folder, f"{monster_id_to_generate}_back.zip")
 
-        for i, behavior in enumerate(current_monster.get("behavior", [])):
-            print(f"  Processing behavior index {i}...")
-            # Ensure the index is within the range of found cards
-            if i < len(cards):
-                # Get the card name
-                card_name = ""
-                if i < len(behavior_names):
-                    card_name = behavior_names[i]
+        print(f"Creating zip files: {front_zip_path} and {back_zip_path}")
+
+        # Use 'with' statement for zip files to ensure they are closed properly
+        with zipfile.ZipFile(front_zip_path, 'w', zipfile.ZIP_DEFLATED) as front_zip, \
+             zipfile.ZipFile(back_zip_path, 'w', zipfile.ZIP_DEFLATED) as back_zip:
+
+            # Process each behavior card of the current monster
+            print(f"Processing {len(cards)} found cards...")
+
+            # Add print statements to inspect monster data and behavior list
+            print(f"Current monster data structure: {type(current_monster)}")
+            if isinstance(current_monster, dict):
+                print(f"Current monster keys: {list(current_monster.keys())}")
+                behavior_list = current_monster.get("behavior", [])
+                print(f"Behavior list type: {type(behavior_list)}")
+                if isinstance(behavior_list, list):
+                    print(f"Behavior list length: {len(behavior_list)}")
                 else:
-                    # Use comment or ID as fallback
-                    card_name = behavior.get("_comment1", f"behavior_{behavior.get('id', i)}")
+                    print('\'behavior\' key does not contain a list.')
+            else:
+                print("Current monster is not a dictionary.")
 
-                # Clean the filename
-                safe_name = "".join(c if c.isalnum() or c in [' ', '_', '-'] else '_' for c in card_name)
-                safe_name = safe_name.replace(' ', '_')
+            for i, behavior in enumerate(current_monster.get("behavior", [])):
+                print(f"  Processing behavior index {i}...")
+                # Ensure the index is within the range of found cards
+                if i < len(cards):
+                    # Get the card name
+                    card_name = ""
+                    if i < len(behavior_names):
+                        card_name = behavior_names[i]
+                    else:
+                        # Use comment or ID as fallback
+                        card_name = behavior.get("_comment1", f"behavior_{behavior.get('id', i)}")
 
-                # Create filename
-                filename = safe_name
+                    # Clean the filename for use in zip archive
+                    safe_name = "".join(c if c.isalnum() or c in [' ', '_', '-'] else '_' for c in card_name)
+                    safe_name = safe_name.replace(' ', '_')
 
-                # Check for duplicate names within this monster's behaviors
-                if card_name in card_names_tracker:
-                     # This is a duplicate name - add the target or index as suffix
-                    suffix = behavior.get("target", behavior.get("id", i))
-                    filename = f"{safe_name}_{suffix}"
-                    print(f"  Warning: Duplicate card name '{card_name}' for monster '{current_monster_id}'. Using filename '{filename}'")
-                card_names_tracker[card_name] = filename # Track the name and its assigned filename
+                    # Create filename for archive member
+                    filename = safe_name
 
-                print(f"  Processing card: {card_name}")
+                    # Check for duplicate names within this monster's behaviors
+                    if card_name in card_names_tracker:
+                         # This is a duplicate name - add the target or index as suffix
+                        suffix = behavior.get("target", behavior.get("id", i))
+                        filename = f"{safe_name}_{suffix}"
+                        print(f"  Warning: Duplicate card name '{card_name}' for monster '{current_monster_id}'. Using filename '{filename}' inside zip")
+                    card_names_tracker[card_name] = filename # Track the name and its assigned filename
 
-                # Make sure we're in front view for consistency
-                if not is_front:
-                    driver.execute_script("document.querySelector('.App').click();")
-                    time.sleep(0.5)  # Wait for animation
-                    is_front = True
+                    print(f"  Processing card: {card_name}")
 
-                # Get the card element using the index from the found cards
-                # We need to re-find cards here as the DOM might have changed after flipping
-                cards_current_view = driver.find_elements(By.CSS_SELECTOR, ".card")
+                    # Make sure we're in front view for consistency
+                    if not is_front:
+                        driver.execute_script("document.querySelector('.App').click();")
+                        time.sleep(0.5)  # Wait for animation
+                        is_front = True
 
-                if i < len(cards_current_view):
-                    card_element = cards_current_view[i]
+                    # Get the card element using the index from the found cards
+                    # We need to re-find cards here as the DOM might have changed after flipping
+                    cards_current_view = driver.find_elements(By.CSS_SELECTOR, ".card")
 
-                    # Scroll to the card to ensure it's visible
-                    driver.execute_script("arguments[0].scrollIntoView(true);", card_element)
-                    time.sleep(0.5)  # Wait for scroll
-
-                    print(f"    Attempting to capture screenshot for {filename}_front.png")
-                    # Take a screenshot of the front side
-                    screenshot = card_element.screenshot_as_png
-                    img = Image.open(BytesIO(screenshot))
-
-                    # Save front side
-                    front_path = os.path.join(output_folder, f"{filename}_front.png")
-                    img.save(front_path)
-                    print(f"    Saved front card: {front_path}")
-
-                    # Click to flip card
-                    driver.execute_script("document.querySelector('.App').click();")
-                    time.sleep(1)  # Wait for animation
-                    is_front = False
-
-                    # Find all cards again after flip
-                    cards_after_flip = driver.find_elements(By.CSS_SELECTOR, ".card")
-
-                    # Ensure the index is within range of cards after flip
-                    if i < len(cards_after_flip):
-                        card_element_after_flip = cards_after_flip[i]
+                    if i < len(cards_current_view):
+                        card_element = cards_current_view[i]
 
                         # Scroll to the card to ensure it's visible
-                        driver.execute_script("arguments[0].scrollIntoView(true);", card_element_after_flip)
+                        driver.execute_script("arguments[0].scrollIntoView(true);", card_element)
                         time.sleep(0.5)  # Wait for scroll
 
-                        print(f"    Attempting to capture screenshot for {filename}_back.png")
-                        # Take screenshot of back side
-                        screenshot = card_element_after_flip.screenshot_as_png
+                        print(f"    Capturing screenshot for {filename}_front.png")
+                        # Take a screenshot of the front side
+                        screenshot = card_element.screenshot_as_png
                         img = Image.open(BytesIO(screenshot))
 
-                        # Save back side
-                        back_path = os.path.join(output_folder, f"{filename}_back.png")
-                        img.save(back_path)
-                        print(f"    Saved back card: {back_path}")
+                        # Save front side to zip
+                        img_byte_arr = BytesIO()
+                        img.save(img_byte_arr, format='PNG')
+                        img_byte_arr = img_byte_arr.getvalue()
+                        arcname_front = f"{filename}_front.png"
+                        front_zip.writestr(arcname_front, img_byte_arr)
+                        print(f"    Added {arcname_front} to {front_zip_path}")
+
+                        # Click to flip card
+                        driver.execute_script("document.querySelector('.App').click();")
+                        time.sleep(1)  # Wait for animation
+                        is_front = False
+
+                        # Find all cards again after flip
+                        cards_after_flip = driver.find_elements(By.CSS_SELECTOR, ".card")
+
+                        # Ensure the index is within range of cards after flip
+                        if i < len(cards_after_flip):
+                            card_element_after_flip = cards_after_flip[i]
+
+                            # Scroll to the card to ensure it's visible
+                            driver.execute_script("arguments[0].scrollIntoView(true);", card_element_after_flip)
+                            time.sleep(0.5)  # Wait for scroll
+
+                            print(f"    Capturing screenshot for {filename}_back.png")
+                            # Take screenshot of back side
+                            screenshot = card_element_after_flip.screenshot_as_png
+                            img = Image.open(BytesIO(screenshot))
+
+                            # Save back side to zip
+                            img_byte_arr = BytesIO()
+                            img.save(img_byte_arr, format='PNG')
+                            img_byte_arr = img_byte_arr.getvalue()
+                            arcname_back = f"{filename}_back.png"
+                            back_zip.writestr(arcname_back, img_byte_arr)
+                            print(f"    Added {arcname_back} to {back_zip_path}")
+                        else:
+                            print(f"    Error: Card index {i} out of range after flip (total cards: {len(cards_after_flip)})")
                     else:
-                        print(f"    Error: Card index {i} out of range after flip (total cards: {len(cards_after_flip)})")
-                else:
-                    print(f"    Error: Card index {i} out of range (total cards: {len(cards_current_view)})")
+                        print(f"    Error: Card index {i} out of range (total cards: {len(cards_current_view)})")
+
+            print("Finished adding cards to zip files.")
 
     except Exception as e:
         print(f"Error during card generation: {str(e)}")
