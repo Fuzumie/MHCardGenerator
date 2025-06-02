@@ -1,5 +1,5 @@
 {
-  "ark": {
+  "glav": {
     "resistance": {
       "fire": 2,
       "ice": 1,
@@ -33,95 +33,34 @@
       }
     ],
     "behavior-names": [
-      "Charged Dragon Blast",
-      "Grab Attack",
-      "Double Chain Slam",
-      "Chain Slam",
-      "Tail Thrust",
-      "Wing Scythe",
-      "Dragon Blast",
-      "Flying Sweep Left",
-      "Tail Sweep",
-      "Three Swings Combo",
-      "Flanking Manoeuvre",
-      "Tail Slam",
-      "Flying Sweep Right",
-      "Chain Embrace"
+      "Tail Swipe",
+      "Flaming Chakram",
+      "Edge Side Cut",
+      "Foward Bite",
+      "Bitter Slash",
+      "Side Slice",
+      "Flaming Valley",
+      "Sharpening Blade",
+      "Sharpening Blade",
+      "Spinning Blade",
+      "Lunging Strike",
+      "Tail Jumpswipe",
+      "Assault Leap"
     ],
     "behavior": [
       {
-        "_comment1": "Charged Dragon Blast",
-        "id": 1027,
-        "part": "wing",
-        "target": "exhaust",
-        "type": "arkface",
+        "_comment1": "Tail Swipe",
+        "id": 1001,
+        "part": "tail",
+        "target": "close",
         "actions": [
-          {
-            "type": "atk-lock",
-            "value": 15,
-            "range": 3,
-            "dodge": 7,
-            "dir": "n",
-            "ele": "dragon"
-          },
-          {"type": "move", "value": 3, "dir": "2"},
-          { "type": "hunter", "turn": 4, "card": 3 },
-          {
-            "type": "bottom-long",
-            "value": "The second node struck spreads by 1 [range] to node adjacent to it. The third node struck spreads by 2 [range] to node adjacent to it."
-          }
-        ]
-      },
-      {
-        "_comment1": "Grab Attack",
-        "id": 1028,
-        "part": "wing",
-        "target": "exhaust",
-        "actions": [
-          {
-            "type": "atk-lock",
-            "value": 8,
-            "range": 3,
-            "dodge": 7,
-            "dir": "n"
-          },
-          {
-            "type": "attack",
-            "value": 12,
-            "range": 1,
-            "dodge": 5,
-            "dir": "n"
-          },
-          { "type": "hunter", "turn": 2, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "Hunter hit is incapacitated and cannot play their turns."
-          }
-        ]
-      },
-      {
-        "_comment1": "Double Chain Slam",
-        "id": 1029,
-        "part": "wing",
-        "target": "far",
-        "actions": [
-          { "type": "wind-up", "turn": 1, "card": 2 },
           { "type": "move", "value": 1, "dir": "8" },
           {
             "type": "attack",
-            "value": 10,
+            "value": 9,
             "range": 3,
-            "dodge": 4,
-            "dir": "8",
-            "ele": "dragon"
-          },
-          {
-            "type": "attack",
-            "value": 10,
-            "range": 2,
-            "dodge": 5,
-            "dir": "8",
-            "ele": "dragon"
+            "dodge": 3,
+            "dir": "8"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
           {
@@ -131,21 +70,21 @@
         ]
       },
       {
-        "_comment1": "Chain Slam",
-        "id": 1030,
-        "part": "wing",
+        "_comment1": "Flaming Chakram",
+        "id": 1002,
+        "part": "head",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
           {
             "type": "attack",
-            "value": 9,
-            "range": 3,
-            "dodge": 4,
+            "value": 10,
+            "range": 4,
+            "dodge": 5,
             "dir": "n",
-            "ele": "dragon"
+            "ele": "fire"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "move", "value": 2, "dir": "2" },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -153,8 +92,8 @@
         ]
       },
       {
-        "_comment1": "Tail Thrust",
-        "id": 1031,
+        "_comment1": "Edge Side Cut",
+        "id": 1003,
         "part": "tail",
         "target": "close",
         "actions": [
@@ -162,10 +101,11 @@
             "type": "attack",
             "value": 10,
             "range": 2,
-            "dodge": 6,
-            "dir": "2"
+            "dodge": 4,
+            "dir": "624",
+            "eff": "stun"
           },
-          { "type": "hunter", "turn": 1, "card": 2 },
+          { "type": "hunter", "turn": 2, "card": 3 },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -173,88 +113,174 @@
         ]
       },
       {
-        "_comment1": "Wing Scythe",
-        "id": 1032,
-        "part": "wing",
+        "_comment1": "Foward Bite",
+        "id": 1004,
+        "part": "head",
         "target": "far",
         "actions": [
-          { "type": "wind-up", "turn": 1, "card": 4 },
-          {"type": "atk-move", "value": 1, "dir": "8"},
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n"
+          },
+
+          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bitter Slash",
+        "id": 1005,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
           {
             "type": "attack",
             "value": 9,
-            "range": 1,
-            "dodge": 7,
-            "dir": "486",
-            "ele": "dragon"
+            "range": 3,
+            "dodge": 4,
+            "dir": "846",
+            "eff": "stun"
           },
+
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Side Slice",
+        "id": 1006,
+        "part": "tail",
+        "target": "far",
+        "actions": [
           {
             "type": "attack",
             "value": 10,
             "range": 3,
-            "dodge": 6,
-            "dir": "n",
-            "ele": "dragon"
+            "dodge": 4,
+            "dir": "46"
+          },
+          { "type": "move", "value": 2, "dir": "8" },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Flaming Valley",
+        "id": 1007,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 3,
+            "dodge": 5,
+            "dir": "8",
+            "atkdir": "789",
+            "ele": "fire"
           },
           { "type": "hunter", "turn": 2, "card": 3 }
         ]
       },
       {
-        "_comment1": "Dragon Blast",
-        "id": 1033,
-        "part": "wing",
-        "target": "exhaust",
-        "actions": [
-          {
-            "type": "atk-lock",
-            "value": 10,
-            "range": 3,
-            "dodge": 8,
-            "dir": "8",
-            "ele": "dragon"
-          },
-          { "type": "hunter", "turn": 2, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], +1 [range]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Flying Sweep Left",
-        "id": 1034,
-        "part": "wing",
-        "target": "far",
-        "actions": [
-          { "type": "atk-move", "value": 3, "dir": "4" },
-          {
-            "type": "attack",
-            "value": 10,
-            "range": 1,
-            "dodge": 6,
-            "dir": "84",
-            "ele": "dragon"
-          },
-          { "type": "hunter", "turn": 3, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], +2 [move]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Tail Sweep",
-        "id": 1035,
-        "part": "tail",
+        "_comment1": "Sharpening Blade",
+        "id": 1008,
+        "part": "head",
         "target": "close",
+        "extra": "sharpen",
         "actions": [
+          {
+            "type": "text",
+            "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Sharpening Blade",
+        "id": 1009,
+        "part": "head",
+        "target": "far",
+        "extra": "sharpen",
+        "actions": [
+          {
+            "type": "text",
+            "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Spinning Blade",
+        "id": 1010,
+        "part": "tail",
+        "target": "far",
+        "type": "fire-blade",
+        "actions": [
+          { "type": "atk-move", "value": 5, "dir": "8" },
           {
             "type": "attack",
             "value": 11,
             "range": 2,
             "dodge": 6,
-            "dir": "246",
+            "dir": "846",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 3, "card": 3 },
+          {
+            "type": "bottom-long",
+            "value": "This behaviour can only be used if *Sharpening Blade* has been played at least once in the game. Otherwise discard this card and draw another."
+          }
+        ]
+      },
+      {
+        "_comment1": "Lunging Strike",
+        "id": 1011,
+        "part": "tail",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 3,
+            "dir": "8462",
             "eff": "stun"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Tail Jumpswipe",
+        "id": 1012,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 3,
+            "dodge": 4,
+            "dir": "82"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
           {
@@ -264,117 +290,25 @@
         ]
       },
       {
-        "_comment1": "Three Swings Combo",
-        "id": 1036,
-        "part": "wing",
-        "target": "close",
-        "actions": [
-          {
-            "type": "atk-lock",
-            "value": 7,
-            "range": 2,
-            "dodge": 5,
-            "dir": "68",
-            "ele": "dragon"
-          },
-          {
-            "type": "atk-lock",
-            "value": 7,
-            "range": 2,
-            "dodge": 5,
-            "dir": "48",
-            "ele": "dragon"
-          },
-          {
-            "type": "atk-lock",
-            "value": 12,
-            "range": 3,
-            "dodge": 4,
-            "dir": "8",
-            "ele": "dragon",
-            "eff": "stun"
-          },
-          { "type": "hunter", "turn": 3, "card": 2 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], +1 [range]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Flanking Manoeuvre",
-        "id": 1037,
-        "part": "wing",
-        "target": "far",
-        "actions": [
-          {
-            "type": "text",
-            "value": "The monster repositions behind the targeted hunter while it's facing the hunter."
-          },
-          { "type": "hunter", "turn": 1, "card": 2 }
-        ]
-      },
-      {
-        "_comment1": "Tail Slam",
-        "id": 1038,
-        "part": "tail",
-        "target": "close",
-        "type": "track",
-        "actions": [
-          {
-            "type": "attack",
-            "value": 12,
-            "range": 2,
-            "dodge": 8,
-            "dir": "2",
-            "eff": "stun"
-          },
-          { "type": "hunter", "turn": 2, "card": 2 }
-        ]
-      },
-      {
-        "_comment1": "Flying Sweep Right",
+        "_comment1": "Assault Leap",
         "id": 1013,
-        "part": "wing",
-        "target": "close",
+        "part": "tail",
+        "target": "far",
         "type": "track",
         "actions": [
-          { "type": "atk-move", "value": 3, "dir": "6" },
+          { "type": "move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 12,
-            "range": 1,
-            "dodge": 5,
-            "dir": "86",
-            "ele": "dragon"
-          },
-          { "type": "hunter", "turn": 2, "card": 3 },
-          {
-            "type": "bottom",
-            "value": "If this monster is [enraged], +2 [move]."
-          }
-        ]
-      },
-      {
-        "_comment1": "Chain Embrace",
-        "id": 1014,
-        "part": "wing",
-        "target": "exhaust",
-        "type": "track",
-        "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
-          {
-            "type": "attack",
-            "value": 12,
+            "value": 11,
             "range": 2,
-            "dodge": 8,
-            "dir": "4268",
-            "ele": "dragon"
+            "dodge": 4,
+            "dir": "86"
           },
-          { "type": "hunter", "turn": 4, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          { "type": "hunter", "turn": 1, "card": 3 },
           {
             "type": "bottom",
-            "value": "Before this monster attacks it will pull hunters within 2 [range] to itself."
+            "value": "If this monster is [enraged], +2 [dodge]."
           }
         ]
       }

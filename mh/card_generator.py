@@ -2,97 +2,196 @@ import os
 import json
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+# Import Firefox-specific service and options
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from PIL import Image
 from io import BytesIO
 
 def setup_driver():
-    """Set up and return a Chrome webdriver with appropriate options."""
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run in headless mode (no UI)
-    chrome_options.add_argument("--window-size=2000,1500")  # Larger window size to capture full cards
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--no-sandbox")
+    """Set up and return a Firefox webdriver with appropriate options."""
+    firefox_options = FirefoxOptions()
+    firefox_options.add_argument("--headless")  # Run in headless mode (no UI)
+    firefox_options.add_argument("--window-size=2000,1500")  # Larger window size to capture full cards
+    # Firefox options might differ, disable-gpu and no-sandbox are typically Chrome-specific
+    # firefox_options.add_argument("--disable-gpu")
+    # firefox_options.add_argument("--no-sandbox")
     
-    driver = webdriver.Chrome(options=chrome_options)
+    # You might need to specify the path to geckodriver if it's not in your PATH
+    # service = FirefoxService(executable_path='/path/to/geckodriver')
+    
+    driver = webdriver.Firefox(options=firefox_options)
+    print("Firefox driver initialized.")
     return driver
 
 def load_monster_data():
-    """Load monster data from the monster.json file."""
-    with open(os.path.join("src", "monster.json"), "r", encoding="utf-8") as f:
-        return json.load(f)
+    """Load monster data from all JSON files in the monsters directory."""
+    print("Loading monster data...")
+    monster_data = {}
+    monsters_dir = os.path.join("src", "monsters")
+
+    if not os.path.exists(monsters_dir):
+        print(f"Error: Monsters directory not found at {monsters_dir}")
+        return monster_data # Return empty if directory doesn't exist
+
+    for filename in os.listdir(monsters_dir):
+        if filename.endswith('.json'):
+            monster_id = os.path.splitext(filename)[0]
+            file_path = os.path.join(monsters_dir, filename)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    loaded_data = json.load(f)
+                print(f"Loaded data for {monster_id}: {loaded_data.get(monster_id, {}).get('behavior', 'Behavior key not found or is not a list')}") # Print behavior list or status
+                monster_data[monster_id] = loaded_data.get(monster_id, {})
+                print(f"Processed monster data: {monster_id}")
+            except Exception as e:
+                print(f"Error loading {filename}: {str(e)}")
+
+    if not monster_data:
+        print("Warning: No monster data files found in src/monsters directory.")
+
+    print(f"Finished loading {len(monster_data)} monsters.")
+    return monster_data
 
 def load_localization_data():
     """Load localization data from the en.json file."""
-    with open(os.path.join("src", "en.json"), "r", encoding="utf-8") as f:
-        return json.load(f)
+    print("Loading localization data...")
+    file_path = os.path.join("src", "en.json")
+    if not os.path.exists(file_path):
+        print(f"Error: Localization file not found at {file_path}")
+        return {}
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    print("Localization data loaded.")
+    return data
 
-def generate_cards(output_folder="generated_cards"):
-    """Generate card images and save them to the specified folder."""
+def generate_cards(output_folder="generated_cards", monster_id_to_generate=None):
+    """Generate card images for the specified monster and save them to the specified folder."""
+    print("--- Starting generate_cards function ---")
+    print(f"Starting card generation for monster '{monster_id_to_generate}' to folder: {output_folder}")
     # Create output folder if it doesn't exist
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
         print(f"Created output folder: {output_folder}")
-    
-    # Load data
+
+    # Load data (still needed for behavior names and structure)
     monster_data = load_monster_data()
     localization_data = load_localization_data()
     titles = localization_data.get("monster-stat", {})
-    
+
     # Setup webdriver
+    print("Setting up webdriver...")
     driver = setup_driver()
-    
+    print("Webdriver setup complete.")
+
     try:
         # Navigate to the local development server
+        print("Navigating to web page...")
         driver.get("http://localhost:5173")  # Assuming default Vite dev server port
         print("Waiting for page to load...")
-        
-        # Wait for the app to load
-        WebDriverWait(driver, 10).until(
+
+        # Wait for the app to load (increased timeout)
+        WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, ".App"))
         )
-        
-        # Add some CSS to ensure cards are properly sized and visible
-        driver.execute_script("""
-        var style = document.createElement('style');
-        style.innerHTML = `
-            .card { 
-                transform: scale(1) !important; 
-                margin: 20px !important; 
-                display: block !important; 
-            }
-            .cards { 
-                display: block !important; 
-                width: auto !important; 
-            }
-            .App { 
-                display: flex !important; 
-                flex-direction: column !important; 
-            }
-        `;
-        document.head.appendChild(style);
-        """)  
-        
+        print(".App element found. Page loaded.")
+        print(f"Current URL: {driver.current_url}")
+        print(f"Page Title: {driver.title}")
+
         # Check if we're in front view (default)
         is_front = True
+
+        # --- Selenium interaction to select the monster ---
+        if monster_id_to_generate:
+            print(f"Attempting to select monster: {monster_id_to_generate}")
+            # Wait for the selector dot to be present and clickable
+            print("Waiting for selector dot...")
+            selector_dot = WebDriverWait(driver, 15).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, ".monster-selector"))
+            )
+            print("Selector dot found and clickable.")
+            print("Clicking selector dot...")
+            selector_dot.click() # Click the dot to expand
+            print("Selector dot clicked.")
+
+            # Wait for the select element to become visible and enabled
+            print("Waiting for select element...")
+            select_element = WebDriverWait(driver, 15).until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, ".monster-selector select"))
+            )
+            print("Select element found and visible.")
+
+            # Use Select class to choose the option by value
+            print(f"Attempting to select option with value: {monster_id_to_generate}")
+            select = Select(select_element)
+            select.select_by_value(monster_id_to_generate)
+            print(f"Selected monster: {monster_id_to_generate}")
+
+            # Add a longer explicit sleep after selection
+            time.sleep(5) # Increased sleep time significantly
+            print("Waited after monster selection.")
+
+        # Wait for the monster cards to be loaded (for the selected monster)
+        # Wait for at least one card element to appear
+        print("Waiting for at least one card to load...")
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".card"))
+        )
+        print("At least one card element found.")
+        time.sleep(2) # Add a buffer to ensure all cards are rendered
+
+        # Get the currently displayed monster's data based on the selected ID
+        current_monster_id = monster_id_to_generate # Use the provided ID
+        current_monster = monster_data.get(current_monster_id)
+
+        if not current_monster:
+             raise Exception(f"Monster data not found for ID: {monster_id_to_generate}")
+
+        print(f"\nProcessing currently displayed monster: {current_monster_id}")
+
+        # Get behavior names for this monster
+        behavior_names = current_monster.get("behavior-names", [])
+
+        # If behavior names aren't available in the monster data, try to get from localization
+        if not behavior_names and current_monster_id in titles:
+            behavior_names = list(titles[current_monster_id].get("behavior", {}).values())
+
+        # Track card names to detect duplicates within this monster's behaviors
+        card_names_tracker = {} # Use a local tracker for this run
+
+        # Find all cards on the page after selection and waiting
+        print("Attempting to find card elements...")
+        cards = driver.find_elements(By.CSS_SELECTOR, ".card")
+        print(f"Found {len(cards)} card elements on the page.")
+
+        # If no cards are found, take a screenshot for debugging (this is a fallback now)
+        if not cards:
+            print("No cards found.") # Keep a print statement
+            return # Exit the function if no cards are found
+
+        # Process each behavior card of the current monster
+        print(f"Processing {len(cards)} found cards...")
         
-        # Process each monster
-        for monster_id, monster_info in monster_data.items():
-            print(f"\nProcessing monster: {monster_id}")
-            
-            # Get behavior names for this monster
-            behavior_names = monster_info.get("behavior-names", [])
-            
-            # If behavior names aren't available in the monster data, try to get from localization
-            if not behavior_names and monster_id in titles:
-                behavior_names = list(titles[monster_id].get("behavior", {}).values())
-            
-            # Process each behavior card
-            for i, behavior in enumerate(monster_info.get("behavior", [])):
+        # Add print statements to inspect monster data and behavior list
+        print(f"Current monster data structure: {type(current_monster)}")
+        if isinstance(current_monster, dict):
+            print(f"Current monster keys: {list(current_monster.keys())}")
+            behavior_list = current_monster.get("behavior", [])
+            print(f"Behavior list type: {type(behavior_list)}")
+            if isinstance(behavior_list, list):
+                print(f"Behavior list length: {len(behavior_list)}")
+            else:
+                print("'behavior' key does not contain a list.")
+        else:
+            print("Current monster is not a dictionary.")
+
+        for i, behavior in enumerate(current_monster.get("behavior", [])):
+            print(f"  Processing behavior index {i}...")
+            # Ensure the index is within the range of found cards
+            if i < len(cards):
                 # Get the card name
                 card_name = ""
                 if i < len(behavior_names):
@@ -100,124 +199,84 @@ def generate_cards(output_folder="generated_cards"):
                 else:
                     # Use comment or ID as fallback
                     card_name = behavior.get("_comment1", f"behavior_{behavior.get('id', i)}")
-                
-                # Clean the filename - use only the attack move name
+
+                # Clean the filename
                 safe_name = "".join(c if c.isalnum() or c in [' ', '_', '-'] else '_' for c in card_name)
                 safe_name = safe_name.replace(' ', '_')
-                
-                # Track card names to detect duplicates
-                if not hasattr(generate_cards, 'card_names'):
-                    generate_cards.card_names = {}
-                
-                # Get the target attribute (close, far, etc.)
-                target = behavior.get("target", "")
-                
-                # Create filename using just the card name
+
+                # Create filename
                 filename = safe_name
-                
-                # Check if this card name has been seen before
-                monster_key = f"{monster_id}:{card_name}"
-                if monster_key in generate_cards.card_names:
-                    # This is a duplicate name - add the target as suffix
-                    if target:
-                        filename = f"{safe_name}_{target}"
-                    else:
-                        # Fallback to ID if no target is available
-                        card_id = behavior.get("id", i)
-                        filename = f"{safe_name}_{card_id}"
-                    
-                    # Also update the first occurrence if it didn't have a suffix
-                    if generate_cards.card_names[monster_key] == safe_name and target:
-                        # Get the target of the first occurrence
-                        first_target = monster_info["behavior"][generate_cards.card_names[monster_key + "_index"]]["target"]
-                        if first_target:
-                            # Rename the first file with its target
-                            first_filename = f"{safe_name}_{first_target}"
-                            
-                            # If files already exist, rename them
-                            old_front = os.path.join(output_folder, f"{safe_name}_front.png")
-                            old_back = os.path.join(output_folder, f"{safe_name}_back.png")
-                            new_front = os.path.join(output_folder, f"{first_filename}_front.png")
-                            new_back = os.path.join(output_folder, f"{first_filename}_back.png")
-                            
-                            if os.path.exists(old_front):
-                                os.rename(old_front, new_front)
-                            if os.path.exists(old_back):
-                                os.rename(old_back, new_back)
-                            
-                            # Update the tracking dictionary
-                            generate_cards.card_names[monster_key] = first_filename
-                else:
-                    # First occurrence of this name - track it
-                    generate_cards.card_names[monster_key] = filename
-                    generate_cards.card_names[monster_key + "_index"] = i
-                
+
+                # Check for duplicate names within this monster's behaviors
+                if card_name in card_names_tracker:
+                     # This is a duplicate name - add the target or index as suffix
+                    suffix = behavior.get("target", behavior.get("id", i))
+                    filename = f"{safe_name}_{suffix}"
+                    print(f"  Warning: Duplicate card name '{card_name}' for monster '{current_monster_id}'. Using filename '{filename}'")
+                card_names_tracker[card_name] = filename # Track the name and its assigned filename
+
                 print(f"  Processing card: {card_name}")
-                
+
                 # Make sure we're in front view for consistency
                 if not is_front:
                     driver.execute_script("document.querySelector('.App').click();")
                     time.sleep(0.5)  # Wait for animation
                     is_front = True
-                
-                # Find all cards
-                cards = driver.find_elements(By.CSS_SELECTOR, ".card")
-                
-                # Calculate the index of the current card (based on monster_id and behavior index)
-                card_index = 0
-                for m_id in monster_data:
-                    if m_id == monster_id:
-                        card_index += i
-                        break
-                    card_index += len(monster_data[m_id].get("behavior", []))
-                
-                # Ensure the index is within range
-                if card_index < len(cards):
-                    # Get the card element
-                    card_element = cards[card_index]
-                    
+
+                # Get the card element using the index from the found cards
+                # We need to re-find cards here as the DOM might have changed after flipping
+                cards_current_view = driver.find_elements(By.CSS_SELECTOR, ".card")
+
+                if i < len(cards_current_view):
+                    card_element = cards_current_view[i]
+
                     # Scroll to the card to ensure it's visible
                     driver.execute_script("arguments[0].scrollIntoView(true);", card_element)
-                    time.sleep(0.2)  # Wait for scroll
-                    
+                    time.sleep(0.5)  # Wait for scroll
+
+                    print(f"    Attempting to capture screenshot for {filename}_front.png")
                     # Take a screenshot of the front side
                     screenshot = card_element.screenshot_as_png
                     img = Image.open(BytesIO(screenshot))
-                    
+
                     # Save front side
                     front_path = os.path.join(output_folder, f"{filename}_front.png")
                     img.save(front_path)
                     print(f"    Saved front card: {front_path}")
-                    
+
                     # Click to flip card
                     driver.execute_script("document.querySelector('.App').click();")
-                    time.sleep(0.5)  # Wait for animation
+                    time.sleep(1)  # Wait for animation
                     is_front = False
-                    
-                    # Get updated cards after flip
-                    cards = driver.find_elements(By.CSS_SELECTOR, ".card")
-                    
-                    # Take screenshot of back side
-                    if card_index < len(cards):
-                        card_element = cards[card_index]
-                        
+
+                    # Find all cards again after flip
+                    cards_after_flip = driver.find_elements(By.CSS_SELECTOR, ".card")
+
+                    # Ensure the index is within range of cards after flip
+                    if i < len(cards_after_flip):
+                        card_element_after_flip = cards_after_flip[i]
+
                         # Scroll to the card to ensure it's visible
-                        driver.execute_script("arguments[0].scrollIntoView(true);", card_element)
-                        time.sleep(0.2)  # Wait for scroll
-                        
-                        screenshot = card_element.screenshot_as_png
+                        driver.execute_script("arguments[0].scrollIntoView(true);", card_element_after_flip)
+                        time.sleep(0.5)  # Wait for scroll
+
+                        print(f"    Attempting to capture screenshot for {filename}_back.png")
+                        # Take screenshot of back side
+                        screenshot = card_element_after_flip.screenshot_as_png
                         img = Image.open(BytesIO(screenshot))
-                        
+
                         # Save back side
                         back_path = os.path.join(output_folder, f"{filename}_back.png")
                         img.save(back_path)
                         print(f"    Saved back card: {back_path}")
+                    else:
+                        print(f"    Error: Card index {i} out of range after flip (total cards: {len(cards_after_flip)})")
                 else:
-                    print(f"    Error: Card index {card_index} out of range (total cards: {len(cards)})")
-    
+                    print(f"    Error: Card index {i} out of range (total cards: {len(cards_current_view)})")
+
     except Exception as e:
         print(f"Error during card generation: {str(e)}")
-    
+
     finally:
         # Clean up
         driver.quit()
@@ -226,15 +285,20 @@ def generate_cards(output_folder="generated_cards"):
 def main():
     """Main function to run the card generator."""
     print("Monster Hunter Card Generator")
-    print("============================")
+    print("===========================")
     
-    # Check if development server is running
-    output_folder = input("Enter output folder name (default: 'generated_cards'): ").strip()
-    if not output_folder:
-        output_folder = "generated_cards"
+    # Set output folder to 'generated_cards' by default
+    output_folder = "generated_cards"
+    print(f"Output folder set to: {output_folder}")
+        
+    # Get monster ID from user
+    monster_id_to_generate = input("Enter the ID of the monster to generate cards for (e.g., 'ark'): ").strip()
+    if not monster_id_to_generate:
+        print("No monster ID entered. Exiting.")
+        return
     
-    print(f"\nStarting card generation to folder: {output_folder}")
-    generate_cards(output_folder)
+    print(f"\nStarting card generation for monster '{monster_id_to_generate}' to folder: {output_folder}")
+    generate_cards(output_folder, monster_id_to_generate)
 
 if __name__ == "__main__":
     main()

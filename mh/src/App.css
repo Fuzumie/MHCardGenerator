@@ -822,3 +822,47 @@
   font-family: "EB Garamond", serif;
   font-weight: 700;
 }
+.monster-selector {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.monster-selector:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.monster-selector.expanded {
+  width: 180px;
+  height: 32px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.monster-selector select {
+  width: 160px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.monster-selector select option {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}

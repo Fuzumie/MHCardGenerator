@@ -1,14 +1,47 @@
 import { useState, useEffect } from "react";
 import parser from "html-react-parser";
 import "./App.css";
-import monster from "./monster.json";
 import en from "./en.json";
+
+// Dynamically require all monster JSONs in src/monsters
+const monsterFiles = import.meta.glob('./monsters/*.json', { eager: true });
+console.log('monsterFiles:', monsterFiles);
+const monsterList = Object.entries(monsterFiles).map(([path, mod]) => {
+  // Extract id from filename (cross-platform and more robust)
+  const match = path.match(/[\\/]monsters[\\/]([^\/]+)\.json$/);
+  if (!match) {
+    console.error('Failed to match monster filename for path:', path);
+    return null; // Or handle the error appropriately
+  }
+  const id = match[1];
+  // Some environments put JSON under .default, some don't
+  const data = mod.default ? mod.default : mod;
+  return { id, data };
+}).filter(m => m !== null); // Filter out any null entries if matching failed
+console.log('monsterList:', monsterList);
 
 function App() {
   const [front, setFront] = useState(1);
+  const [isExpanded, setIsExpanded] = useState(false);
+  // Check if monsterList is not empty before accessing the first element
+  const initialSelected = monsterList.length > 0 ? monsterList[0].id : null;
+  const initialMdata = monsterList.length > 0 ? monsterList[0].data : {};
+
+  const [selected, setSelected] = useState(initialSelected);
+  const [mdata, setMdata] = useState(initialMdata);
   const titles = en["monster-stat"];
-  const mdata = JSON.parse(JSON.stringify(monster));
   let hunterTurn, windUpTurn;
+
+  console.log('Initial selected:', initialSelected);
+  console.log('Initial mdata:', initialMdata);
+
+  useEffect(() => {
+    console.log('Selected monster changed:', selected);
+    const found = monsterList.find((m) => m.id === selected);
+    setMdata(found ? found.data : {});
+    console.log('Updated mdata:', found ? found.data : {});
+  }, [selected]);
+
   const frontBack = (e) => {
     setFront(!front);
   };
@@ -24,13 +57,6 @@ function App() {
           return `<div className="icon-status ${m1}"><img src="icons/${m1}.png" alt=""></div>`;
         }
       );
-      t = t.replaceAll(/\[item:(\d+)\]/g, (m, m1) => {
-        return `<img
-        src=${`item/${m1}.png`}
-        className="item-icon"
-        alt=""
-      /> ${ui.items[m1]}`;
-      });
       t = t.replaceAll("\n", "<br/>");
       t = t.replaceAll("\\", "<br/><br/>");
       t = t.replaceAll(/\*([^\*]+)\*/g, "<span className='em'>$1</span>");
@@ -38,9 +64,48 @@ function App() {
     });
     return parser(r);
   };
+
+  const toggleSelector = (e) => {
+    // Check if the click is directly on the monster-selector div
+    if (e.target === e.currentTarget) {
+      setIsExpanded(!isExpanded);
+    }
+    // Remove e.stopPropagation() from here
+    // e.stopPropagation();
+  };
+
+  // Minimalist selector
   return (
-    <div className="App" onClick={frontBack}>
-      {Object.entries(mdata).map(([id, m]) => (
+    <div className="App" onClick={(e) => {
+      frontBack(e);
+      // Removed this line to prevent collapsing on background click
+      // setIsExpanded(false);
+    }}>
+      <div 
+        className={`monster-selector ${isExpanded ? 'expanded' : ''}`} 
+        onClick={toggleSelector}
+      >
+        <select 
+          value={selected} 
+          // Removed this onClick handler in the previous step
+          // onClick={e => e.stopPropagation()} 
+          onChange={e => {
+            e.stopPropagation(); // Keep this to stop event propagation
+            setSelected(e.target.value);
+            setIsExpanded(false); // Keep this to collapse on selection
+          }}
+          style={{
+            opacity: isExpanded ? 1 : 0,
+            pointerEvents: isExpanded ? 'auto' : 'none'
+          }}
+        >
+          {monsterList.length > 0 
+            ? monsterList.map(m => <option value={m.id} key={m.id}>{en.monsters?.[m.id]||m.id}</option>) 
+            : <option value="">No monsters found</option>}
+        </select>
+      </div>
+      {/* Ensure mdata is not empty before mapping */}
+      {Object.entries(mdata).length > 0 ? Object.entries(mdata).map(([id, m]) => (
         <div className={`cards ${front ? "front" : ""}`} key={id}>
           {Object.entries(m.behavior).map(([key, v]) => {
             if (front) {
@@ -263,7 +328,7 @@ function App() {
             }
           })}
         </div>
-      ))}
+      )) : <div>No monster data loaded.</div>}
     </div>
   );
 }
