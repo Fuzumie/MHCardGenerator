@@ -57,7 +57,7 @@
           { "type": "move", "value": 1, "dir": "8" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 9,
             "range": 3,
             "dodge": 3,
             "dir": "8"
@@ -77,9 +77,9 @@
         "actions": [
           {
             "type": "attack",
-            "value": 8,
+            "value": 10,
             "range": 4,
-            "dodge": 4,
+            "dodge": 5,
             "dir": "n",
             "ele": "fire"
           },
@@ -121,9 +121,9 @@
           { "type": "move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 10,
             "range": 1,
-            "dodge": 4,
+            "dodge": 5,
             "dir": "n"
           },
 
@@ -143,9 +143,9 @@
           { "type": "move", "value": 3, "dir": "4" },
           {
             "type": "attack",
-            "value": 7,
-            "range": 2,
-            "dodge": 2,
+            "value": 9,
+            "range": 3,
+            "dodge": 4,
             "dir": "846",
             "eff": "stun"
           },
@@ -167,7 +167,7 @@
             "type": "attack",
             "value": 10,
             "range": 3,
-            "dodge": 3,
+            "dodge": 4,
             "dir": "46"
           },
           { "type": "move", "value": 2, "dir": "8" },
@@ -186,9 +186,9 @@
         "actions": [
           {
             "type": "attack",
-            "value": 6,
+            "value": 8,
             "range": 3,
-            "dodge": 4,
+            "dodge": 5,
             "dir": "8",
             "atkdir": "789",
             "ele": "fire"
@@ -205,7 +205,7 @@
         "actions": [
           {
             "type": "text",
-            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+            "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
@@ -219,7 +219,7 @@
         "actions": [
           {
             "type": "text",
-            "value": "Next [tail] behaviour deals\\[fire] damage  and +3 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
+            "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
           { "type": "hunter", "turn": 1, "card": 2 }
         ]
@@ -279,7 +279,7 @@
             "type": "attack",
             "value": 7,
             "range": 3,
-            "dodge": 2,
+            "dodge": 4,
             "dir": "82"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
@@ -296,11 +296,12 @@
         "target": "far",
         "type": "track",
         "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 8,
+            "value": 11,
             "range": 2,
-            "dodge": 3,
+            "dodge": 4,
             "dir": "86"
           },
           { "type": "move", "value": 2, "dir": "8" },

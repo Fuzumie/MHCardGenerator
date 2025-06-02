@@ -1,0 +1,373 @@
+{
+  "rajang": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Lightning Jumping Blast",
+      "Ground Slam",
+      "Jumping Slam",
+      "Fist of Fury",
+      "Canon Ball",
+      "Tripple Slam Combo",
+      "Furious Zig-Zag",
+      "Spinning Fist",
+      "Upheavel",
+      "Lightning Beam",
+      "Lunging Grab",
+      "Backstep",
+      "Quick Claw Swipe",
+      "Rapid Rajang Charge"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Lightning Jumping Blast",
+        "id": 1027,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 10,
+            "range": 3,
+            "dodge": 6,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+         {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Ground Slam",
+        "id": 1028,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 1,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Jumping Slam",
+        "id": 1029,
+        "part": "claws",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 2,
+            "dodge": 8,
+            "dir": "8462",
+            "ele": "thunder",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom-long",
+            "value": "This behaviour can only be used if the monster is [enraged]. Otherwise discard this card and draw another."
+          }
+        ]
+      },
+      {
+        "_comment1": "Fist of Fury",
+        "id": 1030,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "486"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack four times."
+          }
+        ]
+      },
+      {
+        "_comment1": "Canon Ball",
+        "id": 1031,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 1,
+            "dodge": 6,
+            "dir": "4268",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the next behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tripple Slam Combo",
+        "id": 1032,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "48"
+          },
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "86"
+          },
+          {
+            "type": "atk-lock",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the next behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Furious Zig-Zag",
+        "id": 1033,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Spinning Fist",
+        "id": 1034,
+        "part": "claws",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 1,
+            "dodge": 7,
+            "dir": "486"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Upheavel",
+        "id": 1035,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 13,
+            "range": 2,
+            "dodge": 6,
+            "dir": "486"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +1 [range]."
+          }
+
+        ]
+      },
+      {
+        "_comment1": "Lightning Beam",
+        "id": 1036,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 15,
+            "range": 3,
+            "dodge": 5,
+            "dir": "8",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Lunging Grab",
+        "id": 1037,
+        "part": "claws",
+        "target": "exhaust",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 8,
+            "dir": "n"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "Hunter hit is incapacitated and cannot play their turns."
+          }
+        ]
+      },
+      {
+        "_comment1": "Backstep",
+        "id": 1038,
+        "part": " torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "2",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "Draw Furious Zig-Zag behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Quick Claw Swipe",
+        "id": 1013,
+        "part": "claws",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 7,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Rapid Rajang Charge",
+        "id": 1014,
+        "part": "head",
+        "target": "exhaust",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 13,
+            "range": 1,
+            "dodge": 6,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 4, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the next behavior has 0 [hunter-turn]."
+          }
+        ]
+      }
+    ]
+  }
+}

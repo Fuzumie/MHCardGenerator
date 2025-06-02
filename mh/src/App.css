@@ -635,6 +635,12 @@
 .odogaron{
   background-image:url(assets/monster/odogaron.png)
 }
+.rajang{
+  background-image:url(assets/monster/rajang.png)
+}
+.ark{
+  background-image:url(assets/monster/ark.png)
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {
@@ -685,6 +691,9 @@
 }
 .xuwu-blade {
   background: url(assets/xuwu-blade.png) center center/contain;
+}
+.arkface {
+  background: url(assets/arkface.png) center center/contain;
 }
 
 
@@ -793,6 +802,8 @@
 .bottom-long {
   font-size: 1.1em;
   justify-content: center;
+  width: 80%;
+  left: 11%;
 }
 .text {
   position: absolute;
