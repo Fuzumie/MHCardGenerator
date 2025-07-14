@@ -148,7 +148,6 @@
             "value": 9,
             "range": 4,
             "dodge": 4,
-            "dir": "",
             "atkdir": "4123679",
             "eff": "bleed"
           },
@@ -194,7 +193,6 @@
             "value": 8,
             "range": 3,
             "dodge": 4,
-            "dir": "86",
             "atkdir": "896",
             "eff": "bleed"
           },
@@ -215,7 +213,6 @@
             "value": 10,
             "range": 5,
             "dodge": 4,
-            "dir": "486",
             "atkdir": "47896",
             "eff": "bleed"
           },
@@ -260,7 +257,7 @@
             "value": 9,
             "range": 4,
             "dodge": 4,
-            "dir": "",
+            "dir": "8",
             "atkdir": "789",
             "eff": "bleed"
           },

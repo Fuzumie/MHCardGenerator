@@ -641,6 +641,9 @@
 .ark{
   background-image:url(assets/monster/ark.png)
 }
+.legia{
+  background-image:url(assets/monster/legia.png)
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {

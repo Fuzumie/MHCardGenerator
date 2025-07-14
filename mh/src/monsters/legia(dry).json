@@ -1,0 +1,353 @@
+{
+  "legia": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Thunder Discharge",
+      "Twirling Lunge Swipe",
+      "Water Jump Tackle",
+      "Lunge Charges",
+      "Body Tackle",
+      "Bite Sweep",
+      "Bite Crunch",
+      "Sideways Thunder Trail",
+      "Bite and Tail Sweep",
+      "Trailing Thunder Shot",
+      "Twisting Tail Swipe",
+      "Body Slam",
+      "Uppercut Bite",
+      "Back Tail Sweep"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Thunder Discharge",
+        "id": 1055,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 2, "card": 3},
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2468",
+            "eff": "stun",
+            "ele": "thunder"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the next behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Twirling Lunge Swipe",
+        "id": 1056,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {"type": "wind-up", "turn": 3, "card": 2},
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Water Jump Tackle",
+        "id": 1067,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 5,
+            "dir": "468",
+            "ele": "thunder"
+          }, 
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "After this monster attacks once, it will move to the closest pond node and then will continue with the second attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Lunge Charges",
+        "id": 1058,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 6,
+            "dir": "468",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Body Tackle",
+        "id": 1059,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 4, "dir": "6" },
+          { "type": "hunter", "turn": 3, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Bite Sweep",
+        "id": 1060,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 7,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Bite Crunch",
+          "id": 1067,
+          "part": "head",
+          "target": "far",
+          "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+          ]
+        },
+      {
+        "_comment1": "Sideways Thunder Trail",
+        "id": 1063,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 10,
+            "range": 3,
+            "dodge": 5,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bite and Tail Sweep",
+        "id": 1064,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 1,
+            "dodge": 7,
+            "dir": "n"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 4,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 3 }
+        ]
+      },
+            {
+        "_comment1": "Trailing Thunder Shot",
+        "id": 1055,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 10,
+            "range": 4,
+            "dodge": 6,
+            "dir": "8",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 }
+        ]
+      },
+            {
+        "_comment1": "Twisting Tail Swipe",
+        "id": 1055,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 4,
+            "dir": "2468",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+            {
+        "_comment1": "Body Slam",
+        "id": 1055,
+        "part": "torso",
+        "type": "track",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 1, "card": 2},
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 7,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+            {
+        "_comment1": "Uppercut Bite",
+        "id": 1055,
+        "part": "head",
+        "type": "track",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 2, "card": 2},
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 2,
+            "dodge": 5,
+            "dir": "n"
+          }
+        ]
+      },
+            {
+        "_comment1": "Back Tail Sweep",
+        "id": 1055,
+        "part": "tail",
+        "type": "track",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 1, "card": 2},
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 2,
+            "dodge": 5,
+            "dir": "246",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack twice."
+          }
+        ]
+      }
+        ]
+      }
+     }
