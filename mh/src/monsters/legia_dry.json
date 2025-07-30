@@ -210,14 +210,14 @@
             "type": "atk-lock",
             "value": 10,
             "range": 3,
-            "dodge": 5,
+            "dodge": 6,
             "dir": "n",
             "ele": "thunder"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "hunter", "turn": 2, "card": 2 },
           {
             "type": "bottom",
-            "value": "If this behaviour is played, repeat the attack."
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
           }
         ]
       },
@@ -254,13 +254,17 @@
         "actions": [
           {
             "type": "atk-lock",
-            "value": 10,
+            "value": 9,
             "range": 4,
-            "dodge": 6,
+            "dodge": 5,
             "dir": "8",
             "ele": "thunder"
           },
-          { "type": "hunter", "turn": 2, "card": 4 }
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+          }
         ]
       },
             {

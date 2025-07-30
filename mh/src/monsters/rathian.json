@@ -1,0 +1,331 @@
+{
+  "rathian": {
+    "behavior-names": [
+      "Charged Fireball Far",
+      "Tail Backflip",
+      "Tail Backflip Reposition",
+      "Dash Run",
+      "Bite Dash",
+      "Air Charge",
+      "Twist Swipe",
+      "Trio Fireball",
+      "Bite Left",
+      "Bite Right",
+      "Tail Swipe Close",
+      "Tail Swipe Far",
+      "Charged Fireball Close",
+      "Quick Dash"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Charged Fireball Far",
+        "id": 1001,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8",
+            "ele": "fire"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tail Backflip",
+        "id": 1003,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 4,
+            "dir": "n",
+            "eff": "poison"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], this behaviour has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Tail Backflip Reposition",
+        "id": 1004,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 3,
+            "dir": "n",
+            "eff": "poison"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], this behaviour has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Dash Run",
+        "id": 1005,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "846",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this behaviour is played, repeat the attack twice."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bite Dash",
+        "id": 1007,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Air Charge",
+        "id": 1008,
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 4,
+            "dir": "846"
+          },
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Twist Swipe",
+        "id": 1009,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "8246",
+            "eff": "poison"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Trio Fireball",
+        "id": 1010,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atk-dir": "789",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bite Left",
+        "id": 1011,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bite Right",
+        "id": 1012,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Tail Swipe Close",
+        "id": 1013,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "842",
+            "eff": "poison"
+          },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 3,
+            "dir": "862",
+            "eff": "poison"
+          }
+        ]
+      },
+      {
+        "_comment1": "Tail Swipe Far",
+        "id": 1014,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 3,
+            "dir": "862",
+            "eff": "poison"
+          },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 2,
+            "dodge": 4,
+            "dir": "842",
+            "eff": "poison"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], this behaviour has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Charged Fireball Close",
+        "id": 1002,
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 3,
+            "dodge": 4,
+            "dir": "8",
+            "ele": "fire"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+          }
+        ]
+      },
+            {
+        "_comment1": "Quick Dash",
+        "id": 1006,
+        "part": "torso",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 4,
+            "dir": "864",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      }
+    ]
+  }
+}

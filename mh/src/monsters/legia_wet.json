@@ -1,0 +1,175 @@
+{
+  "legia": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Vortex Discharge",
+      "Underwater Tackle Left",
+      "Underwater Tackle Right",
+      "Underwater Thunder Shot Far",
+      "Underwater Thunder Shot Close",
+      "Underwater Charge"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Vortex Discharge",
+        "id": 1055,
+        "part": "torso",
+        "type": "vortex",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 3, "card": 3},
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 3,
+            "dodge": 6,
+            "dir": "2468",
+            "ele": "thunder"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 5,
+            "dodge": 4,
+            "dir": "",
+            "atkdir": "12346789",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "Before this monster attacks for the first time it will pull hunters within 3 [range] to itself."
+          }
+        ]
+      },
+      {
+        "_comment1": "Underwater Tackle Left",
+        "id": 1056,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 1,
+            "dodge": 5,
+            "dir": "248",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Underwater Tackle Right",
+        "id": 1067,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 7,
+            "dir": "268",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 1, "card": 4 }
+        ]
+      },
+        {
+        "_comment1": "Underwater Thunder Shot Far",
+        "id": 1067,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 3,
+            "dodge": 4,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom-long",
+            "value": "If this attack hits through or adjacent to a whirlpool, it will and spread [thunder] to all adjacent nodes, discard the terrain node."
+          }
+        ]
+      },
+       {
+        "_comment1": "Underwater Thunder Shot Close",
+        "id": 1067,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {"type": "wind-up", "turn": 1, "card": 2},
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 2,
+            "dodge": 5,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom-long",
+            "value": "If this attack hits through or adjacent to a whirlpool, it will and spread [thunder] to all adjacent nodes, discard the terrain node."
+          }
+        ]
+      },
+      {
+        "_comment1": "Underwater Charge",
+        "id": 1058,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          {"type": "wind-up", "turn": 2, "card": 2},
+          { "type": "atk-move", "value": 5, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 7,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      }
+        ]
+      }
+     }

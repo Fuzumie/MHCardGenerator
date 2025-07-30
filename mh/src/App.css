@@ -644,6 +644,12 @@
 .legia{
   background-image:url(assets/monster/legia.png)
 }
+.rathian{
+  background-image:url(assets/monster/rathian.png)
+}
+.zam{
+  background-image:url(assets/monster/zam.png)
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {
@@ -697,6 +703,9 @@
 }
 .arkface {
   background: url(assets/arkface.png) center center/contain;
+}
+.vortex {
+  background: url(assets/vortex.png) center center/contain;
 }
 
 
