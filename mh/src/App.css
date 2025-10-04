@@ -444,6 +444,9 @@
 .bubble-bliss {
   background: url(assets/blissful_bub.png) center center/contain;
 }
+.effluvia {
+  background: url(assets/effluvia.png) center center/contain;
+}
 /* Monster dodge */
 .m-dodge {
   background: url(assets/m-dodge.png) center center/contain;
@@ -733,6 +736,9 @@
 }
 .vortex {
   background: url(assets/vortex.png) center center/contain;
+}
+.vult {
+  background: url(assets/vult.png) center center/contain;
 }
 
 

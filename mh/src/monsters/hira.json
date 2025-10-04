@@ -137,7 +137,7 @@
             "eff": "frost"
           },
           { "type": "hunter", "turn": 2, "card": 2 },
-          { "type": "bottom", "value": "If this monster is [enraged], +2 dodge" }
+          { "type": "bottom", "value": "If this monster is [enraged], +2 [dodge]" }
         ]
       },
       {
@@ -156,7 +156,7 @@
           },
           { "type": "atk-move", "value": 2, "dir": "4" },
           { "type": "hunter", "turn": 1, "card": 3 },
-          { "type": "bottom", "value": "If this monster is [enraged], +1 move" }
+          { "type": "bottom", "value": "If this monster is [enraged], +1 [move]" }
         ]
       },
       {
@@ -250,7 +250,7 @@
           },
           { "type": "atk-move", "value": 2, "dir": "6" },
           { "type": "hunter", "turn": 1, "card": 3 },
-          { "type": "bottom", "value": "If this monster is [enraged], +1 move" }
+          { "type": "bottom", "value": "If this monster is [enraged], +1 [move]" }
         ]
       },
       {

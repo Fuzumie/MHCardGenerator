@@ -1,0 +1,339 @@
+{
+  "vaal": {
+    "behavior-names": [
+      "Drain of Death",
+      "Flesh Rotting Charge Attack",
+      "Lifeless Surge Spin",
+      "Effluvia Mist Spread",
+      "Reaping Claw Sweep Right",
+      "Carrion Maw Rush",
+      "Necrotic Descent",
+      "Corruption Veil",
+      "Blight Dash",
+      "Corpse Cleaver",
+      "Rot Torrent",
+      "Miasma Mist Clouds",
+      "Reaping Claw Sweep Left",
+      "End of Breath"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "_comment1": "Drain of Death",
+        "part": "torso",
+        "target": "exhaust",
+        "type": "vult",
+        "actions": [
+          { "type": "wind-up", "turn": 4, "card": 2 },
+          {
+            "type": "attack",
+            "value": 20,
+            "range": 4,
+            "dodge": 7,
+            "dir": "2468"
+          }        
+        ]
+      },
+      {
+        "id": 1002,
+        "_comment1": "Flesh Rotting Charge Attack",
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 1,
+            "dodge": 6,
+            "dir": "8",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 4,
+            "dir": "",
+            "atkdir": "123",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1003,
+        "_comment1": "Lifeless Surge Spin",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 1,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atkdir": "47896",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1004,
+        "_comment1": "Effluvia Mist Spread",
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 4,
+            "dodge": 4,
+            "dir": "",
+            "atkdir": "12346789",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 1, "card": 5 }
+        ]
+      },
+      {
+        "id": 1005,
+        "_comment1": "Reaping Claw Sweep Right",
+        "part": "claws",
+        "target": "exhaust",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "atk-lock",
+            "value": 16,
+            "range": 1,
+            "dodge": 6,
+            "dir": "68"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 5,
+            "dir": "",
+            "atkdir": "689",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1006,
+        "_comment1": "Carrion Maw Rush",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 19,
+            "range": 1,
+            "dodge": 7,
+            "dir": "n"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atkdir": "789",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "bottom", "value": "If this monster is [enraged], repeat the attack" }
+        ]
+      },
+      {
+        "id": 1007,
+        "_comment1": "Necrotic Descent",
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 16,
+            "range": 1,
+            "dodge": 5,
+            "dir": "2468",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 2,
+            "dir": "",
+            "atkdir": "12346789",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 3, "card": 4 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1008,
+        "_comment1": "Corruption Veil",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "attack",
+            "value": 19,
+            "range": 3,
+            "dodge": 7,
+            "dir": "8",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1009,
+        "_comment1": "Blight Dash",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 17,
+            "range": 1,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 2,
+            "dir": "",
+            "atkdir": "46789",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1010,
+        "_comment1": "Corpse Cleaver",
+        "part": "head",
+        "target": "exhaust",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 18,
+            "range": 2,
+            "dodge": 6,
+            "dir": "246",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atkdir": "123",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+        ]
+      },
+      {
+        "id": 1011,
+        "_comment1": "Rot Torrent",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 20,
+            "range": 5,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1012,
+        "_comment1": "Miasma Mist Clouds",
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "286",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "bottom", "value": "If this monster is [enraged], +1 [move]" }
+        ]
+      },
+      {
+        "id": 1013,
+        "_comment1": "Reaping Claw Sweep Left",
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "text", "value": "Draw 5 time cards and apply their effect, then call 2 other Hirabami into the hunt, place them on any node of your choice." }
+        ]
+      },
+      {
+        "id": 1014,
+        "_comment1": "End of Breath",
+        "part": "torso",
+        "target": "exhaust",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 5,
+            "dir": "2864",
+            "eff": "stun",
+            "ele": "ice"
+          },
+          { "type": "move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 4, "card": 2 },
+          {"type": "bottom", "value": "If this monster is [enraged], repeat the behaviour"}
+        ]
+      }
+    ]
+  }
+}
