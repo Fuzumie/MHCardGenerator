@@ -1,0 +1,357 @@
+{
+  "devil": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Jump Attack",
+      "Forward Debris Throw",
+      "Side Charge Left",
+      "Head Slam",
+      "Double Tail Spin",
+      "Triple Bite",
+      "Bite",
+      "Dragon Breath",
+      "Right Stomp",
+      "Devouring Hunger",
+      "Devouring Hunger",
+      "Left Stomp",
+      "Side Charge Right",
+      "Penta Bite"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Jump Attack",
+        "id": 1069,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "2468"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Forward Debris Throw",
+        "id": 1070,
+        "part": "head",
+        "target": "exhaust",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 8,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [dragon] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Side Charge Left",
+        "id": 1071,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "248",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Head Slam",
+        "id": 1072,
+        "part": "head",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 1,
+            "dodge": 9,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [dragon] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Double Tail Spin",
+        "id": 1073,
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "842",
+            "eff": "stun"
+          },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 6,
+            "dir": "862",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Triple Bite",
+        "id": 1074,
+        "part": "head",
+        "target": "exhaust",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 6,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [dragon] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bite",
+        "id": 1075,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 11,
+            "range": 1,
+            "dodge": 8,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [dragon] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Dragon Breath",
+        "id": 1076,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 4,
+            "dodge": 7,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "Draw this behavior when the monster is [enraged]. If this monster is not [enraged], discard this behaviour."
+          }
+        ]
+      },
+      {
+        "_comment1": "Right Stomp",
+        "id": 1077,
+        "part": "leg",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 8,
+            "dir": "268",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], this behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Devouring Hunger",
+        "id": 1078,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "text",
+            "value": "This monster will move 2 nodes and attempt to consume the closest Apceros."
+          }
+        ]
+      },
+      {
+        "_comment1": "Devouring Hunger",
+        "id": 1079,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "text",
+            "value": "This monster will move 3 nodes and attempt to consume the farthest Apceros."
+          }
+        ]
+      },
+      {
+        "_comment1": "Left Stomp",
+        "id": 1080,
+        "part": "leg",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 1,
+            "dodge": 7,
+            "dir": "248",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], this behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Side Charge Right",
+        "id": 1081,
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 7,
+            "dir": "268",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Penta Bite",
+        "id": 1082,
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 2,
+            "dodge": 8,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 3, "card": 5 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [dragon] damage."
+          }
+        ]
+      }
+    ]
+  }
+}

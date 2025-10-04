@@ -650,6 +650,33 @@
 .zam{
   background-image:url(assets/monster/zam.png)
 }
+.devil {
+  background-image:url(assets/monster/devil.png)
+}
+.xeno {
+  background-image:url(assets/monster/xeno.png)
+}
+.shogun {
+  background-image:url(assets/monster/shogun.png)
+}
+.roar {
+  background-image:url(assets/monster/roar.png)
+}
+.girr {
+  background-image:url(assets/monster/girr.png)
+}
+.ggirr {
+  background-image:url(assets/monster/ggirr.png)
+}
+.vaal {
+  background-image:url(assets/monster/vaal.png)
+}
+.val {
+  background-image:url(assets/monster/val.png)
+}
+.cham {
+  background-image:url(assets/monster/cham.png)
+}
 
 /* STATUS EFFECTS ICONS */
 .flash {

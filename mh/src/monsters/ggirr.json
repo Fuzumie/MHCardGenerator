@@ -1,0 +1,288 @@
+{
+  "ggirr": {
+    "behavior-names": [
+      "Swiping Bites Close",
+      "Swiping Bites Far",
+      "Frost Spit Close",
+      "Frost Spit Far",
+      "Tail Smash and Swipe",
+      "Side Roll Left",
+      "Dive Attack",
+      "Tail Scissor Cut",
+      "Spin Smash",
+      "Call Pack",
+      "Float Away",
+      "Side Roll Right",
+      "Call Pack",
+      "Frost Spin Smash"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "_comment1": "Swiping Bites Close",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "bottom", "value": "If this behaviour is played, repeat the attack" }
+        ]
+      },
+      {
+        "id": 1002,
+        "_comment1": "Swiping Bites Far",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n"
+          },
+          { "type": "bottom", "value": "If this behaviour is played, repeat the attack" }
+        ]
+      },
+      {
+        "id": 1003,
+        "_comment1": "Frost Spit Close",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atkdir": "8",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "",
+            "atkdir": "79",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          { "type": "bottom", "value": "If this monster is [enraged], +1 [range]" }
+        ]
+      },
+      {
+        "id": 1004,
+        "_comment1": "Frost Spit Far",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 6,
+            "range": 2,
+            "dodge": 5,
+            "dir": "",
+            "atkdir": "8",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 3,
+            "dodge": 3,
+            "dir": "",
+            "atkdir": "8",
+            "ele": "ice",
+            "eff": "freeze"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1005,
+        "_comment1": "Tail Smash and Swipe",
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 2,
+            "dodge": 4,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 3,
+            "dir": "82",
+            "eff": "frost"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          { "type": "bottom", "value": "If this monster is [enraged], +2 dodge" }
+        ]
+      },
+      {
+        "id": 1006,
+        "_comment1": "Side Roll Left",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "284",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "4" },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "bottom", "value": "If this monster is [enraged], +1 move" }
+        ]
+      },
+      {
+        "id": 1007,
+        "_comment1": "Dive Attack",
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "846",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "bottom", "value": "Monster enters Fallen Down State at the end of the behaviour." }
+        ]
+      },
+      {
+        "id": 1008,
+        "_comment1": "Tail Scissor Cut",
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 2,
+            "dodge": 5,
+            "dir": "8",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          { "type": "bottom", "value": "If this monster is [enraged], move towards the next target." }
+        ]
+      },
+      {
+        "id": 1009,
+        "_comment1": "Spin Smash",
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "2864",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "bottom", "value": "If this monster is [enraged], repeat the behaviour" }
+        ]
+      },
+      {
+        "id": 1010,
+        "_comment1": "Call Pack",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "text", "value": "Draw 3 time cards and apply their effect, then call 2 other Hirabami into the hunt, place them on any node of your choice." }
+        ]
+      },
+      {
+        "id": 1011,
+        "_comment1": "Float Away",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "text", "value": "Monster switches to the Floating State and becomes [enraged]." }
+        ]
+      },
+      {
+        "id": 1012,
+        "_comment1": "Side Roll Right",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "286",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          { "type": "hunter", "turn": 1, "card": 3 },
+          { "type": "bottom", "value": "If this monster is [enraged], +1 move" }
+        ]
+      },
+      {
+        "id": 1013,
+        "_comment1": "Call Pack",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "text", "value": "Draw 5 time cards and apply their effect, then call 2 other Hirabami into the hunt, place them on any node of your choice." }
+        ]
+      },
+      {
+        "id": 1014,
+        "_comment1": "Frost Spin Smash",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 5,
+            "dir": "2864",
+            "eff": "stun",
+            "ele": "ice"
+          },
+          { "type": "move", "value": 3, "dir": "2" },
+          { "type": "hunter", "turn": 4, "card": 2 },
+          {"type": "bottom", "value": "If this monster is [enraged], repeat the behaviour"}
+        ]
+      }
+    ]
+  }
+}

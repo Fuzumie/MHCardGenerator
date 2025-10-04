@@ -1,0 +1,325 @@
+{
+  "khez": {
+    "behavior-names": [
+      "Neck Swing",
+      "Neck Slam",
+      "Swinging Rubbery Pounce",
+      "Electric Discharge",
+      "Electric Bolt",
+      "Pounce",
+      "Charged Pounce",
+      "Quick Pounce",
+      "Charged Bite Left",
+      "Ceiling Latch",
+      "Body Slam",
+      "Charged Bite Right",
+      "Ceiling Latch Body Slam",
+      "Ceiling Latch Charged Waves"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "_comment1": "Neck Swing",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 1,
+            "dodge": 4,
+            "dir": "87"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 3,
+            "dir": "84"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 3,
+            "dir": "86"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "_comment1": "Neck Slam",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 8,
+            "range": 3,
+            "dodge": 3,
+            "dir": "n"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "id": 1003,
+        "_comment1": "Swinging Rubbery Pounce",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 4 },
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 2,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 }
+        ]
+      },
+      {
+        "id": 1004,
+        "_comment1": "Electric Discharge",
+        "part": "head",
+        "target": "far",
+        "actions": [
+            { "type": "wind-up", "turn": 2, "card": 4 },
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 3,
+            "dodge": 5,
+            "dir": "",
+            "atkdir": "789",
+            "ele": "thunder",
+            "eff": "paralyze"
+          }
+        ]
+      },
+      {
+        "id": 1005,
+        "_comment1": "Electric Bolt",
+        "part": "head",
+        "target": "close",
+        "actions": [
+            { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 6,
+            "range": 3,
+            "dodge": 4,
+            "dir": "n",
+            "ele": "thunder",
+            "eff": "paralyze"
+          }
+        ]
+      },
+      {
+        "id": 1006,
+        "_comment1": "Pounce",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 4,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1007,
+        "_comment1": "Charged Pounce",
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 4 },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 5,
+            "dir": "468",
+            "eff": "stun"
+          }
+        ]
+      },
+      {
+        "id": 1008,
+        "_comment1": "Quick Pounce",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "stun"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+            {
+                "type": "bottom",
+                "value": "If this monster is [enraged], +2 [dodge]."
+            }
+        ]
+      },
+      {
+        "id": 1009,
+        "_comment1": "Charged Bite Left",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 4,
+            "dir": "48",
+            "ele": "thunder",
+            "eff": "paralyze"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1010,
+        "_comment1": "Ceiling Latch Neck Swipe",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 3,
+            "dodge": 4,
+            "dir": "4862"
+          },
+          {
+            "type": "bottom",
+            "value": "Before hunters attack, monster will move to the closest rock node and will be +3 [range] from hunters."
+          }
+        ]
+      },
+      {
+        "id": 1011,
+        "_comment1": "Body Slam",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 5,
+            "dir": "4862",
+            "eff": "stun"
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "_comment1": "Charged Bite Right",
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 1,
+            "dodge": 4,
+            "dir": "68",
+            "ele": "thunder",
+            "eff": "paralyze"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1013,
+        "_comment1": "Ceiling Latch Body Slam",
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 5,
+            "dir": "4862",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "Before hunters attack, monster will move to the closest rock node and will be +3 [range] from hunters."
+          }
+        ]
+      },
+      {
+        "id": 1014,
+        "_comment1": "Ceiling Latch Charged Waves",
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 4,
+            "range": 3,
+            "dodge": 3,
+            "dir": "8"
+          },
+          {
+            "type": "atk-lock",
+            "value": 4,
+            "range": 3,
+            "dodge": 3,
+            "dir": "6"
+          },
+          {
+            "type": "atk-lock",
+            "value": 4,
+            "range": 3,
+            "dodge": 3,
+            "dir": "4"
+          },
+          {
+            "type": "bottom",
+            "value": "Before hunters attack, monster will move to the closest rock node and will be +3 [range] from hunters."
+          }
+        ]
+      }
+    ]
+  }
+}

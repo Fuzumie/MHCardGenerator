@@ -1,0 +1,298 @@
+{
+  "xeno": {
+    "behavior-names": [
+      "Cerulean Fireball",
+      "Sweeping Ray",
+      "Bioenergy Eruption",
+      "Laser Beam",
+      "Tail Sweep",
+      "Claw Rake",
+      "Frenzied Rush",
+      "Left Pivot Strike",
+      "Right Pivot Blast",
+      "Full Power Laser",
+      "Laser Snipe",
+      "Sapphire Inferno",
+      "Plasma Crush",
+      "Aerial Rush"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Cerulean Fireball",
+        "id": 1001,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 4,
+            "dodge": 5,
+            "dir": "n",
+            "ele": "fire"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, deal 2 damage to all hunters within 1 [range] of the target."
+          }
+        ]
+      },
+      {
+        "_comment1": "Sweeping Ray",
+        "id": 1002,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 4,
+            "dir": "468"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, this behavior deals [fire] damage."
+          }
+        ]
+      },
+      {
+        "_comment1": "Bioenergy Eruption",
+        "id": 1003,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 13,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2468"
+          },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, the behavior gets +1 [dodge] and +2 [attack]"
+          }
+        ]
+      },
+      {
+        "_comment1": "Laser Beam",
+        "id": 1004,
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 3,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, this behavior has -1 [hunter-turn]"
+          }
+        ]
+      },
+      {
+        "_comment1": "Tail Sweep",
+        "id": 1005,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "246"
+          },
+          { "type": "move", "value": 3, "dir": "8" },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Claw Rake",
+        "id": 1006,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 6,
+            "dir": "64"
+          },
+          { "type": "hunter", "turn": 1, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Frenzied Rush",
+        "id": 1007,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 3, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Left Pivot Strike",
+        "id": 1008,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "dir": "84"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Right Pivot Blast",
+        "id": 1009,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 2,
+            "dodge": 5,
+            "dir": "6",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "_comment1": "Full Power Laser",
+        "id": 1010,
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 3, "card": 3 },
+          { "type": "move", "value": 0, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 4,
+            "dodge": 5,
+            "dir": "8"
+          },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, this behavior has +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Laser Snipe",
+        "id": 1011,
+        "part": "head",
+        "target": "exhaust",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 5,
+            "dodge": 4,
+            "dir": "n"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, +1 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Sapphire Inferno",
+        "id": 1012,
+        "part": "head",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 2,
+            "dodge": 5,
+            "dir": "486",
+            "ele": "fire"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Plasma Crush",
+        "id": 1013,
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          { "type": "move", "value": 3, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 2,
+            "dodge": 4,
+            "dir": "682"
+          },
+          {
+            "type": "bottom",
+            "value": "If Xeno’jiiva is in Critical State, this behavior has -1 [hunter-attack]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Aerial Rush",
+        "id": 1014,
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 5, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 5,
+            "dir": "462"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "This behavior’s movement ignores hunters other than the target."
+          }
+        ]
+      }
+    ]
+  }
+}

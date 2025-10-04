@@ -1,0 +1,72 @@
+{
+  "roar": {
+    "behavior-names": [
+      "Weak Roar",
+      "Medium Roar",
+      "Strong Roar",
+      "Extreme Roar"
+    ],
+    "behavior": [
+      {
+        "id": 1010,
+        "_comment1": "Weak Roar",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 4,
+            "dir": "2468"
+          }
+        ]
+      },
+      {
+        "id": 1011,
+        "_comment1": "Medium Roar",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2468"
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "_comment1": "Strong Roar",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 3,
+            "dodge": 6,
+            "dir": "2468"
+          }
+        ]
+      },
+      {
+        "id": 1014,
+        "_comment1": "Extreme Roar",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 4 ,
+            "dodge": 7,
+            "dir": "2468"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "shogun": {
+    "resistance": {
+      "fire": 2,
+      "ice": 1,
+      "water": 2,
+      "dragon": 2,
+      "thunder": 1,
+      "paralysis": 2,
+      "blast": 2,
+      "poison": 2,
+      "stun": 2,
+      "sleep": 2
+    },
+    "levels": [
+      {
+        "hp": 60,
+        "head": { "arc": "8", "armor": 1, "break": 3 },
+        "claws": { "arc": "46", "armor": 1, "break": 4 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 65,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 1, "break": 4 }
+      },
+      {
+        "hp": 70,
+        "head": { "arc": "8", "armor": 2, "break": 5 },
+        "claws": { "arc": "46", "armor": 2, "break": 5 },
+        "tail": { "arc": "2", "armor": 2, "break": 5 }
+      }
+    ],
+    "behavior-names": [
+      "Sideways Claw Swipe",
+      "Half-Moon Claw Swipes",
+      "Burrowing Strike",
+      "Impaling Claw Strike",
+      "Water Jet",
+      "Advancing Cross Chop",
+      "Sharpening Strike",
+      "Hydro Pump",
+      "Clawblade Swipe",
+      "Sideways Water Jet",
+      "Burrowing Leap",
+      "Clawblade Slash",
+      "Shell Switch",
+      "Crab Rave"
+    ],
+    "behavior": [
+      {
+        "_comment1": "Sideways Claw Swipe",
+        "id": 5000,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "move", "value": 4, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "68"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, change all of its right side actions to the left side."
+          }
+        ]
+      },
+      {
+        "_comment1": "Half-Moon Claw Swipes",
+        "id": 5001,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 3,
+            "dir": "2468"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, repeat the attack."
+          }
+        ]
+      },
+      {
+        "_comment1": "Burrowing Strike",
+        "id": 5002,
+        "part": "torso",
+        "target": "far",
+        "type": "dig",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 9,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "stun"
+          }
+        ]
+      },
+      {
+        "_comment1": "Impaling Claw Strike",
+        "id": 5003,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 2 },
+          { "type": "move", "value": 4, "dir": "4" },
+          {
+              "type": "attack",
+              "value": 10,
+              "range": 1,
+              "dodge": 6,
+              "dir": "n"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, change all of its left side actions to the right side."
+          }
+        ]
+      },
+      {
+        "_comment1": "Water Jet",
+        "id": 5004,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 4,
+            "dodge": 4,
+            "dir": "6",
+            "ele": "water"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 4,
+            "dodge": 4,
+            "dir": "2",
+            "ele": "water"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 4,
+            "dodge": 5,
+            "dir": "4",
+            "ele": "water"
+          },
+          { "type": "hunter", "turn": 2, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Gravios Skull play this behaviour, otherwise discard this card."
+          }
+        ]
+      },
+      {
+        "_comment1": "Advancing Cross Chop",
+        "id": 5005,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "468"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "_comment1": "Sharpening Strike",
+        "id": 5006,
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "wind-up", "turn": 4, "card": 2 },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 1,
+            "dodge": 6,
+            "eff": "stun",
+            "dir": "8"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Gravios Skull, the attacking hunter rolls a die. On a roll of 6, their damage is deflected."
+          }
+        ]
+      },
+      {
+        "_comment1": "Hydro Pump",
+        "id": 5007,
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 5,
+            "dodge": 5,
+            "dir": "2",
+            "ele": "water"
+          },
+          { "type": "move", "value": 3, "dir": "8" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Gravios Skull play this behaviour, otherwise discard this card."
+          }
+        ]
+      },
+      {
+        "_comment1": "Clawblade Swipe",
+        "id": 5008,
+        "part": "claws",
+        "target": "close",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "48"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, change all of its left side actions to the right side."
+          }
+        ]
+      },
+      {
+        "_comment1": "Sideways Water Jet",
+        "id": 5009,
+        "part": "torso",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 3, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 3,
+            "dodge": 4,
+            "dir": "2",
+            "ele": "water"
+          },
+          { "type": "atk-move", "value": 3, "dir": "4" },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Gravios Skull play this behaviour, otherwise discard this card."
+          }
+        ]
+      },
+      {
+        "_comment1": "Burrowing Leap",
+        "id": 5013,
+        "part": "torso",
+        "target": "far",
+        "type": "dig",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          {
+            "type": "atk-lock",
+            "value": 7,
+            "range": 1,
+            "dodge": 6,
+            "dir": "n",
+            "eff": "stun"
+          }
+        ]
+      },
+      {
+        "_comment1": "Clawblade Slash",
+        "id": 5011,
+        "part": "claws",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 6,
+            "dir": "68"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster has a Conch Shell, change all of its right side actions to the left side."
+          }
+      ]
+      },
+      {
+        "_comment1": "Shell Switch",
+        "id": 5012,
+        "part": "torso",
+        "type": "track",
+        "target": "far",
+        "actions": [
+          {
+            "type": "text",
+            "value": "When this monster swaps a shell, roll a die to determine which one: \\ 1-3: Gravios Skull \\4-6: Conch Shell"
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "_comment1": "Crab Rave",
+        "id": 5010,
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "text",
+            "value": "If this monster has a Gravios Skull, all hunters must move to an adjacent node next to the monster.\\ If this monster has a Conch Shell, it heals 10 Health by dancing."
+          },
+          { "type": "hunter", "turn": 1, "card": 1 }
+        ]
+      }
+    ]
+  }
+}
