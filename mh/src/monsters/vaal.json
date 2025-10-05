@@ -5,7 +5,7 @@
       "Flesh Rotting Charge Attack",
       "Lifeless Surge Spin",
       "Effluvia Mist Spread",
-      "Reaping Claw Sweep Right",
+      "eaping Claw Sweep RiRght",
       "Carrion Maw Rush",
       "Necrotic Descent",
       "Corruption Veil",
@@ -43,7 +43,7 @@
           { "type": "atk-move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 15,
+            "value": 14,
             "range": 1,
             "dodge": 6,
             "dir": "8",
@@ -59,7 +59,7 @@
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour, the monster gains 1 health." }
         ]
       },
       {
@@ -80,14 +80,14 @@
           {
             "type": "attack",
             "value": 0,
-            "range": 3,
+            "range": 2,
             "dodge": 3,
             "dir": "",
-            "atkdir": "47896",
+            "atkdir": "12346",
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 3, "card": 2 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] they receive 1 damage." }
         ]
       },
       {
@@ -99,8 +99,8 @@
           {
             "type": "attack",
             "value": 0,
-            "range": 4,
-            "dodge": 4,
+            "range": 2,
+            "dodge": 3,
             "dir": "",
             "atkdir": "12346789",
             "eff": "effluvia"
@@ -114,7 +114,7 @@
         "part": "claws",
         "target": "exhaust",
         "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "move", "value": 1, "dir": "6" },
           {
             "type": "atk-lock",
             "value": 16,
@@ -126,13 +126,13 @@
             "type": "attack",
             "value": 0,
             "range": 2,
-            "dodge": 5,
+            "dodge": 4,
             "dir": "",
             "atkdir": "689",
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 3, "card": 2 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour, the monster gains 1 health." }
         ]
       },
       {
@@ -155,7 +155,7 @@
             "range": 3,
             "dodge": 3,
             "dir": "",
-            "atkdir": "789",
+            "atkdir": "2468",
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
@@ -173,7 +173,7 @@
             "type": "attack",
             "value": 16,
             "range": 1,
-            "dodge": 5,
+            "dodge": 4,
             "dir": "2468",
             "eff": "stun"
           },
@@ -187,7 +187,7 @@
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 3, "card": 4 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour, the monster gains 1 health." }
         ]
       },
       {
@@ -199,10 +199,10 @@
           { "type": "wind-up", "turn": 2, "card": 3 },
           {
             "type": "attack",
-            "value": 19,
+            "value": 15,
             "range": 3,
             "dodge": 7,
-            "dir": "8",
+            "dir": "2468",
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 2, "card": 3 }
@@ -217,29 +217,29 @@
           { "type": "atk-move", "value": 3, "dir": "8" },
           {
             "type": "attack",
-            "value": 17,
+            "value": 16,
             "range": 1,
-            "dodge": 5,
+            "dodge": 4,
             "dir": "468",
             "eff": "stun"
           },
           {
             "type": "attack",
             "value": 0,
-            "range": 2,
+            "range": 1,
             "dodge": 2,
             "dir": "",
-            "atkdir": "46789",
+            "atkdir": "134679",
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 1, "card": 4 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] they receive 1 damage." }
         ]
       },
       {
         "id": 1010,
         "_comment1": "Corpse Cleaver",
-        "part": "head",
+        "part": "tail",
         "target": "exhaust",
         "actions": [
           {
@@ -260,7 +260,7 @@
             "eff": "effluvia"
           },
           { "type": "hunter", "turn": 2, "card": 3 },
-          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour within 1 [range] monster gains 1 health." }
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] at the start of this behaviour, the monster gains 1 health." }
         ]
       },
       {
@@ -291,15 +291,14 @@
         "actions": [
           {
             "type": "attack",
-            "value": 8,
-            "range": 1,
+            "value": 0,
+            "range": 4,
             "dodge": 4,
-            "dir": "286",
-            "eff": "stun"
+            "dir": "",
+            "atkdir": "1379",
+            "eff": "effluvia"
           },
-          { "type": "atk-move", "value": 2, "dir": "6" },
-          { "type": "hunter", "turn": 1, "card": 3 },
-          { "type": "bottom", "value": "If this monster is [enraged], +1 [move]" }
+          { "type": "hunter", "turn": 1, "card": 2 }
         ]
       },
       {
@@ -309,7 +308,25 @@
         "target": "close",
         "type": "track",
         "actions": [
-          { "type": "text", "value": "Draw 5 time cards and apply their effect, then call 2 other Hirabami into the hunt, place them on any node of your choice." }
+          { "type": "move", "value": 2, "dir": "4" },
+          {
+            "type": "atk-lock",
+            "value": 13,
+            "range": 1,
+            "dodge": 7,
+            "dir": "48"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 5,
+            "dir": "",
+            "atkdir": "478",
+            "eff": "effluvia"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          { "type": "bottom", "value": "If there is any hunter suffering [effluvia] they receive 1 damage." }
         ]
       },
       {
@@ -319,19 +336,31 @@
         "target": "exhaust",
         "type": "track",
         "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
+          { "type": "wind-up", "turn": 4, "card": 2 },
+          {
+            "type": "atk-lock",
+            "value": 14,
+            "range": 2,
+            "dodge": 4,
+            "dir": "8",
+            "eff": "effluvia"
+          },
+          {
+            "type": "atk-lock",
+            "value": 16,
+            "range": 4,
+            "dodge": 6,
+            "dir": "8",
+            "eff": "effluvia"
+          },
           {
             "type": "attack",
-            "value": 6,
-            "range": 1,
-            "dodge": 5,
-            "dir": "2864",
-            "eff": "stun",
-            "ele": "ice"
-          },
-          { "type": "move", "value": 3, "dir": "2" },
-          { "type": "hunter", "turn": 4, "card": 2 },
-          {"type": "bottom", "value": "If this monster is [enraged], repeat the behaviour"}
+            "value": 18,
+            "range": 6,
+            "dodge": 8,
+            "dir": "468",
+            "eff": "effluvia"
+          }
         ]
       }
     ]

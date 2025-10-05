@@ -45,8 +45,33 @@ def load_monster_data():
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
                     loaded_data = json.load(f)
-                print(f"Loaded data for {monster_id}: {loaded_data.get(monster_id, {}).get('behavior', 'Behavior key not found or is not a list')}") # Print behavior list or status
-                monster_data[monster_id] = loaded_data.get(monster_id, {})
+
+                # Primary lookup: JSON keyed by filename (e.g., legia_dry -> key 'legia_dry')
+                data_for_id = loaded_data.get(monster_id)
+
+                # Fallback 1: if JSON contains a single top-level key, assume that's the data
+                if data_for_id is None and isinstance(loaded_data, dict) and len(loaded_data) == 1:
+                    single_key = next(iter(loaded_data.keys()))
+                    data_for_id = loaded_data[single_key]
+                    print(f"Note: using single top-level key '{single_key}' from {filename} for monster id '{monster_id}'")
+
+                # Fallback 2: try base name before underscore (e.g., legia_dry -> legia)
+                if data_for_id is None and "_" in monster_id:
+                    base = monster_id.split('_')[0]
+                    data_for_id = loaded_data.get(base)
+                    if data_for_id is not None:
+                        print(f"Note: using base key '{base}' from {filename} for monster id '{monster_id}'")
+
+                # Final fallback: if nothing matches, use empty dict
+                if data_for_id is None:
+                    print(f"Warning: Behavior key not found in {filename} for id '{monster_id}'. Available keys: {list(loaded_data.keys()) if isinstance(loaded_data, dict) else 'N/A'}")
+                    data_for_id = {}
+
+                # Log behavior presence (if any)
+                behavior_preview = data_for_id.get('behavior') if isinstance(data_for_id, dict) else None
+                print(f"Loaded data for {monster_id}: {behavior_preview if behavior_preview is not None else 'Behavior key not found or is not a list'}")
+
+                monster_data[monster_id] = data_for_id
                 print(f"Processed monster data: {monster_id}")
             except Exception as e:
                 print(f"Error loading {filename}: {str(e)}")

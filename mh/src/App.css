@@ -339,6 +339,11 @@
 .freeze {
   background: url(assets/freeze.png) center center/contain no-repeat;
 }
+.eff.effluvia {
+  width: 3.375em;
+  right: 5%;
+  top: 53%;
+}
 
 /* DIRECTIONS */
 .dir {
@@ -446,6 +451,9 @@
 }
 .effluvia {
   background: url(assets/effluvia.png) center center/contain;
+}
+.stench {
+  background: url(assets/stench.png) center center/contain;
 }
 /* Monster dodge */
 .m-dodge {
@@ -681,7 +689,7 @@
   background-image:url(assets/monster/cham.png)
 }
 
-/* STATUS EFFECTS ICONS */
+/* Special Icons */
 .flash {
   background: url(assets/flash.png) center center/contain;
 }
@@ -721,9 +729,6 @@
 }
 .amp {
   background: url(assets/amp.png) center center/contain;
-}
-.stench {
-  background: url(assets/stench.png) center center/contain;
 }
 .shroom {
   background: url(assets/shroom.png) center center/contain;
@@ -871,9 +876,9 @@
   position: fixed;
   top: 20px;
   left: 20px;
-  width: 12px;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.2);
+  width: 20px;
+  height: 20px;
+  /* background: rgba(0, 0, 0, 0.2); */
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -881,11 +886,6 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-}
-
-.monster-selector:hover {
-  transform: scale(1.1);
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .monster-selector.expanded {
