@@ -1,0 +1,459 @@
+{
+    "bazel": {
+        "behavior-names": [
+            "Diving Bombardment",
+            "Taking Off",
+            "Big Chomp",
+            "Blast Pound",
+            "Fireball",
+            "Arc Bomb Scatter",
+            "Double Tail Slam",
+            "Bombs Away",
+            "Chin Drag",
+            "Spinning Scale Scatter",
+            "Setting Up Bomb Field",
+            "Incendiary Chomp",
+            "Heavy Stomp",
+            "Blitz Raid Flight"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Diving Bombardment",
+                "id": 1069,
+                "part": "wing",
+                "target": "far",
+                "type": "dive",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 18,
+                        "range": 2,
+                        "dodge": 7,
+                        "dir": "2468",
+                        "eff": "blast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "All [bombs] currently on the board explode."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Taking Off",
+                "id": 1070,
+                "part": "wing",
+                "target": "far",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 0,
+                        "range": 1,
+                        "dodge": 2,
+                        "atkdir": "846"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Repeat the behavior card then draw Diving Bombardment [dive] behavior and the monster will be +3 [range] from hunters."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Big Chomp",
+                "id": 1071,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 12,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Blast Pound",
+                "id": 1072,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 15,
+                        "range": 1,
+                        "dodge": 7,
+                        "dir": "468",
+                        "atkdir": "123789",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Fireball",
+                "id": 1073,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 12,
+                        "range": 4,
+                        "dodge": 6,
+                        "dir": "n",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Arc Bomb Scatter",
+                "id": 1074,
+                "part": "tail",
+                "target": "close",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "246",
+                        "atkdir": "41236"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 3,
+                        "dodge": 6,
+                        "dir": "2",
+                        "atkdir": "2"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Double Tail Slam",
+                "id": 1075,
+                "part": "tail",
+                "target": "close",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 11,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 11,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Bombs Away",
+                "id": 1076,
+                "part": "head",
+                "target": "far",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 14,
+                        "range": 1,
+                        "dodge": 8,
+                        "dir": "8",
+                        "atkdir": "47896"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Chin Drag",
+                "id": 1077,
+                "part": "head",
+                "target": "far",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 13,
+                        "range": 1,
+                        "dodge": 7,
+                        "dir": "468",
+                        "atkdir": "486"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Spinning Scale Scatter",
+                "id": 1078,
+                "part": "tail",
+                "target": "close",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 0,
+                        "range": 3,
+                        "dodge": 2,
+                        "atkdir": "12346789"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 16,
+                        "range": 2,
+                        "dodge": 6,
+                        "dir": "2468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], deals [blast] damage."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Setting Up Bomb Field",
+                "id": 1079,
+                "part": "wing",
+                "target": "far",
+                "type": "bombs",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 0,
+                        "range": 2,
+                        "dodge": 4,
+                        "atkdir": "846"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "The monster will be +3 [range] from hunters."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Incendiary Chomp",
+                "id": 1080,
+                "part": "head",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 13,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "n",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Heavy Stomp",
+                "id": 1081,
+                "part": "torso",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "2468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Blitz Raid Flight",
+                "id": 1082,
+                "part": "wing",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 15,
+                        "range": 1,
+                        "dodge": 8,
+                        "dir": "2468",
+                        "eff": "blast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "All [bombs] currently on the board explode."
+                    }
+                ]
+            }
+        ]
+    }
+}

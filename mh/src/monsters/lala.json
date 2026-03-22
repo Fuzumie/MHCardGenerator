@@ -1,0 +1,508 @@
+{
+  "lala": {
+    "behavior-names": [
+      "Blooming Beauty",
+      "Petal Dance",
+      "Stinger Attack",
+      "Nest Spin",
+      "Web Swinging",
+      "Piercing Landing",
+      "Leap",
+      "Scatter Petals Left",
+      "Claw Slam",
+      "Leg Jab",
+      "Sideways Claw Swipe",
+      "Forward Claw Swipes",
+      "Scatter Petals Right",
+      "Backstab Sting"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "name": "Blooming Beauty",
+        "part": "torso",
+        "type": "rose",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "12346789"
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "name": "Petal Dance",
+        "part": "claws",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8",
+            "atkdir": "12346"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "6"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "id": 1003,
+        "name": "Stinger Attack",
+        "part": "torso",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 4
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "123"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "n",
+            "eff": "paralysis"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "id": 1004,
+        "name": "Nest Spin",
+        "part": "torso",
+        "target": "far",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 2,
+            "card": 4
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "12478"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "23689"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 2,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "12346789"
+          },
+          {
+            "type": "bottom",
+            "value": "Before this monster attacks, it will move to the closest bush node and will be +1 [range] from hunters."
+          }
+        ]
+      },
+      {
+        "id": 1005,
+        "name": "Web Swinging",
+        "part": "torso",
+        "target": "far",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "4"
+          },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 3,
+            "dir": "n",
+            "atkdir": "123"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "6"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          },
+          {
+            "type": "hunter",
+            "turn": 3,
+            "card": 2
+          }
+        ]
+      },
+      {
+        "id": 1006,
+        "name": "Piercing Landing",
+        "part": "torso",
+        "target": "far",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "2468",
+            "atkdir": "12346",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          }
+        ]
+      },
+      {
+        "id": 1007,
+        "name": "Leap",
+        "part": "claws",
+        "target": "far",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "atk-move",
+            "value": 3,
+            "dir": "8"
+          },
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 4
+          },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "468",
+            "atkdir": "123",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 4
+          }
+        ]
+      },
+      {
+        "id": 1008,
+        "name": "Scatter Petals Left",
+        "part": "torso",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "atk-move",
+            "value": 1,
+            "dir": "2"
+          },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "2",
+            "atkdir": "12478"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "4"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "id": 1009,
+        "name": "Claw Slam",
+        "part": "claws",
+        "target": "far",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "move",
+            "value": 1,
+            "dir": "2"
+          },
+          {
+            "type": "move",
+            "value": 4,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 5,
+            "dir": "8",
+            "atkdir": "123",
+            "eff": "stun"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "id": 1010,
+        "name": "Leg Jab",
+        "part": "torso",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 2
+          },
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 1,
+            "dodge": 6,
+            "dir": "n"
+          },
+          {
+            "type": "attack",
+            "value": 0,
+            "range": 1,
+            "dodge": 0,
+            "dir": "",
+            "atkdir": "13"
+          }
+        ]
+      },
+      {
+        "id": 1011,
+        "name": "Sideways Claw Swipe",
+        "part": "claws",
+        "target": "close",
+        "extra": "floret",
+        "actions": [
+          {
+            "type": "atk-move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "wind-up",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 1,
+            "dodge": 4,
+            "dir": "468",
+            "atkdir": "1346"
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "name": "Forward Claw Swipes",
+        "part": "claws",
+        "target": "far",
+        "extra": "floret",
+        "type": "track",
+        "actions": [
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8",
+            "atkdir": "1346"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "4"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "id": 1013,
+        "name": "Scatter Petals Right",
+        "part": "torso",
+        "target": "far",
+        "extra": "floret",
+        "type": "track",
+        "actions": [
+          {
+            "type": "atk-move",
+            "value": 1,
+            "dir": "2"
+          },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 5,
+            "dir": "2",
+            "atkdir": "23689"
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "6"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [move]."
+          }
+        ]
+      },
+      {
+        "id": 1014,
+        "name": "Backstab Sting",
+        "part": "torso",
+        "target": "far",
+        "extra": "floret",
+        "type": "track",
+        "actions": [
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "2"
+          },
+          {
+            "type": "attack",
+            "value": 8,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2",
+            "atkdir": "12346",
+            "eff": "paralysis"
+          },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      }
+    ]
+  }
+}

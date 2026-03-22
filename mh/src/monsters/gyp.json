@@ -1,0 +1,468 @@
+{
+    "gyp": {
+        "resistance": {
+            "fire": 2,
+            "ice": 1,
+            "water": 2,
+            "dragon": 2,
+            "thunder": 1,
+            "paralysis": 2,
+            "blast": 2,
+            "poison": 2,
+            "stun": 2,
+            "sleep": 2
+        },
+        "levels": [
+            {
+                "hp": 60,
+                "head": {
+                    "arc": "8",
+                    "armor": 1,
+                    "break": 3
+                },
+                "claws": {
+                    "arc": "46",
+                    "armor": 1,
+                    "break": 4
+                },
+                "tail": {
+                    "arc": "2",
+                    "armor": 1,
+                    "break": 4
+                }
+            },
+            {
+                "hp": 65,
+                "head": {
+                    "arc": "8",
+                    "armor": 2,
+                    "break": 5
+                },
+                "claws": {
+                    "arc": "46",
+                    "armor": 2,
+                    "break": 5
+                },
+                "tail": {
+                    "arc": "2",
+                    "armor": 1,
+                    "break": 4
+                }
+            },
+            {
+                "hp": 70,
+                "head": {
+                    "arc": "8",
+                    "armor": 2,
+                    "break": 5
+                },
+                "claws": {
+                    "arc": "46",
+                    "armor": 2,
+                    "break": 5
+                },
+                "tail": {
+                    "arc": "2",
+                    "armor": 2,
+                    "break": 5
+                }
+            }
+        ],
+        "behavior-names": [
+            "Tail Smashes",
+            "Tail Swipe Right",
+            "Poison Splashes Close",
+            "Poison Splashes Far",
+            "Tail Whip Close",
+            "Tail Whip Far",
+            "Peck Attacks",
+            "Poison Spit Close",
+            "Ceiling Poison Drop",
+            "Flash Bomb",
+            "Flash Bomb",
+            "Tail Swipe Left",
+            "Peck Attack",
+            "Poison Spit Far"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Tail Smashes",
+                "id": 1100,
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 6,
+                        "range": 3,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this behaviour is played, repeat the attack four times."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tail Swipe Right",
+                "id": 1101,
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "26"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Poison Splashes Close",
+                "id": 1102,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "8",
+                        "atkdir": "79",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Poison Splashes Far",
+                "id": 1103,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 3,
+                        "dodge": 1,
+                        "dir": "8",
+                        "atkdir": "79",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tail Whip Close",
+                "id": 1104,
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 10,
+                        "range": 3,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tail Whip Far",
+                "id": 1105,
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 6,
+                        "range": 5,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Peck Attacks",
+                "id": 1106,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 5
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 1,
+                        "dir": "n",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 1
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this behaviour is played, repeat the attack five times."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Poison Spit Close",
+                "id": 1107,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 4,
+                        "range": 2,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Ceiling Poison Drop",
+                "id": 1108,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 4,
+                        "dodge": 2,
+                        "dir": "84",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 4,
+                        "dodge": 2,
+                        "dir": "86",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Flash Bomb",
+                "id": 1109,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "text",
+                        "value": "Hunters within 3 [range] suffer [stun]."
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Flash Bomb",
+                "id": 1110,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "text",
+                        "value": "Hunters within 3 [range] suffer [stun]."
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tail Swipe Left",
+                "id": 1112,
+                "part": "tail",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 3,
+                        "dodge": 3,
+                        "dir": "24"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Peck Attack",
+                "id": 1111,
+                "part": "head",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Poison Spit Far",
+                "id": 1113,
+                "part": "head",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 5,
+                        "range": 2,
+                        "dodge": 2,
+                        "dir": "n",
+                        "eff": "poison"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [dodge]."
+                    }
+                ]
+            }
+        ]
+    }
+}

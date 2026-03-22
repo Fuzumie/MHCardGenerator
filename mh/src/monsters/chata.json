@@ -1,37 +1,5 @@
 {
   "chata": {
-    "resistance": {
-      "fire": 2,
-      "ice": 1,
-      "water": 2,
-      "dragon": 2,
-      "thunder": 1,
-      "paralysis": 2,
-      "blast": 2,
-      "poison": 2,
-      "stun": 2,
-      "sleep": 2
-    },
-    "levels": [
-      {
-        "hp": 60,
-        "head": { "arc": "8", "armor": 1, "break": 3 },
-        "claws": { "arc": "46", "armor": 1, "break": 4 },
-        "tail": { "arc": "2", "armor": 1, "break": 4 }
-      },
-      {
-        "hp": 65,
-        "head": { "arc": "8", "armor": 2, "break": 5 },
-        "claws": { "arc": "46", "armor": 2, "break": 5 },
-        "tail": { "arc": "2", "armor": 1, "break": 4 }
-      },
-      {
-        "hp": 70,
-        "head": { "arc": "8", "armor": 2, "break": 5 },
-        "claws": { "arc": "46", "armor": 2, "break": 5 },
-        "tail": { "arc": "2", "armor": 2, "break": 5 }
-      }
-    ],
     "behavior-names": [
       "Tongue Lash",
       "Tongue Sweep",
@@ -55,7 +23,11 @@
         "part": "head",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 6,
@@ -63,7 +35,11 @@
             "dodge": 3,
             "dir": "8"
           },
-          { "type": "hunter", "turn": 1, "card": 3 }
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 3
+          }
         ]
       },
       {
@@ -79,7 +55,11 @@
             "dodge": 2,
             "dir": "468"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          }
         ]
       },
       {
@@ -88,7 +68,11 @@
         "part": "head",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 5,
@@ -96,7 +80,11 @@
             "dodge": 4,
             "dir": "n"
           },
-          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -109,7 +97,11 @@
         "part": "claws",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 2, "dir": "4" },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "4"
+          },
           {
             "type": "attack",
             "value": 7,
@@ -117,7 +109,11 @@
             "dodge": 3,
             "dir": "48"
           },
-          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +1 [range]."
@@ -130,7 +126,11 @@
         "part": "claws",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "6"
+          },
           {
             "type": "attack",
             "value": 7,
@@ -138,7 +138,11 @@
             "dodge": 3,
             "dir": "68"
           },
-          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +1 [range]."
@@ -151,8 +155,16 @@
         "part": "claws",
         "target": "far",
         "actions": [
-          { "type": "wind-up", "turn": 1, "card": 2 },
-          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 2
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 10,
@@ -160,7 +172,11 @@
             "dodge": 4,
             "dir": "468"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          }
         ]
       },
       {
@@ -169,7 +185,11 @@
         "part": "claws",
         "target": "far",
         "actions": [
-          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "atk-move",
+            "value": 4,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 9,
@@ -177,7 +197,11 @@
             "dodge": 3,
             "dir": "n"
           },
-          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -190,7 +214,11 @@
         "part": "claws",
         "target": "close",
         "actions": [
-          { "type": "atk-move", "value": 4, "dir": "8" },
+          {
+            "type": "atk-move",
+            "value": 4,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 9,
@@ -198,7 +226,11 @@
             "dodge": 3,
             "dir": "n"
           },
-          { "type": "hunter", "turn": 1, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -211,8 +243,16 @@
         "part": "claws",
         "target": "close",
         "actions": [
-          { "type": "wind-up", "turn": 2, "card": 2 },
-          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "wind-up",
+            "turn": 2,
+            "card": 2
+          },
+          {
+            "type": "move",
+            "value": 1,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 9,
@@ -239,7 +279,11 @@
             "dodge": 4,
             "dir": "246"
           },
-          { "type": "hunter", "turn": 1, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          }
         ]
       },
       {
@@ -248,7 +292,11 @@
         "part": "claws",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 3, "dir": "6" },
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "6"
+          },
           {
             "type": "attack",
             "value": 6,
@@ -256,7 +304,11 @@
             "dodge": 4,
             "dir": "68"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          }
         ]
       },
       {
@@ -266,7 +318,11 @@
         "target": "close",
         "type": "track",
         "actions": [
-          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "4"
+          },
           {
             "type": "attack",
             "value": 6,
@@ -274,7 +330,11 @@
             "dodge": 4,
             "dir": "48"
           },
-          { "type": "hunter", "turn": 2, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          }
         ]
       },
       {

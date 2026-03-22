@@ -1,0 +1,379 @@
+{
+  "bala-s": {
+    "behavior-names": [
+      "Fake Sandstorm",
+      "Phased Charged Thunder",
+      "Fulgurite Drill Lash",
+      "Splitting Jaw",
+      "Chasing Driller",
+      "Volt Burst Tail Slam",
+      "Bolt Step Right",
+      "Crystal Coated Coil",
+      "Bolt Step Left",
+      "Fulgurite Scales",
+      "Sand Eruptions",
+      "Maw Embrace",
+      "Ion Surge",
+      "Drilling Slams"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "name": "Fake Sandstormw",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 4, "card": 2 },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 2,
+            "dodge": 4,
+            "dir": "468",
+            "ele": "thunder"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 7,
+            "range": 3,
+            "dodge": 2,
+            "dir": "246",
+            "ele": "thunder"
+          },
+          {
+            "type": "bottom",
+            "value": "When this behavior is played, place 1 sand terrain, within 1 [range] to any node adjacent to every hunter."
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "name": "Phased Charged Thunder",
+        "part": "head",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 3,
+            "range": 4,
+            "dodge": 6,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "When this behavior is drawn, +1 [attack] per fulgurite node within 2 [range] of the monster."
+          }
+        ]
+      },
+      {
+        "id": 1003,
+        "name": "Fulgurite Drill Lash",
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 2,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "bleed"
+            },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], +2 [dodge]."
+          }
+        ]
+      },
+      {
+        "id": 1004,
+        "name": "Splitting Jaw",
+        "part": "head",
+        "target": "far",
+        "actions": [
+            { "type": "wind-up", "turn": 2, "card": 2 },
+          { "type": "atk-move", "value": 5, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "id": 1005,
+        "name": "Chasing Driller",
+        "part": "tail",
+        "type": "dig",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 4, "dir": "4" },
+          { "type": "atk-move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 3,
+            "dir": "28",
+            "eff": "bleed"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the value of movements will switch."
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      },
+      {
+        "id": 1006,
+        "name": "Volt Burst Tail Slam",
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 4,
+            "dodge": 2,
+            "dir": "46",
+            "atkdir": "1379",
+            "eff": "stun",
+            "ele": "thunder"
+          },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 3,
+            "dodge": 3,
+            "dir": "28",
+            "atkdir": "46",
+            "ele": "thunder"
+          },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 2,
+            "dir": "2468",
+            "eff": "bleed"
+          },
+          { "type": "hunter", "turn": 4, "card": 4 }
+        ]
+      },
+      {
+        "id": 1007,
+        "name": "Bolt Step Right",
+        "part": "torso",
+        "target": "far",
+        "type": "dig",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 1,
+            "dodge": 2,
+            "dir": "268",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 3, "dir": "6" },
+          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "id": 1008,
+        "name": "Crystal Coated Coil",
+        "part": "tail",
+        "target": "close",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 4,
+            "dir": "46",
+            "eff": "stun"
+          },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 4,
+            "range": 3,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "bleed"
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1009,
+        "name": "Bolt Step Left",
+        "part": "torso",
+        "target": "far",
+        "type": "dig",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 1,
+            "dodge": 3,
+            "dir": "248",
+            "eff": "stun"
+          },
+          { "type": "atk-move", "value": 3, "dir": "4" },
+          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "id": 1010,
+        "name": "Fulgurite Scales",
+        "part": "torso",
+        "target": "close",
+        "type": "dig",
+        "actions": [
+          {
+            "type": "text",
+            "value": "When this behavior is drawn, +3 [armor] on every bodypart per fulgurite node within 2 [range] of the monster till the end of the next behaviour card."
+          },
+          { "type": "hunter", "turn": 1, "card": 2 }
+        ]
+      },
+      {
+        "id": 1011,
+        "name": "Sand Eruptions",
+        "part": "torso",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 3, "card": 2 },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 2,
+            "dodge": 4,
+            "dir": "2468",
+            "eff": "bleed"
+          },
+          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 6,
+            "range": 2,
+            "dodge": 3,
+            "dir": "n",
+            "ele": "thunder"
+          },
+          {
+            "type": "bottom",
+            "value": "When this behavior is played, place 1 sand terrain, within 1 [range] to any node adjacent to every hunter."
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "name": "Maw Embrace",
+        "part": "head",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          { "type": "atk-move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 5,
+            "range": 2,
+            "dodge": 5,
+            "dir": "8"
+          },
+          { "type": "move", "value": 4, "dir": "2" },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [thunder] damage."
+          }
+        ]
+      },
+      {
+        "id": 1013,
+        "name": "Ion Surge",
+        "part": "torso",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 3,
+            "range": 1,
+            "dodge": 2,
+            "dir": "46",
+            "ele": "thunder"
+          },
+          { "type": "atk-move", "value": 4, "dir": "8" },
+          { "type": "move", "value": 1, "dir": "2" },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1014,
+        "name": "Drilling Slams",
+        "part": "tail",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 4 },
+          {
+            "type": "atk-lock",
+            "value": 5,
+            "range": 2,
+            "dodge": 5,
+            "dir": "n",
+            "eff": "bleed"
+          },
+          {
+            "type": "atk-lock",
+            "value": 6,
+            "range": 3,
+            "dodge": 3,
+            "dir": "n",
+            "eff": "bleed"
+          },
+          {
+            "type": "atk-lock",
+            "value": 4,
+            "range": 3,
+            "dodge": 4,
+            "dir": "2468",
+            "eff": "bleed"
+          },
+          { "type": "hunter", "turn": 2, "card": 2 }
+        ]
+      }
+    ]
+  }
+}

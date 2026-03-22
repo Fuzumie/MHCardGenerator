@@ -52,7 +52,7 @@ function App() {
     let r = "";
     text.forEach((t) => {
       t = t.replaceAll(
-        /\[(blast|paralysis|poison|sleep|stun|dragon|fire|freeze|ice|thunder|water|r-dragon|r-fire|r-ice|r-thunder|r-water|bush|rock|pond|agility|armor|attack|closest|farthest|dodge|movement|range|break|move|hunter-turn|hunter-attack|supernova|nerg-dive|spike|claws|head|leg|tail|torso|wing|track|flash|sharpen|enraged|bubble|scales|amp|stench|shroom|bubble-off|bubble-bliss|attack-cards|egg|bleed|arkface|vortex|vult|effluvia)\]/g,
+        /\[(blast|paralysis|poison|sleep|stun|dragon|fire|freeze|ice|thunder|water|r-dragon|r-fire|r-ice|r-thunder|r-water|bush|rock|pond|agility|armor|attack|closest|farthest|dodge|movement|range|break|move|hunter-turn|hunter-attack|supernova|nerg-dive|spike|claws|head|leg|tail|torso|wing|track|flash|sharpen|enraged|bubble|scales|amp|stench|shroom|bubble-off|bubble-bliss|attack-cards|egg|bleed|arkface|vortex|vult|effluvia|rose|floret|bombs|dive)\]/g,
         (m, m1) => {
           return `<div className="icon-status ${m1}"><img src="icons/${m1}.png" alt=""></div>`;
         }
@@ -81,12 +81,12 @@ function App() {
       // Removed this line to prevent collapsing on background click
       // setIsExpanded(false);
     }}>
-      <div 
-        className={`monster-selector ${isExpanded ? 'expanded' : ''}`} 
+      <div
+        className={`monster-selector ${isExpanded ? 'expanded' : ''}`}
         onClick={toggleSelector}
       >
-        <select 
-          value={selected} 
+        <select
+          value={selected}
           // Removed this onClick handler in the previous step
           // onClick={e => e.stopPropagation()} 
           onChange={e => {
@@ -99,8 +99,8 @@ function App() {
             pointerEvents: isExpanded ? 'auto' : 'none'
           }}
         >
-          {monsterList.length > 0 
-            ? monsterList.map(m => <option value={m.id} key={m.id}>{en.monsters?.[m.id]||m.id}</option>) 
+          {monsterList.length > 0
+            ? monsterList.map(m => <option value={m.id} key={m.id}>{en.monsters?.[m.id] || m.id}</option>)
             : <option value="">No monsters found</option>}
         </select>
       </div>

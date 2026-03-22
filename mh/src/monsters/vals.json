@@ -1,0 +1,387 @@
+{
+  "vals": {
+    "behavior-names": [
+      "Around The World",
+      "Double Lunge",
+      "Quick Pounce",
+      "Wing Spike",
+      "Charged Wing Spike",
+      "Explosive Dunk",
+      "Rocket Dash",
+      "Jet Burst",
+      "Jet Slicer",
+      "Crimson Salvo",
+      "Crimson Beam",
+      "Ground Zero Burst",
+      "Charged Dragon Spike",
+      "Crimson Heavy Beam"
+    ],
+    "behavior": [
+      {
+        "id": 1001,
+        "name": "Around The World",
+        "part": "wing",
+        "type": "rocket",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 5, "card": 2 },
+          {
+            "type": "attack",
+            "value": 20,
+            "range": 2,
+            "dodge": 5,
+            "dir": "2468",
+            "ele": "dragon"
+          },
+          {
+            "type": "bottom",
+            "value": "Remove the monster from the board before [hunter-turn] are played. When [hunter-turn] end, place it before its target."
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "name": "Double Lunge",
+        "part": "head",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          { "type": "atk-move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 1,
+            "dodge": 3,
+            "dir": "8"
+          },
+          { "type": "hunter", "turn": 1, "card": 4 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "id": 1003,
+        "name": "Quick Pounce",
+        "part": "claws",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "2" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 1,
+            "dodge": 4,
+            "dir": "468",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], draw 1 timecard."
+          }
+        ]
+      },
+      {
+        "id": 1004,
+        "name": "Wing Spike",
+        "part": "wing",
+        "target": "close",
+        "actions": [
+          { "type": "wind-up", "turn": 1, "card": 4 },
+          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 16,
+            "range": 1,
+            "dodge": 5,
+            "dir": "n"
+          },
+          { "type": "move", "value": 1, "dir": "8" },
+          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      },
+      {
+        "id": 1005,
+        "name": "Charged Wing Spike",
+        "part": "wing",
+        "target": "exhaust",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 1,
+            "dodge": 4,
+            "dir": "68"
+          },
+          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 2,
+            "dodge": 3,
+            "dir": "68",
+            "ele": "dragon"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], change all of its right side actions to the left side."
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1006,
+        "name": "Explosive Dunk",
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 2,
+            "dodge": 2,
+            "dir": "246",
+            "ele": "dragon"
+          },
+          { "type": "move", "value": 2, "dir": "8" },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], draw 1 timecard."
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1007,
+        "name": "Rocket Dash",
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "atk-move", "value": 5, "dir": "8" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 1,
+            "dodge": 3,
+            "dir": "468",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1008,
+        "name": "Jet Burst",
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 4, "dir": "8" },
+          { "type": "wind-up", "turn": 2, "card": 3 },
+          {
+            "type": "attack",
+            "value": 17,
+            "range": 1,
+            "dodge": 3,
+            "dir": "2468"
+          },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 2,
+            "dodge": 4,
+            "dir": "468",
+            "ele": "dragon"
+          },
+          { "type": "hunter", "turn": 2, "card": 3 }
+        ]
+      },
+      {
+        "id": 1009,
+        "name": "Jet Slicer",
+        "part": "wing",
+        "target": "exhaust",
+        "actions": [
+          { "type": "wind-up", "turn": 2, "card": 4 },
+          {
+            "type": "atk-lock",
+            "value": 16,
+            "range": 3,
+            "dodge": 3,
+            "dir": "n"
+          },
+          {
+            "type": "atk-lock",
+            "value": 16,
+            "range": 3,
+            "dodge": 3,
+            "dir": "n"
+          },
+          {
+            "type": "atk-lock",
+            "value": 17,
+            "range": 2,
+            "dodge": 4,
+            "dir": "2468",
+            "ele": "dragon"
+          }
+        ]
+      },
+      {
+        "id": 1010,
+        "name": "Crimson Salvo",
+        "part": "wing",
+        "target": "exhaust",
+        "actions": [
+          { "type": "move", "value": 3, "dir": "2" },
+          {
+            "type": "atk-lock",
+            "value": 11,
+            "range": 5,
+            "dodge": 5,
+            "dir": "n",
+            "atkdir": "46789",
+            "ele": "dragon"
+          },
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 4,
+            "dodge": 4,
+            "dir": "n",
+            "atkdir": "46789",
+            "ele": "dragon"
+          }
+        ]
+      },
+      {
+        "id": 1011,
+        "name": "Crimson Beam",
+        "part": "wing",
+        "target": "far",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "wind-up", "turn": 2, "card": 4 },
+          {
+            "type": "attack",
+            "value": 16,
+            "range": 5,
+            "dodge": 4,
+            "dir": "8",
+            "ele": "dragon"
+          },
+          {
+            "type": "attack",
+            "value": 9,
+            "range": 5,
+            "dodge": 2,
+            "dir": "8",
+            "ele": "dragon",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], the next behavior has 0 [hunter-turn]."
+          }
+        ]
+      },
+      {
+        "id": 1012,
+        "name": "Ground Zero Burst",
+        "part": "wing",
+        "target": "close",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 2,
+            "dodge": 3,
+            "dir": "46",
+            "ele": "dragon"
+          },
+          {
+            "type": "attack",
+            "value": 12,
+            "range": 1,
+            "dodge": 4,
+            "dir": "8",
+            "ele": "dragon"
+          },
+          { "type": "hunter", "turn": 3, "card": 4 }
+        ]
+      },
+      {
+        "id": 1013,
+        "name": "Charged Dragon Spike",
+        "part": "wing",
+        "target": "far",
+        "type": "track",
+        "actions": [
+          {
+            "type": "attack",
+            "value": 14,
+            "range": 1,
+            "dodge": 4,
+            "dir": "48"
+          },
+          { "type": "move", "value": 2, "dir": "4" },
+          {
+            "type": "attack",
+            "value": 15,
+            "range": 2,
+            "dodge": 3,
+            "dir": "48",
+            "ele": "dragon"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], change all of its left side actions to the right side."
+          },
+          { "type": "hunter", "turn": 3, "card": 2 }
+        ]
+      },
+      {
+        "id": 1014,
+        "name": "Crimson Heavy Beam",
+        "part": "wing",
+        "target": "exhaust",
+        "type": "track",
+        "actions": [
+          { "type": "move", "value": 1, "dir": "2" },
+          { "type": "wind-up", "turn": 3, "card": 4 },
+          {
+            "type": "attack",
+            "value": 18,
+            "range": 5,
+            "dodge": 4,
+            "dir": "8",
+            "ele": "dragon"
+          },
+          {
+            "type": "attack",
+            "value": 10,
+            "range": 5,
+            "dodge": 2,
+            "dir": "468",
+            "ele": "dragon",
+            "eff": "stun"
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], repeat the attack."
+          }
+        ]
+      }
+    ]
+  }
+}
