@@ -377,27 +377,27 @@
   background: url(assets/armour.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).blast {
+.blast {
   background: url(assets/blast.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).poison {
+.poison {
   background: url(assets/poison.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).iceblight {
+.iceblight {
   background: url(assets/ice.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).sleep {
+.sleep {
   background: url(assets/sleep.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).paralysis {
+.paralysis {
   background: url(assets/paralysis.png) center center/contain no-repeat;
 }
 
-:not(.icon-status).freeze {
+.freeze {
   background: url(assets/freeze.png) center center/contain no-repeat;
 }
 

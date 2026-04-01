@@ -53,7 +53,7 @@
                 "id": 1070,
                 "part": "wing",
                 "target": "far",
-                "type": "bombs",
+                "type": "dive",
                 "actions": [
                     {
                         "type": "atk-move",
