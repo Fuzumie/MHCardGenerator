@@ -1,0 +1,435 @@
+{
+    "bari": {
+        "behavior-names": [
+            "Ice Breath Twister",
+            "Far Leap",
+            "Hop Attack",
+            "Reckless Dive",
+            "Leap Slam",
+            "Claw Swipe Left",
+            "Wing Tackle Right",
+            "Wing Tackle Left",
+            "Airborne Combo Close",
+            "Tail Whip",
+            "Ice Wind Breath",
+            "Close Leap",
+            "Claw Swipe Right",
+            "Airborne Combo Far"
+        ],
+        "behavior": [
+            {
+                "id": 1001,
+                "_comment1": "Ice Breath Twister",
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 5
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 3,
+                        "dodge": 5,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "When the last node or the first hunter's struck, it explodes, spreading to all arcs within 1 [range]."
+                    }
+                ]
+            },
+            {
+                "id": 1002,
+                "_comment1": "Far Leap",
+                "part": "claws",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [move]."
+                    }
+                ]
+            },
+            {
+                "id": 1003,
+                "_comment1": "Hop Attack",
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], it will change its target to the farthest hunter after its first movement."
+                    }
+                ]
+            },
+            {
+                "id": 1004,
+                "_comment1": "Reckless Dive",
+                "part": "claws",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "486"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], draw Tail Whip behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "id": 1005,
+                "_comment1": "Leap Slam",
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "2468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], the [hunter-turn] before the monster movement is 0."
+                    }
+                ]
+            },
+            {
+                "id": 1006,
+                "_comment1": "Claw Swipe Left",
+                "part": "claws",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "246",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 5,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], draw Far Leap behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "id": 1007,
+                "_comment1": "Wing Tackle Right",
+                "part": "wing",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 5
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "862",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "id": 1008,
+                "_comment1": "Wing Tackle Left",
+                "part": "wing",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 5
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "842",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "id": 1009,
+                "_comment1": "Airborne Combo Close",
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 9,
+                        "range": 4,
+                        "dodge": 5,
+                        "dir": "n",
+                        "ele": "ice"
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], draw Tail Whip behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "id": 1010,
+                "_comment1": "Tail Whip",
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 7,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "268"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 5
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], change all of its right side actions to the left side."
+                    }
+                ]
+            },
+            {
+                "id": 1011,
+                "_comment1": "Ice Wind Breath",
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 8,
+                        "range": 3,
+                        "dodge": 4,
+                        "dir": "8",
+                        "ele": "ice"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "id": 1012,
+                "_comment1": "Close Leap",
+                "part": "claws",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [move]."
+                    }
+                ]
+            },
+            {
+                "id": 1013,
+                "_comment1": "Claw Swipe Right",
+                "part": "claws",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 2,
+                        "dodge": 6,
+                        "dir": "246",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 5,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], draw Far Leap behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "id": 1014,
+                "_comment1": "Airborne Combo Far",
+                "part": "wing",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 10,
+                        "range": 4,
+                        "dodge": 6,
+                        "dir": "n",
+                        "ele": "ice"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], draw Tail Whip behavior card, after hunters finish their turns, with 0 [hunter-turn]."
+                    }
+                ]
+            }
+        ]
+    }
+}

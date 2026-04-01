@@ -873,6 +873,10 @@
   background-image: url(assets/monster/bazel.png)
 }
 
+.bari {
+  background-image: url(assets/monster/bari.png)
+}
+
 /* Special Icons */
 .flash {
   background: url(assets/flash.png) center center/contain;
