@@ -15,21 +15,57 @@
     "levels": [
       {
         "hp": 60,
-        "head": { "arc": "8", "armor": 1, "break": 3 },
-        "claws": { "arc": "46", "armor": 1, "break": 4 },
-        "tail": { "arc": "2", "armor": 1, "break": 4 }
+        "head": {
+          "arc": "8",
+          "armor": 1,
+          "break": 3
+        },
+        "claws": {
+          "arc": "46",
+          "armor": 1,
+          "break": 4
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 1,
+          "break": 4
+        }
       },
       {
         "hp": 65,
-        "head": { "arc": "8", "armor": 2, "break": 5 },
-        "claws": { "arc": "46", "armor": 2, "break": 5 },
-        "tail": { "arc": "2", "armor": 1, "break": 4 }
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 5
+        },
+        "claws": {
+          "arc": "46",
+          "armor": 2,
+          "break": 5
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 1,
+          "break": 4
+        }
       },
       {
         "hp": 70,
-        "head": { "arc": "8", "armor": 2, "break": 5 },
-        "claws": { "arc": "46", "armor": 2, "break": 5 },
-        "tail": { "arc": "2", "armor": 2, "break": 5 }
+        "head": {
+          "arc": "8",
+          "armor": 2,
+          "break": 5
+        },
+        "claws": {
+          "arc": "46",
+          "armor": 2,
+          "break": 5
+        },
+        "tail": {
+          "arc": "2",
+          "armor": 2,
+          "break": 5
+        }
       }
     ],
     "behavior-names": [
@@ -40,6 +76,7 @@
       "Bitter Slash",
       "Side Slice",
       "Flaming Valley",
+      "Scorching Slash",
       "Sharpening Blade",
       "Sharpening Blade",
       "Spinning Blade",
@@ -54,7 +91,11 @@
         "part": "tail",
         "target": "close",
         "actions": [
-          { "type": "move", "value": 1, "dir": "8" },
+          {
+            "type": "move",
+            "value": 1,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 9,
@@ -62,7 +103,11 @@
             "dodge": 3,
             "dir": "8"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -83,8 +128,16 @@
             "dir": "n",
             "ele": "fire"
           },
-          { "type": "hunter", "turn": 1, "card": 3 },
-          { "type": "move", "value": 2, "dir": "2" },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 3
+          },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "2"
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -105,7 +158,11 @@
             "dir": "624",
             "eff": "stun"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -118,7 +175,11 @@
         "part": "head",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 10,
@@ -126,8 +187,11 @@
             "dodge": 5,
             "dir": "n"
           },
-
-          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 3
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], repeat the attack."
@@ -140,7 +204,11 @@
         "part": "tail",
         "target": "far",
         "actions": [
-          { "type": "move", "value": 3, "dir": "4" },
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "4"
+          },
           {
             "type": "attack",
             "value": 9,
@@ -149,8 +217,11 @@
             "dir": "846",
             "eff": "stun"
           },
-
-          { "type": "hunter", "turn": 2, "card": 2 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -170,8 +241,16 @@
             "dodge": 4,
             "dir": "46"
           },
-          { "type": "move", "value": 2, "dir": "8" },
-          { "type": "hunter", "turn": 3, "card": 2 },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "hunter",
+            "turn": 3,
+            "card": 2
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -193,12 +272,51 @@
             "atkdir": "789",
             "ele": "fire"
           },
-          { "type": "hunter", "turn": 2, "card": 3 }
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          }
+        ]
+      },
+      {
+        "_comment1": "Scorching Slash",
+        "id": 1008,
+        "part": "tail",
+        "target": "far",
+        "actions": [
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 4
+          },
+          {
+            "type": "attack",
+            "value": 11,
+            "range": 2,
+            "dodge": 5,
+            "dir": "246",
+            "eff": "stun"
+          },
+          {
+            "type": "atk-move",
+            "value": 1,
+            "dir": "2"
+          },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 4
+          },
+          {
+            "type": "bottom",
+            "value": "If this monster is [enraged], deals [fire] damage."
+          }
         ]
       },
       {
         "_comment1": "Sharpening Blade",
-        "id": 1008,
+        "id": 1009,
         "part": "head",
         "target": "close",
         "extra": "sharpen",
@@ -207,12 +325,16 @@
             "type": "text",
             "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
-          { "type": "hunter", "turn": 1, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          }
         ]
       },
       {
         "_comment1": "Sharpening Blade",
-        "id": 1009,
+        "id": 1010,
         "part": "head",
         "target": "far",
         "extra": "sharpen",
@@ -221,17 +343,25 @@
             "type": "text",
             "value": "Next [tail] behaviour deals\\[fire] damage and +5 [attack].\\If [sharpen] is already in effect, discard this card and draw next."
           },
-          { "type": "hunter", "turn": 1, "card": 2 }
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 2
+          }
         ]
       },
       {
         "_comment1": "Spinning Blade",
-        "id": 1010,
+        "id": 1011,
         "part": "tail",
         "target": "far",
         "type": "fire-blade",
         "actions": [
-          { "type": "atk-move", "value": 5, "dir": "8" },
+          {
+            "type": "atk-move",
+            "value": 5,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 11,
@@ -240,7 +370,11 @@
             "dir": "846",
             "ele": "fire"
           },
-          { "type": "hunter", "turn": 3, "card": 3 },
+          {
+            "type": "hunter",
+            "turn": 3,
+            "card": 3
+          },
           {
             "type": "bottom-long",
             "value": "This behaviour can only be used if *Sharpening Blade* has been played at least once in the game. Otherwise discard this card and draw another."
@@ -249,12 +383,16 @@
       },
       {
         "_comment1": "Lunging Strike",
-        "id": 1011,
+        "id": 1012,
         "part": "tail",
         "target": "close",
         "type": "track",
         "actions": [
-          { "type": "wind-up", "turn": 1, "card": 2 },
+          {
+            "type": "wind-up",
+            "turn": 1,
+            "card": 2
+          },
           {
             "type": "attack",
             "value": 10,
@@ -263,18 +401,30 @@
             "dir": "8462",
             "eff": "stun"
           },
-          { "type": "move", "value": 1, "dir": "8" },
-          { "type": "hunter", "turn": 1, "card": 3 }
+          {
+            "type": "move",
+            "value": 1,
+            "dir": "8"
+          },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 3
+          }
         ]
       },
       {
         "_comment1": "Tail Jumpswipe",
-        "id": 1012,
+        "id": 1013,
         "part": "tail",
         "target": "far",
         "type": "track",
         "actions": [
-          { "type": "move", "value": 2, "dir": "6" },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "6"
+          },
           {
             "type": "attack",
             "value": 7,
@@ -282,7 +432,11 @@
             "dodge": 4,
             "dir": "82"
           },
-          { "type": "hunter", "turn": 2, "card": 3 },
+          {
+            "type": "hunter",
+            "turn": 2,
+            "card": 3
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."
@@ -291,12 +445,16 @@
       },
       {
         "_comment1": "Assault Leap",
-        "id": 1013,
+        "id": 1014,
         "part": "tail",
         "target": "far",
         "type": "track",
         "actions": [
-          { "type": "move", "value": 3, "dir": "8" },
+          {
+            "type": "move",
+            "value": 3,
+            "dir": "8"
+          },
           {
             "type": "attack",
             "value": 11,
@@ -304,8 +462,16 @@
             "dodge": 4,
             "dir": "86"
           },
-          { "type": "move", "value": 2, "dir": "8" },
-          { "type": "hunter", "turn": 1, "card": 3 },
+          {
+            "type": "move",
+            "value": 2,
+            "dir": "8"
+          },
+          {
+            "type": "hunter",
+            "turn": 1,
+            "card": 3
+          },
           {
             "type": "bottom",
             "value": "If this monster is [enraged], +2 [dodge]."

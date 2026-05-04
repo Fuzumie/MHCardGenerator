@@ -33,7 +33,8 @@
                         "value": 9,
                         "range": 3,
                         "dodge": 5,
-                        "dir": "n"
+                        "dir": "n",
+                        "ele": "ice"
                     },
                     {
                         "type": "bottom",

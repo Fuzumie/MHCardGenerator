@@ -297,7 +297,7 @@
           { "type": "hunter", "turn": 3, "card": 2 },
           {
             "type": "bottom",
-            "value": "Hunter hit is incapacitated and cannot play their turns."
+            "value": "Hunter that is hit is incapacitated and cannot play his turns."
           }
         ]
       },

@@ -1,0 +1,426 @@
+{
+    "udra": {
+        "behavior-names": [
+            "Tentacle Slam",
+            "Cephalopod Embrace",
+            "Flame Breath",
+            "Grab Attack",
+            "Limb Follow Up",
+            "Octo Charged Spin",
+            "Magma Ball",
+            "Heavy Leap Far",
+            "Lesser Eruption",
+            "Black Flame Eruption",
+            "Ignite",
+            "Heavy Leap Close",
+            "Octo Swift Spin",
+            "Chobotnice's Wrath"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Tentacle Slam",
+                "id": 4001,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 2,
+                        "dodge": 1,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster successfully hits a hunter, flip the rightmost attack card on the stamina board face down."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Cephalopod Embrace",
+                "id": 4002,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "486",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Flame Breath",
+                "id": 4003,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 10,
+                        "range": 4,
+                        "dodge": 4,
+                        "dir": "n",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "For each hit node in the front arc the range spreads to adjacent nodes by each node hit."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Grab Attack",
+                "id": 4004,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 2,
+                        "dodge": 6,
+                        "dir": "n",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Hunter that is hit is incapacitated and cannot play his turns."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Limb Follow Up",
+                "id": 4005,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "stun"
+                    }
+                ]
+            },
+            {
+                "_comment1": "Octo Charged Spin",
+                "id": 4006,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "4862"
+                    }
+                ]
+            },
+            {
+                "_comment1": "Magma Ball",
+                "id": 4007,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 4,
+                        "dodge": 4,
+                        "dir": "n",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Heavy Leap Far",
+                "id": 4008,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "4862",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Lesser Eruption",
+                "id": 4009,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 3,
+                        "dodge": 6,
+                        "dir": "",
+                        "atkdir": "7913",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Black Flame Eruption",
+                "id": 4010,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "",
+                        "atkdir": "179632",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 3,
+                        "dodge": 4,
+                        "dir": "",
+                        "atkdir": "147893",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +1 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Ignite",
+                "id": 4011,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "text",
+                        "value": "When this card is played, monster becomes [enraged]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Heavy Leap Close",
+                "id": 4012,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "4862",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Octo Swift Spin",
+                "id": 4013,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "4862"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Chobotnice's Wrath",
+                "id": 4014,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 4,
+                        "dodge": 3,
+                        "dir": "",
+                        "atkdir": "18479632",
+                        "ele": "fire"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "",
+                        "atkdir": "14789263",
+                        "ele": "fire"
+                    }
+                ]
+            }
+        ]
+    }
+}

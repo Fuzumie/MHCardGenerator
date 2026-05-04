@@ -877,6 +877,30 @@
   background-image: url(assets/monster/bari.png)
 }
 
+.nibel {
+  background-image: url(assets/monster/nibel.png)
+}
+
+.ajara {
+  background-image: url(assets/monster/ajara.png)
+}
+
+.udra {
+  background-image: url(assets/monster/udra.png)
+}
+
+.brach {
+  background-image: url(assets/monster/brach.png)
+}
+
+.asta {
+  background-image: url(assets/monster/asta.png)
+}
+
+.somna {
+  background-image: url(assets/monster/somna.png)
+}
+
 /* Special Icons */
 .flash {
   background: url(assets/flash.png) center center/contain;

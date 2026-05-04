@@ -1,0 +1,416 @@
+{
+    "brach": {
+        "behavior-names": [
+            "Brachydium Slam",
+            "Brachydium Pound Left",
+            "Brachydium Pound Right",
+            "Club Tail Double Swing",
+            "Blast Reposition Right",
+            "Blast Reposition Left",
+            "Jump Obsidian Slam",
+            "Chasing Explosions",
+            "Straightforward Blow Up",
+            "Reload Saliva Close",
+            "Reload Saliva Far",
+            "Slime Puddle Smear",
+            "Boxing Rush",
+            "Dios Explosion"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Brachydium Slam",
+                "id": 6001,
+                "part": "head",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat this attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Brachydium Pound Left",
+                "id": 6002,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "84",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Brachydium Pound Right",
+                "id": 6003,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Club Tail Double Swing",
+                "id": 6004,
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "426",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this behaviour is played, repeat the attack once."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Blast Reposition Right",
+                "id": 6005,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Blast Reposition Left",
+                "id": 6006,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Jump Obsidian Slam",
+                "id": 6007,
+                "part": "head",
+                "extra": "slime",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 13,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "8426",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Chasing Explosions",
+                "id": 6008,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this behaviour is played, repeat the attack four times."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Straightforward Blow Up",
+                "id": 6009,
+                "part": "claws",
+                "extra": "slime",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 12,
+                        "range": 4,
+                        "dodge": 4,
+                        "dir": "8",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 4
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately. If this monster is not [enraged], discard this card."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Reload Saliva Close",
+                "id": 6010,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Monster is now able to place [slime] onto targeted nodes with behaviours that use [superblast]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Reload Saliva Far",
+                "id": 6011,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Monster is now able to place [slime] onto targeted nodes with behaviours that use [superblast]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Slime Puddle Smear",
+                "id": 6012,
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "8426"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Boxing Rush",
+                "id": 6013,
+                "part": "claws",
+                "extra": "slime",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this behaviour is played, repeat the attack five times."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Dios Explosion",
+                "id": 6014,
+                "part": "head",
+                "extra": "slime",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 14,
+                        "range": 5,
+                        "dodge": 5,
+                        "dir": "8",
+                        "eff": "superblast"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], slime explodes immediately. This monster has no [slime] limit on this behaviour, but after hunters resolve their turns, draw and resolve Reload Saliva."
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,373 @@
+{
+    "nibel": {
+        "behavior-names": [
+            "Close Jaw Bite",
+            "Far Double Jaw Bite",
+            "Turning Bite Right",
+            "Turning Bite Left",
+            "Jaws",
+            "Close Swimming Maw",
+            "Tripple Maw",
+            "Single Maw",
+            "Back Blast",
+            "Sand Beam",
+            "Gills Venting",
+            "Far Jaw Bite",
+            "Close Double Jaw",
+            "Far Swimming Maw"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Close Jaw Bite",
+                "id": 1069,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Far Double Jaw Bite",
+                "id": 1070,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Turning Bite Right",
+                "id": 1071,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 2,
+                        "dir": "68"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Turning Bite Left",
+                "id": 1072,
+                "part": "claws",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "48"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], +2 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Jaws",
+                "id": 1073,
+                "part": "claws",
+                "target": "close",
+                "type": "dig",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 3,
+                        "dir": "2468"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Close Swimming Maw",
+                "id": 1074,
+                "part": "head",
+                "target": "close",
+                "type": "dig",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "468"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tripple Maw",
+                "id": 1075,
+                "part": "head",
+                "target": "far",
+                "type": "dig",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 2,
+                        "dir": "468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack twice."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Single Maw",
+                "id": 1076,
+                "part": "head",
+                "target": "close",
+                "type": "dig",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "468",
+                        "eff": "stun"
+                    }
+                ]
+            },
+            {
+                "_comment1": "Back Blast",
+                "id": 1077,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 2,
+                        "dir": "426"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Sand Beam",
+                "id": 1078,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 3,
+                        "dodge": 5,
+                        "dir": "468"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Gills Venting",
+                "id": 1079,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "text",
+                        "value": "The next [dig] behaviour has +3 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Far Jaw Bite",
+                "id": 1080,
+                "part": "claws",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 7,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], repeat the attack."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Close Double Jaw",
+                "id": 1081,
+                "part": "head",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Far Swimming Maw",
+                "id": 1082,
+                "part": "head",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "468"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            }
+        ]
+    }
+}

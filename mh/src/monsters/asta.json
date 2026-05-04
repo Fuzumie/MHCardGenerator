@@ -1,0 +1,440 @@
+{
+    "asta": {
+        "behavior-names": [
+            "Aerial Agression",
+            "Skyline Cleave Left",
+            "Scissortail Overload Zap",
+            "Electro Tail Beam",
+            "Crest Plasma Shot",
+            "Skyline Cleave Right",
+            "Electric Scythe Descent",
+            "Thunder Ball",
+            "Slingshot Charge",
+            "Charged Membrane Right",
+            "Static Voltage Crown",
+            "Charged Membrane Left",
+            "Lightning Storm",
+            "Electric Scythe Slam"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Aerial Agression",
+                "id": 5001,
+                "part": "wing",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 12,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "486"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 4,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], this attack becomes [atk-lock]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Skyline Cleave Left",
+                "id": 5002,
+                "part": "wing",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "86"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], after the hunters finish their turns, draw Skyline Cleave Right with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Scissortail Overload Zap",
+                "id": 5003,
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "4862",
+                        "eff": "paralysis"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], after the hunters finish their turns,draw Aerial Agression with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Electro Tail Beam",
+                "id": 5004,
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "paralysis"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster bodypart is electrified, this attack has +2 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Crest Plasma Shot",
+                "id": 5005,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster bodypart is electrified, this attack has +2 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Skyline Cleave Right",
+                "id": 5006,
+                "part": "wing",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "84"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Electric Scythe Descent",
+                "id": 5007,
+                "part": "wing",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "4862",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Thunder Ball",
+                "id": 5008,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "n",
+                        "atkdir": "7946",
+                        "ele": "thunder"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Monster projectiles have 3 [range] and will change direction to the center node in front of the monster after reaching 2 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Slingshot Charge",
+                "id": 5009,
+                "part": "wing",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "486"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "4862"
+                    }
+                ]
+            },
+            {
+                "_comment1": "Charged Membrane Right",
+                "id": 5010,
+                "part": "wing",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "86",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], this attack becomes [atk-lock]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Static Voltage Crown",
+                "id": 5011,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 2,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster bodypart is electrified, this attack has +3 [range]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Charged Membrane Left",
+                "id": 5012,
+                "part": "wing",
+                "type": "track",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "84",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], this attack becomes [atk-lock]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Lightning Storm",
+                "id": 5013,
+                "part": "wing",
+                "type": "track",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 3,
+                        "dir": "",
+                        "atkdir": "4679",
+                        "ele": "thunder",
+                        "eff": "paralysis"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], after the hunters finish their turns, draw Slingshot Charge with 0 [hunter-turn]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Electric Scythe Slam",
+                "id": 5014,
+                "part": "wing",
+                "type": "track",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 12,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "4862",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 3
+                    }
+                ]
+            }
+        ]
+    }
+}
