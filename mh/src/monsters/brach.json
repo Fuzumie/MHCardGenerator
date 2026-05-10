@@ -75,7 +75,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -106,7 +106,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -123,6 +123,11 @@
                         "dodge": 4,
                         "dir": "426",
                         "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
                     },
                     {
                         "type": "bottom",
@@ -165,7 +170,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -204,7 +209,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -240,7 +245,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -297,7 +302,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately. If this monster is not [enraged], discard this card."
+                        "value": "If this monster is [enraged], [slime] explodes immediately. If this monster is not [enraged], discard this card."
                     }
                 ]
             },
@@ -306,6 +311,7 @@
                 "id": 6010,
                 "part": "head",
                 "target": "close",
+                "extra": "reload",
                 "actions": [
                     {
                         "type": "hunter",
@@ -313,7 +319,7 @@
                         "card": 2
                     },
                     {
-                        "type": "bottom",
+                        "type": "text",
                         "value": "Monster is now able to place [slime] onto targeted nodes with behaviours that use [superblast]."
                     }
                 ]
@@ -322,6 +328,7 @@
                 "_comment1": "Reload Saliva Far",
                 "id": 6011,
                 "part": "head",
+                "extra": "reload",
                 "target": "far",
                 "actions": [
                     {
@@ -330,7 +337,7 @@
                         "card": 2
                     },
                     {
-                        "type": "bottom",
+                        "type": "text",
                         "value": "Monster is now able to place [slime] onto targeted nodes with behaviours that use [superblast]."
                     }
                 ]
@@ -339,6 +346,8 @@
                 "_comment1": "Slime Puddle Smear",
                 "id": 6012,
                 "part": "claws",
+                "type": "track",
+                "extra": "slime",
                 "target": "close",
                 "actions": [
                     {
@@ -355,7 +364,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately."
+                        "value": "If this monster is [enraged], [slime] explodes immediately."
                     }
                 ]
             },
@@ -364,6 +373,7 @@
                 "id": 6013,
                 "part": "claws",
                 "extra": "slime",
+                "type": "track",
                 "target": "close",
                 "actions": [
                     {
@@ -389,6 +399,7 @@
                 "_comment1": "Dios Explosion",
                 "id": 6014,
                 "part": "head",
+                "type": "track",
                 "extra": "slime",
                 "target": "far",
                 "actions": [
@@ -407,7 +418,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], slime explodes immediately. This monster has no [slime] limit on this behaviour, but after hunters resolve their turns, draw and resolve Reload Saliva."
+                        "value": "If this monster is [enraged], [slime] explodes immediately. This monster has no [slime] limit on this behaviour."
                     }
                 ]
             }

@@ -74,7 +74,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "Repeat the behavior card then draw Diving Bombardment [dive] behavior and the monster will be +3 [range] from hunters."
+                        "value": "Repeat the behavior then, draw Diving Bombardment [dive]. The monster will be +3 [range] from hunters."
                     }
                 ]
             },
@@ -82,7 +82,7 @@
                 "_comment1": "Big Chomp",
                 "id": 1071,
                 "part": "head",
-                "target": "close",
+                "target": "exhaust",
                 "actions": [
                     {
                         "type": "move",
@@ -137,7 +137,7 @@
                 "_comment1": "Fireball",
                 "id": 1073,
                 "part": "head",
-                "target": "far",
+                "target": "exhaust",
                 "actions": [
                     {
                         "type": "atk-lock",
@@ -271,7 +271,7 @@
                 "_comment1": "Chin Drag",
                 "id": 1077,
                 "part": "head",
-                "target": "far",
+                "target": "exhaust",
                 "type": "bombs",
                 "actions": [
                     {
@@ -427,7 +427,7 @@
                 "_comment1": "Blitz Raid Flight",
                 "id": 1082,
                 "part": "wing",
-                "target": "far",
+                "target": "exhaust",
                 "type": "track",
                 "actions": [
                     {

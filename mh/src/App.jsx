@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import parser from "html-react-parser";
-import "./App.css";
+import "./css/App.css";
 import en from "./en.json";
 
 // Dynamically require all monster JSONs in src/monsters
@@ -52,7 +52,7 @@ function App() {
     let r = "";
     text.forEach((t) => {
       t = t.replaceAll(
-        /\[(blast|paralysis|poison|sleep|stun|dragon|fire|freeze|ice|thunder|water|r-dragon|r-fire|r-ice|r-thunder|r-water|bush|rock|pond|agility|armor|attack|closest|farthest|dodge|movement|range|break|move|hunter-turn|hunter-attack|supernova|nerg-dive|spike|claws|head|leg|tail|torso|wing|track|flash|sharpen|enraged|bubble|scales|amp|stench|shroom|bubble-off|bubble-bliss|attack-cards|egg|bleed|arkface|vortex|vult|effluvia|rose|floret|bombs|dive|atk-lock)\]/g,
+        /\[([a-zA-Z0-9-]+)\]/g,
         (m, m1) => {
           return `<div className="icon-status ${m1}"><img src="icons/${m1}.png" alt=""></div>`;
         }

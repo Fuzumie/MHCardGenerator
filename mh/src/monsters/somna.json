@@ -1,7 +1,7 @@
 {
     "somna": {
         "behavior-names": [
-            "claws Slash",
+            "Claws Slash",
             "Head Whip",
             "Quill Shots",
             "Tail Slap",
@@ -11,15 +11,14 @@
             "Twisting Divebomb",
             "Sweeping Breath",
             "Siren Smoke",
+            "Retreating Sleep Breath",
             "Rising Swipe",
             "Siren Rend",
-            "Sleep Song",
-            "Shell Stun",
-            "Forward Gnash"
+            "Sleep Song"
         ],
         "behavior": [
             {
-                "_comment1": "claws Slash",
+                "_comment1": "Claws Slash",
                 "id": 1001,
                 "part": "claws",
                 "target": "close",
@@ -43,7 +42,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "While [enraged], this behaviour has -1 [turn]."
+                        "value": "If this monster is [enraged], this behaviour has -1 [hunter-turn]."
                     }
                 ]
             },
@@ -72,7 +71,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "While [enraged], this behaviour has +2 [dodge]."
+                        "value": "If this monster is [enraged], this behaviour has +2 [dodge]."
                     }
                 ]
             },
@@ -87,18 +86,19 @@
                         "value": 7,
                         "range": 1,
                         "dodge": 4,
-                        "dir": "846",
+                        "dir": "",
+                        "atkdir": "46789",
                         "eff": "poison"
                     },
                     {
                         "type": "atk-move",
-                        "value": 2,
+                        "value": 1,
                         "dir": "2"
                     },
                     {
                         "type": "hunter",
                         "turn": 2,
-                        "card": 4
+                        "card": 3
                     }
                 ]
             },
@@ -118,7 +118,7 @@
                         "value": 8,
                         "range": 2,
                         "dodge": 5,
-                        "dir": "842"
+                        "dir": "862"
                     },
                     {
                         "type": "hunter",
@@ -127,7 +127,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "While [enraged], this behaviour has -1 [turn]."
+                        "value": "If this monster is [enraged], this behaviour has -1 [hunter-turn]."
                     }
                 ]
             },
@@ -142,7 +142,7 @@
                         "value": 6,
                         "range": 2,
                         "dodge": 4,
-                        "dir": "846",
+                        "dir": "8",
                         "eff": "sleep"
                     },
                     {
@@ -183,7 +183,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "While [enraged], this behaviour has +2 [dodge]."
+                        "value": "If this monster is [enraged], this behaviour has +2 [dodge]."
                     }
                 ]
             },
@@ -277,7 +277,7 @@
                 "actions": [
                     {
                         "type": "wind-up",
-                        "turn": 3,
+                        "turn": 2,
                         "card": 2
                     },
                     {
@@ -290,14 +290,45 @@
                     },
                     {
                         "type": "hunter",
-                        "turn": 3,
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Retreating Sleep Breath",
+                "id": 1011,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 5,
+                        "range": 3,
+                        "dodge": 6,
+                        "dir": "8",
+                        "eff": "sleep"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
                         "card": 2
                     }
                 ]
             },
             {
                 "_comment1": "Rising Swipe",
-                "id": 1011,
+                "id": 1012,
                 "part": "claws",
                 "target": "far",
                 "type": "track",
@@ -321,7 +352,7 @@
                     },
                     {
                         "type": "bottom",
-                        "value": "If this monster is [enraged], this behaviour has -1 [turn]."
+                        "value": "If this monster is [enraged], this behaviour has -1 [hunter-turn]."
                     }
                 ]
             },

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@800&display=swap");
+
+@font-face {
+  font-family: "Adelle";
+  src: url(../assets/AdelleSansEXT-Regular.ttf);
+}
+
+:root {
+  --w: 7;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.cards {
+  width: calc(744 * var(--w));
+  display: grid;
+  grid-template-columns: repeat(var(--w), 1fr);
+}
+
+.card {
+  position: relative;
+  width: 744px;
+  background: url(../assets/behavior-back-old.png) center center/contain;
+  color: #272422;
+  aspect-ratio: 744/520;
+}
+
+.front .card {
+  background: url(../assets/behavior-front.png) center center/contain;
+}
+
+.coloring {
+  content: "";
+  position: absolute;
+  background-position: center center;
+  inset: 0;
+  mix-blend-mode: multiply;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: url(../assets/bg.jpg);
+  background-size: 150% 150%;
+  background-position: center center;
+  inset: 3% 2%;
+  filter: grayscale(1);
+  opacity: 0.75;
+  mix-blend-mode: color-dodge;
+}
+
+.card-area {
+  position: absolute;
+  inset: 11% 9%;
+}
+
+.draganjegay {
+  position: absolute;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  display: flex;
+  font-family: "EB Garamond", "Noto Serif HK", serif;
+  top: -1%;
+  left: 50%;
+  height: 2em;
+  line-height: 0.85;
+  width: 70%;
+  font-size: 31.75pt;
+  font-weight: 600;
+  justify-content: center;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+
+.back .target {
+  position: absolute;
+  right: 13px;
+  top: 145px;
+  width: 108px;
+  mix-blend-mode: normal;
+}
+
+.back .part,
+.back .type {
+  position: absolute;
+  left: 13px;
+  top: 145px;
+  width: 108px;
+}
+
+.back .part::before {
+  content: none;
+}
+
+.back .type {
+  mix-blend-mode: normal;
+}
+
+
+.bottom,
+.bottom-long,
+.text {
+  font-size: 20px;
+  font-family: "Adelle";
+  font-variant-ligatures: additional-ligatures;
+}
+
+.bottom,
+.bottom-long {
+  position: absolute;
+  height: 3em;
+  bottom: 1%;
+  left: 95px;
+  right: 95px;
+  width: auto;
+  line-height: 1;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.bottom-long {
+  font-size: 1.1em;
+}
+
+.text {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.1;
+  display: grid;
+  align-items: center;
+  font-size: 1.33em;
+  line-height: 1.25;
+}
+
+.em {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+}

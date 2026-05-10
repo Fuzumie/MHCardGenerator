@@ -1,0 +1,181 @@
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 85px;
+  aspect-ratio: 1;
+  mix-blend-mode: darken;
+}
+
+.type {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.track {
+  background: url(../assets/behavior-track.png) center center/contain;
+}
+
+.turf-war {
+  background: url(../assets/turf-war.png) center center/contain;
+}
+
+.supernova {
+  background: url(../assets/supernova.png) center center/contain;
+}
+
+.tornado {
+  background: url(../assets/tornado.png) center center/contain;
+}
+
+.nerg-dive {
+  background: url(../assets/nerg-dive.png) center center/contain;
+}
+
+.spike {
+  background: url(../assets/spike.png) center center/contain;
+}
+
+.part {
+  position: absolute;
+  right: 0;
+  top: 0;
+  mix-blend-mode: normal;
+}
+
+.part::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../assets/icon-frame.png) center center/contain;
+  mix-blend-mode: darken;
+}
+
+.part::after {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  filter: drop-shadow(0 0 0 #f0e9e0);
+}
+
+/* Remove inset for tail */
+.part.tail::after {
+  inset: 0;
+}
+
+.part.head::after {
+  background: url(../assets/part/head.png) center center/contain;
+}
+
+.part.torso::after {
+  background: url(../assets/part/torso.png) center center/contain;
+}
+
+.part.claws::after {
+  background: url(../assets/part/claws.png) center center/contain;
+}
+
+.part.wing::after {
+  background: url(../assets/part/wing.png) center center/contain;
+}
+
+.part.leg::after {
+  background: url(../assets/part/leg.png) center center/contain;
+}
+
+.part.tail::after {
+  background: url(../assets/part/tail.png) center center/contain;
+}
+
+
+
+.icon-status {
+  position: relative;
+  top: -0.3em;
+  display: inline-flex;
+  width: 1.25em;
+  aspect-ratio: 1;
+  margin: -0.25em 0;
+  /*isolation: isolate;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-status img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.icon-status.head,
+.icon-status.torso,
+.icon-status.wing,
+.icon-status.claws,
+.icon-status.leg,
+.icon-status.tail {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon-status.head::before,
+.icon-status.torso::before,
+.icon-status.wing::before,
+.icon-status.claws::before,
+.icon-status.leg::before,
+.icon-status.tail::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  inset: 0;
+  background: url(../assets/icon-frame.png) center center/contain no-repeat;
+  z-index: -1;
+  mix-blend-mode: darken;
+}
+
+.icon-status.head img,
+.icon-status.torso img,
+.icon-status.wing img,
+.icon-status.claws img,
+.icon-status.leg img,
+.icon-status.tail img {
+  width: 80%;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+/* made so the part icons fit into the fucking text */
+.icon-status[class*="head"]::after,
+.icon-status[class*="torso"]::after,
+.icon-status[class*="wing"]::after,
+.icon-status[class*="claws"]::after,
+.icon-status[class*="leg"]::after,
+.icon-status[class*="tail"]::after {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  filter: drop-shadow(0 0 0 #f0e9e0);
+  background-position: center center;
+  background-size: contain;
+}
+
+.icon-status.head::after {
+  background-image: url(../assets/part/head.png);
+}
+
+.icon-status.torso::after {
+  background-image: url(../assets/part/torso.png);
+}
+
+.icon-status.wing::after {
+  background-image: url(../assets/part/wing.png);
+}
+
+.icon-status.claws::after {
+  background-image: url(../assets/part/claws.png);
+}
+
+.icon-status.leg::after {
+  background-image: url(../assets/part/leg.png);
+}
+
+.icon-status.tail::after {
+  background-image: url(../assets/part/tail.png);
+}

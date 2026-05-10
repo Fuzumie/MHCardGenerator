@@ -1,0 +1,366 @@
+.icon.eff {
+  position: absolute;
+  width: 4.375em;
+  right: 1%;
+  transform: translateY(35%);
+  top: 50%;
+  filter: sepia(0.1);
+}
+
+:not(.icon-status).range {
+  position: absolute;
+  width: 4.375em;
+  left: 1%;
+  transform: translateY(-135%);
+  top: 50%;
+  background: url(../assets/range.png) center center/contain no-repeat;
+  mix-blend-mode: normal;
+}
+
+.range {
+  background: url(../assets/range.png) center center/contain no-repeat;
+}
+
+:not(.icon-status).dodge {
+  position: absolute;
+  width: 4.375em;
+  left: 1%;
+  transform: translateY(35%);
+  top: 50%;
+  background: url(../assets/dodge.png) center center/contain no-repeat;
+  mix-blend-mode: normal;
+}
+
+:not(.icon-status).stun {
+  background: url(../assets/stun.png) center center/contain no-repeat;
+}
+
+.stun {
+  background: url(../assets/stun.png) center center/contain no-repeat;
+}
+
+.armor {
+  background: url(../assets/armour.png) center center/contain no-repeat;
+}
+
+.blast {
+  background: url(../assets/blast.png) center center/contain no-repeat;
+}
+
+.poison {
+  background: url(../assets/poison.png) center center/contain no-repeat;
+}
+
+.iceblight {
+  background: url(../assets/ice.png) center center/contain no-repeat;
+}
+
+.sleep {
+  background: url(../assets/sleep.png) center center/contain no-repeat;
+}
+
+.paralysis {
+  background: url(../assets/paralysis.png) center center/contain no-repeat;
+}
+
+.freeze {
+  background: url(../assets/freeze.png) center center/contain no-repeat;
+}
+
+.freeze {
+  background: url(../assets/freeze.png) center center/contain no-repeat;
+}
+
+.icon.eff.effluvia {
+  width: 3.375em;
+  right: 5%;
+  top: 53%;
+}
+
+/* DIRECTIONS */
+.dir {
+  position: absolute;
+  width: 4.375em;
+  aspect-ratio: 1;
+  right: 1%;
+  transform: translateY(-140%) translateX(10%);
+  top: 50%;
+  background: url(../assets/behavior-arcs.png) center center/contain no-repeat;
+}
+
+.dir.node {
+  background: url(../assets/behavior-node.png) center center/contain no-repeat;
+}
+
+.dir .atk {
+  background: url(../assets/behavior-node.png) center center/contain no-repeat;
+  font-size: 8px;
+}
+
+.dir .atkdir-9 {
+  transform: translate(115%, -250%);
+}
+
+.dir .atkdir-8 {
+  transform: translate(-50%, -300%);
+}
+
+.dir .atkdir-7 {
+  transform: translate(-225%, -250%);
+}
+
+.dir .atkdir-6 {
+  transform: translate(150%, -50%) rotate(90deg);
+}
+
+.dir .atkdir-4 {
+  transform: translate(-250%, -50%) rotate(-90deg);
+}
+
+.dir .atkdir-3 {
+  transform: translate(115%, 150%) rotate(-90deg);
+}
+
+.dir .atkdir-2 {
+  transform: translate(-50%, 200%) rotate(180deg);
+}
+
+.dir .atkdir-1 {
+  transform: translate(-215%, 150%) rotate(180deg);
+}
+
+.dir>div {
+  position: absolute;
+  width: 2em;
+  aspect-ratio: 33/28;
+  background: url(../assets/behavior-arc.png) center center/contain no-repeat;
+  top: 50%;
+  left: 50%;
+}
+
+.dir .dir-8 {
+  transform: translate(-50%, -140%);
+}
+
+.dir .dir-2 {
+  transform: translate(-50%, 35%) rotate(180deg);
+}
+
+.dir .dir-4 {
+  transform: translate(-120%, -50%) rotate(-90deg);
+}
+
+.dir .dir-6 {
+  transform: translate(25%, -50%) rotate(90deg);
+}
+
+.ele {
+  position: absolute;
+  width: 2.75em;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  filter: saturate(1.25);
+}
+
+/* Elements */
+.fire {
+  background: url(../assets/fire.png) center center/contain no-repeat;
+}
+
+.ice {
+  background: url(../assets/ice.png) center center/contain no-repeat;
+}
+
+.thunder {
+  background: url(../assets/thunder.png) center center/contain no-repeat;
+}
+
+.dragon {
+  background: url(../assets/dragon.png) center center/contain no-repeat;
+}
+
+.water {
+  background: url(../assets/water.png) center center/contain no-repeat;
+}
+
+/* Status effects */
+.egg {
+  background: url(../assets/egg.png) center center/contain;
+}
+
+.bleed {
+  background: url(../assets/bleed.png) center center/contain;
+}
+
+.bubble {
+  background: url(../assets/bubble.png) center center/contain;
+}
+
+.bubble-off {
+  background: url(../assets/offensive_bub.png) center center/contain;
+}
+
+.bubble-bliss {
+  background: url(../assets/blissful_bub.png) center center/contain;
+}
+
+.effluvia {
+  background: url(../assets/effluvia.png) center center/contain;
+}
+
+.stench {
+  background: url(../assets/stench.png) center center/contain;
+}
+
+.bombs {
+  background: url(../assets/bombs.png) center center/contain;
+}
+
+.dive {
+  background: url(../assets/dive.png) center center/contain;
+}
+
+/* Monster dodge */
+.m-dodge {
+  background: url(../assets/m-dodge.png) center center/contain;
+}
+
+.ele.dir-8 {
+  transform: translate(-50%, -175%);
+}
+
+.ele.dir-2 {
+  transform: translate(-50%, 75%) rotate(180deg);
+}
+
+.ele.dir-4 {
+  transform: translate(-175%, -50%) rotate(-90deg);
+}
+
+.ele.dir-6 {
+  transform: translate(75%, -50%) rotate(90deg);
+}
+
+.thunder.dir-8 {
+  transform: translate(-50%, -175%) rotate(180deg);
+}
+
+.thunder.dir-2 {
+  transform: translate(-50%, 75%);
+}
+
+.thunder.dir-4 {
+  transform: translate(-175%, -50%) rotate(90deg);
+}
+
+.thunder.dir-6 {
+  transform: translate(75%, -50%) rotate(-90deg);
+}
+
+
+/* Special Icons */
+.flash {
+  background: url(../assets/flash.png) center center/contain;
+}
+
+.normal {
+  background: url(../assets/eye-normal.png) center center/contain;
+}
+
+.enraged {
+  background: url(../assets/eye-enraged.png) center center/contain;
+  filter: saturate(2);
+}
+
+.search {
+  background: url(../assets/eye-search.png) center center/contain;
+}
+
+.sharpen {
+  background: url(../assets/sharpen.png) center center/contain;
+}
+
+.dig {
+  background: url(../assets/dig.png) center center/contain;
+}
+
+.tail {
+  background: url(../assets/part/tail.png) center center/contain;
+}
+
+.dodge {
+  background: url(../assets/dodge.png) center center/contain no-repeat;
+}
+
+.scales {
+  background: url(../assets/scales.png) center center/contain;
+}
+
+.fire-blade {
+  background: url(../assets/fire-blade.png) center center/contain;
+}
+
+.avalanche {
+  background: url(../assets/avalanche.png) center center/contain;
+}
+
+.railgun {
+  background: url(../assets/railgun.png) center center/contain;
+}
+
+.amp {
+  background: url(../assets/amp.png) center center/contain;
+}
+
+.shroom {
+  background: url(../assets/shroom.png) center center/contain;
+}
+
+.xuwu-blade {
+  background: url(../assets/xuwu-blade.png) center center/contain;
+}
+
+.arkface {
+  background: url(../assets/arkface.png) center center/contain;
+}
+
+.vortex {
+  background: url(../assets/vortex.png) center center/contain;
+}
+
+.vult {
+  background: url(../assets/vult.png) center center/contain;
+}
+
+.rose {
+  background: url(../assets/rose.png) center center/contain;
+}
+
+.floret {
+  background: url(../assets/floret.png) center center/contain;
+}
+
+.rocket {
+  background: url(../assets/rocket.png) center center/contain no-repeat;
+}
+
+.superblast {
+  background: url(../assets/superblast.png) center center/contain no-repeat;
+}
+
+.reload {
+  background: url(../assets/reload.png) center center/contain no-repeat;
+}
+
+.slime {
+  background: url(../assets/slime.png) center center/contain no-repeat;
+}
+
+.hunter-turn {
+  background: url(../assets/behavior-hunter-turn.png) center center/contain no-repeat;
+}
+
+.hunter-attack {
+  background: url(../assets/behavior-hunter-attack.png) center center/contain no-repeat;
+}

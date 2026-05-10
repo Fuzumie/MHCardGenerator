@@ -1,0 +1,288 @@
+.icon.monster {
+  position: absolute;
+  width: 250px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon.monster.kulu,
+.icon.monster.diab,
+.icon.monster.jaggi,
+.icon.monster.sereg,
+.icon.monster.gig,
+.icon.monster.gjaggi .icon.monster.mizu {
+  mix-blend-mode: multiply;
+}
+
+/* MONSTER ICONS */
+.anja {
+  background-image: url(../assets/monster/anja.png) !important;
+}
+
+.a-rath {
+  background-image: url(../assets/monster/a-rath.png) !important;
+}
+
+.barr {
+  background-image: url(../assets/monster/barr.png) !important;
+}
+
+.b-diab {
+  background-image: url(../assets/monster/b-diab.png) !important;
+}
+
+.diab {
+  background-image: url(../assets/monster/diab.png) !important;
+}
+
+.g-jagr {
+  background-image: url(../assets/monster/g-jagr.png) !important;
+}
+
+.jyur {
+  background-image: url(../assets/monster/jyur.png) !important;
+}
+
+.kulu {
+  background-image: url(../assets/monster/kulu.png) !important;
+}
+
+.kush {
+  background-image: url(../assets/monster/kush.png) !important;
+}
+
+.nerg {
+  background-image: url(../assets/monster/nerg.png) !important;
+}
+
+.puke {
+  background-image: url(../assets/monster/puke.png) !important;
+}
+
+.rath {
+  background-image: url(../assets/monster/rath.png) !important;
+}
+
+.teos {
+  background-image: url(../assets/monster/teos.png) !important;
+}
+
+.tobi {
+  background-image: url(../assets/monster/tobi.png) !important;
+}
+
+.tzit {
+  background-image: url(../assets/monster/tzit.png) !important;
+}
+
+.glav {
+  background-image: url(../assets/monster/glav.png) !important;
+}
+
+.legi {
+  background-image: url(../assets/monster/legi.png) !important;
+}
+
+.paol {
+  background-image: url(../assets/monster/paol.png) !important;
+}
+
+.gamm {
+  background-image: url(../assets/monster/gamm.png) !important;
+}
+
+.sereg {
+  background-image: url(../assets/monster/sereg.png) !important;
+}
+
+.mizu {
+  background-image: url(../assets/monster/mizu.png) !important;
+}
+
+.gara {
+  background-image: url(../assets/monster/gara.png) !important;
+}
+
+.tetsu {
+  background-image: url(../assets/monster/tetsu.png) !important;
+}
+
+.chata {
+  background-image: url(../assets/monster/chata.png) !important;
+}
+
+.gjaggi {
+  background-image: url(../assets/monster/gjaggi.png) !important;
+}
+
+.dodo {
+  background-image: url(../assets/monster/dodo.png) !important;
+}
+
+.khez {
+  background-image: url(../assets/monster/khez.png) !important;
+}
+
+.que {
+  background-image: url(../assets/monster/que.png) !important;
+}
+
+.gyp {
+  background-image: url(../assets/monster/gyp.png) !important;
+}
+
+.bala {
+  background-image: url(../assets/monster/bal.png) !important;
+}
+
+.hira {
+  background-image: url(../assets/monster/hira.png) !important;
+}
+
+.yian {
+  background-image: url(../assets/monster/yian.png) !important;
+}
+
+.jaggi {
+  background-image: url(../assets/monster/jaggi.png) !important;
+}
+
+.rey {
+  background-image: url(../assets/monster/rey.png) !important;
+}
+
+.conga {
+  background-image: url(../assets/monster/konga.png) !important;
+}
+
+.xuwu {
+  background-image: url(../assets/monster/xuwu.png) !important;
+}
+
+.quru {
+  background-image: url(../assets/monster/quru.png) !important;
+}
+
+.luna {
+  background-image: url(../assets/monster/luna.png) !important;
+}
+
+.gigi {
+  background-image: url(../assets/monster/gigi.png)
+}
+
+.gig {
+  background-image: url(../assets/monster/gig.png)
+}
+
+.odogaron {
+  background-image: url(../assets/monster/odogaron.png)
+}
+
+.rajang {
+  background-image: url(../assets/monster/rajang.png)
+}
+
+.ark {
+  background-image: url(../assets/monster/ark.png)
+}
+
+.legia {
+  background-image: url(../assets/monster/legia.png)
+}
+
+.rathian {
+  background-image: url(../assets/monster/rathian.png)
+}
+
+.zam {
+  background-image: url(../assets/monster/zam.png)
+}
+
+.devil {
+  background-image: url(../assets/monster/devil.png)
+}
+
+.xeno {
+  background-image: url(../assets/monster/xeno.png)
+}
+
+.shogun {
+  background-image: url(../assets/monster/shogun.png)
+}
+
+.roar {
+  background-image: url(../assets/monster/roar.png)
+}
+
+.girr {
+  background-image: url(../assets/monster/girr.png)
+}
+
+.ggirr {
+  background-image: url(../assets/monster/ggirr.png)
+}
+
+.vaal {
+  background-image: url(../assets/monster/vaal.png)
+}
+
+.val {
+  background-image: url(../assets/monster/val.png)
+}
+
+.cham {
+  background-image: url(../assets/monster/cham.png)
+}
+
+.lala {
+  background-image: url(../assets/monster/lala.png)
+}
+
+.bala-s {
+  background-image: url(../assets/monster/bala-s.png)
+}
+
+.vals {
+  background-image: url(../assets/monster/val.png)
+}
+
+.bazel {
+  background-image: url(../assets/monster/bazel.png)
+}
+
+.bari {
+  background-image: url(../assets/monster/bari.png)
+}
+
+.nibel {
+  background-image: url(../assets/monster/nibel.png)
+}
+
+.ajara {
+  background-image: url(../assets/monster/ajara.png)
+}
+
+.udra {
+  background-image: url(../assets/monster/udra.png)
+}
+
+.brach {
+  background-image: url(../assets/monster/brach.png)
+}
+
+.asta {
+  background-image: url(../assets/monster/asta.png)
+}
+
+.somna {
+  background-image: url(../assets/monster/somna.png)
+}
+
+.tetra {
+  background-image: url(../assets/monster/tetra.png)
+}

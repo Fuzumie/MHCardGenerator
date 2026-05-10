@@ -1,0 +1,202 @@
+{
+    "tetra": {
+        "behavior-names": [
+            "Crushing Drop",
+            "Arm Clap",
+            "Right Sumo Stomp",
+            "Left Sumo Stomp",
+            "Water Beam",
+            "Arm Thrust Charge",
+            "Rock Upheaval"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Crushing Drop",
+                "id": 1008,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 2,
+                        "dir": "8642",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Arm Clap",
+                "id": 1009,
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "8",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Right Sumo Stomp",
+                "id": 1010,
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 2,
+                        "dir": "62",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Left Sumo Stomp",
+                "id": 1011,
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 2,
+                        "dodge": 2,
+                        "dir": "42",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Water Beam",
+                "id": 1012,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "864",
+                        "ele": "water"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Arm Thrust Charge",
+                "id": 1013,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "8",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Rock Upheaval",
+                "id": 1014,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 2,
+                        "dodge": 3,
+                        "dir": "8",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            }
+        ]
+    }
+}

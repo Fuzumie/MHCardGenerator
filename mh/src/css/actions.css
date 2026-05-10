@@ -1,0 +1,161 @@
+.hunter-area {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 85px);
+  width: 85px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  gap: 0.5em;
+}
+
+.icon.hunter-turn {
+  mix-blend-mode: normal;
+}
+
+.icon.hunter-turn::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background: url(../assets/behavior-hunter-turn.png) center center/contain;
+  mix-blend-mode: darken;
+}
+
+.icon.hunter-attack {
+  mix-blend-mode: normal;
+}
+
+.icon.hunter-attack::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background: url(../assets/behavior-hunter-attack.png) center center/contain;
+  mix-blend-mode: darken;
+}
+
+.attack-cards {
+  background: url(../assets/attack-cards.png) center center/contain;
+}
+
+.num {
+  position: absolute;
+  left: calc(50% - 0.05em);
+  top: 50%;
+  transform: translate(-50%, -50%) scaleX(0.9);
+  color: #fff;
+  font-size: 4em;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  letter-spacing: -0.1em;
+}
+
+.target-area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 85px);
+  width: 85px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  gap: 0.5em;
+}
+
+.icon.close {
+  background: url(../assets/close.png) center center/contain;
+}
+
+.icon.far {
+  background: url(../assets/far.png) center center/contain;
+  mix-blend-mode: normal;
+}
+
+.icon.exhaust {
+  background: url(../assets/exhaust.png) center center/contain;
+  mix-blend-mode: normal;
+}
+
+.action-area {
+  position: absolute;
+  left: calc(85px + 1em);
+  right: calc(85px + 1em);
+  bottom: 0;
+  height: calc(100% - 85px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.action-area:has(> div:nth-child(3)) {
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.7em;
+}
+
+.action {
+  position: relative;
+}
+
+.move {
+  background: url(../assets/behavior-dir-pad.png) center center/contain no-repeat;
+}
+
+.atk-move {
+  background: url(../assets/atk-behavior-dir-pad.png) center center/contain no-repeat;
+}
+
+.atk-lock {
+  background: url(../assets/lockata.png) center center/contain no-repeat;
+}
+
+.attack {
+  background: url(../assets/behavior-damage.png) center center/contain no-repeat;
+}
+
+.move-dir {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 33%;
+  aspect-ratio: 68/85;
+  background: url(../assets/behavior-move-dir.png) center center/contain no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.move-dir.dir-8 {
+  transform: translate(-50%, -118%);
+}
+
+/*number top*/
+.num.dir-8 {
+  transform: translate(-50%, -113%) scaleX(0.9);
+}
+
+/*d-pad bottom*/
+.move-dir.dir-2 {
+  transform: translate(-50%, 22%) rotate(180deg);
+}
+
+/*number bottom*/
+.num.dir-2 {
+  transform: translate(-50%, 18%) scaleX(0.9);
+}
+
+.move-dir.dir-4 {
+  transform: translate(-139%, -49%) rotate(-90deg);
+}
+
+.num.dir-4 {
+  transform: translate(-250%, -49%) scaleX(0.9);
+}
+
+.move-dir.dir-6 {
+  transform: translate(39%, -49%) rotate(90deg);
+}
+
+.num.dir-6 {
+  transform: translate(155%, -49%) scaleX(0.9);
+}
+
