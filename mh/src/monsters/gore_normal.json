@@ -1,0 +1,211 @@
+{
+    "gore": {
+        "behavior-names": [
+            "Frenzy Breath",
+            "Side Tackle Left",
+            "Side Tackle Right",
+            "Bite And Tail Swipe",
+            "Aerial Lunge",
+            "Aerial Frenzy Shot",
+            "Frenzy Burst"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Frenzy Breath",
+                "id": 1055,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 11,
+                        "range": 3,
+                        "dodge": 5,
+                        "atkdir": "789",
+                        "eff": "frenzy"
+                    }
+                ]
+            },
+            {
+                "_comment1": "Side Tackle Left",
+                "id": 1056,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "248",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Side Tackle Right",
+                "id": 1067,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "268",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Bite And Tail Swipe",
+                "id": 1058,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "84",
+                        "eff": "frenzy"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "26",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Aerial Lunge",
+                "id": 1059,
+                "part": "wing",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "468",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Before this monster attacks, it will be +2 [range] from hunters."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Aerial Frenzy Shot",
+                "id": 1060,
+                "part": "wing",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "2"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 12,
+                        "range": 4,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "frenzy"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "Before this monster attacks, it will be +2 [range] from hunters."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Frenzy Burst",
+                "id": 1061,
+                "part": "head",
+                "target": "close",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 4,
+                        "dodge": 6,
+                        "dir": "468",
+                        "eff": "frenzy"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            }
+        ]
+    }
+}

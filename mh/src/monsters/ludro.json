@@ -1,0 +1,444 @@
+{
+    "ludro": {
+        "behavior-names": [
+            "Tail Slap",
+            "Tail Sweep",
+            "Side Roll Left",
+            "Side Roll Right",
+            "Water Bomb",
+            "Chomp",
+            "Triple Water Bomb",
+            "Body Slam",
+            "Ludroth Launcher",
+            "Wide Sweeps",
+            "Hip Check Combo",
+            "Royal Rusher",
+            "Charging Water Bombs",
+            "Leaping Body Crush"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Tail Slap",
+                "id": 1001,
+                "part": "tail",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "62",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 1
+                    }
+                ]
+            },
+            {
+                "_comment1": "Tail Sweep",
+                "id": 1002,
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 2,
+                        "dodge": 5,
+                        "dir": "42"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 1
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], all Ludroth automatically move 1 towards the target hunter."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Side Roll Left",
+                "id": 1003,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "86"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Side Roll Right",
+                "id": 1004,
+                "part": "torso",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "84"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Water Bomb",
+                "id": 1005,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-lock",
+                        "value": 7,
+                        "range": 3,
+                        "dodge": 5,
+                        "dir": "n",
+                        "elm": "water"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], all Ludroth automatically move 1 towards the target hunter."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Chomp",
+                "id": 1006,
+                "part": "head",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 1,
+                        "dodge": 2,
+                        "dir": "86"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Triple Water Bomb",
+                "id": 1007,
+                "part": "head",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 1
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 8,
+                        "range": 3,
+                        "dodge": 4,
+                        "atkdir": "789",
+                        "elm": "water"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Body Slam",
+                "id": 1008,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 9,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Ludroth Launcher",
+                "id": 1009,
+                "part": "torso",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 9,
+                        "range": 2,
+                        "dodge": 4,
+                        "dir": "86"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 4,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], this attack has +1 [dodge]."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Wide Sweeps",
+                "id": 1010,
+                "part": "tail",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 1
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "642"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 7,
+                        "range": 1,
+                        "dodge": 3,
+                        "dir": "864"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Hip Check Combo",
+                "id": 1011,
+                "part": "claws",
+                "target": "close",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 1
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 5,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Royal Rusher",
+                "id": 1012,
+                "part": "torso",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 8
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 5,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 4,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], all Ludroth automatically move 1 towards the target hunter."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Charging Water Bombs",
+                "id": 1013,
+                "part": "head",
+                "target": "far",
+                "type": "track",
+                "actions": [
+                    {
+                        "type": "atk-move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 2,
+                        "dodge": 4,
+                        "atkdir": "345",
+                        "elm": "water"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 6,
+                        "range": 2,
+                        "dodge": 4,
+                        "atkdir": "567",
+                        "elm": "water"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 3
+                    }
+                ]
+            },
+            {
+                "_comment1": "Leaping Body Crush",
+                "id": 1014,
+                "part": "torso",
+                "type": "track",
+                "target": "far",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 2
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "8",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 1
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], this attack has +1 [dodge]."
+                    }
+                ]
+            }
+        ]
+    }
+}

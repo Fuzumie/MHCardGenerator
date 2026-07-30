@@ -18,7 +18,7 @@
   content: "";
   inset: 0;
   position: absolute;
-  background: url(../assets/behavior-hunter-turn.png) center center/contain;
+  background: url(../assets/card_structure/behavior-hunter-turn.png) center center/contain;
   mix-blend-mode: darken;
 }
 
@@ -30,12 +30,12 @@
   content: "";
   inset: 0;
   position: absolute;
-  background: url(../assets/behavior-hunter-attack.png) center center/contain;
+  background: url(../assets/card_structure/behavior-hunter-attack.png) center center/contain;
   mix-blend-mode: darken;
 }
 
 .attack-cards {
-  background: url(../assets/attack-cards.png) center center/contain;
+  background: url(../assets/card_structure/attack-cards.png) center center/contain;
 }
 
 .num {
@@ -65,16 +65,16 @@
 }
 
 .icon.close {
-  background: url(../assets/close.png) center center/contain;
+  background: url(../assets/card_structure/close.png) center center/contain;
 }
 
 .icon.far {
-  background: url(../assets/far.png) center center/contain;
+  background: url(../assets/card_structure/far.png) center center/contain;
   mix-blend-mode: normal;
 }
 
 .icon.exhaust {
-  background: url(../assets/exhaust.png) center center/contain;
+  background: url(../assets/card_structure/exhaust.png) center center/contain;
   mix-blend-mode: normal;
 }
 
@@ -99,19 +99,19 @@
 }
 
 .move {
-  background: url(../assets/behavior-dir-pad.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/behavior-dir-pad.png) center center/contain no-repeat;
 }
 
 .atk-move {
-  background: url(../assets/atk-behavior-dir-pad.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/atk-behavior-dir-pad.png) center center/contain no-repeat;
 }
 
 .atk-lock {
-  background: url(../assets/lockata.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/lockata.png) center center/contain no-repeat;
 }
 
 .attack {
-  background: url(../assets/behavior-damage.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/behavior-damage.png) center center/contain no-repeat;
 }
 
 .move-dir {
@@ -120,7 +120,7 @@
   top: 50%;
   width: 33%;
   aspect-ratio: 68/85;
-  background: url(../assets/behavior-move-dir.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/behavior-move-dir.png) center center/contain no-repeat;
   transform: translate(-50%, -50%);
 }
 
@@ -158,4 +158,4 @@
 .num.dir-6 {
   transform: translate(155%, -49%) scaleX(0.9);
 }
-
+

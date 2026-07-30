@@ -1,0 +1,223 @@
+{
+    "gore": {
+        "behavior-names": [
+            "Frenzy Burst",
+            "Wider Frenzy Burst",
+            "Wing Arm Ground Slam",
+            "Wing Arm Right Slam",
+            "Wing Arm Left Slam",
+            "Chaotic Charge",
+            "Multiarm Swipes"
+        ],
+        "behavior": [
+            {
+                "_comment1": "Frenzy Burst",
+                "id": 1055,
+                "part": "head",
+                "target": "far",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 15,
+                        "range": 3,
+                        "dodge": 6,
+                        "dir": "n",
+                        "eff": "frenzy"
+                    },
+                    {
+                        "type": "bottom-long",
+                        "value": "At the start of the next round, the second node struck spreads by 2 [range] to node adjacent to it."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Wider Frenzy Burst",
+                "id": 1056,
+                "part": "head",
+                "target": "close",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "atk-lock",
+                        "value": 14,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "8",
+                        "eff": "frenzy"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom-long",
+                        "value": "At the start of the next round, the second node struck spreads by 2 [range] to node adjacent to it."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Wing Arm Ground Slam",
+                "id": 1067,
+                "part": "wing",
+                "target": "close",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "wind-up",
+                        "turn": 1,
+                        "card": 3
+                    },
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 16,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "n",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], hunters suffering from frenzy decrease frenzy countdown by 1."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Wing Arm Right Slam",
+                "id": 1058,
+                "part": "wing",
+                "target": "close",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "6"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 13,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], hunters suffering from frenzy decrease frenzy countdown by 1."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Wing Arm Left Slam",
+                "id": 1059,
+                "part": "wing",
+                "target": "far",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "move",
+                        "value": 2,
+                        "dir": "4"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 11,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "n"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    },
+                    {
+                        "type": "bottom",
+                        "value": "If this monster is [enraged], hunters suffering from frenzy decrease frenzy countdown by 1."
+                    }
+                ]
+            },
+            {
+                "_comment1": "Chaotic Charge",
+                "id": 1060,
+                "part": "wing",
+                "target": "far",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 13,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "846"
+                    },
+                    {
+                        "type": "atk-move",
+                        "value": 3,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 3,
+                        "card": 2
+                    }
+                ]
+            },
+            {
+                "_comment1": "Multiarm Swipe",
+                "id": 1061,
+                "part": "wing",
+                "target": "far",
+                "type": "gore-head",
+                "actions": [
+                    {
+                        "type": "attack",
+                        "value": 10,
+                        "range": 1,
+                        "dodge": 6,
+                        "dir": "48",
+                        "eff": "stun"
+                    },
+                    {
+                        "type": "move",
+                        "value": 1,
+                        "dir": "8"
+                    },
+                    {
+                        "type": "attack",
+                        "value": 14,
+                        "range": 1,
+                        "dodge": 4,
+                        "dir": "86"
+                    },
+                    {
+                        "type": "hunter",
+                        "turn": 2,
+                        "card": 3
+                    }
+                ]
+            }
+        ]
+    }
+}

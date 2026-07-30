@@ -13,27 +13,27 @@
 }
 
 .track {
-  background: url(../assets/behavior-track.png) center center/contain;
+  background: url(../assets/card_structure/behavior-track.png) center center/contain;
 }
 
 .turf-war {
-  background: url(../assets/turf-war.png) center center/contain;
+  background: url(../assets/monster_effects/turf-war.png) center center/contain;
 }
 
 .supernova {
-  background: url(../assets/supernova.png) center center/contain;
+  background: url(../assets/monster_effects/supernova.png) center center/contain;
 }
 
 .tornado {
-  background: url(../assets/tornado.png) center center/contain;
+  background: url(../assets/monster_effects/tornado.png) center center/contain;
 }
 
 .nerg-dive {
-  background: url(../assets/nerg-dive.png) center center/contain;
+  background: url(../assets/monster_effects/nerg-dive.png) center center/contain;
 }
 
 .spike {
-  background: url(../assets/spike.png) center center/contain;
+  background: url(../assets/monster_effects/spike.png) center center/contain;
 }
 
 .part {
@@ -47,7 +47,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../assets/icon-frame.png) center center/contain;
+  background: url(../assets/card_structure/icon-frame.png) center center/contain;
   mix-blend-mode: darken;
 }
 
@@ -126,7 +126,7 @@
   position: absolute;
   display: inline-block;
   inset: 0;
-  background: url(../assets/icon-frame.png) center center/contain no-repeat;
+  background: url(../assets/card_structure/icon-frame.png) center center/contain no-repeat;
   z-index: -1;
   mix-blend-mode: darken;
 }

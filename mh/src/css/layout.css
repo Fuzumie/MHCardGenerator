@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Adelle";
-  src: url(../assets/AdelleSansEXT-Regular.ttf);
+  src: url(../assets/font/AdelleSansEXT-Regular.ttf);
 }
 
 :root {
@@ -27,13 +27,13 @@
 .card {
   position: relative;
   width: 744px;
-  background: url(../assets/behavior-back-old.png) center center/contain;
+  background: url(../assets/card_structure/behavior-back-old.png) center center/contain;
   color: #272422;
   aspect-ratio: 744/520;
 }
 
 .front .card {
-  background: url(../assets/behavior-front.png) center center/contain;
+  background: url(../assets/card_structure/behavior-front.png) center center/contain;
 }
 
 .coloring {
